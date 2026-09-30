@@ -634,3 +634,20 @@ Official sources reviewed on 2026-09-30:
 The certification page confirms 65 questions, 90 minutes, and that the exam format is multiple choice or multiple response. It directs candidates to the AWS Certification Official Practice Question Set and Official Practice Exam in Skill Builder for official exam-style practice.
 
 Because the public Exam Guide does not publish a fixed MC/MR ratio, Task Statement sub-weights, or the identities/domains of the 15 unscored questions, this blueprint intentionally does not invent those values.
+
+
+## 15. Official practice-set evidence
+
+Current AWS Skill Builder metadata confirms:
+
+- Official Practice Question Set: AWS Certified Cloud Practitioner (CLF-C02) contains 20 AWS-developed questions intended to demonstrate certification-exam style.
+- Each practice-set question includes detailed feedback for answer choices and recommended resources.
+- Official Practice Exam: AWS Certified Cloud Practitioner (CLF-C02) contains 65 questions with a 90-minute limit.
+- AWS states that the Official Practice Exam uses the same question style and rigor as the certification exam.
+- AWS Skill Builder may require sign-in/subscription for some content. Publicly indexed metadata exposes the assessment description, but not the full 20-question item text used for style analysis.
+
+Design consequence:
+
+- Use the Official Exam Guide for supported question types and scope.
+- Do not invent a fixed MC/MR ratio from unavailable item text.
+- When the actual Official Practice Question Set is available to this project later, use its question wording and distractor construction as the primary CLF-specific style reference, without copying its questions into the mock.
