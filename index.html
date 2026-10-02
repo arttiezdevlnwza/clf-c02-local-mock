@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CLF-C02 Local Mock</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="study-enhancements.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">CLF-C02 LOCAL MOCK</div>
+        <h1>CLF-C02 Local Mock</h1>
+        <p>1 ชุด · 65 ข้อ · Official CLF-C02 Blueprint Mix · English exam-style พร้อมคำแปลไทยตอน Summary</p>
+      </div>
+      <div class="topbar-actions">
+        <button id="dashboardBtn" class="primary" type="button">Study Dashboard</button>
+        <button id="infoLibraryBtn" class="ghost" type="button">CLF-C02 Info Library</button>
+        <button id="homeBtn" class="ghost" type="button">หน้ารวมชุด</button>
+      </div>
+    </header>
+
+    <section id="homeView">
+      <div id="overallProgress" class="overall-progress"></div>
+
+      <section class="progress-tools" aria-labelledby="progressToolsTitle">
+        <div class="progress-tools-copy">
+          <div class="eyebrow">LOCAL SAVE TOOLS</div>
+          <h2 id="progressToolsTitle">ย้าย Progress โดยไม่ใช้ Database</h2>
+          <p>ข้อมูลยังเก็บใน localStorage ของ Browser เครื่องนี้เท่านั้น · ใช้ Copy / Export / Import เมื่อต้องการย้ายไปอีกเครื่อง</p>
+          <div id="progressToolStatus" class="progress-tool-status"></div>
+        </div>
+        <div class="progress-tool-actions">
+          <button id="copyProgressBtn" class="primary" type="button">Copy Progress Code</button>
+          <button id="exportProgressBtn" class="ghost" type="button">Export JSON</button>
+          <button id="importProgressBtn" class="ghost" type="button">Import Progress</button>
+        </div>
+      </section>
+
+      <div id="setCards" class="set-grid"></div>
+    </section>
+
+    <section id="dashboardView" class="dashboard-shell hidden">
+      <div class="dashboard-toolbar">
+        <div>
+          <div class="eyebrow">LOCAL STUDY DASHBOARD</div>
+          <h2>ภาพรวมจาก Local Mock ที่ทำไปแล้ว</h2>
+          <p class="muted">คำนวณจาก progress ที่อยู่ใน browser เครื่องนี้ และผล review ที่สรุปไว้หลังทำข้อสอบ</p>
+        </div>
+      </div>
+
+      <div id="dashboardOverview" class="dashboard-overview"></div>
+
+      <div class="dashboard-two-col">
+        <section class="dashboard-panel">
+          <div class="dashboard-panel-head">
+            <div>
+              <h3>คะแนนแต่ละ Set</h3>
+              <p class="muted">ดูแนวโน้ม Set 1 → Set 25 แบบเร็ว ๆ</p>
+            </div>
+          </div>
+          <div id="dashboardSets"></div>
+        </section>
+
+        <section class="dashboard-panel">
+          <div class="dashboard-panel-head">
+            <div>
+              <h3>Accuracy ตาม Domain</h3>
+              <p class="muted">ใช้เฉพาะข้อที่ยังมีรายละเอียดคำตอบใน localStorage</p>
+            </div>
+          </div>
+          <div id="dashboardDomains"></div>
+        </section>
+      </div>
+
+      <div id="dashboardStrengths" class="dashboard-insights"></div>
+
+      <section class="dashboard-panel">
+        <div class="dashboard-panel-head">
+          <div>
+            <h3>Reviewed Gaps</h3>
+            <p class="muted">แยกจากผล review จริงว่าเป็น Concept / Confidence / Language ไม่ได้เดาจากคะแนนอย่างเดียว</p>
+          </div>
+        </div>
+        <div id="dashboardReviewInsights"></div>
+      </section>
+
+      <section class="dashboard-panel">
+        <div class="dashboard-panel-head">
+          <div>
+            <h3>อะไรที่ยังขาดอยู่</h3>
+            <p class="muted">ดู coverage ก่อนตีความจุดแข็ง/จุดอ่อน</p>
+          </div>
+        </div>
+        <div id="dashboardCoverage"></div>
+      </section>
+
+      <section class="dashboard-panel">
+        <div class="dashboard-panel-head">
+          <div>
+            <h3>Review Queue</h3>
+            <p class="muted">รวมข้อที่ผิด และข้อที่ Flag 🟡 จากทุก Set ที่มีรายละเอียดใน browser</p>
+          </div>
+        </div>
+        <div id="dashboardReviewQueue"></div>
+      </section>
+    </section>
+
+    <section id="infoLibraryView" class="info-library-shell hidden">
+      <div class="dashboard-toolbar info-library-header">
+        <div>
+          <div class="eyebrow">CLF-C02 QUICK REFERENCE</div>
+          <h2>CLF-C02 Info Library</h2>
+          <p class="muted">รวม Domain / Task Statement / service map และแหล่งอ้างอิง CLF-C02 ไว้ที่เดียว</p>
+        </div>
+        <button id="infoLibraryHomeBtn" class="ghost" type="button">← กลับหน้ารวมชุด</button>
+      </div>
+
+      <div class="info-library-tabs" role="tablist" aria-label="Info Library sections">
+        <button id="infoTopicTabBtn" class="info-library-tab active" type="button">Topic Map</button>
+        <button id="infoInfographicTabBtn" class="info-library-tab" type="button">Blueprint & Sources</button>
+      </div>
+
+      <section id="infoTopicPanel" class="dashboard-panel info-library-panel">
+        <div id="dashboardFamilyGuide"></div>
+      </section>
+
+      <section id="infoInfographicPanel" class="dashboard-panel info-library-panel hidden">
+        <div class="infographic-library-head">
+          <div>
+            <h3>CLF-C02 Infographics</h3>
+            <p class="muted">สรุป blueprint, scope และแหล่งอ้างอิงที่ใช้สร้าง Local Mock</p>
+          </div>
+          <input id="infographicSearch" class="family-guide-search" type="search" placeholder="ค้นหา Domain / Task / service...">
+        </div>
+        <div id="infographicGallery" class="infographic-gallery"></div>
+      </section>
+    </section>
+
+    <div id="infographicModal" class="infographic-modal hidden" role="dialog" aria-modal="true" aria-labelledby="infographicModalTitle">
+      <div class="infographic-modal-card">
+        <div class="infographic-modal-head">
+          <h2 id="infographicModalTitle">Infographic</h2>
+          <button id="infographicModalClose" class="ghost" type="button" aria-label="ปิด">✕</button>
+        </div>
+        <div id="infographicModalBody"></div>
+      </div>
+    </div>
+
+    <section id="quizView" class="hidden">
+      <div class="quiz-toolbar">
+        <div>
+          <div id="setTitle" class="set-title"></div>
+          <div id="setMeta" class="muted"></div>
+        </div>
+        <div class="toolbar-actions">
+          <button id="summaryBtn" class="primary hidden" type="button">Summary</button>
+          <button id="incorrectBtn" class="ghost" type="button">ดูข้อที่ผิด</button>
+          <button id="resetBtn" class="danger-ghost" type="button">เริ่มชุดนี้ใหม่</button>
+        </div>
+      </div>
+
+      <div class="progress-wrap"><div id="progressBar" class="progress-bar"></div></div>
+
+      <div class="quiz-layout">
+        <aside class="question-nav-panel">
+          <div class="nav-title">ข้อสอบ</div>
+          <div id="questionGrid" class="question-grid"></div>
+        </aside>
+
+        <article class="question-card">
+          <div class="question-head">
+            <div class="question-head-left">
+              <span id="domainBadge" class="badge"></span>
+              <button id="vocabBtn" class="vocab-btn hidden" type="button">? Vocabulary</button>
+            </div>
+            <span id="questionCounter" class="muted"></span>
+          </div>
+          <h2 id="questionText"></h2>
+          <div id="vocabPanel" class="vocab-panel hidden"></div>
+          <div id="multiHint" class="hint hidden"></div>
+          <div id="choices" class="choices"></div>
+
+          <div class="review-flag-row">
+            <label id="reviewFlagLabel" class="review-flag" for="explainMoreCheck">
+              <input id="explainMoreCheck" type="checkbox">
+              <span><strong>🟡 ขอให้อธิบายเพิ่มตอนรีวิว</strong><small>ติ๊กเมื่อคิดว่าน่าจะใช่ แต่ยังไม่มั่นใจ หรืออยากให้ช่วยอธิบาย concept นี้เพิ่ม</small></span>
+            </label>
+          </div>
+
+          <div class="answer-actions">
+            <button id="checkBtn" class="primary" type="button">ตรวจคำตอบ</button>
+          </div>
+
+          <div id="feedback" class="feedback hidden"></div>
+
+          <div class="bottom-nav">
+            <button id="prevBtn" class="ghost" type="button">← ข้อก่อนหน้า</button>
+            <div id="scoreText" class="score"></div>
+            <button id="nextBtn" class="primary" type="button">ข้อถัดไป →</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="summaryView" class="hidden">
+      <div class="summary-toolbar">
+        <div>
+          <div class="eyebrow">RESULT SUMMARY</div>
+          <h2 id="summaryTitle">Summary</h2>
+          <div id="summaryMeta" class="muted"></div>
+        </div>
+        <button id="backToQuizBtn" class="ghost" type="button">← กลับไปข้อสอบ</button>
+      </div>
+      <div id="summaryStats" class="summary-stats"></div>
+      <div class="summary-section-head">
+        <div>
+          <h3 id="summarySectionTitle">รายละเอียดทุกข้อ</h3>
+          <p id="summarySectionMeta" class="muted">แสดงทุกข้อพร้อมสถานะ คำตอบ และคำอธิบาย</p>
+        </div>
+        <div class="summary-actions">
+          <div class="summary-filter" role="group" aria-label="Summary filter">
+            <button id="summaryAllBtn" class="filter-btn active" type="button">ทุกข้อ</button>
+            <button id="summaryWrongBtn" class="filter-btn" type="button">เฉพาะข้อผิด</button>
+            <button id="summaryExplainBtn" class="filter-btn" type="button">ขออธิบายเพิ่ม</button>
+          </div>
+          <button id="copySummaryBtn" class="ghost" type="button">คัดลอกผลสำหรับรีวิว</button>
+        </div>
+      </div>
+      <div id="summaryList" class="wrong-summary-list"></div>
+    </section>
+  </main>
+
+  <div id="progressModal" class="progress-modal hidden" role="dialog" aria-modal="true" aria-labelledby="progressModalTitle">
+    <div class="progress-modal-card">
+      <div class="progress-modal-head">
+        <div>
+          <div class="eyebrow">IMPORT PROGRESS</div>
+          <h2 id="progressModalTitle">นำ Progress เข้าเครื่องนี้</h2>
+        </div>
+        <button id="closeProgressModalBtn" class="ghost modal-close" type="button" aria-label="ปิด">✕</button>
+      </div>
+
+      <p class="muted progress-modal-help">Paste Progress Code ที่ขึ้นต้นด้วย <strong>CLFPROGRESS1:</strong> หรือวาง JSON ที่ Export จากเว็บนี้ก็ได้</p>
+      <textarea id="progressCodeInput" class="progress-code-input" rows="8" placeholder="Paste Progress Code หรือ JSON ที่นี่..."></textarea>
+
+      <div class="progress-file-row">
+        <label class="ghost file-picker-label" for="progressFileInput">เลือกไฟล์ JSON</label>
+        <input id="progressFileInput" class="hidden-file-input" type="file" accept="application/json,.json">
+        <span id="progressFileName" class="muted">ยังไม่ได้เลือกไฟล์</span>
+      </div>
+
+      <div id="progressImportPreview" class="progress-import-preview">ยังไม่มีข้อมูลสำหรับ Import</div>
+      <div id="progressImportMessage" class="progress-import-message hidden"></div>
+
+      <div class="progress-modal-actions">
+        <button id="mergeProgressBtn" class="primary" type="button" disabled>Merge Progress</button>
+        <button id="replaceProgressBtn" class="danger-ghost" type="button" disabled>Replace ทั้งหมด</button>
+      </div>
+      <p class="progress-modal-note"><strong>Merge</strong> จะเก็บคำตอบที่เครื่องนี้มีอยู่ และเติมข้อมูลที่ขาดจากอีกเครื่อง · <strong>Replace</strong> จะล้าง Local Mock progress ของเครื่องนี้ก่อนนำข้อมูลเข้า</p>
+    </div>
+  </div>
+
+  <script src="data/local-set-01-domain1.js"></script>
+  <script src="data/local-set-01-domain2.js"></script>
+  <script src="data/local-set-01-domain3.js"></script>
+  <script src="data/local-set-01-domain4.js"></script>
+  <script src="data/local-set-01-builder.js"></script>
+
+  <script src="app.js"></script>
+  <script src="ui-extras.js"></script>
+</body>
+</html>
