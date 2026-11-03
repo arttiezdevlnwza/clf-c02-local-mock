@@ -796,14 +796,14 @@ $('progressModal').onclick=e=>{ if(e.target===$('progressModal')) closeProgressM
 document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&!$('progressModal').classList.contains('hidden')) closeProgressModal(); });
 
 window.openSet=openSet;
-window.renderQuiz=renderQuiz;
-window.renderHome=renderHome;
+window.renderQuiz=(...args)=>renderQuiz(...args);
+window.renderHome=(...args)=>renderHome(...args);
 window.saveState=saveState;
 window.state=state;
 window.currentAnswer=currentAnswer;
 window.isCorrect=isCorrect;
-window.renderQuestionGrid=renderQuestionGrid;
-window.renderSummaryList=renderSummaryList;
-window.buildReviewText=buildReviewText;
+window.renderQuestionGrid=(...args)=>renderQuestionGrid(...args);
+window.renderSummaryList=(...args)=>renderSummaryList(...args);
+window.buildReviewText=(...args)=>buildReviewText(...args);
 
 renderHome();
