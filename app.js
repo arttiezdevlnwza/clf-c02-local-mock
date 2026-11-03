@@ -794,4 +794,16 @@ $('mergeProgressBtn').onclick=()=>applyProgressImport('merge');
 $('replaceProgressBtn').onclick=()=>applyProgressImport('replace');
 $('progressModal').onclick=e=>{ if(e.target===$('progressModal')) closeProgressModal(); };
 document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&!$('progressModal').classList.contains('hidden')) closeProgressModal(); });
+
+window.openSet=openSet;
+window.renderQuiz=renderQuiz;
+window.renderHome=renderHome;
+window.saveState=saveState;
+window.state=state;
+window.currentAnswer=currentAnswer;
+window.isCorrect=isCorrect;
+window.renderQuestionGrid=renderQuestionGrid;
+window.renderSummaryList=renderSummaryList;
+window.buildReviewText=buildReviewText;
+
 renderHome();
