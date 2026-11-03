@@ -59,7 +59,7 @@
           <div class="dashboard-panel-head">
             <div>
               <h3>คะแนนแต่ละ Set</h3>
-              <p class="muted">ดูแนวโน้ม Set 1 → Set 25 แบบเร็ว ๆ</p>
+              <p class="muted">ดูแนวโน้มทุกชุดแบบเร็ว ๆ</p>
             </div>
           </div>
           <div id="dashboardSets"></div>
@@ -114,14 +114,14 @@
         <div>
           <div class="eyebrow">CLF-C02 QUICK REFERENCE</div>
           <h2>CLF-C02 Info Library</h2>
-          <p class="muted">รวม Domain / Task Statement / service map และแหล่งอ้างอิง CLF-C02 ไว้ที่เดียว</p>
+          <p class="muted">รวมภาพจำ service/concept ที่ชอบสับสน และ Infographic สำหรับ CLF-C02 ไว้ที่เดียว</p>
         </div>
         <button id="infoLibraryHomeBtn" class="ghost" type="button">← กลับหน้ารวมชุด</button>
       </div>
 
       <div class="info-library-tabs" role="tablist" aria-label="Info Library sections">
         <button id="infoTopicTabBtn" class="info-library-tab active" type="button">Topic Map</button>
-        <button id="infoInfographicTabBtn" class="info-library-tab" type="button">Blueprint & Sources</button>
+        <button id="infoInfographicTabBtn" class="info-library-tab" type="button">Infographics 1–10</button>
       </div>
 
       <section id="infoTopicPanel" class="dashboard-panel info-library-panel">
@@ -132,9 +132,9 @@
         <div class="infographic-library-head">
           <div>
             <h3>CLF-C02 Infographics</h3>
-            <p class="muted">สรุป blueprint, scope และแหล่งอ้างอิงที่ใช้สร้าง Local Mock</p>
+            <p class="muted">10 หน้าแบบภาพจำ ครอบคลุม Cloud Concepts, Security, Compute, Storage, Networking, Analytics, Pricing และ Support</p>
           </div>
-          <input id="infographicSearch" class="family-guide-search" type="search" placeholder="ค้นหา Domain / Task / service...">
+          <input id="infographicSearch" class="family-guide-search" type="search" placeholder="ค้นหา Page / topic เช่น IAM, EC2, S3, Route 53, Budgets...">
         </div>
         <div id="infographicGallery" class="infographic-gallery"></div>
       </section>
@@ -264,15 +264,25 @@
     </div>
   </div>
 
-  <script src="data/prestudy-diagnostic.js"></script>\n  <script src="data/local-set-01-domain1.js"></script>
+  <script src="data/prestudy-diagnostic.js"></script>
+  <script src="data/local-set-01-domain1.js"></script>
   <script src="data/local-set-01-domain2.js"></script>
   <script src="data/local-set-01-domain3.js"></script>
   <script src="data/local-set-01-domain4.js"></script>
   <script src="data/local-set-01-builder.js"></script>
+  <script src="data/review-insights.js"></script>
+  <script src="data/exam-family-guide.js"></script>
+  <script src="data/infographic-pages.js"></script>
 
   <script src="app.js"></script>
   <script src="study-enhancements.js"></script>
   <script src="review-flags.js"></script>
-  <script src="ui-extras.js"></script>
+  <script src="english-notes.js"></script>
+  <script src="dashboard.js"></script>
+  <script src="dashboard-advanced.js"></script>
+  <script src="dashboard-family-guide.js"></script>
+  <script src="infographics.js"></script>
+  <script src="dashboard-vocabulary.js"></script>
+  <script src="dashboard-set-count-patch.js"></script>
 </body>
 </html>
