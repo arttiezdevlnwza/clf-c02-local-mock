@@ -218,11 +218,11 @@
   ],
   [
     "2.3",
-    "Which TWO practices are recommended when protecting access to sensitive AWS resources? (Select TWO.)",
-    "แนวทางสองข้อใดแนะนำสำหรับปกป้องการเข้าถึง AWS resources ที่สำคัญ",
-    "AWS IAM|IAM Identity Center|AWS Cost Explorer|AWS DMS|Amazon Athena",
+    "A security team wants to avoid permanent credentials for workforce users and EC2 applications. Which TWO capabilities can provide managed, temporary access? (Select TWO.)",
+    "ทีม security ต้องการหลีกเลี่ยง permanent credentials สำหรับพนักงานและแอปบน EC2 ความสามารถสองข้อใดช่วยได้",
+    "IAM Identity Center|AWS IAM|AWS Cost Explorer|AWS DMS|Amazon Athena",
     "0,1",
-    "IAM บังคับ least privilege และ Identity Center รองรับการจัดการ workforce identities อย่างเป็นระบบ"
+    "Identity Center รองรับ workforce federation และ IAM roles ให้ temporary credentials แก่ EC2 applications"
   ],
   [
     "2.3",
@@ -378,11 +378,11 @@
   ],
   [
     "3.5",
-    "A company requires a private dedicated connection between its data center and AWS instead of relying only on the public internet. Which service fits?",
-    "บริษัทต้องการ dedicated private connection ระหว่าง data center กับ AWS ไม่พึ่ง public internet อย่างเดียว ควรใช้ใด",
-    "AWS Direct Connect|AWS Site-to-Site VPN|NAT Gateway|Amazon CloudFront",
+    "A company needs encrypted connectivity from its on-premises network to AWS using an existing internet connection. Which option fits?",
+    "บริษัทต้องการเชื่อม on-premises ไป AWS แบบเข้ารหัสผ่าน internet connection ที่มีอยู่ ควรเลือกใด",
+    "AWS Site-to-Site VPN|AWS Direct Connect|NAT Gateway|Amazon CloudFront",
     "0",
-    "Direct Connect ให้ dedicated connectivity ระหว่างเครือข่ายลูกค้าและ AWS"
+    "Site-to-Site VPN สร้าง encrypted tunnels ผ่านอินเทอร์เน็ตสำหรับเชื่อมเครือข่าย on premises กับ AWS"
   ],
   [
     "3.5",
