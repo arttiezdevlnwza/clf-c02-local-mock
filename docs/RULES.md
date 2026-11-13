@@ -10,8 +10,8 @@ Use sources in this order:
 
 1. Current AWS Certified Cloud Practitioner (CLF-C02) Official Exam Guide.
 2. Current official AWS documentation, AWS Skill Builder, and official AWS certification learning material.
-3. The user's AWS Learning Hub notes as a lesson/content reference. These notes originated from AWS Skill Builder and were later refreshed, but they are not authoritative when they conflict with current official AWS material.
-4. Secondary sources only when official material is insufficient.
+3. The Local Mock project's own CLF-C02 blueprint and original question-design requirements.
+4. Secondary public sources only when official AWS material is insufficient.
 
 Rules:
 
@@ -99,6 +99,9 @@ Where useful, include a short Thai translation/summary of the question.
 - Vocabulary is optional and does not need to appear on every question.
 
 ### 2.9 Duplicate control
+
+- Local Mock and AWS Learning Hub must use independent question banks. Do not copy, import, adapt, or sample AWS Learning Hub questions into Local Mock.
+- Author new Local Mock questions from official AWS exam scope and service documentation.
 
 Within and across sets:
 
@@ -189,4 +192,3 @@ Do not convert AWS scaled scores into raw percentages.
 - CLF-C02 Exam Guide: https://docs.aws.amazon.com/aws-certification/latest/cloud-practitioner-02/cloud-practitioner-02.html
 - CLF-C02 Exam Guide PDF: https://docs.aws.amazon.com/pdfs/aws-certification/latest/cloud-practitioner-02/cloud-practitioner-02.pdf
 - AWS Certified Cloud Practitioner certification page: https://aws.amazon.com/certification/certified-cloud-practitioner/
-- User lesson reference: https://aws-learning-hub-theta.vercel.app/#/clf-c02/01-introduction-to-the-cloud
