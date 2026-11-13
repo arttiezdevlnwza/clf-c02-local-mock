@@ -4,9 +4,11 @@ Local practice exam project for **AWS Certified Cloud Practitioner (CLF-C02)**.
 
 ## Current status
 
-- Pre-study Diagnostic: 65 questions\n- Local Mock Set 1: 65 questions
-- Diagnostic domain distribution: 16 / 19 / 22 / 8 (covers all 19 Task Statements)\n- Mock Set 1 domain distribution: 16 / 19 / 22 / 8
-- Covers all 19 CLF-C02 Task Statements
+- Pre-study Diagnostic: 65 questions
+- Local Mock Sets 1, 2, 3: 65 questions each (195 mock questions)
+- Domain distribution in every mock set: 16 / 19 / 22 / 8
+- Each mock set covers all 19 CLF-C02 Task Statements
+- Sets 2 and 3 add 130 independently authored questions, not copied from AWS Learning Hub
 - Supports Multiple Choice and Multiple Response
 - Includes Thai explanations, vocabulary helper, progress saving, review flags, and summary review
 - Progress is stored in browser localStorage
