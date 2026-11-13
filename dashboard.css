@@ -223,3 +223,42 @@
 .infographic-text-details{border-top:1px solid #e4e7ec;background:#fff}
 .infographic-text-details>summary{cursor:pointer;padding:12px 16px;font-weight:800;color:#344054}
 .infographic-text-details .infographic-full-page{padding-top:4px}
+
+
+/* Pre-study diagnostic baseline */
+.prestudy-panel{display:flex;flex-direction:column;gap:12px}
+.prestudy-baseline-label{font-size:.68rem;font-weight:800;letter-spacing:.06em;border:1px solid var(--border,#dfe3e8);border-radius:999px;padding:5px 9px;color:var(--muted,#667085);white-space:nowrap}
+.prestudy-summary-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.prestudy-stat{border:1px solid var(--border,#e5e7eb);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.prestudy-stat span{font-size:.78rem;color:var(--muted,#667085)}
+.prestudy-stat strong{font-size:1.45rem;line-height:1.2}
+.prestudy-section-title{margin:8px 0 0;font-size:.95rem}
+.prestudy-domain-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.prestudy-domain-card{border:1px solid var(--border,#e5e7eb);border-radius:12px;padding:11px;min-width:0}
+.prestudy-domain-head{display:flex;justify-content:space-between;gap:8px;align-items:flex-start;margin-bottom:8px}
+.prestudy-domain-head>div{display:flex;flex-direction:column;gap:3px;min-width:0}
+.prestudy-domain-head>div span{font-size:.74rem;color:var(--muted,#667085);line-height:1.35}
+.prestudy-domain-head>strong{font-size:.9rem;white-space:nowrap}
+.prestudy-domain-card small{display:block;margin-top:6px;color:var(--muted,#667085);font-size:.75rem}
+.prestudy-chapter-list{display:flex;flex-direction:column;border:1px solid var(--border,#e5e7eb);border-radius:12px;overflow:hidden}
+.prestudy-chapter-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center;padding:11px 13px;border-bottom:1px solid var(--border,#e5e7eb)}
+.prestudy-chapter-row:last-child{border-bottom:0}
+.prestudy-chapter-main{display:flex;flex-direction:column;gap:3px;min-width:0}
+.prestudy-chapter-main a,.prestudy-question-row a{color:var(--accent,#2563eb);text-decoration:none}
+.prestudy-chapter-main a:hover,.prestudy-question-row a:hover{text-decoration:underline}
+.prestudy-chapter-main span,.prestudy-chapter-main small{font-size:.77rem;color:var(--muted,#667085);line-height:1.4}
+.prestudy-chapter-questions{display:flex;flex-direction:column;align-items:flex-end;gap:2px;white-space:nowrap}
+.prestudy-chapter-questions strong{font-size:1.05rem}
+.prestudy-chapter-questions span{font-size:.72rem;color:var(--muted,#667085)}
+.prestudy-question-details{border:1px solid var(--border,#e5e7eb);border-radius:12px;overflow:hidden}
+.prestudy-question-details>summary{cursor:pointer;padding:11px 13px;font-size:.86rem;font-weight:800;list-style:none}
+.prestudy-question-details>summary::-webkit-details-marker{display:none}
+.prestudy-question-details[open]>summary{border-bottom:1px solid var(--border,#e5e7eb)}
+.prestudy-question-list{display:flex;flex-direction:column}
+.prestudy-question-row{display:grid;grid-template-columns:48px 90px minmax(0,1fr) minmax(190px,auto);gap:10px;align-items:start;padding:9px 12px;border-bottom:1px solid var(--border,#e5e7eb);font-size:.78rem}
+.prestudy-question-row:last-child{border-bottom:0}
+.prestudy-question-row>span:nth-child(2),.prestudy-question-row>a{color:var(--muted,#667085)}
+.prestudy-question-row>a{white-space:nowrap}
+.prestudy-note{margin:0!important}
+@media(max-width:1000px){.prestudy-domain-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.prestudy-question-row{grid-template-columns:42px 78px minmax(0,1fr)}.prestudy-question-row>a{grid-column:3}}
+@media(max-width:640px){.prestudy-summary-grid,.prestudy-domain-grid{grid-template-columns:1fr 1fr}.prestudy-chapter-row{grid-template-columns:1fr}.prestudy-chapter-questions{align-items:flex-start;flex-direction:row;gap:7px}.prestudy-question-row{grid-template-columns:42px 1fr;gap:4px 8px}.prestudy-question-row>span:nth-child(2){grid-column:2}.prestudy-question-row>span:nth-child(3){grid-column:1/-1}.prestudy-question-row>a{grid-column:1/-1;white-space:normal}}
