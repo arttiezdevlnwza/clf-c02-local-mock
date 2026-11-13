@@ -1,6 +1,8 @@
 (() => {
   const defs = {
     'AWS CloudTrail':'บันทึกกิจกรรม API และการดำเนินการในบัญชี AWS',
+    'AWS CloudFront':'content delivery network ใช้ edge locations เพื่อส่ง content ใกล้ผู้ใช้',
+    'Amazon Cognito':'จัดการการลงชื่อเข้าใช้ของลูกค้าใน web/mobile applications',
     'Amazon CloudWatch':'เก็บ metrics, logs และสร้าง alarms สำหรับการติดตามระบบ',
     'AWS Config':'ติดตามและประเมิน configuration ของทรัพยากรตามกฎ',
     'AWS Artifact':'ให้ดาวน์โหลดรายงานและเอกสารด้าน compliance ของ AWS',
