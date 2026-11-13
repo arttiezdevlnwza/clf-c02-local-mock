@@ -138,11 +138,11 @@
   ],
   [
     "2.1",
-    "A company runs containers using AWS Fargate. Who remains responsible for vulnerabilities in the application code?",
+    "A company runs containers using AWS Fargate. Which access-management capability must the customer still configure?",
     "บริษัทใช้ AWS Fargate รัน containers ใครรับผิดชอบช่องโหว่ใน application code",
     "AWS IAM|Amazon Inspector|AWS Fargate|AWS Artifact",
     "0",
-    "ลูกค้ายังต้องดูแล application code และ dependencies ของตน แม้ Fargate จัดการ underlying compute"
+    "ลูกค้ายังคงต้องกำหนด IAM roles และ permissions ให้แอป แม้ Fargate จะจัดการ underlying compute"
   ],
   [
     "2.1",
