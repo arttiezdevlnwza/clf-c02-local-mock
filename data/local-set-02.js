@@ -130,7 +130,7 @@
   ],
   [
     "2.1",
-    "A company deploys a custom application to EC2. Who must configure inbound access rules for the instance?",
+    "A company deploys a custom application to EC2. Which control must the customer configure to restrict inbound access to the instance?",
     "บริษัทติดตั้งแอปบน EC2 ใครต้องตั้งค่ากฎอนุญาต inbound access ของ instance",
     "AWS IAM|AWS CloudTrail|Security group|AWS Shield",
     "2",
@@ -138,7 +138,7 @@
   ],
   [
     "2.1",
-    "A managed database runs on Amazon RDS. Which task is still the customer's responsibility?",
+    "A managed database runs on Amazon RDS. Which AWS capability must the customer configure to restrict access to the database?",
     "ฐานข้อมูลรันบน Amazon RDS งานใดยังคงเป็นความรับผิดชอบของลูกค้า",
     "AWS IAM|AWS KMS|AWS Artifact|AWS Backup",
     "0",
