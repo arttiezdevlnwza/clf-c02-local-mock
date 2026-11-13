@@ -10,6 +10,42 @@
     3: 'Cloud Technology and Services',
     4: 'Billing, Pricing, and Support'
   };
+  const PRESTUDY_BASELINE = {
+    score: { correct: 51, total: 65, wrong: 14, accuracy: 78.5 },
+    domains: [
+      { id: 1, name: 'Cloud Concepts', correct: 13, total: 16, wrong: 3 },
+      { id: 2, name: 'Security and Compliance', correct: 15, total: 19, wrong: 4 },
+      { id: 3, name: 'Cloud Technology and Services', correct: 18, total: 22, wrong: 4 },
+      { id: 4, name: 'Billing, Pricing, and Support', correct: 5, total: 8, wrong: 3 }
+    ],
+    chapters: [
+      { id: 'L09', title: 'Security', file: '09-security.md', questions: [15, 16, 48], topics: 'Amazon Inspector vs GuardDuty · AWS WAF vs AWS Shield' },
+      { id: 'L13', title: 'Well-Architected Solutions', file: '13-well-architected-solutions.md', questions: [4, 26, 33], topics: 'Operational Excellence vs Performance Efficiency · Amazon SES · Performance Efficiency vs Sustainability' },
+      { id: 'L02', title: 'Compute in the Cloud', file: '02-compute-in-the-cloud.md', questions: [27, 62], topics: 'EC2 Spot vs On-Demand vs Dedicated Hosts' },
+      { id: 'L06', title: 'Storage', file: '06-storage.md', questions: [23, 59], topics: 'Amazon EFS shared file system · Amazon EBS vs Instance Store' },
+      { id: 'L10', title: 'Monitoring, Compliance, and Governance in the AWS Cloud', file: '10-monitoring-compliance-governance.md', questions: [12], topics: 'AWS Config evaluates resource configurations against rules' },
+      { id: 'L07', title: 'Databases', file: '07-databases.md', questions: [56], topics: 'Amazon RDS relational database vs DynamoDB NoSQL' },
+      { id: 'L11', title: 'Pricing and Support', file: '11-pricing-and-support.md', questions: [63], topics: 'AWS Budgets alerts vs Cost Explorer analysis', note: 'เป็นบทเสริมด้าน pricing สำหรับ Q27 และ Q62; บทหลักของ EC2 purchasing options คือ L02' },
+      { id: 'L01', title: 'Introduction to the Cloud', file: '01-introduction-to-the-cloud.md', questions: [6], topics: 'Fixed expense vs Variable expense' }
+    ],
+    questions: [
+      { id: 4, domain: 1, lesson: 'L13', topic: 'Operational Excellence vs Performance Efficiency' },
+      { id: 6, domain: 1, lesson: 'L01', topic: 'Fixed expense vs Variable expense' },
+      { id: 12, domain: 2, lesson: 'L10', topic: 'AWS Config: resource configuration compliance vs Amazon Inspector' },
+      { id: 15, domain: 2, lesson: 'L09', topic: 'Amazon Inspector: vulnerability scanning vs GuardDuty: threat detection' },
+      { id: 16, domain: 2, lesson: 'L09', topic: 'AWS WAF: filtering malicious HTTP requests vs AWS Shield: DDoS protection' },
+      { id: 23, domain: 3, lesson: 'L06', topic: 'Amazon EFS: shared file system across multiple EC2 instances' },
+      { id: 26, domain: 3, lesson: 'L13', topic: 'Amazon SES: email delivery vs Step Functions: workflow orchestration' },
+      { id: 27, domain: 4, lesson: 'L02', topic: 'EC2 Spot: interruptible capacity for fault-tolerant workloads' },
+      { id: 33, domain: 1, lesson: 'L13', topic: 'Performance Efficiency vs Sustainability' },
+      { id: 48, domain: 2, lesson: 'L09', topic: 'AWS Shield: DDoS protection vs AWS WAF: HTTP request filtering' },
+      { id: 56, domain: 3, lesson: 'L07', topic: 'Amazon RDS: managed relational database vs DynamoDB: NoSQL' },
+      { id: 59, domain: 3, lesson: 'L06', topic: 'Amazon EBS: persistent block storage vs EC2 Instance Store: temporary local storage' },
+      { id: 62, domain: 4, lesson: 'L02', topic: 'EC2 On-Demand vs Dedicated Hosts for short-term unpredictable usage' },
+      { id: 63, domain: 4, lesson: 'L11', topic: 'AWS Budgets: budget/forecast alerts vs Cost Explorer: cost analysis' }
+    ],
+    lessonBaseUrl: 'https://github.com/arttiezdevlnwza/aws-learning-hub/blob/main/public/lessons/clf-c02/'
+  };
 
   function escapeHtml(value) {
     return String(value || '').replace(/[&<>"']/g, char => ({
@@ -223,6 +259,69 @@
       historicalOnlySets,
       totalQuestions: sets.reduce((sum, set) => sum + set.questionCount, 0)
     };
+  }
+
+
+  function renderPrestudyDiagnostic() {
+    const baseline = PRESTUDY_BASELINE;
+    const scoreRoot = byId('prestudyDiagnosticSummary');
+    const domainRoot = byId('prestudyDiagnosticDomains');
+    const chapterRoot = byId('prestudyDiagnosticChapters');
+    const questionRoot = byId('prestudyDiagnosticQuestions');
+    if (!scoreRoot || !domainRoot || !chapterRoot || !questionRoot) return;
+
+    scoreRoot.innerHTML = [
+      ['คะแนนรวม', `${baseline.score.correct}/${baseline.score.total}`],
+      ['Accuracy', `${baseline.score.accuracy}%`],
+      ['ตอบถูก', String(baseline.score.correct)],
+      ['ตอบผิด', String(baseline.score.wrong)]
+    ].map(([label, value]) => `
+      <div class="prestudy-stat">
+        <span>${label}</span>
+        <strong>${value}</strong>
+      </div>`).join('');
+
+    domainRoot.innerHTML = baseline.domains.map(domain => {
+      const pct = (domain.correct / domain.total * 100).toFixed(1);
+      return `
+        <div class="prestudy-domain-card">
+          <div class="prestudy-domain-head">
+            <div><strong>Domain ${domain.id}</strong><span>${escapeHtml(domain.name)}</span></div>
+            <strong>${pct}%</strong>
+          </div>
+          <div class="dashboard-track"><div class="dashboard-fill" style="width:${pct}%"></div></div>
+          <small>ถูก ${domain.correct}/${domain.total} · ผิด ${domain.wrong}</small>
+        </div>`;
+    }).join('');
+
+    chapterRoot.innerHTML = baseline.chapters.map(chapter => {
+      const url = baseline.lessonBaseUrl + chapter.file;
+      return `
+        <div class="prestudy-chapter-row">
+          <div class="prestudy-chapter-main">
+            <a href="${url}" target="_blank" rel="noopener noreferrer"><strong>${chapter.id} · ${escapeHtml(chapter.title)}</strong></a>
+            <span>${escapeHtml(chapter.topics)}</span>
+            ${chapter.note ? `<small>${escapeHtml(chapter.note)}</small>` : ''}
+          </div>
+          <div class="prestudy-chapter-questions">
+            <strong>${chapter.questions.length}</strong>
+            <span>Q${chapter.questions.join(', Q')}</span>
+          </div>
+        </div>`;
+    }).join('');
+
+    const lessonById = Object.fromEntries(baseline.chapters.map(chapter => [chapter.id, chapter]));
+    questionRoot.innerHTML = baseline.questions.map(question => {
+      const lesson = lessonById[question.lesson];
+      const url = baseline.lessonBaseUrl + lesson.file;
+      return `
+        <div class="prestudy-question-row">
+          <strong>Q${question.id}</strong>
+          <span>Domain ${question.domain}</span>
+          <span>${escapeHtml(question.topic)}</span>
+          <a href="${url}" target="_blank" rel="noopener noreferrer">${question.lesson} · ${escapeHtml(lesson.title)}</a>
+        </div>`;
+    }).join('');
   }
 
   function renderOverview(data) {
@@ -449,6 +548,7 @@
       try { window.saveState(); } catch {}
     }
     const data = collectDashboardData();
+    renderPrestudyDiagnostic();
     renderOverview(data);
     renderSetPerformance(data);
     renderDomains(data);
