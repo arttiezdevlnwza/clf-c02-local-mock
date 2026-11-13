@@ -19,7 +19,7 @@ Primary source:
 Supporting sources:
 - Official AWS documentation
 - AWS Skill Builder / official AWS certification learning material
-- User CLF-C02 Learning Hub notes
+- Local Mock project blueprint and independently authored scenarios
 
 ## GitHub Pages
 
