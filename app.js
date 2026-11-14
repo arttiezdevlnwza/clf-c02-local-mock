@@ -578,7 +578,8 @@ function renderFeedback(q,answer){
     const displayed=q.answer.map(k=>map[k]).sort(); answerHtml=escapeHtml(displayed.join(', '));
   }
   const label=(q.type==='ordering'||q.type==='matching')?'คำตอบที่ถูก':'คำตอบ';
-  $('feedback').innerHTML=`<strong>${ok?'✅ ถูกต้อง':'❌ ยังไม่ถูก'} — ${label}: ${q.type==='single'||q.type==='multiple'?answerHtml:''}</strong>${q.type==='ordering'||q.type==='matching'?answerHtml:''}<div class="explanation">${escapeHtml(explanationWithChoices(q,q.explanation))}</div>`;
+  const detail=(q.type==='single'||q.type==='multiple') && window.CLF_EXPLANATION_GUIDE ? window.CLF_EXPLANATION_GUIDE.html(q,displayMap(q)) : `<div class="explanation">${escapeHtml(explanationWithChoices(q,q.explanation))}</div>`;
+  $('feedback').innerHTML=`<strong>${ok?'✅ ถูกต้อง':'❌ ยังไม่ถูก'} — ${label}: ${q.type==='single'||q.type==='multiple'?answerHtml:''}</strong>${q.type==='ordering'||q.type==='matching'?answerHtml:''}${detail}`;
 }
 function renderQuestionGrid(){
   const st=state(); $('questionGrid').innerHTML='';
@@ -691,7 +692,7 @@ function renderSummaryList(){
       <div class="summary-all-choices"><div class="summary-label">ช้อยส์ทั้งหมด</div>${allChoicesDisplayHtml(q,userAnswer)}</div>
       <div class="summary-answer-block ${ok?'user-answer-correct':'user-answer'}"><div class="summary-label">${ok?'✅':'❌'} คำตอบที่เลือก</div>${answerDisplayHtml(q,userAnswer)}</div>
       <div class="summary-answer-block correct-answer"><div class="summary-label">✅ คำตอบที่ถูก</div>${answerDisplayHtml(q,q.answer)}</div>
-      <div class="summary-explanation"><div class="summary-label">คำอธิบาย</div>${escapeHtml(explanationWithChoices(q,q.explanation))}</div>
+      <div class="summary-explanation">${window.CLF_EXPLANATION_GUIDE && (q.type==='single' || q.type==='multiple') ? window.CLF_EXPLANATION_GUIDE.html(q,displayMap(q)) : `<div class="summary-label">คำอธิบาย</div>${escapeHtml(explanationWithChoices(q,q.explanation))}`}</div>
       <button type="button" class="ghost review-one-btn">กลับไปดูข้อนี้ →</button>`;
     card.querySelector('.review-one-btn').onclick=()=>{ currentIndex=i; vocabOpen=false; reviewWrongOnly=false; $('incorrectBtn').textContent='ดูข้อที่ผิด'; $('summaryView').classList.add('hidden'); $('quizView').classList.remove('hidden'); renderQuiz(); };
     list.appendChild(card);
@@ -716,7 +717,8 @@ function buildReviewText(){
     allChoicesDisplayText(q,user).forEach(line=>lines.push(line));
     lines.push(`Selected: ${answerDisplayText(q,user)}`);
     lines.push(`Correct: ${answerDisplayText(q,q.answer)}`);
-    lines.push(`Explanation (TH): ${explanationWithChoices(q,q.explanation)}`);
+    if(window.CLF_EXPLANATION_GUIDE && (q.type==='single'||q.type==='multiple')) lines.push(window.CLF_EXPLANATION_GUIDE.plain(q,displayMap(q)));
+    else lines.push(`Explanation (TH): ${explanationWithChoices(q,q.explanation)}`);
     if(flag) lines.push(`Review: ยังไม่มั่นใจ / ขอให้อธิบายเพิ่มเติม`);
     lines.push('');
   });
