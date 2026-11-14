@@ -79,7 +79,7 @@
     [/\b(?:community.based|technical knowledge|questions and answers)\b/i,'ต้องการแหล่งความรู้หรือชุมชนถามตอบ'],
     [/\b(?:AWS service event|affecting its account|health event)\b/i,'ต้องตรวจเหตุการณ์ AWS ที่กระทบบัญชีหรือทรัพยากร'],
     [/\b(?:product ideas|experiment|prototypes|rapidly)\b/i,'ต้องทดลองหรือสร้างสิ่งใหม่ได้อย่างรวดเร็ว'],
-    [/\b(?:business|people|governance|platform|security|operations)\b/i,'ต้องดูว่าคำถามเกี่ยวกับมุมมองขององค์กรหรือไม่'],
+    [/\b(?:business, people, governance|organizational perspectives|cloud adoption framework|AWS CAF)\b/i,'เน้นกรอบมุมมององค์กรสำหรับการนำ cloud มาใช้'],
     [/\b(?:MOST|BEST|LEAST|PRIMARY|directly|primarily)\b/i,'ต้องเลือกตัวเลือกที่ตรงเงื่อนไขที่สุด ไม่ใช่แค่เกี่ยวข้อง']
   ];
   const esc = value => String(value==null?'':value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
