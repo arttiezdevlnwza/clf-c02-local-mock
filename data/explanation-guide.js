@@ -110,6 +110,7 @@
     const patterns=[/(?:ควรเลือก|ควรใช้|ควรพิจารณา|ควรตั้งค่า|ต้องใช้|ต้องเลือก|บริการใด|เครื่องมือใด|แนวทางใด|กลยุทธ์ใด|คุณสมบัติใด|หลักการใด|ใครรับผิดชอบ|ข้อใด(?:สองข้อ)?|ตัวเลือกใด|เป็น pillar ใด|เป็น strategy ใด|สอดคล้อง pillar ใด|เป็นรูปแบบค่าใช้จ่ายใด).{0,120}$/i];
     for(const p of patterns){const m=text.match(p);if(m)return m[0].replace(/[?？]$/,'');}
     const cleaned=text.replace(/[?？]\s*$/,'');
+    if(/^(?:ทำไม|Requirement ใด|ข้อความใด)/i.test(cleaned))return cleaned;
     const ask=cleaned.match(/(?:ประโยชน์|แนวคิด|บริการ|เครื่องมือ|กลยุทธ์|คุณสมบัติ|รูปแบบ|ตัวเลือก|แนวทาง|หลักการ|ความสามารถ|ความรับผิดชอบ|การกระทำ|องค์ประกอบ|ข้อใด|pillar|concept|framework|option|resource|ใคร|อะไร)[^.!?？]{0,110}$/);
     if(ask)return ask[0];
     const tail=cleaned.match(/[^\s]{0,50}(?:ใด|อะไร|ไหน|อย่างไร|ใคร|หรือไม่)[^\s]{0,50}$/);
