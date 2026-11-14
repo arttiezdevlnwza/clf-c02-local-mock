@@ -132,9 +132,9 @@
     "2.1",
     "A customer uses Amazon S3 and accidentally grants public read access to confidential objects. Which party is responsible for correcting the access policy?",
     "ลูกค้าใช้ S3 และเผลอเปิด public read ให้ข้อมูลลับ ใครต้องแก้ access policy",
-    "AWS IAM|AWS KMS|IAM Access Analyzer|AWS Organizations",
+    "The customer|AWS|AWS Support|The third-party auditor",
     "0",
-    "ลูกค้ารับผิดชอบการกำหนด IAM และ bucket permissions สำหรับข้อมูลของตน"
+    "ลูกค้ารับผิดชอบกำหนด S3 bucket policies และ object permissions ของข้อมูลตนเอง รวมถึงแก้ไขการเปิด public access โดยไม่ตั้งใจ"
   ],
   [
     "2.1",
@@ -148,17 +148,17 @@
     "2.1",
     "Which TWO activities are customer responsibilities for data stored in AWS? (Select TWO.)",
     "กิจกรรมสองข้อใดเป็นความรับผิดชอบลูกค้าสำหรับข้อมูลที่เก็บบน AWS",
-    "AWS KMS|AWS IAM|AWS Artifact|AWS Health Dashboard|AWS Marketplace",
+    "Managing customer-data encryption settings|Defining data-access permissions|Patching AWS-owned physical hosts|Securing AWS data centers|Maintaining AWS global network infrastructure",
     "0,1",
-    "ลูกค้าต้องกำหนด encryption/key usage และสิทธิ์การเข้าถึงข้อมูลให้เหมาะกับความเสี่ยง"
+    "ลูกค้ากำหนดการเข้ารหัสและสิทธิ์เข้าถึงข้อมูลของตน ส่วน physical hosts และ AWS data centers เป็นความรับผิดชอบของ AWS"
   ],
   [
     "2.1",
     "A company uses EC2 rather than a fully managed compute service. Which additional layer must it typically manage?",
     "บริษัทใช้ EC2 แทน fully managed compute จึงต้องจัดการ layer เพิ่มเติมใด",
-    "Amazon EC2|AWS CloudTrail|AWS Artifact|AWS Shield",
+    "Guest operating system|Hypervisor|AWS-owned physical servers|AWS data center power systems",
     "0",
-    "ลูกค้าต้องดูแล guest operating system รวมถึง patches และ configuration ของ EC2"
+    "EC2 ให้ลูกค้าดูแล guest operating system รวมถึง configuration และ patching ขณะที่ AWS ดูแล hypervisor และ physical infrastructure"
   ],
   [
     "2.2",
