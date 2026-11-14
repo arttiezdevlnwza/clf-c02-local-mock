@@ -52,7 +52,7 @@
     "1.2",
     "Which TWO practices are consistent with the Reliability pillar? (Select TWO.)",
     "แนวทางสองข้อใดสอดคล้องกับ Reliability pillar",
-    "Multi-AZ deployment|Fault tolerance|Cost allocation tags|AWS Pricing Calculator|AWS Trusted Advisor",
+    "Multi-AZ deployment|Fault tolerance|Cost allocation tags|AWS Pricing Calculator|AWS KMS",
     "0,1",
     "Multi-AZ deployment ลด single point of failure และ Fault tolerance ทำให้ระบบรับมือความล้มเหลวได้"
   ],
