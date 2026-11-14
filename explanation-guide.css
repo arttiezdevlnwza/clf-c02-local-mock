@@ -21,3 +21,9 @@
 .summary-explanation:has(.guided-explanation){padding:0;background:transparent;border:0}
 .feedback .guided-explanation{font-size:14px}
 @media(max-width:520px){.guide-section{padding:12px}.guide-choice{padding:10px}.guide-choice-title{flex-direction:column;gap:3px}}
+
+/* Short concept definition and real-world example under "โจทย์ถามอะไร?" */
+.guide-concept{margin-top:10px;padding:10px 12px;border-left:3px solid #84caff;border-radius:8px;background:#f5faff;line-height:1.65}
+.guide-concept strong{display:block;margin-bottom:4px;color:#175cd3}
+.guide-section .guide-concept p{margin:3px 0 0;line-height:1.65}
+.guide-concept em{font-style:normal;font-weight:700;color:#344054}
