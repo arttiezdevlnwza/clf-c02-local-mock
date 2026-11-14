@@ -31,7 +31,8 @@
     </div>
 
     <div id="familyGuideGroups" class="family-guide-groups"></div>
-    <p class="dashboard-note family-guide-note">อัปเดต ${esc(guide.updated)} · ทำเป็น quick-reference สำหรับแยก service/concept ที่ชื่อหรือหน้าที่คล้ายกันใน CLF-C02</p>`;
+    <p class="dashboard-note family-guide-note">อัปเดต ${esc(guide.updated)} · ${esc(guide.examGuideVersion || 'CLF-C02')} · เนื้อหาสรุปเพื่อทบทวนสอบ</p>
+    <p class="dashboard-note family-guide-note">อ้างอิง: ${(guide.sources || []).map(source => `<a href="${esc(source.url)}" target="_blank" rel="noopener noreferrer">${esc(source.name)}</a>`).join(' · ')}</p>`;
 
   const groupsRoot = document.getElementById('familyGuideGroups');
   const mapRoot = document.getElementById('familyGuideMap');
@@ -42,7 +43,7 @@
   function renderMap(query='') {
     const q = query.trim().toLowerCase();
     mapRoot.innerHTML = guide.groups.map(group => {
-      const haystack = [group.title, group.summary, ...group.items.flatMap(item => [item.name,item.use,item.cue,item.confuse])].join(' ').toLowerCase();
+      const haystack = [group.title, group.summary, ...group.items.flatMap(item => [item.name,item.use,item.cue,item.confuse,item.example])].join(' ').toLowerCase();
       if (q && !haystack.includes(q)) return '';
       const sample = group.items.slice(0, 3).map(item => item.name).join(' · ');
       return `
@@ -68,7 +69,7 @@
   function renderGroups(query='') {
     const q = query.trim().toLowerCase();
     const groups = guide.groups.map(group => {
-      const matchedItems = group.items.filter(item => !q || [group.title,group.summary,item.name,item.use,item.cue,item.confuse].join(' ').toLowerCase().includes(q));
+      const matchedItems = group.items.filter(item => !q || [group.title,group.summary,item.name,item.use,item.cue,item.confuse,item.example].join(' ').toLowerCase().includes(q));
       if (q && !matchedItems.length) return '';
 
       return `
@@ -95,6 +96,7 @@
                 <div class="family-guide-item-head"><strong>${esc(item.name)}</strong><span>${esc(item.use)}</span></div>
                 <div class="family-guide-memory">🧠 จำสั้น ๆ: ${esc(item.cue)}</div>
                 <div class="family-guide-confuse">⚠️ อย่าสับสน: ${esc(item.confuse)}</div>
+                ${item.example ? `<div class="family-guide-example">💡 ตัวอย่าง: ${esc(item.example)}</div>` : ""}
               </article>`).join('')}
           </div>
         </details>`;
