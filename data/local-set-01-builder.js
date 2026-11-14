@@ -60,6 +60,10 @@
     title:'Local Mock Set 1',
     subtitle:'65 Questions · CLF-C02 Blueprint Mix · Exam-Style + Close Distractors',
     questionCount:65,
+    // First completed attempt from the 2026-11-14 exported exam report.
+    // Keep as history when a browser has no completed local attempt; do not overwrite local progress.
+    historicalAnswered:65,
+    historicalScore:65,
     questions,
     _blueprint:{
       domains,types,tasks,qualityProblems:problems,
