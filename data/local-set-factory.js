@@ -170,6 +170,68 @@
     "AWS-owned physical servers": "เครื่อง server จริงใน AWS data centers ที่ AWS ดูแล",
     "AWS data center power systems": "ระบบไฟฟ้าและโครงสร้างพื้นฐานของ data centers ที่ AWS ดูแล"
   });
+  // Explain each distractor by its real function and the distinction from this question's requirement.
+  // Preserve existing answer keys and the authored explanation for correct choices.
+  const specificContrasts = {
+    'Agility|Elasticity': {
+      'Rightsizing':'Rightsizing คือการเลือกขนาด resource ให้พอดีกับ workload ไม่ได้อธิบายทั้งการทดลองได้เร็วและการปรับ capacity ขึ้นลงตาม demand',
+      'Scalability':'Scalability คือความสามารถรองรับ workload ที่เติบโต แต่ไม่ใช่ความคล่องตัวในการสร้าง environment และไม่ได้เน้นการลด capacity เมื่อ demand ลด',
+      'High availability':'High availability เน้นให้บริการพร้อมใช้งานแม้บางส่วนมีปัญหา ไม่ใช่ความเร็วในการทดลองหรือการปรับ capacity ตาม demand'
+    },
+    'Agility': {
+      'Elasticity':'Elasticity คือการเพิ่มลด capacity ตาม demand ส่วนโจทย์นี้เน้นความเร็วในการสร้างและเลิกใช้ test environment',
+      'Scalability':'Scalability คือการรองรับ workload ที่เพิ่มขึ้น แต่โจทย์เน้นความเร็วในการทดลองและ deploy',
+      'Pay-as-you-go':'Pay-as-you-go คือจ่ายตามการใช้งานจริง แม้ช่วยเรื่องค่าใช้จ่าย แต่ไม่ใช่คุณสมบัติที่อธิบายความเร็วในการสร้าง environment'
+    },
+    'Elasticity': {
+      'Scalability':'Scalability คือความสามารถรองรับโหลดที่เพิ่มขึ้น ส่วน Elasticity เน้นปรับทั้งเพิ่มและลด capacity ตาม demand ที่เปลี่ยนไป',
+      'Rightsizing':'Rightsizing คือเลือกขนาด resource ให้เหมาะกับการใช้งานที่วัดได้ แต่ไม่ได้หมายถึงการเพิ่มลด capacity ตาม demand แบบต่อเนื่อง',
+      'High availability':'High availability เน้นลด downtime เมื่อระบบบางส่วนล้มเหลว ไม่ใช่การปรับ capacity ตามจำนวนผู้ใช้'
+    },
+    'Fault tolerance': {
+      'High availability':'High availability มุ่งให้บริการพร้อมใช้งานโดยรวม แต่อาจมีช่วง failover; โจทย์นี้เน้นทำงานต่อได้แม้ component หยุดกะทันหัน',
+      'Reliability':'Reliability เป็นแนวคิดกว้างเรื่องการทำงานและฟื้นจาก failure ส่วนโจทย์เจาะจงความสามารถทำงานต่อเมื่อ component ล้มเหลว',
+      'Multi-AZ deployment':'Multi-AZ deployment เป็นวิธีวางระบบข้าม AZ เพื่อเพิ่ม resilience ไม่ใช่ชื่อคุณสมบัติที่โจทย์ถาม'
+    },
+    'Performance Efficiency': {
+      'Cost Optimization':'Cost Optimization เน้นความคุ้มค่าของค่าใช้จ่าย ส่วนโจทย์นี้วัดการเลือก instance ให้ได้ throughput ตามเป้าหมาย',
+      'Operational Excellence':'Operational Excellence เน้นการดำเนินงานและปรับปรุงกระบวนการ ไม่ได้เน้นการเลือก compute เพื่อให้ได้ throughput',
+      'Sustainability':'Sustainability เน้นผลกระทบต่อสิ่งแวดล้อม ไม่ใช่การเลือก resource ให้ได้ performance targets'
+    },
+    'Rehost': {
+      'Replatform':'Replatform มีการปรับ platform บางส่วน เช่นเปลี่ยนไปใช้ managed database แต่โจทย์ระบุว่าแทบไม่เปลี่ยนแอป',
+      'Refactor':'Refactor ปรับ architecture/code มากเพื่อใช้ cloud-native แต่โจทย์ระบุว่ามีการเปลี่ยนแปลงน้อยมาก',
+      'Retain':'Retain คือยังเก็บ workload ไว้ที่เดิม ไม่ใช่ย้ายขึ้น AWS virtual machines'
+    },
+    'Replatform': {
+      'Rehost':'Rehost ย้ายโดยแทบไม่ปรับ platform แต่โจทย์มีการเปลี่ยน self-managed database เป็น RDS',
+      'Refactor':'Refactor ปรับ architecture/code เชิงลึก แต่โจทย์เปลี่ยน platform บางส่วนและแก้ code เพียงเล็กน้อย',
+      'Retain':'Retain คือเก็บระบบไว้ที่เดิม ไม่ใช่ย้ายแอปขึ้น AWS'
+    },
+    'Refactor': {
+      'Replatform':'Replatform เปลี่ยน platform บางส่วนโดยยังคงโครงสร้างหลัก แต่โจทย์ต้องการแยก monolith และออกแบบ cloud-native',
+      'Rehost':'Rehost คือ lift-and-shift โดยแก้ไขน้อย ไม่ใช่การปรับ architecture เป็น cloud-native',
+      'Retain':'Retain คือคงระบบไว้ที่เดิม ไม่ได้เปลี่ยนสถาปัตยกรรมระหว่าง migration'
+    },
+    'Rightsizing': {
+      'Cost Optimization':'Cost Optimization เป็นเป้าหมายกว้างในการลดค่าใช้จ่าย ส่วนโจทย์ระบุวิธีลดขนาด instance จาก usage ที่วัดได้',
+      'Performance Efficiency':'Performance Efficiency เป็น pillar ด้านประสิทธิภาพ แต่โจทย์ถามชื่อวิธีเลือกขนาด resource ให้พอดี',
+      'Economies of scale':'Economies of scale คือข้อได้เปรียบด้านต้นทุนจากการใช้ทรัพยากรรวมจำนวนมาก ไม่ใช่การลดขนาด instance ของบริษัท'
+    },
+    'AWS Config': {
+      'AWS CloudTrail':'CloudTrail ติดตาม API activity ว่าใครทำอะไร แต่ไม่ได้ประเมิน configuration compliance เทียบ rules ตามเวลา',
+      'Amazon CloudWatch':'CloudWatch ดู metrics/logs/alarms ไม่ได้เป็นบริการหลักสำหรับประเมิน resource configurations เทียบ rules',
+      'AWS Audit Manager':'Audit Manager ช่วยรวบรวมหลักฐานการตรวจประเมิน ไม่ได้ติดตาม resource configuration history เป็นหลัก'
+    }
+  };
+  function explainDistractor(option, correctOptions, why) {
+    const key=correctOptions.join('|');
+    const specific=specificContrasts[key] && specificContrasts[key][option];
+    if(specific) return specific;
+    // Every option in the sets has an authored definition in defs (validated below).
+    // Reuse the question-specific rationale rather than a generic "not the best answer" phrase.
+    return defs[option]+'; แต่สิ่งที่โจทย์เน้นคือ '+why;
+  }
   const domainNames={1:'Cloud Concepts',2:'Security and Compliance',3:'Cloud Technology and Services',4:'Billing, Pricing, and Support'};
   const tasks=['1.1','1.2','1.3','1.4','2.1','2.2','2.3','2.4','3.1','3.2','3.3','3.4','3.5','3.6','3.7','3.8','4.1','4.2','4.3'];
   function build(setNumber,rows){
@@ -182,7 +244,7 @@
       const answer=correct.map(j=>String.fromCharCode(65+j));
       const explanation=options.map((o,j)=>{
         const letter=String.fromCharCode(65+j);
-        return correct.includes(j)?'✅ '+letter+' — '+why:'❌ '+letter+' — '+(defs[o]||'ตัวเลือกนี้ไม่ตอบความต้องการหลักของโจทย์')+'; ไม่ใช่คำตอบที่เหมาะที่สุดสำหรับเงื่อนไขนี้';
+        return correct.includes(j)?'✅ '+letter+' — '+why:'❌ '+letter+' — '+explainDistractor(o,correct.map(index=>options[index]),why);
       }).join('\n');
       const domain=Number(task[0]);
       domainCount[domain]=(domainCount[domain]||0)+1;taskCount[task]=(taskCount[task]||0)+1;typeCount[type]=(typeCount[type]||0)+1;
