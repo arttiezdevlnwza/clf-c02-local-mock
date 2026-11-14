@@ -444,7 +444,7 @@
     "3.8",
     "Which TWO services can help a developer diagnose application requests and orchestrate multi-step processes? (Select TWO.)",
     "บริการสองข้อใดช่วย trace requests และ orchestrate กระบวนการหลายขั้นตอน",
-    "AWS X-Ray|AWS Step Functions|Amazon CloudWatch|Amazon EventBridge|AWS CodePipeline",
+    "AWS X-Ray|AWS Step Functions|AWS Config|Amazon EventBridge|AWS CodePipeline",
     "0,1",
     "X-Ray ช่วย trace requests และ Step Functions จัดลำดับงานเป็น workflows"
   ],
