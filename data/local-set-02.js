@@ -148,17 +148,17 @@
     "2.1",
     "Which TWO responsibilities generally remain with customers when using managed AWS services? (Select TWO.)",
     "ความรับผิดชอบสองข้อใดยังคงอยู่กับลูกค้าเมื่อใช้ AWS managed services",
-    "AWS IAM|AWS KMS|AWS Artifact|AWS Health Dashboard|AWS Shield",
+    "Configuring IAM permissions|Managing customer encryption key policies|Securing AWS data centers|Maintaining AWS physical servers|Maintaining AWS global network infrastructure",
     "0,1",
-    "ลูกค้าต้องกำหนด IAM permissions และตัดสินใจเรื่อง encryption/key access ตามลักษณะบริการ"
+    "ลูกค้ากำหนด IAM permissions และนโยบายการใช้ encryption keys สำหรับข้อมูลของตนเอง แม้ใช้งาน AWS managed services"
   ],
   [
     "2.1",
     "An organization stores personal records in Amazon S3. Who is responsible for deciding who may read the objects?",
     "องค์กรเก็บข้อมูลส่วนบุคคลใน Amazon S3 ใครรับผิดชอบตัดสินใจว่าใครอ่าน objects ได้",
-    "AWS IAM|AWS KMS|IAM Access Analyzer|AWS CloudTrail",
+    "The customer|AWS|AWS Support|The third-party auditor",
     "0",
-    "ลูกค้าต้องออกแบบ IAM policies และ resource permissions เพื่อควบคุมการเข้าถึง objects"
+    "ลูกค้าเป็นเจ้าของข้อมูลและต้องตัดสินใจว่าใครเข้าถึง S3 objects ได้ โดยกำหนด access policies และ permissions เอง"
   ],
   [
     "2.2",
@@ -236,9 +236,9 @@
     "2.3",
     "A developer should be able to read objects but never delete them. Which principle should shape the IAM policy?",
     "นักพัฒนาควรอ่าน objects ได้แต่ห้ามลบ ควรใช้หลักการใดออกแบบ IAM policy",
-    "AWS IAM|AWS Organizations|IAM Access Analyzer|AWS Config",
+    "Least privilege|Defense in depth|Separation of duties|Zero Trust",
     "0",
-    "ใช้ IAM policy ตาม least privilege โดยอนุญาตเฉพาะ read actions ที่จำเป็น ไม่ให้ delete permissions"
+    "Least privilege ให้ developer เฉพาะสิทธิ์อ่าน S3 objects ที่จำเป็น โดยไม่ให้สิทธิ์ลบ"
   ],
   [
     "2.4",
