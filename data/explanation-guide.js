@@ -2,7 +2,12 @@
 (() => {
   // Keywords are taken verbatim from each English question, not invented or taken from answer choices.
   const signals = [
-    [/\b(?:Reliability|Operational Excellence|Performance Efficiency|Cost Optimization|Sustainability|Security) pillar\b/i,'เป็นชื่อ Well-Architected Pillar ต้องเข้าใจจุดเน้นของ Pillar นั้นก่อนเลือกแนวทาง'],
+    [/\bReliability pillar\b/i,'เน้นให้ workload ทำงานตามที่คาดหวัง ฟื้นตัวจาก failure และรองรับ failover'],
+    [/\bOperational Excellence pillar\b/i,'เน้น operations การเรียนรู้จาก incident และปรับปรุงกระบวนการ'],
+    [/\bPerformance Efficiency pillar\b/i,'เน้นเลือก resource ให้ workload ทำงานได้ตาม performance targets'],
+    [/\bCost Optimization pillar\b/i,'เน้นใช้ทรัพยากรอย่างคุ้มค่าและลดต้นทุนที่ไม่จำเป็น'],
+    [/\bSustainability pillar\b/i,'เน้นลดผลกระทบต่อสิ่งแวดล้อมจาก workload'],
+    [/\bSecurity pillar\b/i,'เน้นปกป้องข้อมูล ระบบ และสิทธิ์เข้าถึง'],
     [/\bwithout (?:managing|maintaining|provisioning|installing|buying|purchasing|building|sharing|relying|waiting)[^.?,;]*/i,'ข้อจำกัดสำคัญ: ต้องทำได้โดยไม่ต้องทำสิ่งที่ระบุ'],
     [/\b(?:no|minimal|little|almost no) (?:code|application|server|infrastructure|manual|long-term)[^.?,;]*/i,'เน้นลดสิ่งที่ต้องจัดการหรือเปลี่ยนแปลง'],
     [/\b(?:Select TWO|Choose TWO|Select THREE|Choose THREE)\b/i,'โจทย์ต้องการมากกว่าหนึ่งคำตอบ'],
