@@ -146,6 +146,30 @@
     'Capital expenditure':'ค่าใช้จ่ายลงทุนล่วงหน้าในสินทรัพย์',
     'Variable expense':'ค่าใช้จ่ายที่เปลี่ยนตามการใช้งาน'
   };
+  // Cross-service responsibility and security-principle distractors
+  Object.assign(defs, {
+    "Configuring IAM permissions": "ลูกค้ากำหนดสิทธิ์ IAM identities และ resource access ที่จำเป็น",
+    "Managing customer encryption key policies": "ลูกค้ากำหนดนโยบายการใช้ encryption keys ที่ควบคุมเอง",
+    "Securing AWS data centers": "หน้าที่ของ AWS ในการรักษาความปลอดภัยศูนย์ข้อมูลทางกายภาพ",
+    "Maintaining AWS physical servers": "หน้าที่ของ AWS ในการบำรุงรักษา hardware underlying services",
+    "Maintaining AWS global network infrastructure": "หน้าที่ของ AWS ในการดูแลเครือข่าย backbone ของ AWS",
+    "The customer": "ลูกค้า AWS ผู้ดูแลข้อมูลและสิทธิ์เข้าถึงข้อมูลของตน",
+    "AWS": "ผู้ให้บริการ cloud ที่ดูแลความปลอดภัยของ infrastructure",
+    "AWS Support": "ทีมสนับสนุนเพื่อช่วยแก้ปัญหาการใช้บริการ ไม่ได้กำหนดสิทธิ์ข้อมูลแทนลูกค้า",
+    "The third-party auditor": "ผู้ตรวจประเมินภายนอก ไม่ได้เป็นเจ้าของนโยบายการเข้าถึงของลูกค้า",
+    "The internet service provider": "ผู้ให้บริการอินเทอร์เน็ต ไม่ได้เป็นผู้กำหนดสิทธิ์ใน S3",
+    "Least privilege": "หลักให้สิทธิ์เท่าที่จำเป็นต่อการทำงาน",
+    "Defense in depth": "หลักใช้มาตรการรักษาความปลอดภัยหลายชั้น",
+    "Separation of duties": "หลักแยกหน้าที่หรืออำนาจสำคัญเพื่อป้องกันการใช้งานผิด",
+    "Zero Trust": "หลักไม่เชื่อถือโดยอัตโนมัติและตรวจสอบการเข้าถึงต่อเนื่อง",
+    "Managing customer-data encryption settings": "ลูกค้าตั้งค่าการเข้ารหัสข้อมูลตามข้อกำหนดของตน",
+    "Defining data-access permissions": "ลูกค้ากำหนดว่า identity ใดเข้าถึงข้อมูลอะไรได้",
+    "Patching AWS-owned physical hosts": "หน้าที่ของ AWS ในการดูแลระบบ host ทางกายภาพที่ตนเป็นเจ้าของ",
+    "Guest operating system": "ระบบปฏิบัติการภายใน EC2 ที่ลูกค้าต้องกำหนดค่าและ patch",
+    "Hypervisor": "ระบบ virtualization underlying EC2 ที่ AWS ดูแล",
+    "AWS-owned physical servers": "เครื่อง server จริงใน AWS data centers ที่ AWS ดูแล",
+    "AWS data center power systems": "ระบบไฟฟ้าและโครงสร้างพื้นฐานของ data centers ที่ AWS ดูแล"
+  });
   const domainNames={1:'Cloud Concepts',2:'Security and Compliance',3:'Cloud Technology and Services',4:'Billing, Pricing, and Support'};
   const tasks=['1.1','1.2','1.3','1.4','2.1','2.2','2.3','2.4','3.1','3.2','3.3','3.4','3.5','3.6','3.7','3.8','4.1','4.2','4.3'];
   function build(setNumber,rows){
