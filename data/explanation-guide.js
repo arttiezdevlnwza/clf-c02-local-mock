@@ -83,6 +83,218 @@
     [/\b(?:business, people, governance|organizational perspectives|cloud adoption framework|AWS CAF)\b/i,'เน้นกรอบมุมมององค์กรสำหรับการนำ cloud มาใช้'],
     [/\b(?:MOST|BEST|LEAST|PRIMARY|directly|primarily)\b/i,'ต้องเลือกตัวเลือกที่ตรงเงื่อนไขที่สุด ไม่ใช่แค่เกี่ยวข้อง']
   ];
+  const scenarioGlossary = [
+  {
+    "term": "Demand / Capacity",
+    "pattern": "\\b(?:demand|capacity|traffic spikes?|varying demand|unpredictable peaks?)\\b",
+    "meaning": "Demand คือปริมาณงานที่เข้ามา ส่วน Capacity คือกำลังรองรับงานของระบบ",
+    "example": "เว็บมีผู้ใช้พุ่งขึ้นจึงต้องเพิ่มจำนวน EC2"
+  },
+  {
+    "term": "Latency",
+    "pattern": "\\blatency\\b",
+    "meaning": "เวลาหน่วงตั้งแต่ส่ง Request จนเริ่มได้รับ Response; ค่ายิ่งต่ำยิ่งตอบสนองเร็ว",
+    "example": "ใช้ CloudFront ส่งรูปจาก Edge ใกล้ผู้ใช้"
+  },
+  {
+    "term": "Throughput",
+    "pattern": "\\bthroughput\\b",
+    "meaning": "ปริมาณงานที่ระบบประมวลผลได้ต่อหน่วยเวลา",
+    "example": "วัดจำนวน Requests ต่อวินาทีที่ระบบรองรับ"
+  },
+  {
+    "term": "Incident",
+    "pattern": "\\b(?:incidents?|lessons learned|deployment procedures)\\b",
+    "meaning": "Incident คือเหตุการณ์ที่กระทบการทำงานของระบบ การทบทวนเหตุการณ์ช่วยปรับกระบวนการไม่ให้เกิดซ้ำ",
+    "example": "วิเคราะห์สาเหตุ Production Outage แล้วแก้ Runbook"
+  },
+  {
+    "term": "Failover",
+    "pattern": "\\b(?:failover|automatic recovery|recover\\w*|component unexpectedly stops)\\b",
+    "meaning": "การสลับไปใช้ระบบหรือส่วนสำรองเมื่อส่วนหลักมีปัญหา",
+    "example": "RDS Multi-AZ สลับไป Standby เมื่อ Primary ใช้งานไม่ได้"
+  },
+  {
+    "term": "Cloud migration",
+    "pattern": "\\b(?:migrat\\w*|legacy application|lift.and.shift)\\b",
+    "meaning": "การย้ายแอป ข้อมูล หรือโครงสร้างพื้นฐานจากที่เดิมไป AWS โดยเลือกกลยุทธ์ตามระดับการเปลี่ยนแปลง",
+    "example": "ย้าย Server ไป EC2 หรือเปลี่ยน Database เป็น RDS"
+  },
+  {
+    "term": "On-premises",
+    "pattern": "\\b(?:on.premises|own data centers?|data center|physical servers?)\\b",
+    "meaning": "ระบบที่องค์กรติดตั้งและดูแลเองในสถานที่ของตน ต่างจากการใช้บริการ AWS Cloud",
+    "example": "บริษัทดูแล Servers ใน Data Center ของตัวเอง"
+  },
+  {
+    "term": "Cloud-native",
+    "pattern": "\\b(?:cloud.native|monolithic|microservices)\\b",
+    "meaning": "แนวทางออกแบบแอปให้ใช้ประโยชน์จาก Cloud เช่น Managed Services และการแยกส่วนระบบ",
+    "example": "แยก Monolith เป็น Services ที่ Scale ได้อิสระ"
+  },
+  {
+    "term": "Utilization",
+    "pattern": "\\b(?:utilization|underutilized|CPU and memory|instance sizes?)\\b",
+    "meaning": "สัดส่วนการใช้ทรัพยากรจริงเมื่อเทียบกับที่จัดเตรียมไว้",
+    "example": "EC2 ใช้ CPU เพียง 5% ต่อเนื่องอาจมีขนาดใหญ่เกินจำเป็น"
+  },
+  {
+    "term": "Compliance",
+    "pattern": "\\b(?:complian\\w*|required rules|regulat\\w*)\\b",
+    "meaning": "การปฏิบัติตามกฎ นโยบาย หรือข้อกำหนดที่องค์กรต้องทำตาม",
+    "example": "ตรวจว่า S3 Buckets ไม่เปิด Public Access ผิด Policy"
+  },
+  {
+    "term": "Configuration",
+    "pattern": "\\b(?:configurations?|configuration changes?|resource configurations?)\\b",
+    "meaning": "ค่าการตั้งค่าของ AWS Resources เช่น Network Rules, Encryption และ Public Access",
+    "example": "เปลี่ยน S3 Bucket Policy แล้วตรวจว่าเป็นไปตามมาตรฐาน"
+  },
+  {
+    "term": "Audit",
+    "pattern": "\\b(?:auditors?|audit history|SOC reports?|audit reports?)\\b",
+    "meaning": "การตรวจสอบหลักฐานและกิจกรรมเพื่อพิสูจน์ว่าระบบเป็นไปตามข้อกำหนด",
+    "example": "Auditor ขอ SOC Report หรือบันทึก API Activity"
+  },
+  {
+    "term": "API",
+    "pattern": "\\bAPI(?:s| calls?| activity)?\\b",
+    "meaning": "Application Programming Interface คือช่องทางให้โปรแกรมเรียกใช้งานบริการ; AWS API Actions ใช้สืบค้นกิจกรรมได้",
+    "example": "CloudTrail บันทึกการเรียก DeleteBucket"
+  },
+  {
+    "term": "IAM principal",
+    "pattern": "\\b(?:IAM principals?|IAM identities|identity|privileged AWS access)\\b",
+    "meaning": "ตัวตนที่ใช้ขอสิทธิ์ทำงานบน AWS เช่น IAM User หรือ Role",
+    "example": "ตรวจว่า Role ใดเรียก AWS API"
+  },
+  {
+    "term": "MFA",
+    "pattern": "\\b(?:MFA|multi.factor authentication)\\b",
+    "meaning": "Multi-Factor Authentication เพิ่มการยืนยันตัวตนอีกปัจจัยนอกเหนือจากรหัสผ่าน",
+    "example": "ใช้ Authenticator App เมื่อเข้าสู่ระบบ"
+  },
+  {
+    "term": "Vulnerability",
+    "pattern": "\\b(?:vulnerabilit\\w*|CVE|container images?)\\b",
+    "meaning": "ช่องโหว่ด้านความปลอดภัยใน Software หรือ Package ที่อาจถูกโจมตีได้",
+    "example": "Amazon Inspector พบ CVE ใน EC2 Package"
+  },
+  {
+    "term": "Encryption",
+    "pattern": "\\b(?:encrypt\\w*|cryptographic|encryption keys?)\\b",
+    "meaning": "การแปลงข้อมูลให้อ่านไม่ได้หากไม่มี Key ที่เหมาะสม",
+    "example": "เข้ารหัส Objects ใน S3 ด้วย KMS Key"
+  },
+  {
+    "term": "DDoS protection",
+    "pattern": "\\b(?:DDoS|volumetric attacks?)\\b",
+    "meaning": "การป้องกันการโจมตีส่ง Traffic จำนวนมากจนบริการรับไม่ไหว",
+    "example": "ใช้ AWS Shield ช่วยป้องกัน DDoS"
+  },
+  {
+    "term": "HTTP requests",
+    "pattern": "\\b(?:HTTP requests?|web application layer|SQL injection)\\b",
+    "meaning": "HTTP Request คือคำขอที่ Client ส่งไปยังเว็บ; Web Application Firewall กรองรูปแบบคำขออันตรายได้",
+    "example": "AWS WAF บล็อก Request ที่คล้าย SQL Injection"
+  },
+  {
+    "term": "Infrastructure as Code",
+    "pattern": "\\b(?:version.controlled templates?|infrastructure as code|repeatable templates?)\\b",
+    "meaning": "การกำหนด Infrastructure ด้วย Code/Templates เพื่อสร้างซ้ำและเก็บ Version ได้",
+    "example": "ใช้ CloudFormation Deploy Environment เดิมซ้ำ"
+  },
+  {
+    "term": "Event-driven",
+    "pattern": "\\b(?:event.driven|triggered by|short functions?)\\b",
+    "meaning": "การทำงานที่เริ่มเมื่อเกิด Event แทนการเปิด Process รอไว้ตลอด",
+    "example": "S3 Upload กระตุ้น Lambda ให้ทำงาน"
+  },
+  {
+    "term": "Container",
+    "pattern": "\\b(?:containers?|container images?|Docker)\\b",
+    "meaning": "การแพ็กแอปพร้อม Dependencies เพื่อรันแยกจากแอปอื่น โดยแชร์ Kernel ของ Host",
+    "example": "รัน Docker Container บน ECS"
+  },
+  {
+    "term": "Kubernetes",
+    "pattern": "\\bKubernetes\\b",
+    "meaning": "แพลตฟอร์ม Container Orchestration สำหรับจัดการ Deployment, Scaling และ Scheduling",
+    "example": "Amazon EKS จัดการ Kubernetes Control Plane ให้"
+  },
+  {
+    "term": "Relational database",
+    "pattern": "\\b(?:relational|SQL|database engine|PostgreSQL|MySQL)\\b",
+    "meaning": "ฐานข้อมูลแบบตารางที่รองรับความสัมพันธ์และ SQL",
+    "example": "ใช้ RDS PostgreSQL เก็บ Orders"
+  },
+  {
+    "term": "NoSQL database",
+    "pattern": "\\b(?:NoSQL|key.value|document database)\\b",
+    "meaning": "ฐานข้อมูลที่ไม่จำเป็นต้องใช้ตารางสัมพันธ์แบบ SQL",
+    "example": "ใช้ DynamoDB เก็บ Key-value Records"
+  },
+  {
+    "term": "Caching",
+    "pattern": "\\b(?:cache|caching|in.memory)\\b",
+    "meaning": "เก็บข้อมูลที่เรียกซ้ำบ่อยไว้ในหน่วยความจำเพื่อลดเวลาเข้าถึง",
+    "example": "ใช้ ElastiCache ลดการ Query Database ซ้ำ"
+  },
+  {
+    "term": "Object storage",
+    "pattern": "\\b(?:objects?|buckets?|object storage)\\b",
+    "meaning": "จัดเก็บข้อมูลเป็น Objects พร้อม Metadata แทน Disk Blocks",
+    "example": "เก็บรูปสินค้าใน S3 Bucket"
+  },
+  {
+    "term": "Block storage",
+    "pattern": "\\b(?:block storage|volumes?|instance store)\\b",
+    "meaning": "Storage ที่แอปหรือ OS มองเป็น Disk/Volume",
+    "example": "แนบ EBS Volume ให้ EC2"
+  },
+  {
+    "term": "Private network",
+    "pattern": "\\b(?:private network|dedicated private|private connectivity|public internet)\\b",
+    "meaning": "การเชื่อมต่อเครือข่ายที่ควบคุมเส้นทางและการเข้าถึงได้ตามข้อกำหนด",
+    "example": "ใช้ Direct Connect เชื่อม Data Center กับ AWS"
+  },
+  {
+    "term": "Streaming data",
+    "pattern": "\\b(?:streaming|real.time data|clickstream)\\b",
+    "meaning": "ข้อมูลที่เข้ามาต่อเนื่องและมักต้องประมวลผลใกล้เวลาจริง",
+    "example": "ส่ง Events เข้า Kinesis Data Streams"
+  },
+  {
+    "term": "ETL",
+    "pattern": "\\b(?:ETL|data integration|data catalog)\\b",
+    "meaning": "Extract, Transform, Load คือกระบวนการดึง แปลง และโหลดข้อมูล",
+    "example": "ใช้ AWS Glue เตรียมข้อมูลก่อน Query"
+  },
+  {
+    "term": "Decoupling",
+    "pattern": "\\b(?:decoupl\\w*|asynchronous|message queues?|buffer tasks?)\\b",
+    "meaning": "แยกส่วนระบบไม่ให้ต้องรอทำงานพร้อมกัน โดยส่งงานผ่าน Queue",
+    "example": "Order Service ส่ง Message เข้า SQS ให้ Worker"
+  },
+  {
+    "term": "Pub/Sub",
+    "pattern": "\\b(?:pub.sub|fan.out|subscribers?)\\b",
+    "meaning": "การส่งข้อความจาก Publisher ไปยัง Subscribers หลายราย",
+    "example": "SNS Topic ส่งข้อความไปหลาย SQS Queues"
+  },
+  {
+    "term": "Cost management",
+    "pattern": "\\b(?:cost|billing|charges|spending|expense|financial)\\b",
+    "meaning": "การติดตาม ประเมิน และควบคุมค่าใช้จ่าย Cloud ให้เหมาะกับการใช้งาน",
+    "example": "ใช้ Budgets แจ้งเตือนและ Cost Explorer วิเคราะห์ย้อนหลัง"
+  },
+  {
+    "term": "Support Plan",
+    "pattern": "\\b(?:support plans?|support cases?|technical support)\\b",
+    "meaning": "ระดับสิทธิ์การขอความช่วยเหลือจาก AWS ซึ่งต่างกันตามแผน",
+    "example": "เลือก Business Support+ เมื่อต้องการ Technical Support 24/7"
+  }
+].map(entry=>({...entry,rx:new RegExp(entry.pattern,'i')}));
   // Explain the meaning of the concepts named in the question before discussing answers.
   // Match only the question stem/translation, never distractor choices or the answer key.
   const conceptGlossary = [
@@ -486,6 +698,12 @@
       if(entry.term==='Well-Architected Framework'&&found.some(x=>/pillar$/.test(x.term)))continue;
       found.push({term:entry.term,meaning:entry.meaning,example:entry.example});
       if(found.length===2)break;
+    }
+    // When no named concept appears, explain the technical terms in the scenario.
+    // Limit to one scenario concept to keep each review concise.
+    if(!found.length){
+      const match=scenarioGlossary.find(entry=>entry.rx.test(source));
+      if(match)found.push({term:match.term,meaning:match.meaning,example:match.example});
     }
     return found;
   }
