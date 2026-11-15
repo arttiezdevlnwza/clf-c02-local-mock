@@ -9,6 +9,17 @@
     })[char]);
   }
 
+  // Review text is stored as prose, sometimes separated by semicolons.
+  // Render each point on its own line without changing the stored review data.
+  function reviewTextLines(values) {
+    const entries = Array.isArray(values) ? values : [values];
+    return entries.flatMap(value => String(value ?? '').split(/[;\r\n]+/))
+      .map(line => line.trim())
+      .filter(Boolean)
+      .map(line => `<p>${escapeHtml(line)}</p>`)
+      .join('');
+  }
+
   function ensurePanel(id, title, subtitle) {
     let panel = document.getElementById(id);
     if (panel) return panel;
@@ -270,8 +281,8 @@
                 ${rawFlags.length ? `<div><b>Raw flags</b><p>${escapeHtml(rawFlags.join(' · '))}</p></div>` : ''}
                 ${row.userReasoning ? `<div class="review-detail-wide"><b>ตอนทำคิดอะไร</b><p>${escapeHtml(row.userReasoning)}</p></div>` : ''}
                 ${row.diagnosis ? `<div class="review-detail-wide"><b>Final diagnosis</b><p>${escapeHtml(row.diagnosis)}</p></div>` : ''}
-                ${row.memoryCue ? `<div class="review-detail-wide"><b>จำสั้น ๆ</b><p>${escapeHtml(row.memoryCue)}</p></div>` : ''}
-                ${notes.length ? `<div class="review-detail-wide"><b>Review notes</b><p>${escapeHtml(notes.join(' / '))}</p></div>` : ''}
+                ${row.memoryCue ? `<div class="review-detail-wide review-detail-lines"><b>จำสั้น ๆ</b>${reviewTextLines(row.memoryCue)}</div>` : ''}
+                ${notes.length ? `<div class="review-detail-wide review-detail-lines"><b>Review notes</b>${reviewTextLines(notes)}</div>` : ''}
               </div>
             </details>`;
         }).join('') || '<div class="dashboard-empty">ยังไม่มีรายละเอียดรายข้อ</div>'}
