@@ -11,13 +11,23 @@
 
   // Review text is stored as prose, sometimes separated by semicolons.
   // Render each point on its own line without changing the stored review data.
-  function reviewTextLines(values) {
+  function reviewTextLines(values, kind = 'notes') {
     const entries = Array.isArray(values) ? values : [values];
-    return entries.flatMap(value => String(value ?? '').split(/[;\r\n]+/))
+    const lines = entries.flatMap(value => String(value ?? '').split(/[;\r\n]+/))
       .map(line => line.trim())
-      .filter(Boolean)
-      .map(line => `<p>${escapeHtml(line)}</p>`)
-      .join('');
+      .filter(Boolean);
+    return lines.map((line, index) => {
+      if (kind === 'cue') {
+        const cue = line.match(/^(.+?)\s*=\s*(.+)$/);
+        if (cue) return `<p class="review-cue-line"><strong>${escapeHtml(cue[1])}</strong><span> = ${escapeHtml(cue[2])}</span></p>`;
+      }
+      const option = line.match(/^([A-E])\.\s+(.+?)\s+[—–]\s+(.+)$/);
+      if (option) {
+        const correct = /\[คำตอบที่ถูก\]/.test(line);
+        return `<p class="review-option-line${correct ? ' is-correct' : ''}"><span class="review-option-letter">${escapeHtml(option[1])}.</span> <strong class="review-option-title">${escapeHtml(option[2])}</strong><span class="review-option-description"> — ${escapeHtml(option[3])}</span></p>`;
+      }
+      return `<p class="${kind === 'notes' && index === 0 ? 'review-note-keypoint' : 'review-note-context'}">${escapeHtml(line)}</p>`;
+    }).join('');
   }
 
   function ensurePanel(id, title, subtitle) {
@@ -281,7 +291,7 @@
                 ${rawFlags.length ? `<div><b>Raw flags</b><p>${escapeHtml(rawFlags.join(' · '))}</p></div>` : ''}
                 ${row.userReasoning ? `<div class="review-detail-wide"><b>ตอนทำคิดอะไร</b><p>${escapeHtml(row.userReasoning)}</p></div>` : ''}
                 ${row.diagnosis ? `<div class="review-detail-wide"><b>Final diagnosis</b><p>${escapeHtml(row.diagnosis)}</p></div>` : ''}
-                ${row.memoryCue ? `<div class="review-detail-wide review-detail-lines"><b>จำสั้น ๆ</b>${reviewTextLines(row.memoryCue)}</div>` : ''}
+                ${row.memoryCue ? `<div class="review-detail-wide review-detail-lines"><b>จำสั้น ๆ</b>${reviewTextLines(row.memoryCue, 'cue')}</div>` : ''}
                 ${notes.length ? `<div class="review-detail-wide review-detail-lines"><b>Review notes</b>${reviewTextLines(notes)}</div>` : ''}
               </div>
             </details>`;
