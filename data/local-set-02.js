@@ -522,4 +522,11 @@
   ]
 ];
   window.buildClfLocalExamSet(2,rows);
+  // Preserve the first completed Set 2 score as history when browser progress is absent.
+  // A completed local attempt always takes precedence over these historical numbers.
+  const completedSet = (window.QUIZ_SETS || []).find(set => set.id === 'local-set-02');
+  if (completedSet) {
+    completedSet.historicalAnswered = 65;
+    completedSet.historicalScore = 46;
+  }
 })();
