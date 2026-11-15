@@ -110,6 +110,20 @@
 .review-question-text small{display:block;margin-top:7px;color:var(--muted,#6b7280);font-size:.78rem;line-height:1.5}
 .review-history-question-body .review-detail-wide{grid-column:1/-1}
 .review-history-question-body .review-detail-lines p+p{margin-top:8px}
+
+/* Clear text hierarchy for memory cues and per-choice review explanations */
+.review-history-question-body .review-detail-lines>b{font-size:.84rem;font-weight:800;color:#175cd3;margin-bottom:9px}
+.review-history-question-body .review-cue-line strong{display:inline;color:#175cd3;font-size:.84rem;font-weight:800}
+.review-history-question-body .review-cue-line span{color:#344054}
+.review-history-question-body .review-note-keypoint{color:#175cd3;font-weight:700;background:#eff6ff;border-left:3px solid #93c5fd;border-radius:4px;padding:7px 10px}
+.review-history-question-body .review-note-context{color:#475467}
+.review-history-question-body .review-option-line{padding:7px 9px;background:#f8fafc;border-radius:7px;border-left:3px solid #cbd5e1}
+.review-history-question-body .review-option-line.is-correct{background:#f0fdf4;border-left-color:#22c55e}
+.review-history-question-body .review-option-letter{font-weight:800;color:#475467}
+.review-history-question-body .review-option-title{font-weight:800;color:#175cd3}
+.review-history-question-body .review-option-line.is-correct .review-option-letter,.review-history-question-body .review-option-line.is-correct .review-option-title{color:#15803d}
+.review-history-question-body .review-option-description{color:#344054}
+
 @media(max-width:1180px){.dashboard-overview{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:980px){.dashboard-overview{grid-template-columns:repeat(2,minmax(0,1fr))}.dashboard-two-col,.dashboard-insights,.reviewed-gap-grid{grid-template-columns:1fr}.coverage-grid{grid-template-columns:1fr 1fr}.reviewed-gap-list{max-height:none}}
 @media(max-width:640px){.dashboard-overview{grid-template-columns:1fr}.coverage-grid{grid-template-columns:1fr}.dashboard-set-head,.domain-performance-head{align-items:flex-start;flex-direction:column}.dashboard-set-head span{text-align:left}.review-domain summary{flex-direction:column}.review-item{grid-template-columns:1fr}.review-item-tags{grid-row:auto;flex-direction:row}.review-set-detail-head,.review-history-question>summary{flex-direction:column;align-items:stretch}.review-cause-chips{justify-content:flex-start}.review-history-question-body{grid-template-columns:1fr}.review-history-question-body .review-detail-wide{grid-column:auto}}
