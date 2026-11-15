@@ -1,0 +1,302 @@
+[
+ [
+  "Amazon EC2",
+  "virtual server, guest OS control, instance types, compute",
+  "เปิด Linux VM ติดตั้ง Java Application เอง",
+  "Fargate/Lambda ลดภาระจัดการ Server"
+ ],
+ [
+  "AWS Lambda",
+  "event-driven code, serverless functions, S3 event, short task",
+  "Trigger Function เมื่อมี S3 Object ใหม่",
+  "ECS รัน Containers ด้วย Tasks/Services"
+ ],
+ [
+  "Amazon ECS",
+  "AWS-native containers, tasks, services, replicas, no Kubernetes",
+  "ECS Service รักษา Desired Count=3 Tasks",
+  "EKS ใช้ Kubernetes; Fargate เป็น Compute"
+ ],
+ [
+  "Amazon EKS",
+  "Kubernetes, control plane, K8s clusters, pods",
+  "รัน Kubernetes Deployment บน AWS",
+  "ECS ไม่จำเป็นต้องใช้ Kubernetes"
+ ],
+ [
+  "AWS Fargate",
+  "serverless container compute, no EC2 fleet, run tasks",
+  "รัน ECS Task โดยไม่ต้อง Patch EC2 Hosts",
+  "ECS/EKS Orchestrate; Fargate ให้ Compute"
+ ],
+ [
+  "Amazon ECR",
+  "container image registry, Docker image storage, push pull",
+  "Push Docker Image ให้ ECS ดึงมา Deploy",
+  "ECS รัน Containers ส่วน ECR เก็บ Image"
+ ],
+ [
+  "AWS Batch",
+  "batch jobs, queue, scientific jobs, compute provisioning",
+  "จัดคิวงานประมวลผลภาพ 10,000 งาน",
+  "Lambda เหมาะกับ Functions; Step Functions Orchestrates Workflow"
+ ],
+ [
+  "AWS Elastic Beanstalk",
+  "deploy application source, managed environment, web platform",
+  "Deploy Java Web App แล้วให้ Beanstalk Provision Environment",
+  "ECS ใช้ Containers Orchestration; Lambda ใช้ Event-driven Functions"
+ ],
+ [
+  "Amazon Lightsail",
+  "bundled VPS, predictable monthly bundle, simple server",
+  "เปิด WordPress/เว็บเล็กจาก VPS Package",
+  "EC2 ยืดหยุ่นด้าน Config มากกว่า"
+ ],
+ [
+  "AWS Outposts",
+  "AWS infrastructure on premises, local compute hardware",
+  "ต้องรัน AWS Service ใน Data Center ของบริษัท",
+  "Direct Connect แค่ Network Circuit ไม่ยก AWS Infrastructure มา"
+ ],
+ [
+  "EC2 Auto Scaling",
+  "add reduce instances, target tracking, desired capacity",
+  "เพิ่มจำนวน EC2 เมื่อ CPU สูง",
+  "ELB กระจาย Traffic ไม่ได้เพิ่มเครื่องเอง"
+ ],
+ [
+  "AWS Auto Scaling",
+  "adjust capacity across resources, autoscaling policy",
+  "Scale Capacity ของแอปตาม Demand",
+  "ต่างจาก ELB ที่กระจาย Requests"
+ ],
+ [
+  "Elastic Load Balancing",
+  "distribute incoming traffic, targets, health checks, ALB/NLB",
+  "ALB กระจาย HTTP Requests ไป ECS Tasks หลายตัว",
+  "Auto Scaling เพิ่มลดจำนวน Targets"
+ ],
+ [
+  "Amazon API Gateway",
+  "publish REST or HTTP API, request routing to Lambda",
+  "เปิด REST API สำหรับ Mobile App หลังบ้านเป็น Lambda",
+  "ALB มัก Load Balance Targets"
+ ],
+ [
+  "AWS CodeBuild",
+  "compile and test, build container image, CI",
+  "Maven Build และ Unit Tests เมื่อ Push Code",
+  "CodePipeline Orchestrates Multi-stage Release"
+ ],
+ [
+  "AWS CodePipeline",
+  "automate CI/CD stages, orchestrate build/test/deploy",
+  "Pipeline ต่อ Source → Build → Deploy",
+  "CodeBuild ทำ Build/Test เอง"
+ ],
+ [
+  "AWS X-Ray",
+  "distributed tracing, request latency across services",
+  "Trace Request จาก API Gateway → Lambda → DynamoDB",
+  "CloudWatch Metrics/Logs ไม่ใช่ Distributed Trace เป็นหลัก"
+ ],
+ [
+  "AWS Amplify",
+  "frontend web mobile hosting, backend integration",
+  "Deploy React Website ด้วย Amplify",
+  "Elastic Beanstalk เหมาะกับ Web App Runtime"
+ ],
+ [
+  "Amazon WorkSpaces",
+  "persistent virtual desktop, desktop as a service",
+  "ให้พนักงานใช้ Windows Desktop บน Cloud",
+  "AppStream 2.0 เน้น Stream Applications"
+ ],
+ [
+  "Amazon AppStream 2.0",
+  "stream desktop apps, managed application streaming",
+  "เปิด CAD Application ผ่าน Browser",
+  "WorkSpaces เป็น Virtual Desktop"
+ ],
+ [
+  "Amazon WorkSpaces Secure Browser",
+  "secure browser sessions, isolated web access",
+  "เปิด Internal Web Apps ผ่าน Secure Browser Environment",
+  "ไม่ใช่ Desktop เต็มแบบ WorkSpaces"
+ ],
+ [
+  "Amazon VPC",
+  "isolated virtual network, CIDR, subnets",
+  "สร้าง VPC มี Public/Private Subnets",
+  "Transit Gateway เชื่อม VPC หลายวง"
+ ],
+ [
+  "Internet Gateway",
+  "public subnet internet connectivity, route 0.0.0.0/0",
+  "Public EC2 ออก Internet ผ่าน Route ไป IGW",
+  "NAT Gateway สำหรับ Private Subnet Outbound"
+ ],
+ [
+  "NAT Gateway",
+  "private subnet outbound internet, no unsolicited inbound",
+  "Private EC2 Download Package Updates จาก Internet",
+  "VPC endpoint เข้าถึง AWS Service แบบ Private"
+ ],
+ [
+  "VPC endpoint",
+  "privately reach AWS service, private S3 access, no internet",
+  "Private EC2 เข้าถึง S3 โดยไม่ออก Internet",
+  "ไม่ใช่ NAT Gateway"
+ ],
+ [
+  "AWS PrivateLink",
+  "private service connectivity, private endpoints, partner SaaS",
+  "ใช้ Private Endpoint ต่อ SaaS Service บน AWS",
+  "ไม่จำเป็นต้องเปิด Public Internet"
+ ],
+ [
+  "AWS Transit Gateway",
+  "hub spoke, connect many VPCs and on premises",
+  "รวม VPC Dev/Prod/Shared Services ที่ Transit Gateway",
+  "VPC คือแต่ละ Virtual Network ไม่ใช่ Hub"
+ ],
+ [
+  "AWS Direct Connect",
+  "dedicated network circuit, data center to AWS, private connectivity",
+  "ต่อ Private Circuit จาก Office Data Center ไป AWS",
+  "Site-to-Site VPN ใช้ Encrypted Internet Tunnel"
+ ],
+ [
+  "AWS Site-to-Site VPN",
+  "encrypted tunnel over internet, site-to-site link",
+  "เชื่อม Router บริษัทกับ VPC ผ่าน IPSec VPN",
+  "Direct Connect เป็น Dedicated Circuit"
+ ],
+ [
+  "AWS VPN",
+  "VPN connectivity, encrypted corporate network link",
+  "เชื่อม On-prem Network เข้า AWS ผ่าน VPN",
+  "ชื่อหมวดรวมที่ครอบ Site-to-Site/Client VPN"
+ ],
+ [
+  "AWS Client VPN",
+  "remote workers connect to VPC, client-based VPN",
+  "พนักงาน Work from Home ต่อ VPC ด้วย Client VPN",
+  "Site-to-Site VPN ใช้เชื่อมเครือข่ายสองฝั่ง"
+ ],
+ [
+  "Amazon Route 53",
+  "DNS records, domain routing, hosted zone, health check",
+  "api.example.com ชี้ไป ALB",
+  "CloudFront เป็น CDN Cache Content"
+ ],
+ [
+  "Amazon CloudFront",
+  "CDN, edge cache, global static content, low latency",
+  "Cache Images ใกล้ผู้ใช้อยู่ที่ Edge Location",
+  "Route 53 เป็น DNS ไม่ใช่ CDN"
+ ],
+ [
+  "AWS Global Accelerator",
+  "global anycast, TCP UDP latency, fixed IP",
+  "ส่ง Global Client Traffic ผ่าน AWS Backbone ไป Healthy Endpoints",
+  "CloudFront เน้น Cache Content"
+ ],
+ [
+  "Security group",
+  "stateful firewall, ENI, instance-level inbound outbound",
+  "เปิด Port 443 ที่ ALB Security Group",
+  "Network ACL เป็น Stateless ระดับ Subnet"
+ ],
+ [
+  "Network ACL",
+  "stateless subnet filtering, allow deny rules, NACL",
+  "ปฏิเสธ IP Range ที่ Subnet Boundary",
+  "SG เป็น Stateful และผูก ENI"
+ ],
+ [
+  "Amazon S3",
+  "object storage, bucket, backup, static assets",
+  "เก็บรูปสินค้าและ Log Files ใน S3 Buckets",
+  "EBS เป็น Block Disk ส่วน EFS เป็น File System"
+ ],
+ [
+  "Amazon S3 Standard-IA",
+  "infrequent access, immediate retrieval, minimum duration",
+  "เก็บ Backup ที่โหลดปีละไม่กี่ครั้งแต่ต้องเรียกคืนทันที",
+  "Glacier Deep Archive ต้องรอ Restore"
+ ],
+ [
+  "Amazon S3 Intelligent-Tiering",
+  "unknown access patterns, auto move tiers",
+  "เก็บไฟล์ที่เดาไม่ได้ว่าจะถูกอ่านบ่อยหรือไม่",
+  "Standard-IA เหมาะกับ Infrequent Access ที่คาดการณ์ได้"
+ ],
+ [
+  "Amazon S3 Glacier Deep Archive",
+  "long-term archive, lowest storage cost, hours retrieval",
+  "เก็บเอกสารกฎหมาย 7 ปีโดยยอมรอ Restore",
+  "ไม่เหมาะกับ Immediate Retrieval"
+ ],
+ [
+  "Amazon EBS",
+  "persistent block volume, EC2 disk, snapshots",
+  "แนบ EBS Volume ให้ EC2 Database และทำ Snapshot",
+  "Instance Store เป็น Ephemeral Disk"
+ ],
+ [
+  "Instance store",
+  "ephemeral local disk, scratch data, instance lifetime",
+  "เก็บ Temporary Processing Files บน EC2 Host",
+  "ข้อมูลสูญหายเมื่อ Instance Stop/Terminate"
+ ],
+ [
+  "Amazon EFS",
+  "shared NFS, elastic file system, Linux instances",
+  "Linux EC2 หลายตัว Mount Path ร่วมกัน",
+  "EBS เป็น Block Volume ไม่ใช่ Shared NFS แบบทั่วไป"
+ ],
+ [
+  "Amazon FSx for Windows File Server",
+  "SMB shares, Windows file system, Active Directory",
+  "Windows Servers หลายตัวใช้ SMB File Share ร่วมกัน",
+  "EFS ใช้ NFS เป็นหลัก"
+ ],
+ [
+  "Amazon FSx",
+  "managed file systems, Windows SMB, shared storage",
+  "ใช้ Managed Windows File Server แบบ SMB",
+  "ดูชนิด File System ในโจทย์"
+ ],
+ [
+  "AWS Storage Gateway",
+  "on premises cloud storage integration, hybrid storage",
+  "File Gateway เชื่อม NAS ในบริษัทเข้ากับ S3",
+  "DataSync เน้น Transfer/Sync"
+ ],
+ [
+  "AWS DataSync",
+  "accelerate online file transfer, migrate data over network",
+  "Sync Files จาก NAS On-prem ไป S3 ผ่าน Network",
+  "Snowball Edge ใช้ Device สำหรับ Offline Transfer"
+ ],
+ [
+  "AWS Snowball Edge",
+  "physical data transfer device, offline, limited bandwidth",
+  "ส่ง 200 TB จาก Data Center ไป AWS เมื่อ Internet ช้ามาก",
+  "DataSync ใช้เครือข่ายเป็นหลัก"
+ ],
+ [
+  "AWS Backup",
+  "central backup policy, recovery points, schedule",
+  "ตั้ง Backup Policy ให้ EBS/RDS Accounts",
+  "Multi-Region Deployment ไม่ได้มีแค่การเก็บ Backup"
+ ],
+ [
+  "AWS Elastic Disaster Recovery",
+  "disaster recovery, replicate servers, failover AWS",
+  "Replicate On-prem Servers ไป AWS เพื่อกู้คืนภัยพิบัติ",
+  "Backup ใช้ Recovery Points ไม่ใช่ Live Server DR"
+ ]
+]
