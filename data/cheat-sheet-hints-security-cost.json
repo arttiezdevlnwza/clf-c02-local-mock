@@ -1,0 +1,362 @@
+[
+ [
+  "AWS IAM",
+  "policies, roles, EC2 credentials, authorization, cross-account assume role",
+  "ให้ EC2 Instance Profile รับ Temporary Credentials เพื่ออ่าน S3",
+  "Workforce SSO ข้ามหลาย Accounts มักใช้ IAM Identity Center"
+ ],
+ [
+  "IAM Identity Center",
+  "workforce SSO, permission sets, company directory, access portal",
+  "ให้พนักงานเข้า AWS Accounts หลายบัญชีจาก Corporate SSO",
+  "ไม่ใช่ Amazon Cognito สำหรับ End Users ของแอป"
+ ],
+ [
+  "AWS Organizations",
+  "organization units, SCP, consolidated billing, account grouping",
+  "รวม Accounts ทีม Dev/Prod ภายใต้ Organizations และ SCP",
+  "ไม่ใช่ Identity Center ที่แจก Workforce Permission Sets"
+ ],
+ [
+  "AWS Control Tower",
+  "multi-account landing zone, guardrails, account factory",
+  "ตั้ง Landing Zone พร้อม Guardrails และ Provision Accounts",
+  "Organizations เป็นโครงสร้างบัญชี ส่วน Control Tower ช่วยตั้งค่า Landing Zone"
+ ],
+ [
+  "Amazon Cognito",
+  "app users, sign-up, sign-in, customer identities, mobile authentication",
+  "ให้ลูกค้าสมัครและ Login เว็บร้านค้า",
+  "ไม่ใช่ IAM Identity Center สำหรับพนักงานเข้า AWS"
+ ],
+ [
+  "IAM Access Analyzer",
+  "external access, unintended resource policy, public or cross-account access",
+  "ตรวจ S3 Bucket Policy ที่เปิดสิทธิ์นอก Organization",
+  "ไม่ใช่ Amazon Inspector ตรวจ CVE"
+ ],
+ [
+  "AWS KMS",
+  "encryption key, encrypt data, managed cryptographic keys, key policy",
+  "ใช้ KMS Key เข้ารหัส S3 Objects",
+  "Secrets Manager จัดการ Password ไม่ใช่ Cryptographic Keys เป็นหลัก"
+ ],
+ [
+  "AWS CloudHSM",
+  "dedicated HSM, hardware key custody, cryptography control",
+  "องค์กรมีข้อกำหนดใช้ Dedicated Hardware Security Module",
+  "ต่างจาก KMS ที่ AWS ช่วยจัดการ Key Service มากกว่า"
+ ],
+ [
+  "AWS Secrets Manager",
+  "database password, API secret, rotation, credentials",
+  "Rotate RDS Database Credentials อัตโนมัติ",
+  "KMS จัดการ Encryption Keys ไม่ใช่ Rotation ของ App Passwords"
+ ],
+ [
+  "AWS Certificate Manager",
+  "SSL/TLS, certificate provisioning, HTTPS",
+  "ออก TLS Certificate ให้ ALB Endpoint",
+  "ไม่ใช่ KMS Key สำหรับ Encrypt S3"
+ ],
+ [
+  "AWS Artifact",
+  "SOC report, compliance report, agreements",
+  "ดาวน์โหลด SOC 2 Report ให้ Auditor",
+  "ไม่ใช่ Security Hub ที่รวม Findings"
+ ],
+ [
+  "Amazon GuardDuty",
+  "suspicious API calls, compromised credentials, threat detection",
+  "ตรวจการใช้ IAM Credentials จาก Location ที่ผิดปกติ",
+  "Inspector ตรวจ Package Vulnerabilities"
+ ],
+ [
+  "Amazon Inspector",
+  "CVE, vulnerable packages, ECR image scanning, Lambda vulnerability",
+  "สแกนช่องโหว่ Libraries ใน EC2/ECR Container Image",
+  "ไม่ใช่ GuardDuty ที่หา Threat Behavior"
+ ],
+ [
+  "Amazon Detective",
+  "investigate threat, entity relationships, root-cause, graph",
+  "สืบความเชื่อมโยง IP/Role/EC2 หลัง GuardDuty Alert",
+  "ไม่ใช่ Security Hub ที่รวม Findings"
+ ],
+ [
+  "AWS Security Hub",
+  "aggregate security findings, security posture, multi-account security",
+  "รวม Findings จาก GuardDuty และ Inspector",
+  "ไม่ใช่ Control Tower สำหรับ Landing Zone"
+ ],
+ [
+  "Amazon Macie",
+  "sensitive data, PII, S3 classification, data discovery",
+  "สแกน S3 หาเลขบัตรหรือข้อมูลส่วนตัว",
+  "ไม่ใช่ Inspector ตรวจ CVEs"
+ ],
+ [
+  "AWS WAF",
+  "HTTP filtering, SQL injection, XSS, web ACL, block requests",
+  "Block SQL Injection ก่อน Request ไปถึง ALB",
+  "Firewall Manager จัดการ Policies ส่วนกลาง"
+ ],
+ [
+  "AWS Firewall Manager",
+  "central security policy, manage WAF across accounts, organization-wide ACL",
+  "บังคับ Web ACL Policy ให้หลาย Accounts",
+  "WAF กรอง Request ส่วน Firewall Manager จัดการ Policy"
+ ],
+ [
+  "AWS Shield",
+  "DDoS protection, volumetric attack, public endpoint",
+  "ป้องกัน DDoS ที่มุ่งให้เว็บล่ม",
+  "WAF กรอง HTTP Attacks เป็นหลัก"
+ ],
+ [
+  "AWS Shield Standard",
+  "basic DDoS, included protection",
+  "ป้องกัน DDoS มาตรฐานสำหรับ AWS Resources ที่รองรับ",
+  "Shield Advanced มี Features และค่าใช้จ่ายเพิ่มเติม"
+ ],
+ [
+  "AWS CloudTrail",
+  "API activity, who did what when, account auditing, DeleteBucket",
+  "ตรวจว่า IAM Role ไหนเรียก DeleteBucket เมื่อไร",
+  "AWS Config ดูการเปลี่ยน Configuration"
+ ],
+ [
+  "Amazon CloudWatch",
+  "CPU threshold, metrics, logs, alarms, dashboards",
+  "ตั้ง Alarm เมื่อ EC2 CPU > 80%",
+  "CloudTrail เก็บ API Events ไม่ใช่ Metric Alarms"
+ ],
+ [
+  "AWS Config",
+  "configuration history, compliance rules, configuration drift",
+  "ตรวจ S3 Encryption Settings ว่าตรง Policy ไหม",
+  "CloudTrail ตอบว่าใครเรียก API"
+ ],
+ [
+  "AWS Trusted Advisor",
+  "best-practice checks, exposed security groups, cost recommendations, service limits",
+  "ตรวจ Security Group เปิด Port 22 กว้างเกินไป",
+  "Security Hub รวม Findings ไม่ใช่ Advisory Checks เป็นหลัก"
+ ],
+ [
+  "AWS Health Dashboard",
+  "AWS service issues, account events, planned maintenance",
+  "ดูว่า AWS Region มี Service Disruption หรือ Maintenance",
+  "CloudWatch วัด Metrics ของ Workload"
+ ],
+ [
+  "AWS Well-Architected Tool",
+  "workload review, six pillars, architecture best practices",
+  "Review Workload เทียบ Well-Architected Pillars",
+  "Trusted Advisor ตรวจ Checks ใน Account"
+ ],
+ [
+  "AWS Well-Architected Framework",
+  "six pillars, reliability, security, operational excellence",
+  "ประเมิน Design ด้าน Security/Reliability/Cost",
+  "เป็น Framework ไม่ใช่ Service ที่ Deploy App"
+ ],
+ [
+  "AWS Cloud Adoption Framework",
+  "people, governance, platform, adoption strategy",
+  "ทำ Cloud Adoption Roadmap ให้องค์กร",
+  "ต่างจาก Well-Architected ที่เน้นคุณภาพ Workload"
+ ],
+ [
+  "AWS Management Console",
+  "GUI, browser administration, visual AWS management",
+  "เปิด Console สร้าง S3 Bucket ด้วยหน้าจอ",
+  "AWS CLI ใช้คำสั่ง"
+ ],
+ [
+  "AWS CLI",
+  "command line, scripted AWS calls, terminal",
+  "รัน aws s3 ls หรือ aws ec2 describe-instances",
+  "SDK คือ Libraries เรียก API จากโค้ด"
+ ],
+ [
+  "AWS SDK",
+  "programmatic API, Java Python SDK, application integration",
+  "Java Service เรียก DynamoDB ผ่าน AWS SDK",
+  "CLI ใช้ Shell Commands"
+ ],
+ [
+  "AWS CloudFormation",
+  "infrastructure as code, declarative template, stacks, repeatable deployment",
+  "Deploy VPC/EC2/Security Groups จาก Template",
+  "CDK เขียน IaC ด้วย Programming Language แล้ว Synth"
+ ],
+ [
+  "AWS CDK",
+  "infrastructure as code in TypeScript/Python, synthesize templates",
+  "ใช้ TypeScript สร้าง CloudFormation Template",
+  "CloudFormation เป็น Declarative Stack Engine"
+ ],
+ [
+  "AWS CloudShell",
+  "browser based shell, AWS CLI without local install",
+  "เปิด Shell จาก Console แล้วใช้ AWS CLI",
+  "ปัจจุบันอยู่ Out-of-scope ใน Exam Guide แต่เคยเป็นช้อยส์ของ Mock"
+ ],
+ [
+  "AWS Systems Manager",
+  "manage nodes, fleet operations, patch manager, run commands",
+  "ใช้ Run Command จัดการ EC2 Fleet",
+  "CloudWatch ดู Metrics ไม่ใช่ Run Command"
+ ],
+ [
+  "AWS Compute Optimizer",
+  "rightsizing recommendations, utilization, resource sizing",
+  "ดูคำแนะนำเปลี่ยน Instance Type ตาม Metrics",
+  "Cost Explorer เน้นวิเคราะห์ค่าใช้จ่าย"
+ ],
+ [
+  "AWS License Manager",
+  "software licenses, license compliance, BYOL tracking",
+  "ติดตาม License ของ Windows/SQL Server ใน AWS",
+  "ไม่ใช่ AWS Marketplace ซึ่งเป็น Catalog"
+ ],
+ [
+  "AWS Service Catalog",
+  "approved products, governed self-service provision",
+  "เปิดให้ทีมสร้างเฉพาะ Template ที่องค์กรอนุมัติ",
+  "ไม่ใช่ Marketplace สำหรับซื้อ Third-party Products"
+ ],
+ [
+  "Service Quotas",
+  "service limits, quota increase request",
+  "ขอเพิ่ม Service Quota EC2 สำหรับ Account",
+  "Health Dashboard แสดง Service Events"
+ ],
+ [
+  "AWS Resource Access Manager",
+  "share resources across accounts, share subnet",
+  "Share VPC Subnet ให้หลาย AWS Accounts",
+  "Organizations แบ่งกลุ่มบัญชี"
+ ],
+ [
+  "AWS Directory Service",
+  "managed Microsoft AD, directory integration",
+  "ให้ EC2 Windows ใช้งาน Managed Microsoft AD",
+  "IAM Identity Center เป็น Workforce SSO Portal"
+ ],
+ [
+  "AWS Support",
+  "technical guidance, support plans, support case",
+  "เปิด Case ถามปัญหาบริการ AWS",
+  "ไม่ใช่ AWS Partner Network ที่หาพาร์ทเนอร์มาทำ Project"
+ ],
+ [
+  "AWS Support Center",
+  "support case, contact AWS support, private ticket",
+  "เปิด Technical Support Case",
+  "re:Post เป็นชุมชนถามตอบสาธารณะ"
+ ],
+ [
+  "AWS re:Post",
+  "community Q&A, public AWS questions, knowledge sharing",
+  "ถามวิธีตั้งค่า AWS ผ่าน Community",
+  "Support Center ใช้เปิด Case"
+ ],
+ [
+  "AWS Partner Network",
+  "APN, external consultants, migration specialist",
+  "หาบริษัท AWS Partner มาช่วยทำ Migration",
+  "Marketplace เป็น Catalog ของสินค้าและบริการ"
+ ],
+ [
+  "AWS Marketplace",
+  "purchase third-party software, product catalog, AMI subscriptions",
+  "เลือกซื้อ Firewall Appliance หรือ SaaS",
+  "APN ใช้ค้นหาคู่ค้าเชิงบริการ"
+ ],
+ [
+  "AWS Pricing Calculator",
+  "before deployment, estimate monthly cost, forecast architecture",
+  "ประมาณค่า EC2+RDS ก่อนเปิด Production",
+  "Cost Explorer ดูค่าใช้จ่ายที่เกิดจริง"
+ ],
+ [
+  "AWS Cost Explorer",
+  "historical trends, filter cost by account/service, interactive analysis",
+  "กรองค่า EC2 ไตรมาสก่อนตาม Linked Account",
+  "CUR ให้ Billing Line Items ละเอียด"
+ ],
+ [
+  "AWS Budgets",
+  "spending threshold, forecast alert, budget notification",
+  "แจ้งเตือนเมื่อค่าใช้จ่ายเดือนนี้คาดเกินงบ",
+  "Cost Anomaly Detection จับ Pattern ผิดปกติ"
+ ],
+ [
+  "AWS Cost Anomaly Detection",
+  "unusual cost spike, unexpected spend pattern, ML anomaly",
+  "แจ้งเตือนเมื่อค่า S3 เพิ่มผิดปกติจากแนวโน้มเดิม",
+  "Budgets ใช้วงเงินที่ตั้งไว้"
+ ],
+ [
+  "AWS Cost and Usage Report",
+  "detailed billing line items, CUR, raw cost data",
+  "ส่งรายการ Cost Line Items ไป S3 เพื่อวิเคราะห์กับ Athena",
+  "Cost Explorer ทำ Interactive Chart ง่ายกว่า"
+ ],
+ [
+  "Consolidated billing",
+  "combined bill, payer account, AWS Organizations",
+  "รวมค่าบริการ Dev/Prod Accounts มาใบแจ้งหนี้เดียว",
+  "Cost allocation tags แยกค่าใช้จ่ายตามฝ่าย"
+ ],
+ [
+  "Cost allocation tags",
+  "tag cost center, department/project chargeback",
+  "Tag Project=Alpha เพื่อแยกค่า AWS Project",
+  "ไม่ใช่การรวม Billing หลาย Accounts"
+ ],
+ [
+  "On-Demand Instances",
+  "no term commitment, predictable pricing, short term",
+  "เปิด EC2 ชั่วคราวแบบไม่ Commit 1/3 ปี",
+  "Spot ถูกกว่าได้แต่ Interrupted ได้"
+ ],
+ [
+  "Spot Instances",
+  "spare EC2 capacity, interruptible, checkpoint retry, low cost",
+  "รัน Video Encoding ที่ Restart ได้",
+  "ไม่เหมาะกับงานห้ามถูก Interrupt"
+ ],
+ [
+  "Reserved Instances",
+  "1 or 3-year commitment, EC2 pricing discount, predictable workload",
+  "ใช้ RI ลดค่า EC2 ของ Workload ที่นิ่ง",
+  "Capacity Reservation เน้นรับประกัน Capacity"
+ ],
+ [
+  "Savings Plans",
+  "hourly spend commitment, 1 or 3 years, flexible compute discounts",
+  "Commit Compute Spend ต่อชั่วโมงเพื่อลดค่าใช้จ่าย",
+  "ต่างจาก Spot ซึ่งไม่ผูก Commitment แต่ถูก Interrupt"
+ ],
+ [
+  "On-Demand Capacity Reservations",
+  "guaranteed AZ capacity, reserve capacity without term",
+  "จอง c6i Capacity ใน AZ เฉพาะก่อน Launch",
+  "ไม่ใช่ Discount Commitment อย่าง Savings Plans"
+ ],
+ [
+  "Dedicated Hosts",
+  "dedicated physical server, physical cores licensing, BYOL",
+  "ใช้ License ที่ผูกกับ Physical Socket/Core",
+  "ไม่ใช่ Dedicated Instance หรือ Capacity Reservation ทั่วไป"
+ ],
+ [
+  "Data transfer out",
+  "outbound data charges, leave AWS, egress",
+  "ส่งข้อมูลจาก S3 ไป Internet มี Data Transfer Out",
+  "ไม่ใช่ค่าใช้จ่าย Storage หรือ Compute"
+ ]
+]
