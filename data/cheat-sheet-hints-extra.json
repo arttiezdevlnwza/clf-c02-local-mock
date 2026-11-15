@@ -1,0 +1,104 @@
+[
+ [
+  "Basic Support",
+  "included support, account billing questions, docs community",
+  "บัญชีทั่วไปใช้ AWS Basic Support ได้โดยไม่จ่ายรายเดือนเพิ่ม",
+  "ไม่รวม Technical Engineer Support Cases แบบ Premium"
+ ],
+ [
+  "AWS Business Support+",
+  "24/7 technical experts, AI troubleshooting, production",
+  "ทีม Production ต้องการ Technical Support ตลอดเวลา",
+  "เป็น Support Plan ปัจจุบันแทน Developer/Business สำหรับลูกค้าใหม่"
+ ],
+ [
+  "AWS Enterprise Support",
+  "TAM, business critical, proactive guidance",
+  "องค์กรธุรกิจสำคัญต้องการ TAM และ Expert Support",
+  "ต่างจาก Business Support+ ที่การช่วยดูแลเชิงรุกน้อยกว่า"
+ ],
+ [
+  "AWS Unified Operations",
+  "mission critical, proactive operations, incident management",
+  "ระบบสำคัญระดับ Mission-critical ต้องการ Operations Support",
+  "Premium Support Tier สูง"
+ ],
+ [
+  "Developer Support",
+  "legacy plan, discontinued 2027, no new subscribers",
+  "ลูกค้าเดิมยังใช้ได้จนถึงช่วงยุติ",
+  "เลิกเปิดสมัครใหม่ตั้งแต่ Dec 2025; ศึกษาสถานะปัจจุบัน"
+ ],
+ [
+  "Business Support",
+  "legacy plan, discontinued 2027, no new subscribers",
+  "บัญชีเดิมอาจยังอยู่ใน Plan เก่า",
+  "เปลี่ยนผ่านไป Business Support+"
+ ],
+ [
+  "AWS Cloud Adoption Framework",
+  "adoption strategy, business people governance platform",
+  "วาง Cloud Adoption Roadmap ให้องค์กร",
+  "ต่างจาก Well-Architected ที่ดูคุณภาพ Workload"
+ ],
+ [
+  "Data classification",
+  "sensitive, confidential, PII, data ownership",
+  "กำหนด S3 Object นี้เป็น Confidential",
+  "เป็นหน้าที่ลูกค้า"
+ ],
+ [
+  "Data residency",
+  "geographic storage, store data in country or region",
+  "เลือก Region ตามที่กฎหมายกำหนดให้เก็บข้อมูล",
+  "Data sovereignty เป็นบริบทสิทธิและกฎหมายเหนือข้อมูล"
+ ],
+ [
+  "Vertical scaling",
+  "scale up, larger instance, more CPU memory",
+  "เปลี่ยน EC2 จาก t3.medium เป็น t3.large",
+  "Horizontal Scaling คือเพิ่มจำนวน Instances"
+ ],
+ [
+  "Horizontal scaling",
+  "scale out, add instances, more nodes",
+  "เพิ่มจำนวน EC2 จาก 2 เป็น 6",
+  "Vertical Scaling เพิ่มขนาดเครื่องเดิม"
+ ],
+ [
+  "Repurchase",
+  "replace legacy software with SaaS, buy new product",
+  "เปลี่ยนระบบ On-prem CRM ไป SaaS",
+  "เป็น Migration 7Rs ไม่ใช่ Rehost"
+ ],
+ [
+  "Relocate",
+  "move platform level workloads, VMware Cloud, same app",
+  "ย้าย VM Cluster ไป Cloud Platform ที่รองรับ",
+  "ต่างจาก Refactor ที่เปลี่ยน Architecture"
+ ],
+ [
+  "AWS Basic Support",
+  "included for every account, account billing support",
+  "เปิด Case Billing ของบัญชี",
+  "Premium Plans ให้ Technical Support เพิ่ม"
+ ],
+ [
+  "Reserved Instances for every workload",
+  "commitment discount but not universally best",
+  "Workload ใช้ไม่แน่นอนอาจไม่เหมาะ RI",
+  "มอง Usage Pattern ก่อนเลือก Purchasing Option"
+ ],
+ [
+  "Amazon S3 Glacier Flexible Retrieval",
+  "infrequent archived data, restore minutes or hours",
+  "เก็บ Archive ที่ยอมรอ Restore ก่อนอ่าน",
+  "Standard-IA เรียกคืนได้ทันที"
+ ],
+ [
+  "Dedicated tenancy",
+  "single tenant physical host isolation, compliance",
+  "เลือก Dedicated Instance/Host สำหรับข้อกำหนด Isolation",
+  "ไม่ใช่ Default ของ Public Cloud"
+ ]
+]
