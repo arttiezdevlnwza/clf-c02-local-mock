@@ -522,4 +522,10 @@
   ]
 ];
   window.buildClfLocalExamSet(3,rows);
+  // Historical score of first completed Set 3 attempt; completed browser attempts take precedence.
+  const completedSet = (window.QUIZ_SETS || []).find(set => set.id === 'local-set-03');
+  if (completedSet) {
+    completedSet.historicalAnswered = 65;
+    completedSet.historicalScore = 39;
+  }
 })();
