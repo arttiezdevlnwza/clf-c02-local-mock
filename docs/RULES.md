@@ -1,6 +1,6 @@
 # CLF-C02 Local Mock — Rules
 
-Last reviewed: 2026-09-30
+Last reviewed: 2026-11-15
 
 This file is the single source of workflow rules for creating and reviewing CLF-C02 local mock exams.
 
@@ -71,6 +71,20 @@ AIF-C01 Local Mock Set 25 may be used only as a style reference for concise stem
 - Avoid obviously unrelated or absurd options used only to make a question easy.
 - Avoid multiple answers that are equally correct under the stated requirement.
 - If wording such as MOST cost-effective, LEAST operational overhead, or BEST meets is necessary, the explanation must show why that qualifier determines the answer.
+
+### 2.5.1 Calibrated close-distractor difficulty (Set 2–3 baseline; approved 2026-11-15)
+
+Use the **revised Local Mock Sets 2 and 3** as the accepted baseline for difficulty and distractor quality. The user explicitly preferred these sets over original Set 1, whose unrelated options were too easy to eliminate. This is a **local practice-design standard**, not a claim that the official exam is equally difficult.
+
+- For most questions, choose distractors from the **same AWS service family, adjacent workflow stage, similar cloud benefit, or genuinely competing architecture/cost decision**. A learner should have to compare functions and the scenario's requirements, not just recognize one relevant AWS word.
+- Make alternatives plausible **but not equally correct**. Specify the decisive requirement (e.g., which layer, action, scope, timing, data type, commitment, recovery, or network path) and ensure the key is defensible. If two answers could fit, tighten the existing stem instead of declaring one arbitrarily wrong.
+- Favor distinctions such as CloudWatch / CloudTrail / Config; IAM / Identity Center / Organizations; GuardDuty / Inspector / Detective / Security Hub; WAF / Firewall Manager / Shield; ECS / EKS / Fargate; DMS / discovery / schema conversion; NAT / endpoint / Direct Connect / VPN; Savings Plans / Reserved Instances / Spot / Capacity Reservations; and Agility / Elasticity / Scalability.
+- Do **not** require a long scenario, obscure service trivia, misleading grammar, or complicated English to increase difficulty. Keep CLF-C02 foundational, concise, and within official Task Statement scope.
+- Avoid absurd distractors, deliberately impossible claims, or three options from unrelated categories. Also avoid turning every question into the same service-name comparison: include benefit, economics, responsibility, network, architecture, and applied use cases.
+- For multiple-response items, **each correct choice must cover an independently stated part of the requirement**; wrong choices should be plausible near misses, with exactly the requested number of correct options.
+- Explain **what each incorrect service or concept actually does**, ideally with a short practical use case, and **why the decisive condition rules it out**. Never use only "not the most appropriate answer" or duplicate the correct-answer explanation under every option.
+- Preserve exam blueprint, distribution, independent question bank, per-question IDs, and any existing attempt history. Do not revise completed sets merely to rebalance difficulty without an explicit request.
+- Calibration reference: Set 2 first attempt was 46/65 (71%), Set 3 first attempt was 39/65 (60%) after harder distractors. These are observations about **one learner's practice attempts**, not target scores, a requirement to force a percentage, or an official AWS score conversion.
 
 ### 2.6 Service and concept scope
 
