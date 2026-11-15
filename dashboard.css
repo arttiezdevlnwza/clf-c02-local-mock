@@ -109,6 +109,7 @@
 .review-history-question-body p{margin:0;font-size:.82rem;line-height:1.5;overflow-wrap:anywhere}
 .review-question-text small{display:block;margin-top:7px;color:var(--muted,#6b7280);font-size:.78rem;line-height:1.5}
 .review-history-question-body .review-detail-wide{grid-column:1/-1}
+.review-history-question-body .review-detail-lines p+p{margin-top:8px}
 @media(max-width:1180px){.dashboard-overview{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:980px){.dashboard-overview{grid-template-columns:repeat(2,minmax(0,1fr))}.dashboard-two-col,.dashboard-insights,.reviewed-gap-grid{grid-template-columns:1fr}.coverage-grid{grid-template-columns:1fr 1fr}.reviewed-gap-list{max-height:none}}
 @media(max-width:640px){.dashboard-overview{grid-template-columns:1fr}.coverage-grid{grid-template-columns:1fr}.dashboard-set-head,.domain-performance-head{align-items:flex-start;flex-direction:column}.dashboard-set-head span{text-align:left}.review-domain summary{flex-direction:column}.review-item{grid-template-columns:1fr}.review-item-tags{grid-row:auto;flex-direction:row}.review-set-detail-head,.review-history-question>summary{flex-direction:column;align-items:stretch}.review-cause-chips{justify-content:flex-start}.review-history-question-body{grid-template-columns:1fr}.review-history-question-body .review-detail-wide{grid-column:auto}}
