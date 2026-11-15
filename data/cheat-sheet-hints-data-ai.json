@@ -1,0 +1,266 @@
+[
+ [
+  "Amazon RDS",
+  "relational database, managed SQL, MySQL PostgreSQL SQL Server",
+  "ใช้ RDS PostgreSQL เก็บ Orders",
+  "DynamoDB เป็น NoSQL ไม่ใช่ Relational SQL"
+ ],
+ [
+  "Amazon Aurora",
+  "AWS optimized relational database, MySQL PostgreSQL compatible",
+  "เลือก Aurora PostgreSQL สำหรับ Transaction Workload",
+  "RDS เป็น Managed Relational Database Family"
+ ],
+ [
+  "Amazon DynamoDB",
+  "serverless NoSQL, key value, predictable low latency, primary store",
+  "เก็บ Player Profiles ด้วย Partition Key",
+  "ElastiCache มักเป็น Cache ไม่ใช่ Persistent Primary Database"
+ ],
+ [
+  "Amazon ElastiCache",
+  "in-memory cache, Redis Memcached, faster repeated reads",
+  "Cache Product Details ที่ถูกอ่านซ้ำ",
+  "DynamoDB เป็น NoSQL Data Store"
+ ],
+ [
+  "Amazon DocumentDB",
+  "JSON document database, MongoDB compatible",
+  "เก็บ JSON Documents ที่ต้องการ MongoDB Compatibility",
+  "Neptune เป็น Graph Database"
+ ],
+ [
+  "Amazon Neptune",
+  "graph database, nodes edges, fraud rings, relationship traversals",
+  "วิเคราะห์ Fraud Ring ระหว่าง Accounts และ Transactions",
+  "DynamoDB เป็น Key-value/Document ไม่ใช่ Graph"
+ ],
+ [
+  "Amazon Redshift",
+  "managed data warehouse, columnar SQL analytics, historical datasets",
+  "วิเคราะห์ธุรกรรมหลายปีใน Warehouse",
+  "Athena Query Data ใน S3 โดยตรง"
+ ],
+ [
+  "Amazon Athena",
+  "serverless SQL on S3, no warehouse loading, query data lake",
+  "Query Parquet Files ใน S3 ด้วย SQL",
+  "Glue เตรียม/แค็ตตาล็อกข้อมูล"
+ ],
+ [
+  "AWS Glue",
+  "ETL, data catalog, schema crawlers, transform data",
+  "แปลง CSV เป็น Parquet และลง Glue Data Catalog",
+  "Athena ใช้ SQL Query"
+ ],
+ [
+  "Amazon EMR",
+  "managed big data clusters, Spark Hadoop, large distributed processing",
+  "รัน Apache Spark Job วิเคราะห์ Logs จำนวนมาก",
+  "Glue เป็น Managed ETL Integration"
+ ],
+ [
+  "Amazon OpenSearch Service",
+  "full text search, search index, log analytics",
+  "ทำ Search Index ให้แอปค้นหาสินค้า",
+  "Athena เหมาะ Query S3 Data Lake"
+ ],
+ [
+  "Amazon Quick",
+  "business intelligence, dashboards, visualization",
+  "สร้าง Business Dashboard จาก Athena/Redshift",
+  "บริการ BI; เคยรู้จักในชื่อ QuickSight"
+ ],
+ [
+  "Amazon Quick Sight",
+  "BI dashboards, visualization, analytics reports",
+  "สร้าง Dashboard แสดง Sales Trends",
+  "ชื่อเดิมที่อาจปรากฏใน Mock ก่อนเปลี่ยน Brand"
+ ],
+ [
+  "AWS DMS",
+  "migrate database, replicate data, minimize downtime",
+  "Replicate Database Data จาก On-prem ไป RDS",
+  "SCT ใช้แปลง Schema/Code"
+ ],
+ [
+  "AWS SCT",
+  "schema conversion, incompatible database engines, SQL code migration",
+  "แปลง Schema จาก Oracle ไป PostgreSQL",
+  "DMS เน้นย้ายข้อมูล; แนวทางใหม่มี DMS Schema Conversion"
+ ],
+ [
+  "AWS Application Migration Service",
+  "server migration, lift and shift, continuous replication, MGN",
+  "Replicate On-prem Servers มาที่ EC2 ก่อน Cutover",
+  "Discovery Service สำรวจ Dependencies ไม่ได้ย้าย Server"
+ ],
+ [
+  "AWS Application Discovery Service",
+  "server inventory, dependency mapping, migration waves",
+  "เก็บ Mapping ว่า Server A คุยกับ Server B",
+  "MGN ใช้ย้าย Server จริง"
+ ],
+ [
+  "AWS Migration Evaluator",
+  "financial business case, migration TCO, cost estimation",
+  "ประเมินค่า On-prem เทียบค่า AWS ก่อนย้าย",
+  "Discovery Service เก็บ Inventory/Dependencies"
+ ],
+ [
+  "AWS Migration Hub",
+  "central migration progress, migration tracking, portfolio",
+  "ดู Dashboard Progress ของ Applications ที่ย้าย",
+  "ไม่ใช่ DMS หรือ MGN ที่ลงมือ Transfer Data/Servers"
+ ],
+ [
+  "Amazon SNS",
+  "publish subscribe, fan-out, notifications to many subscribers",
+  "Publish Event แล้วส่งไปหลาย SQS Queues",
+  "SQS เป็น Durable Queue ให้ Worker Poll"
+ ],
+ [
+  "Amazon SQS",
+  "durable queue, decouple systems, backlog, retry messages",
+  "เก็บ Order Jobs รอ Worker หลังบ้าน",
+  "SNS Fan-out; EventBridge Routing"
+ ],
+ [
+  "Amazon EventBridge",
+  "event bus, match patterns, route business events, schedules",
+  "Route OrderCreated ไป Lambda ที่เกี่ยวข้อง",
+  "Step Functions คุม Multi-step Workflow"
+ ],
+ [
+  "AWS Step Functions",
+  "workflow orchestration, state machine, retries, ordered steps",
+  "สั่ง Lambda A → B → C และ Retry เมื่อผิดพลาด",
+  "EventBridge เน้น Event Routing"
+ ],
+ [
+  "Amazon Kinesis Data Streams",
+  "real-time event stream, ordered shards, high-throughput ingestion",
+  "รับ IoT Telemetry หลายล้าน Records ต่อวัน",
+  "SQS เป็น Queue ไม่ใช่ Event Streaming Analytics"
+ ],
+ [
+  "Amazon Kinesis",
+  "real-time data streams, analytics ingestion",
+  "ส่ง Real-time Clickstream ไป Pipeline",
+  "ชื่อกลุ่มบริการสตรีมมิงข้อมูล"
+ ],
+ [
+  "Amazon SES",
+  "transactional email, send email at scale",
+  "ส่ง Order Receipt ให้ลูกค้า",
+  "SNS ทำ Pub/Sub ไม่ใช่ Email API เต็มรูปแบบ"
+ ],
+ [
+  "Amazon Connect",
+  "contact center, call routing, agent support",
+  "สร้าง Cloud Contact Center ให้ Customer Support",
+  "WorkSpaces คือ Virtual Desktop"
+ ],
+ [
+  "Amazon Lex",
+  "chatbots, conversational AI, intent recognition",
+  "สร้าง Chatbot ให้ผู้ใช้จองตั๋วด้วยข้อความ/เสียง",
+  "Polly แปลง Text เป็น Speech"
+ ],
+ [
+  "Amazon Polly",
+  "text-to-speech, synthesize spoken audio",
+  "อ่านบทความเป็นเสียงด้วย Text-to-Speech",
+  "Transcribe แปลง Speech เป็น Text"
+ ],
+ [
+  "Amazon Transcribe",
+  "speech to text, call transcription, audio recognition",
+  "ถอดเสียงประชุมเป็นข้อความ",
+  "Polly ทำ Text-to-Speech"
+ ],
+ [
+  "Amazon Translate",
+  "language translation, multilingual text",
+  "แปลรีวิวภาษาอังกฤษเป็นไทย",
+  "Comprehend วิเคราะห์ความหมาย/อารมณ์ข้อความ"
+ ],
+ [
+  "Amazon Comprehend",
+  "natural language insights, sentiment, entity extraction",
+  "วิเคราะห์ Sentiment ของ Reviews",
+  "Translate ใช้แปลภาษา"
+ ],
+ [
+  "Amazon Rekognition",
+  "image labels, face attributes, video detection",
+  "ตรวจภาพสินค้าว่ามีวัตถุประเภทใด",
+  "Textract ดึงข้อความจากเอกสาร"
+ ],
+ [
+  "Amazon Textract",
+  "extract text and tables from scanned documents, OCR",
+  "อ่านข้อมูล Invoice PDF ที่ Scan มา",
+  "Rekognition วิเคราะห์ภาพทั่วไป"
+ ],
+ [
+  "Amazon SageMaker AI",
+  "build train deploy ML models, model training",
+  "Train Fraud Detection Model ด้วย Dataset ของบริษัท",
+  "Bedrock ให้เรียก Pretrained Foundation Models ผ่าน API"
+ ],
+ [
+  "Amazon Bedrock",
+  "foundation models API, generative AI, no model training required",
+  "เรียก FM ผ่าน API สร้างสรุปเอกสาร",
+  "SageMaker AI เหมาะงาน ML Lifecycle/Custom Training"
+ ],
+ [
+  "Amazon Q",
+  "generative AI assistant, business coding assistance",
+  "ใช้ AI Assistant ช่วยสรุปหรือถามเรื่องงาน",
+  "Bedrock เป็น Platform ใช้ Foundation Models"
+ ],
+ [
+  "AWS IoT Core",
+  "connect devices, MQTT, sensors, IoT messages",
+  "Sensor หลายพันตัวส่ง Telemetry เข้า AWS",
+  "SNS ใช้ Fan-out Notifications"
+ ],
+ [
+  "Amazon ECR",
+  "store container images, Docker repository, pull images",
+  "ECS Pull Image จาก Private ECR Repository",
+  "ECS รัน Tasks; ECR เก็บ Image"
+ ],
+ [
+  "AWS Professional Services",
+  "expert AWS engagement, migration planning, consulting",
+  "ให้ทีม AWS Professional Services ช่วยวาง Migration",
+  "APN เป็นเครือข่ายพาร์ทเนอร์ภายนอก"
+ ],
+ [
+  "AWS Prescriptive Guidance",
+  "AWS patterns, migration guidance, architecture recommendations",
+  "อ่าน Playbook สำหรับย้าย Monolith ไป AWS",
+  "เป็น Guidance/Content ไม่ใช่ Compute Service"
+ ],
+ [
+  "AWS Knowledge Center",
+  "troubleshooting articles, AWS how-to answers",
+  "หา Article แก้ AccessDenied ใน AWS",
+  "re:Post เป็น Community Q&A"
+ ],
+ [
+  "AWS Support plans",
+  "plan tiers, technical support coverage, support entitlements",
+  "เทียบ Support Plan สำหรับ Production Workload",
+  "ไม่ใช่ AWS Marketplace"
+ ],
+ [
+  "AWS Shared Responsibility Model",
+  "AWS security OF cloud, customer security IN cloud",
+  "ลูกค้า Patch Guest OS บน EC2 แต่ AWS ดูแล Hardware",
+  "ขอบเขตเปลี่ยนตาม Service Type"
+ ]
+]
