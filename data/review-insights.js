@@ -2114,6 +2114,681 @@ window.REVIEW_INSIGHTS = window.REVIEW_INSIGHTS || {
           ]
         }
       ]
+    },
+    "local-set-04": {
+      "title": "Local Mock Set 4",
+      "note": "16 Nov 2026 · 49/65 correct (75.4%) · 16 wrong · 4 Explain More, 2 English Unclear, 2 Concept / Recall, 2 Clue / Distractor flags (overlaps possible). Based on the supplied Set 4 attempt.",
+      "items": [
+        {
+          "questionId": 1,
+          "key": "local-set-04:q1",
+          "topic": "L01 — Agility vs Elasticity",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | ภายในวันเดียวหลัง Requirement เปลี่ยนและไม่รอจัดซื้อ Hardware ต้องการความเร็วในการ Provision Prototype (Agility) ไม่ใช่เพิ่มลด Load"
+        },
+        {
+          "questionId": 3,
+          "key": "local-set-04:q3",
+          "topic": "L01 — Elasticity vs Scalability + Pay-as-you-go",
+          "type": "confidence",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "note": "Wrong | โจทย์แบ่งเป็นสองโจทย์ย่อย: ต้องปรับ Compute ช่วง Spike (Elasticity) และเลิกค่า Compute เมื่อเลิกใช้งาน (Pay-as-you-go)"
+        },
+        {
+          "questionId": 6,
+          "key": "local-set-04:q6",
+          "topic": "L13 — Performance Efficiency + Cost Optimization vs other Well-Architected pillars",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | Response-time Targets ชี้ไป Performance Efficiency; Idle Environment Spending ชี้ไป Cost Optimization ไม่ได้ถามสิ่งแวดล้อมหรือ Runbook"
+        },
+        {
+          "questionId": 11,
+          "key": "local-set-04:q11",
+          "topic": "L12 — Application Discovery Service vs Application Migration Service",
+          "type": "concept",
+          "rawFlags": [
+            "🧠 Concept / Recall Gap"
+          ],
+          "reviewedCauses": [
+            "concept"
+          ],
+          "note": "Wrong | ถาม BEFORE Migration: Map Dependencies ใช้ Application Discovery Service ส่วนประเมิน Business Case ใช้ Migration Evaluator; MGN เป็นขั้นตอนย้ายจริง"
+        },
+        {
+          "questionId": 13,
+          "key": "local-set-04:q13",
+          "topic": "L01 — Economies of scale vs Capital expenditure",
+          "type": "concept",
+          "rawFlags": [
+            "🧠 Concept / Recall Gap"
+          ],
+          "reviewedCauses": [
+            "concept"
+          ],
+          "note": "Wrong | AWS ต่อรอง Network/Hardware ได้ถูกเพราะรวม Demand ของลูกค้าจำนวนมาก จึงเป็น Economies of scale"
+        },
+        {
+          "questionId": 15,
+          "key": "local-set-04:q15",
+          "topic": "L01 — Variable expense vs Capital expenditure",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | โจทย์บอกย้ายจากการซื้อ Physical Servers ไปเป็น Monthly Bills ที่ขึ้นลงตาม Usage จึงเป็น Variable expense"
+        },
+        {
+          "questionId": 18,
+          "key": "local-set-04:q18",
+          "topic": "L09 — Shared Responsibility: Hypervisor vs Guest operating system",
+          "type": "clue",
+          "rawFlags": [
+            "🧩 Clue / Distractor Gap"
+          ],
+          "reviewedCauses": [
+            "clue"
+          ],
+          "note": "Correct; flagged for review | แม้จะตอบถูก Q18 แต่มีธง Clue/Distractor: คำว่า AWS rather than customer หมายถึงถาม Security OF the Cloud"
+        },
+        {
+          "questionId": 19,
+          "key": "local-set-04:q19",
+          "topic": "L09 — EC2 Shared Responsibility: Guest OS + IAM permissions",
+          "type": "confidence",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "note": "Correct; flagged for review | สองหน้าที่ของลูกค้าบน EC2 คือดูแล Guest OS และกำหนดสิทธิ์ AWS IAM แม้บริการ Compute จะอยู่บน AWS"
+        },
+        {
+          "questionId": 22,
+          "key": "local-set-04:q22",
+          "topic": "L10 — AWS Control Tower vs AWS Organizations vs Security Hub",
+          "type": "language",
+          "rawFlags": [
+            "📘 English Unclear"
+          ],
+          "reviewedCauses": [
+            "language"
+          ],
+          "note": "Wrong | Landing Zone พร้อม Governed Multi-account Guardrails เน้นตั้งโครงสร้างและกำกับบัญชี (Control Tower) ไม่ใช่ Dashboard รวม Findings"
+        },
+        {
+          "questionId": 23,
+          "key": "local-set-04:q23",
+          "topic": "L09 — IAM Access Analyzer + Macie vs Inspector",
+          "type": "clue",
+          "rawFlags": [
+            "🧩 Clue / Distractor Gap"
+          ],
+          "reviewedCauses": [
+            "clue"
+          ],
+          "note": "Wrong | ต้องหาข้อมูลอ่อนไหวใน S3 (Macie) และตรวจการเปิดสิทธิ์นอกบัญชี (IAM Access Analyzer) ไม่ได้ถาม Software Vulnerabilities"
+        },
+        {
+          "questionId": 34,
+          "key": "local-set-04:q34",
+          "topic": "L09 — AWS Firewall Manager vs WAF and Shield",
+          "type": "language",
+          "rawFlags": [
+            "📘 English Unclear"
+          ],
+          "reviewedCauses": [
+            "language"
+          ],
+          "note": "Correct; flagged for review | ตอบถูกแต่ปัก English Unclear; centrally manage policies across accounts คือ Firewall Manager"
+        },
+        {
+          "questionId": 39,
+          "key": "local-set-04:q39",
+          "topic": "L04 — Edge location vs Amazon CloudFront",
+          "type": "confidence",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "note": "Wrong | โจทย์ถาม Infrastructure component that holds caches ไม่ได้ถามชื่อ CDN Service; Edge location เป็นสถานที่หรือจุดบริการของ CloudFront"
+        },
+        {
+          "questionId": 42,
+          "key": "local-set-04:q42",
+          "topic": "L03 — AWS Lambda vs Elastic Beanstalk",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | Resize Image หลัง S3 Upload โดยไม่เปิด Server ระหว่างงาน = Lambda; Elastic Beanstalk เป็น Platform สำหรับ Deploy Apps"
+        },
+        {
+          "questionId": 43,
+          "key": "local-set-04:q43",
+          "topic": "L03 — Amazon ECS vs EC2/EKS/Fargate",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | โจทย์ต้องการจัด Replicas, Rolling Updates และ Health Recovery แบบ AWS-native และไม่ใช้ Kubernetes จึงเป็น ECS"
+        },
+        {
+          "questionId": 45,
+          "key": "local-set-04:q45",
+          "topic": "L07 — Amazon DynamoDB vs ElastiCache/Neptune/RDS",
+          "type": "confidence",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "note": "Correct; flagged for review | ตอบถูกแต่ปัก Explain More; Player Sessions/Items เป็น Persistent Primary Store ค้นตาม Player ID จึงใช้ DynamoDB"
+        },
+        {
+          "questionId": 48,
+          "key": "local-set-04:q48",
+          "topic": "L05 — VPC endpoint vs Internet Gateway/NAT Gateway",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | Private Subnet ไป S3 โดยไม่ใช้ Public IP หรือ Internet Route = VPC Endpoint; Internet Gateway สร้างเส้นทางออก Internet"
+        },
+        {
+          "questionId": 49,
+          "key": "local-set-04:q49",
+          "topic": "L05 — Site-to-Site VPN + Direct Connect vs Internet Gateway",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | สองเงื่อนไขมีคนละคำตอบ: Encrypted Internet Tunnel = VPN; Dedicated Circuit = Direct Connect ไม่ใช่ Internet Gateway"
+        },
+        {
+          "questionId": 54,
+          "key": "local-set-04:q54",
+          "topic": "L08 — Amazon Bedrock vs SageMaker AI",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | ต้องการใช้ Pretrained Foundation Models ผ่าน API โดยไม่ Train เอง ให้เลือก Bedrock มากกว่า SageMaker AI"
+        },
+        {
+          "questionId": 60,
+          "key": "local-set-04:q60",
+          "topic": "L11 — On-Demand vs Spot vs On-Demand Capacity Reservations",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | ถามสอง Pricing Options ที่ไม่มี Term Commitment สำหรับ Ordinary Usage กับ Interruptible Spare Capacity คือ On-Demand + Spot; Capacity Reservations ตอบโจทย์จอง Capacity"
+        },
+        {
+          "questionId": 62,
+          "key": "local-set-04:q62",
+          "topic": "L11 — AWS Cost Explorer vs Cost and Usage Report",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | โจทย์ต้อง Filter ย้อนหลังตาม Service/Linked Account และดู Trend ตรงกับ Cost Explorer; CUR เหมาะกับ Raw Detailed Analysis"
+        }
+      ],
+      "details": [
+        {
+          "questionId": 1,
+          "result": "Wrong",
+          "topic": "L01 — Agility vs Elasticity",
+          "question": "A research team needs an analytics prototype on the same day its requirement changes, without waiting for hardware procurement. Which cloud benefit is MOST relevant?",
+          "questionTh": "ทีมวิจัยต้องสร้าง Analytics Prototype ภายในวันเดียวหลัง Requirement เปลี่ยน โดยไม่รอจัดซื้อ Hardware เป็นประโยชน์ Cloud ใดที่ตรงที่สุด",
+          "selected": "Elasticity",
+          "correct": "Agility",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "ตอบผิดเพราะเลือกตัวเลือกที่ไม่ตรง Requirement หลักตามเฉลย; เหตุผลตอนคิดจริงยังไม่ทราบ",
+          "memoryCue": "Agility = สร้างและทดลองสิ่งใหม่ได้รวดเร็ว; Elasticity = ปรับ Capacity ขึ้นลงตาม Demand",
+          "notes": [
+            "ภายในวันเดียวหลัง Requirement เปลี่ยนและไม่รอจัดซื้อ Hardware ต้องการความเร็วในการ Provision Prototype (Agility) ไม่ใช่เพิ่มลด Load",
+            "A. Scalability — Scalability คือความสามารถรองรับโหลดที่เพิ่มขึ้น ส่วน Elasticity เน้นปรับทั้งเพิ่มและลด capacity ตาม demand ที่เปลี่ยนไป",
+            "B. Agility — จัดสรรและทดลองทรัพยากรได้รวดเร็ว [คำตอบที่ถูก]",
+            "C. Elasticity — Elasticity คือการเพิ่มลด capacity ตาม demand ส่วนโจทย์นี้เน้นความเร็วในการสร้างและเลิกใช้ test environment",
+            "D. Pay-as-you-go — Pay-as-you-go คือจ่ายตามการใช้งานจริง แม้ช่วยเรื่องค่าใช้จ่าย แต่ไม่ใช่คุณสมบัติที่อธิบายความเร็วในการสร้าง environment"
+          ]
+        },
+        {
+          "questionId": 3,
+          "result": "Wrong",
+          "topic": "L01 — Elasticity vs Scalability + Pay-as-you-go",
+          "question": "A ticketing company wants to add compute during short spikes and avoid compute charges for resources after they are terminated. Which TWO cloud characteristics support these needs? (Select TWO.)",
+          "questionTh": "บริษัทขายตั๋วต้องเพิ่ม Compute เมื่อ Traffic พุ่งสั้น ๆ และหยุดจ่าย Compute ที่ยุติใช้งาน ข้อใดสองลักษณะรองรับโดยตรง",
+          "selected": "Pay-as-you-go + Scalability",
+          "correct": "Pay-as-you-go + Elasticity",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "diagnosis": "ตอบผิด; ธงช่วยระบุสิ่งที่อยากทบทวน แต่ยังไม่ยืนยันวิธีคิดจริงขณะเลือก",
+          "memoryCue": "Elasticity = เพิ่ม/ลด Capacity ตาม Demand; Scalability = รองรับ Workload Growth; Pay-as-you-go = จ่ายตามใช้",
+          "notes": [
+            "โจทย์แบ่งเป็นสองโจทย์ย่อย: ต้องปรับ Compute ช่วง Spike (Elasticity) และเลิกค่า Compute เมื่อเลิกใช้งาน (Pay-as-you-go)",
+            "A. Pay-as-you-go — Pay-as-you-go คือจ่ายตามการใช้งานจริง แม้ช่วยเรื่องค่าใช้จ่าย แต่ไม่ใช่คุณสมบัติที่อธิบายความเร็วในการสร้าง environment [คำตอบที่ถูก]",
+            "B. Fault tolerance — ทำงานต่อได้เมื่อบางส่วนล้มเหลว",
+            "C. High availability — High availability มุ่งให้บริการพร้อมใช้งานโดยรวม แต่อาจมีช่วง failover; โจทย์นี้เน้นทำงานต่อได้แม้ component หยุดกะทันหัน",
+            "D. Elasticity — Elasticity คือการเพิ่มลด capacity ตาม demand ส่วนโจทย์นี้เน้นความเร็วในการสร้างและเลิกใช้ test environment [คำตอบที่ถูก]",
+            "E. Scalability — Scalability คือความสามารถรองรับโหลดที่เพิ่มขึ้น ส่วน Elasticity เน้นปรับทั้งเพิ่มและลด capacity ตาม demand ที่เปลี่ยนไป"
+          ]
+        },
+        {
+          "questionId": 6,
+          "result": "Wrong",
+          "topic": "L13 — Performance Efficiency + Cost Optimization vs other Well-Architected pillars",
+          "question": "A team must both meet strict response-time targets by choosing suitable compute resources and eliminate spending on idle environments. Which TWO pillars apply MOST directly? (Select TWO.)",
+          "questionTh": "ทีมต้องเลือก Compute ให้ผ่าน Response-time Target และลดค่าใช้จ่ายของ Environment ที่ว่าง ข้อใดสอง Pillars ที่ตรงที่สุด",
+          "selected": "Sustainability + Operational Excellence",
+          "correct": "Performance Efficiency + Cost Optimization",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "ตอบผิดเพราะเลือกตัวเลือกที่ไม่ตรง Requirement หลักตามเฉลย; เหตุผลตอนคิดจริงยังไม่ทราบ",
+          "memoryCue": "Performance Efficiency = ตอบ Latency/Throughput Targets; Cost Optimization = ใช้จ่ายคุ้มค่า; Sustainability = ลด Environmental Impact; Operational Excellence = ปรับกระบวนการ",
+          "notes": [
+            "Response-time Targets ชี้ไป Performance Efficiency; Idle Environment Spending ชี้ไป Cost Optimization ไม่ได้ถามสิ่งแวดล้อมหรือ Runbook",
+            "A. Sustainability — Sustainability เน้นผลกระทบต่อสิ่งแวดล้อม ไม่ใช่การเลือก resource ให้ได้ performance targets",
+            "B. Performance Efficiency — Performance Efficiency เป็น pillar ด้านประสิทธิภาพ แต่โจทย์ถามชื่อวิธีเลือกขนาด resource ให้พอดี [คำตอบที่ถูก]",
+            "C. Reliability — Reliability เป็นแนวคิดกว้างเรื่องการทำงานและฟื้นจาก failure ส่วนโจทย์เจาะจงความสามารถทำงานต่อเมื่อ component ล้มเหลว",
+            "D. Cost Optimization — Cost Optimization เป็นเป้าหมายกว้างในการลดค่าใช้จ่าย ส่วนโจทย์ระบุวิธีลดขนาด instance จาก usage ที่วัดได้ [คำตอบที่ถูก]",
+            "E. Operational Excellence — Operational Excellence เน้นการดำเนินงานและปรับปรุงกระบวนการ ไม่ได้เน้นการเลือก compute เพื่อให้ได้ throughput"
+          ]
+        },
+        {
+          "questionId": 11,
+          "result": "Wrong",
+          "topic": "L12 — Application Discovery Service vs Application Migration Service",
+          "question": "Before migration, a firm must map dependencies among on-premises servers and separately create a financial business case for executives. Which TWO services help? (Select TWO.)",
+          "questionTh": "ก่อน Migration บริษัทต้องทำแผน Dependencies ของ Servers และทำ Financial Business Case ให้ผู้บริหาร ข้อใดสองบริการที่รองรับ",
+          "selected": "AWS Migration Evaluator + AWS Application Migration Service",
+          "correct": "AWS Migration Evaluator + AWS Application Discovery Service",
+          "rawFlags": [
+            "🧠 Concept / Recall Gap"
+          ],
+          "reviewedCauses": [
+            "concept"
+          ],
+          "diagnosis": "ตอบผิด; ธงช่วยระบุสิ่งที่อยากทบทวน แต่ยังไม่ยืนยันวิธีคิดจริงขณะเลือก",
+          "memoryCue": "Application Discovery Service = สำรวจ Inventory/Dependencies; Application Migration Service (MGN) = ย้าย Servers/Replicate; Migration Evaluator = Financial Business Case",
+          "notes": [
+            "ถาม BEFORE Migration: Map Dependencies ใช้ Application Discovery Service ส่วนประเมิน Business Case ใช้ Migration Evaluator; MGN เป็นขั้นตอนย้ายจริง",
+            "A. AWS Migration Evaluator — ช่วยสร้าง business case และ cost assessment ก่อน migration [คำตอบที่ถูก]",
+            "B. AWS Migration Hub — ติดตามความคืบหน้าการ migration",
+            "C. AWS DMS — ย้ายและ replicate databases",
+            "D. AWS Application Discovery Service — รวบรวมข้อมูล servers และ dependencies เพื่อวางแผน migration [คำตอบที่ถูก]",
+            "E. AWS Application Migration Service — ย้าย servers โดยทำ lift-and-shift"
+          ]
+        },
+        {
+          "questionId": 13,
+          "result": "Wrong",
+          "topic": "L01 — Economies of scale vs Capital expenditure",
+          "question": "A cloud provider negotiates lower network and hardware prices by operating infrastructure for millions of customers. Which economic concept explains this?",
+          "questionTh": "ผู้ให้บริการ Cloud ต่อรองราคา Network และ Hardware ได้ต่ำเพราะดูแล Infrastructure ให้ลูกค้าจำนวนมหาศาล เป็นแนวคิดใด",
+          "selected": "Capital expenditure",
+          "correct": "Economies of scale",
+          "rawFlags": [
+            "🧠 Concept / Recall Gap"
+          ],
+          "reviewedCauses": [
+            "concept"
+          ],
+          "diagnosis": "ตอบผิด; ธงช่วยระบุสิ่งที่อยากทบทวน แต่ยังไม่ยืนยันวิธีคิดจริงขณะเลือก",
+          "memoryCue": "Economies of scale = ต้นทุนต่อหน่วยลดจากการจัดซื้อ/ดำเนินงานจำนวนมาก; Capital expenditure = ลงทุนสินทรัพย์ล่วงหน้า",
+          "notes": [
+            "AWS ต่อรอง Network/Hardware ได้ถูกเพราะรวม Demand ของลูกค้าจำนวนมาก จึงเป็น Economies of scale",
+            "A. Rightsizing — Rightsizing คือเลือกขนาด resource ให้เหมาะกับการใช้งานที่วัดได้ แต่ไม่ได้หมายถึงการเพิ่มลด capacity ตาม demand แบบต่อเนื่อง",
+            "B. Economies of scale — Economies of scale คือข้อได้เปรียบด้านต้นทุนจากการใช้ทรัพยากรรวมจำนวนมาก ไม่ใช่การลดขนาด instance ของบริษัท [คำตอบที่ถูก]",
+            "C. Variable expense — ค่าใช้จ่ายที่เปลี่ยนตามการใช้งาน",
+            "D. Capital expenditure — ค่าใช้จ่ายลงทุนล่วงหน้าในสินทรัพย์"
+          ]
+        },
+        {
+          "questionId": 15,
+          "result": "Wrong",
+          "topic": "L01 — Variable expense vs Capital expenditure",
+          "question": "A company switches from buying physical servers to a cloud bill that varies monthly with its consumption. Which expense model now dominates?",
+          "questionTh": "บริษัทเปลี่ยนจากซื้อ Physical Servers เป็นบิล Cloud ที่เปลี่ยนทุกเดือนตามการใช้ เป็น Expense Model ใด",
+          "selected": "Capital expenditure",
+          "correct": "Variable expense",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "ตอบผิดเพราะเลือกตัวเลือกที่ไม่ตรง Requirement หลักตามเฉลย; เหตุผลตอนคิดจริงยังไม่ทราบ",
+          "memoryCue": "Variable expense = ค่าใช้จ่ายเปลี่ยนตาม Consumption; Capital expenditure = ซื้อสินทรัพย์ล่วงหน้า",
+          "notes": [
+            "โจทย์บอกย้ายจากการซื้อ Physical Servers ไปเป็น Monthly Bills ที่ขึ้นลงตาม Usage จึงเป็น Variable expense",
+            "A. Capital expenditure — ค่าใช้จ่ายลงทุนล่วงหน้าในสินทรัพย์",
+            "B. Variable expense — ค่าใช้จ่ายที่เปลี่ยนตามการใช้งาน [คำตอบที่ถูก]",
+            "C. Savings Plans — ส่วนลดตาม commitment ด้านการใช้ compute",
+            "D. Consolidated billing — รวมการเรียกเก็บเงินหลายบัญชีใน Organizations"
+          ]
+        },
+        {
+          "questionId": 18,
+          "result": "Correct",
+          "topic": "L09 — Shared Responsibility: Hypervisor vs Guest operating system",
+          "question": "Which security layer is managed by AWS rather than the customer for a standard Amazon EC2 instance?",
+          "questionTh": "Security Layer ใด AWS เป็นผู้ดูแล ไม่ใช่ลูกค้า สำหรับ EC2 Instance ทั่วไป",
+          "selected": "Hypervisor",
+          "correct": "Hypervisor",
+          "rawFlags": [
+            "🧩 Clue / Distractor Gap"
+          ],
+          "reviewedCauses": [
+            "clue"
+          ],
+          "diagnosis": "ตอบถูก แต่มีธงทบทวนจากผู้สอบ",
+          "memoryCue": "AWS ดูแล Hypervisor/Physical Hosts; ลูกค้าดูแล Guest OS, IAM Policies และการตั้งค่าของตนบน EC2",
+          "notes": [
+            "แม้จะตอบถูก Q18 แต่มีธง Clue/Distractor: คำว่า AWS rather than customer หมายถึงถาม Security OF the Cloud",
+            "A. Guest operating system — ระบบปฏิบัติการภายใน EC2 ที่ลูกค้าต้องกำหนดค่าและ patch",
+            "B. Configuring IAM permissions — ลูกค้ากำหนดสิทธิ์ IAM identities และ resource access ที่จำเป็น",
+            "C. Hypervisor — ระบบ virtualization underlying EC2 ที่ AWS ดูแล [คำตอบที่ถูก]",
+            "D. Managing customer encryption key policies — ลูกค้ากำหนดนโยบายการใช้ encryption keys ที่ควบคุมเอง"
+          ]
+        },
+        {
+          "questionId": 19,
+          "result": "Correct",
+          "topic": "L09 — EC2 Shared Responsibility: Guest OS + IAM permissions",
+          "question": "A team hosts a custom API on EC2. Which TWO activities remain its responsibility under the shared responsibility model? (Select TWO.)",
+          "questionTh": "ทีมโฮสต์ Custom API บน EC2 กิจกรรมใดสองข้อยังเป็นหน้าที่ของทีมตาม Shared Responsibility Model",
+          "selected": "Guest operating system + Configuring IAM permissions",
+          "correct": "Guest operating system + Configuring IAM permissions",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "diagnosis": "ตอบถูก แต่มีธงทบทวนจากผู้สอบ",
+          "memoryCue": "ลูกค้า Patch/Configure Guest Operating System บน EC2 และกำหนด IAM Permissions; AWS ดูแล Data Centers/Physical Hardware",
+          "notes": [
+            "สองหน้าที่ของลูกค้าบน EC2 คือดูแล Guest OS และกำหนดสิทธิ์ AWS IAM แม้บริการ Compute จะอยู่บน AWS",
+            "A. Guest operating system — ระบบปฏิบัติการภายใน EC2 ที่ลูกค้าต้องกำหนดค่าและ patch [คำตอบที่ถูก]",
+            "B. Maintaining AWS physical servers — หน้าที่ของ AWS ในการบำรุงรักษา hardware underlying services",
+            "C. Configuring IAM permissions — ลูกค้ากำหนดสิทธิ์ IAM identities และ resource access ที่จำเป็น [คำตอบที่ถูก]",
+            "D. Securing AWS data centers — หน้าที่ของ AWS ในการรักษาความปลอดภัยศูนย์ข้อมูลทางกายภาพ",
+            "E. AWS-owned physical servers — เครื่อง server จริงใน AWS data centers ที่ AWS ดูแล"
+          ]
+        },
+        {
+          "questionId": 22,
+          "result": "Wrong",
+          "topic": "L10 — AWS Control Tower vs AWS Organizations vs Security Hub",
+          "question": "An enterprise wants a governed multi-account landing zone with centrally applied guardrails. Which AWS service BEST fits?",
+          "questionTh": "องค์กรต้องการ Multi-account Landing Zone พร้อม Guardrails จากส่วนกลาง ควรใช้บริการใด",
+          "selected": "AWS Security Hub",
+          "correct": "AWS Control Tower",
+          "rawFlags": [
+            "📘 English Unclear"
+          ],
+          "reviewedCauses": [
+            "language"
+          ],
+          "diagnosis": "ตอบผิด; ธงช่วยระบุสิ่งที่อยากทบทวน แต่ยังไม่ยืนยันวิธีคิดจริงขณะเลือก",
+          "memoryCue": "Control Tower = ตั้ง Multi-account Landing Zone/Guardrails; Organizations = จัดโครงสร้าง Accounts/SCP; Security Hub = รวม Security Findings; Config = ตรวจ Configuration Rules",
+          "notes": [
+            "Landing Zone พร้อม Governed Multi-account Guardrails เน้นตั้งโครงสร้างและกำกับบัญชี (Control Tower) ไม่ใช่ Dashboard รวม Findings",
+            "A. AWS Control Tower — ตั้งค่าและกำกับ multi-account landing zone [คำตอบที่ถูก]",
+            "B. AWS Organizations — จัดกลุ่มบัญชีและใช้ governance / consolidated billing",
+            "C. AWS Security Hub — รวม findings และสถานะ security จากหลายแหล่ง",
+            "D. AWS Config — ติดตามและประเมิน configuration ของทรัพยากรตามกฎ"
+          ]
+        },
+        {
+          "questionId": 23,
+          "result": "Wrong",
+          "topic": "L09 — IAM Access Analyzer + Macie vs Inspector",
+          "question": "A team needs to identify sensitive personal data in S3 and detect resource policies that allow access from outside its accounts. Which TWO services are purpose-built for these tasks? (Select TWO.)",
+          "questionTh": "ทีมต้องหาข้อมูลส่วนบุคคลใน S3 และตรวจ Resource Policies ที่อาจเปิดสิทธิ์ให้ภายนอก ข้อใดสองบริการที่ตรงงาน",
+          "selected": "Amazon Inspector + Amazon Macie",
+          "correct": "IAM Access Analyzer + Amazon Macie",
+          "rawFlags": [
+            "🧩 Clue / Distractor Gap"
+          ],
+          "reviewedCauses": [
+            "clue"
+          ],
+          "diagnosis": "ตอบผิด; ธงช่วยระบุสิ่งที่อยากทบทวน แต่ยังไม่ยืนยันวิธีคิดจริงขณะเลือก",
+          "memoryCue": "IAM Access Analyzer = Resource-policy External Access; Macie = Sensitive Data in S3; Inspector = Software Package Vulnerabilities/CVEs",
+          "notes": [
+            "ต้องหาข้อมูลอ่อนไหวใน S3 (Macie) และตรวจการเปิดสิทธิ์นอกบัญชี (IAM Access Analyzer) ไม่ได้ถาม Software Vulnerabilities",
+            "A. Amazon Inspector — สแกนช่องโหว่ของ workload ที่รองรับ",
+            "B. IAM Access Analyzer — วิเคราะห์ resource access และ external access [คำตอบที่ถูก]",
+            "C. AWS Config — ติดตามและประเมิน configuration ของทรัพยากรตามกฎ",
+            "D. Amazon Macie — ค้นหาและจัดประเภทข้อมูลอ่อนไหวใน Amazon S3 [คำตอบที่ถูก]",
+            "E. AWS Security Hub — รวม findings และสถานะ security จากหลายแหล่ง"
+          ]
+        },
+        {
+          "questionId": 34,
+          "result": "Correct",
+          "topic": "L09 — AWS Firewall Manager vs WAF and Shield",
+          "question": "An administrator needs consistent web ACL policies across many AWS accounts and organizational units. Which service provides centralized management?",
+          "questionTh": "ผู้ดูแลต้องการ Web ACL Policies ที่สอดคล้องกันข้าม AWS Accounts และ Organizational Units ใช้บริการใดจัดการจากส่วนกลาง",
+          "selected": "AWS Firewall Manager",
+          "correct": "AWS Firewall Manager",
+          "rawFlags": [
+            "📘 English Unclear"
+          ],
+          "reviewedCauses": [
+            "language"
+          ],
+          "diagnosis": "ตอบถูก แต่มีธงทบทวนจากผู้สอบ",
+          "memoryCue": "Firewall Manager = จัดการ Web ACL/Security Policies ข้าม Accounts; WAF = กรอง HTTP Requests; Shield = DDoS Protection",
+          "notes": [
+            "ตอบถูกแต่ปัก English Unclear; centrally manage policies across accounts คือ Firewall Manager",
+            "A. AWS WAF — กรอง HTTP(S) requests ตาม web ACL rules",
+            "B. AWS Security Hub — รวม findings และสถานะ security จากหลายแหล่ง",
+            "C. AWS Firewall Manager — จัดการ security policies ส่วนกลางข้ามบัญชี [คำตอบที่ถูก]",
+            "D. AWS Shield — ป้องกันการโจมตี DDoS"
+          ]
+        },
+        {
+          "questionId": 39,
+          "result": "Wrong",
+          "topic": "L04 — Edge location vs Amazon CloudFront",
+          "question": "A video streaming service stores a single origin in one Region but delivers cached thumbnails from nearby AWS network sites around the world. Which infrastructure component holds these caches?",
+          "questionTh": "บริการ Video Streaming มี Origin ใน Region เดียว แต่ส่ง Cached Thumbnails จาก Network Sites ใกล้ผู้ชมทั่วโลก ตำแหน่งนี้เรียกว่าอะไร",
+          "selected": "Amazon CloudFront",
+          "correct": "Edge location",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "diagnosis": "ตอบผิด; ธงช่วยระบุสิ่งที่อยากทบทวน แต่ยังไม่ยืนยันวิธีคิดจริงขณะเลือก",
+          "memoryCue": "CloudFront = CDN Service; Edge location = AWS network site ที่ใช้ Cache ใกล้ผู้ชม",
+          "notes": [
+            "โจทย์ถาม Infrastructure component that holds caches ไม่ได้ถามชื่อ CDN Service; Edge location เป็นสถานที่หรือจุดบริการของ CloudFront",
+            "A. Amazon CloudFront — content delivery network ที่ใช้ edge locations",
+            "B. Availability Zone — พื้นที่โครงสร้างพื้นฐานที่แยกจาก AZ อื่นใน Region",
+            "C. Edge location — จุดกระจาย content ใกล้ผู้ใช้ [คำตอบที่ถูก]",
+            "D. AWS Region — พื้นที่ทางภูมิศาสตร์ที่มีหลาย Availability Zones"
+          ]
+        },
+        {
+          "questionId": 42,
+          "result": "Wrong",
+          "topic": "L03 — AWS Lambda vs Elastic Beanstalk",
+          "question": "A photo website must resize each image after an upload event, without keeping an application server running between uploads. Which compute service is the simplest fit?",
+          "questionTh": "เว็บรูปภาพต้อง Resize ภาพเมื่อเกิด Upload Event โดยไม่เปิด Application Server ทิ้งไว้ระหว่าง Uploads ใช้ Compute Service ใด",
+          "selected": "AWS Elastic Beanstalk",
+          "correct": "AWS Lambda",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "ตอบผิดเพราะเลือกตัวเลือกที่ไม่ตรง Requirement หลักตามเฉลย; เหตุผลตอนคิดจริงยังไม่ทราบ",
+          "memoryCue": "Lambda = Event-driven Code แบบไม่ต้องเปิด Server รอ; Elastic Beanstalk = Deploy/Manage Application Environment",
+          "notes": [
+            "Resize Image หลัง S3 Upload โดยไม่เปิด Server ระหว่างงาน = Lambda; Elastic Beanstalk เป็น Platform สำหรับ Deploy Apps",
+            "A. Amazon EC2 — ให้ virtual servers ที่ลูกค้าจัดการ guest OS",
+            "B. AWS Batch — จัดคิวและรัน batch computing jobs",
+            "C. AWS Lambda — รันโค้ดแบบ event-driven โดยไม่จัดการ servers [คำตอบที่ถูก]",
+            "D. AWS Elastic Beanstalk — deploy applications พร้อมจัดการ underlying environment"
+          ]
+        },
+        {
+          "questionId": 43,
+          "result": "Wrong",
+          "topic": "L03 — Amazon ECS vs EC2/EKS/Fargate",
+          "question": "A team wants to manage replicas, rolling updates, and health recovery for containers using AWS-native orchestration, not Kubernetes. Which service is intended?",
+          "questionTh": "ทีมต้องจัดการ Replicas, Rolling Updates และ Recovery ของ Containers ด้วย AWS-native Orchestration ไม่ใช้ Kubernetes ควรเลือกบริการใด",
+          "selected": "Amazon EC2",
+          "correct": "Amazon ECS",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "ตอบผิดเพราะเลือกตัวเลือกที่ไม่ตรง Requirement หลักตามเฉลย; เหตุผลตอนคิดจริงยังไม่ทราบ",
+          "memoryCue": "ECS = Container Orchestration จัด Tasks/Services/Desired Count; EKS = Kubernetes Orchestration; Fargate = Compute; EC2 = Virtual Server",
+          "notes": [
+            "โจทย์ต้องการจัด Replicas, Rolling Updates และ Health Recovery แบบ AWS-native และไม่ใช้ Kubernetes จึงเป็น ECS",
+            "A. Amazon EKS — บริการ Kubernetes แบบ managed",
+            "B. AWS Fargate — compute engine สำหรับ containers โดยไม่จัดการ servers",
+            "C. Amazon ECS — orchestrate containers ด้วย AWS-native control plane [คำตอบที่ถูก]",
+            "D. Amazon EC2 — ให้ virtual servers ที่ลูกค้าจัดการ guest OS"
+          ]
+        },
+        {
+          "questionId": 45,
+          "result": "Correct",
+          "topic": "L07 — Amazon DynamoDB vs ElastiCache/Neptune/RDS",
+          "question": "A mobile game needs a persistent primary store for player sessions and items, keyed by player ID with consistent low-latency lookups at scale. Which service BEST fits?",
+          "questionTh": "เกมมือถือใช้ Primary Persistent Store สำหรับ Session และ Items โดยค้นด้วย Player ID ต้องการ Low Latency ใน Scale สูง ควรใช้บริการใด",
+          "selected": "Amazon DynamoDB",
+          "correct": "Amazon DynamoDB",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "diagnosis": "ตอบถูก แต่มีธงทบทวนจากผู้สอบ",
+          "memoryCue": "DynamoDB = Durable Managed NoSQL Key-value Database; ElastiCache = In-memory Cache; Neptune = Graph Relationships; RDS = Relational SQL",
+          "notes": [
+            "ตอบถูกแต่ปัก Explain More; Player Sessions/Items เป็น Persistent Primary Store ค้นตาม Player ID จึงใช้ DynamoDB",
+            "A. Amazon ElastiCache — managed in-memory caching",
+            "B. Amazon Neptune — managed graph database",
+            "C. Amazon RDS — managed relational databases",
+            "D. Amazon DynamoDB — managed NoSQL key-value/document database [คำตอบที่ถูก]"
+          ]
+        },
+        {
+          "questionId": 48,
+          "result": "Wrong",
+          "topic": "L05 — VPC endpoint vs Internet Gateway/NAT Gateway",
+          "question": "Instances in a private subnet must reach a supported S3 service privately without using a public IP or internet route. Which network feature is appropriate?",
+          "questionTh": "Instances ใน Private Subnet ต้องเข้าถึง S3 ที่รองรับแบบ Private โดยไม่ใช้ Public IP หรือ Internet Route ควรเลือก Network Feature ใด",
+          "selected": "Internet Gateway",
+          "correct": "VPC endpoint",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "ตอบผิดเพราะเลือกตัวเลือกที่ไม่ตรง Requirement หลักตามเฉลย; เหตุผลตอนคิดจริงยังไม่ทราบ",
+          "memoryCue": "VPC endpoint = Private Connectivity ไป AWS Services; Internet Gateway = Internet Route ของ VPC; NAT Gateway = Outbound Internet ของ Private Subnet",
+          "notes": [
+            "Private Subnet ไป S3 โดยไม่ใช้ Public IP หรือ Internet Route = VPC Endpoint; Internet Gateway สร้างเส้นทางออก Internet",
+            "A. VPC endpoint — เข้าถึง AWS services แบบ private โดยไม่ผ่าน public internet [คำตอบที่ถูก]",
+            "B. NAT Gateway — ให้ private subnet เริ่ม outbound connections ไปอินเทอร์เน็ต",
+            "C. Internet Gateway — เชื่อม VPC กับอินเทอร์เน็ตตาม route และ security rules",
+            "D. AWS Site-to-Site VPN — เข้ารหัสการเชื่อมต่อเครือข่ายผ่านอินเทอร์เน็ต"
+          ]
+        },
+        {
+          "questionId": 49,
+          "result": "Wrong",
+          "topic": "L05 — Site-to-Site VPN + Direct Connect vs Internet Gateway",
+          "question": "A company needs one network connection over the internet that encrypts traffic to AWS, and another using a dedicated private circuit. Which TWO AWS connectivity services match these requirements? (Select TWO.)",
+          "questionTh": "บริษัทต้องการ Network Connection แบบเข้ารหัสผ่าน Internet และอีกแบบเป็น Dedicated Private Circuit ข้อใดสอง Connectivity Services ที่ตรงงาน",
+          "selected": "AWS Site-to-Site VPN + Internet Gateway",
+          "correct": "AWS Site-to-Site VPN + AWS Direct Connect",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "ตอบผิดเพราะเลือกตัวเลือกที่ไม่ตรง Requirement หลักตามเฉลย; เหตุผลตอนคิดจริงยังไม่ทราบ",
+          "memoryCue": "Site-to-Site VPN = Encrypted Tunnel ผ่าน Internet; Direct Connect = Dedicated Private Circuit; Internet Gateway = เส้นทาง Internet ให้ VPC",
+          "notes": [
+            "สองเงื่อนไขมีคนละคำตอบ: Encrypted Internet Tunnel = VPN; Dedicated Circuit = Direct Connect ไม่ใช่ Internet Gateway",
+            "A. AWS Transit Gateway — เชื่อม VPC และ on-premises networks แบบ hub",
+            "B. AWS Site-to-Site VPN — เข้ารหัสการเชื่อมต่อเครือข่ายผ่านอินเทอร์เน็ต [คำตอบที่ถูก]",
+            "C. Internet Gateway — เชื่อม VPC กับอินเทอร์เน็ตตาม route และ security rules",
+            "D. AWS Direct Connect — dedicated private network connection ไป AWS [คำตอบที่ถูก]",
+            "E. VPC endpoint — เข้าถึง AWS services แบบ private โดยไม่ผ่าน public internet"
+          ]
+        },
+        {
+          "questionId": 54,
+          "result": "Wrong",
+          "topic": "L08 — Amazon Bedrock vs SageMaker AI",
+          "question": "A startup wants to call pretrained foundation models through managed APIs for text generation, without building and training its own ML model. Which service fits?",
+          "questionTh": "Startup ต้องการเรียก Pretrained Foundation Models ผ่าน Managed APIs เพื่อสร้างข้อความ โดยไม่ฝึก ML Model ใหม่เอง ใช้บริการใด",
+          "selected": "Amazon SageMaker AI",
+          "correct": "Amazon Bedrock",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "ตอบผิดเพราะเลือกตัวเลือกที่ไม่ตรง Requirement หลักตามเฉลย; เหตุผลตอนคิดจริงยังไม่ทราบ",
+          "memoryCue": "Bedrock = เรียก Foundation Models ผ่าน Managed APIs; SageMaker AI = สร้าง ฝึก และ Deploy ML Models",
+          "notes": [
+            "ต้องการใช้ Pretrained Foundation Models ผ่าน API โดยไม่ Train เอง ให้เลือก Bedrock มากกว่า SageMaker AI",
+            "A. Amazon SageMaker AI — สร้าง ฝึก และ deploy machine learning models",
+            "B. Amazon Lex — สร้าง conversational interfaces",
+            "C. Amazon Bedrock — ใช้งาน foundation models ผ่าน managed APIs [คำตอบที่ถูก]",
+            "D. Amazon Polly — แปลงข้อความเป็นเสียงพูด"
+          ]
+        },
+        {
+          "questionId": 60,
+          "result": "Wrong",
+          "topic": "L11 — On-Demand vs Spot vs On-Demand Capacity Reservations",
+          "question": "Which TWO EC2 purchasing options are respectively suited to short-term ordinary usage without a long-term commitment and to interruptible spare capacity without a term commitment? (Select TWO.)",
+          "questionTh": "ตัวเลือกซื้อ EC2 สองแบบใดใช้กับงานทั่วไปช่วงสั้นแบบไม่มี Long-term Commitment และงานที่ยอมให้ Interrupt จาก Spare Capacity โดยไม่ผูกสัญญาระยะยาว",
+          "selected": "Spot Instances + On-Demand Capacity Reservations",
+          "correct": "Spot Instances + On-Demand Instances",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "ตอบผิดเพราะเลือกตัวเลือกที่ไม่ตรง Requirement หลักตามเฉลย; เหตุผลตอนคิดจริงยังไม่ทราบ",
+          "memoryCue": "On-Demand = จ่ายตามใช้ไม่มี Term Commitment; Spot = ส่วนลดจาก EC2 Spare Capacity แต่อาจ Interrupted; Capacity Reservations = จอง EC2 Capacity ใน AZ",
+          "notes": [
+            "ถามสอง Pricing Options ที่ไม่มี Term Commitment สำหรับ Ordinary Usage กับ Interruptible Spare Capacity คือ On-Demand + Spot; Capacity Reservations ตอบโจทย์จอง Capacity",
+            "A. Spot Instances — ใช้ EC2 spare capacity ที่อาจถูกขัดจังหวะ [คำตอบที่ถูก]",
+            "B. Reserved Instances — ส่วนลดตาม commitment และคุณสมบัติที่กำหนด",
+            "C. Savings Plans — ส่วนลดตาม commitment ด้านการใช้ compute",
+            "D. On-Demand Instances — คิดเงินตามการใช้งานโดยไม่มีสัญญาระยะยาว [คำตอบที่ถูก]",
+            "E. On-Demand Capacity Reservations — จอง capacity ใน AZ โดยไม่ผูกกับส่วนลดค่าใช้งาน"
+          ]
+        },
+        {
+          "questionId": 62,
+          "result": "Wrong",
+          "topic": "L11 — AWS Cost Explorer vs Cost and Usage Report",
+          "question": "An analyst wants to filter actual AWS charges from the previous quarter by service and linked account, then view the spending trend. Which tool fits?",
+          "questionTh": "นักวิเคราะห์ต้อง Filter ค่า AWS ที่จ่ายจริงไตรมาสก่อนตาม Service และ Linked Account พร้อมดู Trend ใช้เครื่องมือใด",
+          "selected": "AWS Cost and Usage Report",
+          "correct": "AWS Cost Explorer",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "ตอบผิดเพราะเลือกตัวเลือกที่ไม่ตรง Requirement หลักตามเฉลย; เหตุผลตอนคิดจริงยังไม่ทราบ",
+          "memoryCue": "Cost Explorer = Interactive Historical Cost Trends/Filtering; Cost and Usage Report = Detailed Billing Line-item Data เพื่อนำไปวิเคราะห์ต่อ",
+          "notes": [
+            "โจทย์ต้อง Filter ย้อนหลังตาม Service/Linked Account และดู Trend ตรงกับ Cost Explorer; CUR เหมาะกับ Raw Detailed Analysis",
+            "A. AWS Cost and Usage Report — ข้อมูลค่าใช้จ่ายและการใช้งานละเอียด",
+            "B. AWS Budgets — กำหนด budgets และแจ้งเตือนตาม thresholds",
+            "C. AWS Pricing Calculator — ประเมินค่าใช้จ่ายก่อนใช้งาน",
+            "D. AWS Cost Explorer — วิเคราะห์ค่าใช้จ่ายจริงและแนวโน้ม [คำตอบที่ถูก]"
+          ]
+        }
+      ]
     }
   },
   "history": [
@@ -2149,6 +2824,17 @@ window.REVIEW_INSIGHTS = window.REVIEW_INSIGHTS || {
       "confidence": 4,
       "language": 2,
       "clue": 0
+    },
+    {
+      "setId": "local-set-04",
+      "label": "Local Mock Set 4 · 16 Nov 2026",
+      "score": 49,
+      "total": 65,
+      "percent": 75,
+      "concept": 2,
+      "confidence": 4,
+      "language": 2,
+      "clue": 2
     }
   ],
   "topicStatus": [],
