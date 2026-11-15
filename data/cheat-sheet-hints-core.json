@@ -1,0 +1,332 @@
+[
+ [
+  "Pay-as-you-go",
+  "pay for what you use, usage-based, stop paying, no upfront",
+  "ปิด EC2 ทดสอบเมื่อเลิกใช้เพื่อลดค่า Compute ตามเวลา",
+  "ไม่ใช่ Elasticity ซึ่งพูดถึงการเพิ่มลด Capacity"
+ ],
+ [
+  "Scalability",
+  "handle growth, increase throughput, more users, scale up/out",
+  "เว็บขยายจำนวน EC2 เพื่อรองรับลูกค้าเพิ่ม",
+  "รองรับงานโต ไม่จำเป็นต้องลดลงอัตโนมัติแบบ Elasticity"
+ ],
+ [
+  "Agility",
+  "prototype quickly, launch in minutes, rapid experiment, faster provisioning",
+  "ทีม Dev เปิด Test Environment ภายในไม่กี่นาที",
+  "เน้นความเร็วในการสร้าง/เปลี่ยน ไม่ใช่ปริมาณ Traffic"
+ ],
+ [
+  "Elasticity",
+  "demand spikes, scale in/out, peak then quiet, shrink capacity",
+  "Auto Scaling เพิ่ม EC2 ช่วง Flash Sale แล้วลดหลังจบ",
+  "ไม่ใช่ Scalability ที่เน้นรองรับโหลดเติบโต"
+ ],
+ [
+  "Global reach",
+  "launch across continents, customers worldwide, international expansion",
+  "Deploy Website ใน Region ใกล้ลูกค้าต่างประเทศ",
+  "ต่างจาก Multi-AZ ที่เน้นทนความล้มเหลวภายใน Region"
+ ],
+ [
+  "High availability",
+  "minimize downtime, service remains accessible, failover",
+  "ALB กระจาย Requests ไป EC2 หลาย AZ",
+  "Availability ของระบบ ไม่ใช่ Durability ของข้อมูล"
+ ],
+ [
+  "Fault tolerance",
+  "continue despite component failure, uninterrupted operation",
+  "Node หนึ่งเสีย แต่อีก Node รับงานต่อได้ทันที",
+  "เข้มกว่าเพียงการกู้ระบบให้กลับมา"
+ ],
+ [
+  "Reliability",
+  "recover from failures, recovery planning, failover testing, RTO/RPO",
+  "ทดสอบ Recovery หลัง AZ Failure",
+  "เป็น Well-Architected Pillar; ครอบคลุม HA/Recovery"
+ ],
+ [
+  "Durability",
+  "data not lost, object preservation, 11 nines",
+  "เก็บภาพบน S3 เพื่อให้ข้อมูลคงอยู่แม้ Storage Hardware เสีย",
+  "ไม่ได้แปลว่า Service พร้อมให้เรียกใช้ตลอดเวลา"
+ ],
+ [
+  "Security",
+  "protect data, encryption, identity, least privilege",
+  "เข้ารหัส S3 และจำกัด IAM Policies",
+  "Pillar เน้นการป้องกัน ไม่ใช่ Reliability"
+ ],
+ [
+  "Performance Efficiency",
+  "response time, latency target, throughput, right resource type",
+  "เปลี่ยน Instance Type ให้รองรับ API Latency เป้าหมาย",
+  "โจทย์ถาม Performance ไม่ใช่เพียง Cost"
+ ],
+ [
+  "Operational Excellence",
+  "runbooks, postmortem, deployment improvement, automate operations",
+  "ทำ Incident Review แล้วปรับ Deployment Procedure",
+  "เน้นกระบวนการดำเนินงาน ไม่ใช่ Reliability โดยตรง"
+ ],
+ [
+  "Cost Optimization",
+  "minimize wasted spend, idle resources, cost efficiency",
+  "ปิด Dev EC2 กลางคืนเพื่อลดค่าใช้จ่าย",
+  "Pillar ด้านต้นทุน ไม่ใช่ Sustainability โดยตรง"
+ ],
+ [
+  "Sustainability",
+  "environmental footprint, power consumption, carbon emissions",
+  "ปรับ Batch Scheduling เพื่อลดการใช้พลังงาน",
+  "เน้นสิ่งแวดล้อม แม้ช่วยลดค่าใช้จ่ายได้"
+ ],
+ [
+  "Rightsizing",
+  "underutilized, choose smaller instance, CPU low, reduce overprovisioning",
+  "ลดขนาด RDS หลังตรวจ Usage ย้อนหลัง",
+  "ไม่ใช่ Elasticity ที่ปรับ Capacity ตาม Demand แบบ Dynamic"
+ ],
+ [
+  "Economies of scale",
+  "bulk purchasing, millions of customers, lower per-unit cost",
+  "AWS ซื้อ Hardware จำนวนมากจึงลดต้นทุนต่อหน่วย",
+  "ไม่ใช่ CapEx/Variable Expense"
+ ],
+ [
+  "Capital expenditure",
+  "upfront purchase, own hardware, depreciate assets, data center investment",
+  "ซื้อ Physical Server ก่อนเปิดระบบ",
+  "เทียบกับ Variable Expense ซึ่งขึ้นลงตาม Usage"
+ ],
+ [
+  "Variable expense",
+  "monthly bill varies, consumption-based, operating expense",
+  "ค่าใช้จ่าย Cloud เพิ่มลดตามชั่วโมงใช้งานจริง",
+  "ไม่ใช่การซื้อสินทรัพย์ล่วงหน้า"
+ ],
+ [
+  "Data sovereignty",
+  "data jurisdiction, local laws, country-specific storage",
+  "เลือกเก็บข้อมูลลูกค้าใน Region ที่ตรงกฎหมายประเทศ",
+  "เกี่ยวกับกฎหมายที่ครอบข้อมูล ไม่ใช่ Performance อย่างเดียว"
+ ],
+ [
+  "Rehost",
+  "lift and shift, minimal changes, move VM as-is",
+  "ย้าย VM จาก On-premises มา EC2 โดยแทบไม่เปลี่ยนโค้ด",
+  "ไม่ใช่ Replatform/Refactor"
+ ],
+ [
+  "Replatform",
+  "limited changes, switch to managed database, lift-tinker-shift",
+  "ย้าย MySQL ที่ดูแลเองเป็น Amazon RDS",
+  "เปลี่ยน Platform บางส่วนแต่ยังไม่ Redesign แอปทั้งหมด"
+ ],
+ [
+  "Refactor",
+  "redesign architecture, microservices, cloud-native, event-driven redesign",
+  "แตก Monolith เป็น Services ที่ใช้ EventBridge",
+  "เป็นการเปลี่ยน Architecture เชิงลึก"
+ ],
+ [
+  "Retain",
+  "keep on-premises, not yet migrating, regulatory hold",
+  "ยังเก็บระบบเดิมใน Data Center ชั่วคราว",
+  "ไม่ใช่ Retire ที่เลิกใช้งาน"
+ ],
+ [
+  "Retire",
+  "no users, decommission, turn off legacy app",
+  "ปิดระบบเก่าที่ไม่มีฝ่ายใดใช้แล้ว",
+  "ไม่ย้ายและไม่เก็บไว้ใช้"
+ ],
+ [
+  "Multi-AZ deployment",
+  "same Region, failover, high availability, AZ failure",
+  "RDS มี Standby ข้าม Availability Zone",
+  "ไม่ใช่ Multi-Region disaster recovery"
+ ],
+ [
+  "Multi-Region deployment",
+  "different regions, disaster recovery, regional outage, global presence",
+  "Deploy Application ใน Singapore และ Tokyo เพื่อ DR",
+  "ไม่ใช่แค่หลาย AZ ภายใน Region เดียว"
+ ],
+ [
+  "AWS Region",
+  "geography, data residency, closest users, region selection",
+  "เลือก ap-southeast-1 ให้บริการลูกค้าไทย",
+  "เป็นกลุ่มภูมิศาสตร์ของ AZ หลายแห่ง"
+ ],
+ [
+  "Availability Zone",
+  "isolated facilities, within a Region, AZ outage",
+  "ใช้ EC2 ใน AZ a และ AZ b",
+  "AZ อยู่ภายใน Region ไม่ใช่กลับกัน"
+ ],
+ [
+  "Edge location",
+  "cached near users, CDN point of presence, global edge",
+  "CloudFront Cache Thumbnail ใกล้ผู้ใช้",
+  "Edge location เป็นจุดบริการ ไม่ใช่ชื่อ CDN"
+ ],
+ [
+  "Public cloud",
+  "shared provider infrastructure, no owned datacenter",
+  "บริษัทเปิด EC2 โดยไม่ซื้อ Hardware",
+  "ยังต้องดูแล Security IN the cloud"
+ ],
+ [
+  "Hybrid cloud",
+  "on premises and cloud, integrate existing DC",
+  "เชื่อม Data Center กับ AWS ด้วย VPN",
+  "ไม่ใช่ Multi-cloud ที่ใช้หลาย Cloud Providers"
+ ],
+ [
+  "Least privilege",
+  "only required permissions, read but not delete",
+  "Lambda อ่าน DynamoDB Table เดียว ไม่ให้ Update",
+  "ไม่ใช่ Defense in depth ซึ่งวางหลายชั้นป้องกัน"
+ ],
+ [
+  "Defense in depth",
+  "multiple security controls, layered defenses",
+  "ใช้ IAM + WAF + Encryption",
+  "ไม่ใช่เพียงจำกัดสิทธิ์ให้แคบที่สุด"
+ ],
+ [
+  "Separation of duties",
+  "split responsibilities, approval separation",
+  "คนอนุมัติ Payment ไม่ใช่คนแก้ข้อมูลธุรกรรม",
+  "เน้นแยกหน้าที่ ไม่ใช่ Authentication"
+ ],
+ [
+  "Zero Trust",
+  "never trust automatically, verify explicitly",
+  "ตรวจ Identity/Device/Context ทุกครั้งก่อนอนุญาต",
+  "เป็น Security Principle ไม่ใช่ชื่อ Service"
+ ],
+ [
+  "Shared Responsibility Model",
+  "security OF vs IN cloud, customer data, AWS hardware",
+  "AWS ดูแล Host จริง แต่ลูกค้าดูแล IAM และ Guest OS ของ EC2",
+  "ขอบเขตความรับผิดชอบเปลี่ยนตามประเภท Service"
+ ],
+ [
+  "Guest operating system",
+  "patch OS on EC2, Linux/Windows VM",
+  "ลูกค้าอัปเดต Linux Security Patch บน EC2",
+  "ต่างจาก Hypervisor ที่ AWS ดูแล"
+ ],
+ [
+  "Hypervisor",
+  "virtualization layer, underlying EC2, AWS responsibility",
+  "AWS จัดการชั้น Virtualization ใต้ EC2",
+  "ไม่ใช่ Guest OS ที่ลูกค้า Patch"
+ ],
+ [
+  "Configuring IAM permissions",
+  "assign roles, grant access, customer managed",
+  "จำกัด IAM Role ให้อ่านเฉพาะ Bucket",
+  "เป็น Security IN the Cloud"
+ ],
+ [
+  "Managing customer encryption key policies",
+  "KMS key policy, customer policy control",
+  "กำหนด KMS Key Policy ให้ทีม Security ใช้ได้",
+  "AWS จัดการ Hardware แต่ลูกค้ากำหนด Key Access"
+ ],
+ [
+  "Managing customer-data encryption settings",
+  "encryption at rest, customer settings",
+  "เลือก KMS Key สำหรับเข้ารหัส EBS",
+  "ไม่ใช่หน้าที่ดูแล Physical Host"
+ ],
+ [
+  "Defining data-access permissions",
+  "who reads objects, bucket policies, authorizations",
+  "กำหนดสิทธิ์อ่าน S3 ของทีม Finance",
+  "เป็นหน้าที่ลูกค้าแม้ใช้ Managed Service"
+ ],
+ [
+  "Securing AWS data centers",
+  "physical security, CCTV, facility access",
+  "AWS ควบคุมทางเข้าศูนย์ข้อมูล",
+  "Security OF the Cloud"
+ ],
+ [
+  "Maintaining AWS physical servers",
+  "replace failed hardware, AWS-owned servers",
+  "AWS เปลี่ยน Disk เครื่อง EC2 Host ที่เสีย",
+  "ไม่ใช่งานของลูกค้า EC2"
+ ],
+ [
+  "Maintaining AWS global network infrastructure",
+  "backbone network, AWS physical network",
+  "AWS ดูแลเครือข่ายเชื่อม Regions",
+  "Security OF the Cloud"
+ ],
+ [
+  "Patching AWS-owned physical hosts",
+  "hardware host maintenance, virtualization",
+  "AWS Patch Physical Host ที่ให้บริการ Managed Compute",
+  "ไม่ใช่ Guest OS บน EC2"
+ ],
+ [
+  "The customer",
+  "security IN the cloud, IAM, data classification",
+  "องค์กรต้องแก้ S3 Bucket Policy ที่เปิด Public",
+  "AWS ไม่กำหนด Data Permissions ให้ลูกค้า"
+ ],
+ [
+  "AWS",
+  "security OF the cloud, physical facilities",
+  "AWS ดูแล Hardware และ Data Centers",
+  "ลูกค้ายังรับผิดชอบ Data/Access"
+ ],
+ [
+  "The third-party auditor",
+  "independent compliance review, external audit",
+  "Auditor ตรวจ SOC Report จาก AWS Artifact",
+  "ไม่ใช่ผู้กำหนดสิทธิ์ข้อมูลของลูกค้า"
+ ],
+ [
+  "The internet service provider",
+  "internet connectivity, ISP, WAN provider",
+  "ISP จัดการลิงก์ Internet ของสำนักงาน",
+  "ไม่ใช่ผู้ดูแล IAM ใน AWS"
+ ],
+ [
+  "Root-user access",
+  "root account, full privilege, MFA",
+  "Root User ใช้งานเฉพาะงานจำเป็นของ Account",
+  "ไม่ควรใช้ทำงานประจำ"
+ ],
+ [
+  "An IAM role",
+  "temporary credentials, assume role, EC2 instance profile",
+  "EC2 ได้สิทธิ์อ่าน S3 ผ่าน IAM Role",
+  "ไม่ใช่ฝัง Long-term Access Key"
+ ],
+ [
+  "Enable multi-factor authentication (MFA)",
+  "extra verification factor, privileged account security",
+  "Login Console ด้วย Password และ Authenticator",
+  "ไม่แชร์ Root Password"
+ ],
+ [
+  "IAM policies define permissions",
+  "authorization, allow deny, JSON policy",
+  "IAM Policy Allow s3:GetObject เฉพาะ Bucket",
+  "Policy ไม่ได้สร้างตัวตนเอง"
+ ],
+ [
+  "IAM groups can contain IAM users",
+  "assign shared permissions to users",
+  "สร้าง IAM Group Developers แล้วเพิ่ม Users",
+  "IAM Groups ไม่สามารถซ้อนเป็น Groups ภายใน"
+ ]
+]
