@@ -35,11 +35,11 @@
   ],
   [
     "2.1",
-    "Which shared-responsibility concept explains why AWS maintains an EC2 host's virtualization layer while the customer patches the installed Linux guest?",
-    "หลัก Shared Responsibility ใดอธิบายว่า AWS ดูแล Virtualization Layer ของ EC2 แต่ลูกค้า Patch Linux Guest ที่ติดตั้งเอง",
-    "Managing customer encryption key policies|Hypervisor|Guest operating system|Defining data-access permissions",
-    "2",
-    "Guest operating system คือ OS ภายใน EC2 ที่ลูกค้าต้อง Patch; Hypervisor เป็นชั้นที่ AWS ดูแล; คำถามเน้นขอบเขตที่ลูกค้าต้องรับผิดชอบต่อ Linux Guest"
+    "An application encrypts sensitive objects using a customer-controlled AWS KMS key. Which security responsibility remains with the customer?",
+    "Application เข้ารหัส Sensitive Objects ด้วย AWS KMS Key ที่ลูกค้าควบคุม Security Responsibility ใดยังเป็นหน้าที่ลูกค้า",
+    "Managing customer encryption key policies|Hypervisor|Securing AWS data centers|Maintaining AWS physical servers",
+    "0",
+    "ลูกค้ากำหนด Key Policies/Permissions ของ Customer-controlled KMS Keys เอง ส่วน AWS ดูแล Hypervisor และ Physical Facilities"
   ],
   [
     "2.2",
