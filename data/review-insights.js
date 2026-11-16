@@ -3332,6 +3332,643 @@ window.REVIEW_INSIGHTS = window.REVIEW_INSIGHTS || {
           ]
         }
       ]
+    },
+    "local-set-06": {
+      "title": "Local Mock Set 6",
+      "note": "16 Nov 2026 · 61/65 correct (93.8%) · 4 wrong + 13 correct flagged · 5 Explain More, 6 English Unclear, 3 Concept / Recall, 1 Clue / Distractor (flags can overlap).",
+      "englishNotes": [
+        {
+          "questionId": 6,
+          "phrase": "rehearse",
+          "translation": "ซักซ้อมหรือฝึกซ้อม เช่นซ้อมขั้นตอน Disaster Recovery"
+        },
+        {
+          "questionId": 55,
+          "phrase": "emits",
+          "translation": "ปล่อยหรือสร้างออกมา ในบริบทนี้หมายถึงส่ง Events ออกจาก Application"
+        }
+      ],
+      "items": [
+        {
+          "questionId": 4,
+          "key": "local-set-06:q4",
+          "topic": "L01 — High availability vs Durability",
+          "type": "confidence",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "note": "Correct; flagged for review | มีสองเป้าหมายแยกกัน เว็บต้องยังเข้าได้เมื่อ AZ ล่มคือ High availability ส่วน Media ต้องไม่สูญหายคือ Durability ความพร้อมใช้งานกับการคงอยู่ของข้อมูลไม่ใช่คุณสมบัติเดียวกัน"
+        },
+        {
+          "questionId": 6,
+          "key": "local-set-06:q6",
+          "topic": "L13 — Reliability vs Operational Excellence",
+          "type": "language",
+          "rawFlags": [
+            "📘 English Unclear"
+          ],
+          "reviewedCauses": [
+            "language"
+          ],
+          "note": "Correct; flagged for review | rehearse แปลว่า ซักซ้อม การซ้อมรับมือ Region Outage เป็น Reliability ส่วนการจัดทำและปรับปรุง Incident-response Runbooks เป็น Operational Excellence"
+        },
+        {
+          "questionId": 9,
+          "key": "local-set-06:q9",
+          "topic": "L12 — Retire vs Retain",
+          "type": "language",
+          "rawFlags": [
+            "📘 English Unclear"
+          ],
+          "reviewedCauses": [
+            "language"
+          ],
+          "note": "Correct; flagged for review | Retire คือเลิกใช้ระบบและปิดถาวร ส่วน Retain คือคงระบบเดิมไว้ใช้งานต่อโดยยังไม่ย้าย คำว่า decommissioned คือยุติการใช้งาน"
+        },
+        {
+          "questionId": 11,
+          "key": "local-set-06:q11",
+          "topic": "L12 — Migration Hub vs Application Migration Service vs Discovery / Evaluator / DMS / SCT",
+          "type": "concept",
+          "rawFlags": [
+            "🧠 Concept / Recall Gap"
+          ],
+          "reviewedCauses": [
+            "concept"
+          ],
+          "note": "Correct; flagged for review | Migration Hub ติดตามความคืบหน้าการย้าย ส่วน Application Migration Service ทำ Replication ของ Servers เพื่อย้ายจริง Discovery Service ใช้ค้นหา Dependencies, Migration Evaluator ประเมินต้นทุน, DMS ย้าย Database, SCT ช่วยแปลง Database Schema"
+        },
+        {
+          "questionId": 12,
+          "key": "local-set-06:q12",
+          "topic": "L12 — Replatform vs Refactor / Rehost",
+          "type": "clue",
+          "rawFlags": [
+            "🧩 Clue / Distractor Gap"
+          ],
+          "reviewedCauses": [
+            "clue"
+          ],
+          "note": "Correct; flagged for review | Replatform เปลี่ยนบางส่วนของ Platform เช่นใช้ Managed Relational Database พร้อมแก้ Connection เล็กน้อย ไม่ใช่ Refactor ที่ออกแบบ Architecture หรือ Code ใหม่เชิงลึก และไม่ใช่ Rehost แบบ Lift-and-shift"
+        },
+        {
+          "questionId": 15,
+          "key": "local-set-06:q15",
+          "topic": "L01 — Pay-as-you-go + Economies of scale vs Capital expenditure",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | Select TWO มีสองเงื่อนไข การไม่ต้องซื้อ Hardware เผื่อ Peak ล่วงหน้าและจ่ายตามการใช้เหมาะกับ Pay-as-you-go ส่วนต้นทุนต่อหน่วยของ Provider ลดเมื่อดำเนินงานขนาดใหญ่คือ Economies of scale. Capital expenditure เป็นค่าใช้จ่ายลงทุนซื้อสินทรัพย์ล่วงหน้า ซึ่งตรงข้ามกับสิ่งที่โจทย์ต้องการหลีกเลี่ยง"
+        },
+        {
+          "questionId": 16,
+          "key": "local-set-06:q16",
+          "topic": "L01 — Variable expense vs Capital expenditure",
+          "type": "language",
+          "rawFlags": [
+            "📘 English Unclear"
+          ],
+          "reviewedCauses": [
+            "language"
+          ],
+          "note": "Correct; flagged for review | Variable expense คือค่าใช้จ่ายผันแปรตาม Consumption ต่างจาก Capital expenditure ที่ซื้อ Hardware เป็นสินทรัพย์ล่วงหน้า"
+        },
+        {
+          "questionId": 30,
+          "key": "local-set-06:q30",
+          "topic": "L09 — AWS KMS vs Secrets Manager vs ACM / IAM",
+          "type": "language",
+          "rawFlags": [
+            "📘 English Unclear"
+          ],
+          "reviewedCauses": [
+            "language"
+          ],
+          "note": "Correct; flagged for review | KMS ใช้จัดการ Cryptographic Keys สำหรับ Encryption. Secrets Manager จัดเก็บและหมุนเวียน Password หรือ Secrets ส่วน ACM จัดการ TLS Certificates และ IAM ควบคุมสิทธิ์"
+        },
+        {
+          "questionId": 33,
+          "key": "local-set-06:q33",
+          "topic": "L09 — AWS Shield vs WAF vs Firewall Manager",
+          "type": "confidence",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "note": "Correct; flagged for review | Shield เน้น DDoS Protection รวมถึง Volumetric Attacks. WAF กรอง HTTP(S) Requests ตาม Web ACL ส่วน Firewall Manager จัดการ Security Policies ข้าม Accounts"
+        },
+        {
+          "questionId": 34,
+          "key": "local-set-06:q34",
+          "topic": "L09 — AWS WAF vs AWS Shield vs Firewall Manager",
+          "type": "confidence",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "note": "Correct; flagged for review | WAF ใช้ Web ACL และ Managed Rules เพื่อกรอง HTTP(S) Requests ที่ ALB ได้. Shield เน้น DDoS Protection ส่วน Firewall Manager เน้น Central Policy Management"
+        },
+        {
+          "questionId": 36,
+          "key": "local-set-06:q36",
+          "topic": "L03 — Elastic Beanstalk vs CloudFormation vs CDK / ECS",
+          "type": "concept",
+          "rawFlags": [
+            "🧠 Concept / Recall Gap"
+          ],
+          "reviewedCauses": [
+            "concept"
+          ],
+          "note": "Correct; flagged for review | Elastic Beanstalk รับ Application Package แล้วจัดการ Web Environment และ Deployment. CloudFormation เป็น Infrastructure Stack Engine, CDK ใช้ภาษา Programming นิยาม Infrastructure และ ECS ใช้จัดการ Containers"
+        },
+        {
+          "questionId": 37,
+          "key": "local-set-06:q37",
+          "topic": "L03 — CloudFormation vs CDK / Elastic Beanstalk / CodePipeline",
+          "type": "confidence",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "note": "Correct; flagged for review | CloudFormation สร้าง จัดการ และ Rollback Infrastructure Stacks. CDK ใช้เขียน IaC แล้ว Synthesize เป็น CloudFormation, Elastic Beanstalk เน้น Deploy Application, CodePipeline ประสาน CI/CD Stages"
+        },
+        {
+          "questionId": 47,
+          "key": "local-set-06:q47",
+          "topic": "L05 — Security group vs Network ACL",
+          "type": "confidence",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "note": "Wrong | Security group เป็น Stateful Firewall ที่ใช้กับ Network Interface ของ EC2 เมื่ออนุญาต Inbound HTTPS แล้ว Return Traffic สำหรับ Connection นั้นได้รับอนุญาตโดยสถานะการเชื่อมต่อ. Network ACL เป็น Stateless Filter ที่ระดับ Subnet จึงไม่ตรง Requirement นี้"
+        },
+        {
+          "questionId": 48,
+          "key": "local-set-06:q48",
+          "topic": "L05 — NAT Gateway vs VPC endpoint / Internet Gateway",
+          "type": "language",
+          "rawFlags": [
+            "📘 English Unclear"
+          ],
+          "reviewedCauses": [
+            "language"
+          ],
+          "note": "Wrong | NAT Gateway ช่วย EC2 ใน Private Subnet เริ่ม Connection ออก Internet เพื่อ Download Updates โดยไม่เปิดรับ Unsolicited Inbound Connections ไปยัง Instance. VPC endpoint ใช้เข้าถึง Service ที่รองรับผ่าน Private Connectivity ไม่ใช่ Public Repository ทั่วไป"
+        },
+        {
+          "questionId": 51,
+          "key": "local-set-06:q51",
+          "topic": "L06 — AWS Backup vs DataSync / Storage Gateway / S3",
+          "type": "concept",
+          "rawFlags": [
+            "🧠 Concept / Recall Gap"
+          ],
+          "reviewedCauses": [
+            "concept"
+          ],
+          "note": "Correct; flagged for review | AWS Backup ตั้ง Backup Plans และ Retention Policies รวมศูนย์สำหรับทรัพยากร AWS ที่รองรับ. DataSync ใช้โอนย้ายข้อมูล, Storage Gateway เชื่อม Storage ภายในองค์กรกับ AWS และ S3 เป็น Object Storage"
+        },
+        {
+          "questionId": 57,
+          "key": "local-set-06:q57",
+          "topic": "L02 — Amazon SES vs SNS / SQS / EventBridge",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | SES ใช้ส่ง Transactional Emails เช่น Receipt หรือ Confirmation ให้ลูกค้าผ่าน Application. SNS เหมาะกับ Pub/Sub Notifications และ Fan-out ไม่ใช่บริการ Email Delivery ของ Application ที่ต้องการในโจทย์"
+        },
+        {
+          "questionId": 65,
+          "key": "local-set-06:q65",
+          "topic": "L11 — AWS Marketplace vs AWS Partner Network / re:Post / Support Center",
+          "type": "language",
+          "rawFlags": [
+            "📘 English Unclear"
+          ],
+          "reviewedCauses": [
+            "language"
+          ],
+          "note": "Correct; flagged for review | Marketplace เป็น Catalog สำหรับค้นหา Subscribe และซื้อ Third-party Software/Products ผ่าน AWS Billing. Partner Network เป็นเครือข่ายคู่ค้าบริการปรึกษาและ Implementation ไม่ใช่ Catalog สำหรับซื้อ Software"
+        }
+      ],
+      "details": [
+        {
+          "questionId": 4,
+          "result": "Correct",
+          "topic": "L01 — High availability vs Durability",
+          "question": "A media portal needs users to keep reaching its site when one Availability Zone is down, and it must separately preserve uploaded media against storage-component loss. Which TWO qualities directly match? (Select TWO.)",
+          "questionTh": "Media Portal ต้องให้ผู้ใช้เข้าเว็บได้แม้ AZ หนึ่งล่ม และต้องรักษา Uploaded Media ไม่ให้สูญหายเมื่อ Storage Component เสีย ข้อใดสองคุณสมบัติตรงงาน",
+          "selected": "High availability + Durability",
+          "correct": "High availability + Durability",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "diagnosis": "ตอบถูก แต่ปักธงขอทบทวนตามข้อมูลที่ส่งมา ไม่ได้แปลว่าตอบโดยไม่เข้าใจ",
+          "memoryCue": "website accessible after AZ outage → High availability | uploaded data survives storage failure → Durability",
+          "notes": [
+            "มีสองเป้าหมายแยกกัน เว็บต้องยังเข้าได้เมื่อ AZ ล่มคือ High availability ส่วน Media ต้องไม่สูญหายคือ Durability ความพร้อมใช้งานกับการคงอยู่ของข้อมูลไม่ใช่คุณสมบัติเดียวกัน",
+            "A. High availability — High availability เน้นให้ Service พร้อมใช้งานเมื่อ AZ มีปัญหา ส่วน Durability เน้นรักษาข้อมูลให้ไม่สูญหาย [คำตอบที่ถูก]",
+            "B. Scalability — ความสามารถรองรับภาระงานที่เพิ่มขึ้น เช่น ขยายระบบให้รองรับจำนวนผู้ใช้ที่เพิ่มขึ้น",
+            "C. Durability — High availability เน้นให้ Service พร้อมใช้งานเมื่อ AZ มีปัญหา ส่วน Durability เน้นรักษาข้อมูลให้ไม่สูญหาย [คำตอบที่ถูก]",
+            "D. Agility — จัดสรรและทดลองทรัพยากรได้รวดเร็ว เช่น สร้าง test environment ใหม่ภายในไม่กี่นาที",
+            "E. Pay-as-you-go — จ่ายตามปริมาณทรัพยากรที่ใช้ เช่น หยุดจ่ายค่า compute เมื่อปิดทรัพยากรที่คิดตามเวลาใช้งาน"
+          ]
+        },
+        {
+          "questionId": 6,
+          "result": "Correct",
+          "topic": "L13 — Reliability vs Operational Excellence",
+          "question": "A company must rehearse recovery from a regional outage and also standardize its incident-response runbooks. Which TWO pillars address these separate concerns? (Select TWO.)",
+          "questionTh": "บริษัทต้องซ้อม Recovery เมื่อ Region มีปัญหาและต้องทำ Incident-response Runbooks ให้เป็นมาตรฐาน ข้อใดสอง Pillars ตอบโจทย์",
+          "selected": "Reliability + Operational Excellence",
+          "correct": "Reliability + Operational Excellence",
+          "rawFlags": [
+            "📘 English Unclear"
+          ],
+          "reviewedCauses": [
+            "language"
+          ],
+          "diagnosis": "ตอบถูก แต่ปักธงขอทบทวนตามข้อมูลที่ส่งมา ไม่ได้แปลว่าตอบโดยไม่เข้าใจ",
+          "memoryCue": "rehearse regional recovery → Reliability | standardize runbooks → Operational Excellence",
+          "notes": [
+            "rehearse แปลว่า ซักซ้อม การซ้อมรับมือ Region Outage เป็น Reliability ส่วนการจัดทำและปรับปรุง Incident-response Runbooks เป็น Operational Excellence",
+            "A. Security — เน้นปกป้องข้อมูล ระบบ และ assets เช่น ใช้ IAM จำกัดสิทธิ์และ AWS KMS จัดการ encryption keys",
+            "B. Reliability — Reliability ครอบคลุม Disaster Recovery Testing ส่วน Operational Excellence ครอบคลุม Runbooks และการปรับปรุงกระบวนการ Incident [คำตอบที่ถูก]",
+            "C. Sustainability — ลดผลกระทบด้านสิ่งแวดล้อมของ workloads เช่น ลดทรัพยากรที่ไม่จำเป็นเพื่อลดการใช้พลังงาน",
+            "D. Operational Excellence — Reliability ครอบคลุม Disaster Recovery Testing ส่วน Operational Excellence ครอบคลุม Runbooks และการปรับปรุงกระบวนการ Incident [คำตอบที่ถูก]",
+            "E. Performance Efficiency — เน้นการใช้ทรัพยากรให้เหมาะกับ workload เช่น เลือก EC2 Instance Type ให้เหมาะกับงาน CPU-intensive เพื่อให้ได้ throughput ตามเป้าหมาย"
+          ]
+        },
+        {
+          "questionId": 9,
+          "result": "Correct",
+          "topic": "L12 — Retire vs Retain",
+          "question": "After an application inventory review, a firm decides a discontinued HR tool has no users and should be decommissioned instead of migrated. Which migration strategy applies?",
+          "questionTh": "หลัง Review Inventory บริษัทพบ HR Tool ที่ไม่มีผู้ใช้แล้วและตัดสินใจปิดถาวรแทนการย้าย เป็น Migration Strategy ใด",
+          "selected": "Retire",
+          "correct": "Retire",
+          "rawFlags": [
+            "📘 English Unclear"
+          ],
+          "reviewedCauses": [
+            "language"
+          ],
+          "diagnosis": "ตอบถูก แต่ปักธงขอทบทวนตามข้อมูลที่ส่งมา ไม่ได้แปลว่าตอบโดยไม่เข้าใจ",
+          "memoryCue": "no users + decommissioned → Retire | kept in data center → Retain",
+          "notes": [
+            "Retire คือเลิกใช้ระบบและปิดถาวร ส่วน Retain คือคงระบบเดิมไว้ใช้งานต่อโดยยังไม่ย้าย คำว่า decommissioned คือยุติการใช้งาน",
+            "A. Retain — เก็บแอปไว้ในสภาพแวดล้อมเดิม เช่น เก็บแอปไว้ใน data center เดิมก่อน",
+            "B. Rehost — ย้าย workload โดยเปลี่ยนแปลงน้อยที่สุด เช่น ย้าย virtual machine ไป EC2 โดยแทบไม่แก้แอป",
+            "C. Retire — Retire หมายถึง Decommission Application ที่เลิกใช้แล้ว ส่วน Retain คือเก็บไว้ไม่ย้ายในตอนนี้ [คำตอบที่ถูก]",
+            "D. Replatform — ย้ายและปรับแพลตฟอร์มบางส่วน เช่น ย้าย database ไป RDS โดยแก้แอปเพียงเล็กน้อย"
+          ]
+        },
+        {
+          "questionId": 11,
+          "result": "Correct",
+          "topic": "L12 — Migration Hub vs Application Migration Service vs Discovery / Evaluator / DMS / SCT",
+          "question": "A migration team wants to track progress across applications in a central dashboard and use a service to replicate and move source servers to AWS. Which TWO tools meet these distinct needs? (Select TWO.)",
+          "questionTh": "ทีม Migration ต้องติดตาม Progress ของหลาย Applications ใน Central Dashboard และต้องใช้ Service เพื่อ Replicate/Y้าย Servers ไป AWS ข้อใดสอง Services ตรงงาน",
+          "selected": "AWS Application Migration Service + AWS Migration Hub",
+          "correct": "AWS Application Migration Service + AWS Migration Hub",
+          "rawFlags": [
+            "🧠 Concept / Recall Gap"
+          ],
+          "reviewedCauses": [
+            "concept"
+          ],
+          "diagnosis": "ตอบถูก แต่ปักธงขอทบทวนตามข้อมูลที่ส่งมา ไม่ได้แปลว่าตอบโดยไม่เข้าใจ",
+          "memoryCue": "central progress dashboard → Migration Hub | replicate and move servers → Application Migration Service",
+          "notes": [
+            "Migration Hub ติดตามความคืบหน้าการย้าย ส่วน Application Migration Service ทำ Replication ของ Servers เพื่อย้ายจริง Discovery Service ใช้ค้นหา Dependencies, Migration Evaluator ประเมินต้นทุน, DMS ย้าย Database, SCT ช่วยแปลง Database Schema",
+            "A. AWS Application Migration Service — Migration Hub ใช้ดู Migration Progress จากส่วนกลาง ส่วน Application Migration Service ใช้ Replicate และย้าย Servers จริง [คำตอบที่ถูก]",
+            "B. AWS Migration Hub — Migration Hub ใช้ดู Migration Progress จากส่วนกลาง ส่วน Application Migration Service ใช้ Replicate และย้าย Servers จริง [คำตอบที่ถูก]",
+            "C. AWS Migration Evaluator — ช่วยสร้าง business case และ cost assessment ก่อน migration เช่น ประเมิน business case และค่าใช้จ่ายก่อน migration",
+            "D. AWS DMS — ย้ายและ replicate databases เช่น replicate ข้อมูลจากฐานข้อมูลต้นทางไปปลายทาง",
+            "E. AWS SCT — ช่วยแปลง database schema ระหว่าง engines เช่น แปลง database schema ระหว่าง engines"
+          ]
+        },
+        {
+          "questionId": 12,
+          "result": "Correct",
+          "topic": "L12 — Replatform vs Refactor / Rehost",
+          "question": "During migration, a software company moves its self-managed SQL database to a managed relational service, with only minor connection changes in the application. Which strategy is being used?",
+          "questionTh": "ระหว่าง Migration บริษัท Software เปลี่ยน SQL Database ที่ดูแลเองไป Managed Relational Service โดยแก้ Application Connections เล็กน้อย ใช้ Strategy ใด",
+          "selected": "Replatform",
+          "correct": "Replatform",
+          "rawFlags": [
+            "🧩 Clue / Distractor Gap"
+          ],
+          "reviewedCauses": [
+            "clue"
+          ],
+          "diagnosis": "ตอบถูก แต่ปักธงขอทบทวนตามข้อมูลที่ส่งมา ไม่ได้แปลว่าตอบโดยไม่เข้าใจ",
+          "memoryCue": "self-managed database → managed database + minor code changes → Replatform",
+          "notes": [
+            "Replatform เปลี่ยนบางส่วนของ Platform เช่นใช้ Managed Relational Database พร้อมแก้ Connection เล็กน้อย ไม่ใช่ Refactor ที่ออกแบบ Architecture หรือ Code ใหม่เชิงลึก และไม่ใช่ Rehost แบบ Lift-and-shift",
+            "A. Replatform — Replatform ปรับส่วนของ Platform เพื่อใช้ Managed Service โดยคง Architecture หลัก ส่วน Refactor ปรับสถาปัตยกรรมมาก [คำตอบที่ถูก]",
+            "B. Rehost — Rehost ย้ายโดยแทบไม่ปรับ platform แต่โจทย์มีการเปลี่ยน self-managed database เป็น RDS",
+            "C. Refactor — Refactor ปรับ architecture/code เชิงลึก แต่โจทย์เปลี่ยน platform บางส่วนและแก้ code เพียงเล็กน้อย",
+            "D. Retain — Retain คือเก็บระบบไว้ที่เดิม ไม่ใช่ย้ายแอปขึ้น AWS"
+          ]
+        },
+        {
+          "questionId": 15,
+          "result": "Wrong",
+          "topic": "L01 — Pay-as-you-go + Economies of scale vs Capital expenditure",
+          "question": "A retailer wants to avoid purchasing peak-capacity hardware and also benefit from the provider's lower unit costs gained from operating at enormous scale. Which TWO benefits apply? (Select TWO.)",
+          "questionTh": "ร้านค้าต้องการไม่ซื้อ Hardware เผื่อ Peak Load ล่วงหน้าและต้องการประโยชน์จากต้นทุนต่อหน่วยต่ำของ Cloud Provider ที่มี Scale ใหญ่มาก ข้อใดสองแนวคิดตรงงาน",
+          "selected": "Capital expenditure + Economies of scale",
+          "correct": "Pay-as-you-go + Economies of scale",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "เลือก Capital expenditure + Economies of scale แทน Pay-as-you-go + Economies of scale ข้อมูลไม่ได้ระบุเหตุผลในใจขณะเลือก จึงวิเคราะห์จาก Requirement และหน้าที่บริการเท่านั้น",
+          "memoryCue": "avoid upfront peak hardware → Pay-as-you-go | lower unit costs at provider scale → Economies of scale",
+          "notes": [
+            "Select TWO มีสองเงื่อนไข การไม่ต้องซื้อ Hardware เผื่อ Peak ล่วงหน้าและจ่ายตามการใช้เหมาะกับ Pay-as-you-go ส่วนต้นทุนต่อหน่วยของ Provider ลดเมื่อดำเนินงานขนาดใหญ่คือ Economies of scale. Capital expenditure เป็นค่าใช้จ่ายลงทุนซื้อสินทรัพย์ล่วงหน้า ซึ่งตรงข้ามกับสิ่งที่โจทย์ต้องการหลีกเลี่ยง",
+            "A. Capital expenditure — ค่าใช้จ่ายลงทุนซื้อสินทรัพย์ เช่น Physical Servers ก่อนใช้งาน ซึ่งเป็นสิ่งที่ร้านค้าต้องการหลีกเลี่ยง ไม่ใช่ Cloud Benefit ที่ตอบโจทย์",
+            "B. Pay-as-you-go — ใช้ทรัพยากรและจ่ายตามการใช้จริง ไม่ต้องซื้อ Peak-capacity Hardware เผื่อไว้ตั้งแต่ต้น [คำตอบที่ถูก]",
+            "C. Rightsizing — เลือกขนาด Resource ให้พอดีกับ Workload ไม่ใช่เหตุผลเรื่องไม่ต้องลงทุนซื้อ Peak Hardware ล่วงหน้า",
+            "D. Economies of scale — AWS ดำเนินงานขนาดใหญ่มากจนมีต้นทุนต่อหน่วยต่ำลง จึงตรงเงื่อนไข Provider's lower unit costs [คำตอบที่ถูก]",
+            "E. High availability — การทำให้ Service พร้อมใช้งาน ไม่ใช่แนวคิดเศรษฐศาสตร์ที่โจทย์ถาม"
+          ]
+        },
+        {
+          "questionId": 16,
+          "result": "Correct",
+          "topic": "L01 — Variable expense vs Capital expenditure",
+          "question": "A company's spending moves from a fixed hardware purchase budget to recurring charges that rise and fall with consumption. Which cost classification describes the new spending?",
+          "questionTh": "ต้นทุนบริษัทเปลี่ยนจากงบซื้อ Hardware คงที่เป็นค่าใช้จ่ายประจำที่ขึ้นลงตาม Consumption จัดเป็นต้นทุนชนิดใด",
+          "selected": "Variable expense",
+          "correct": "Variable expense",
+          "rawFlags": [
+            "📘 English Unclear"
+          ],
+          "reviewedCauses": [
+            "language"
+          ],
+          "diagnosis": "ตอบถูก แต่ปักธงขอทบทวนตามข้อมูลที่ส่งมา ไม่ได้แปลว่าตอบโดยไม่เข้าใจ",
+          "memoryCue": "recurring charges rise/fall with consumption → Variable expense",
+          "notes": [
+            "Variable expense คือค่าใช้จ่ายผันแปรตาม Consumption ต่างจาก Capital expenditure ที่ซื้อ Hardware เป็นสินทรัพย์ล่วงหน้า",
+            "A. Rightsizing — เลือกขนาดทรัพยากรให้ตรงความต้องการ เช่น ลด EC2 จากขนาดใหญ่เป็นขนาดเล็กหลังตรวจ CPU/Memory utilization",
+            "B. Economies of scale — ลดต้นทุนต่อหน่วยจากการใช้ทรัพยากรในปริมาณมาก เช่น AWS กระจายต้นทุนโครงสร้างพื้นฐานให้ลูกค้าจำนวนมาก",
+            "C. Variable expense — Variable expense เปลี่ยนไปตาม Consumption. Capital expenditure คือการซื้อทรัพย์สินและลงทุนล่วงหน้า [คำตอบที่ถูก]",
+            "D. Capital expenditure — ค่าใช้จ่ายลงทุนล่วงหน้าในสินทรัพย์ เช่น ซื้อ physical servers ก่อนเริ่มใช้งาน"
+          ]
+        },
+        {
+          "questionId": 30,
+          "result": "Correct",
+          "topic": "L09 — AWS KMS vs Secrets Manager vs ACM / IAM",
+          "question": "A company needs fine-grained control over the cryptographic key used to encrypt regulated application data. Which managed AWS service is intended for key management?",
+          "questionTh": "บริษัทต้องควบคุม Cryptographic Key อย่างละเอียดเพื่อเข้ารหัส Regulated Application Data ใช้ Managed Service ใดสำหรับ Key Management",
+          "selected": "AWS KMS",
+          "correct": "AWS KMS",
+          "rawFlags": [
+            "📘 English Unclear"
+          ],
+          "reviewedCauses": [
+            "language"
+          ],
+          "diagnosis": "ตอบถูก แต่ปักธงขอทบทวนตามข้อมูลที่ส่งมา ไม่ได้แปลว่าตอบโดยไม่เข้าใจ",
+          "memoryCue": "cryptographic key / encryption key policies → AWS KMS",
+          "notes": [
+            "KMS ใช้จัดการ Cryptographic Keys สำหรับ Encryption. Secrets Manager จัดเก็บและหมุนเวียน Password หรือ Secrets ส่วน ACM จัดการ TLS Certificates และ IAM ควบคุมสิทธิ์",
+            "A. AWS Certificate Manager — ออกและจัดการ TLS certificates ที่รองรับ",
+            "B. AWS Secrets Manager — เก็บและหมุนเวียน secrets เช่น database credentials เช่น เก็บและหมุนเวียน database password",
+            "C. AWS KMS — KMS จัดการ Encryption Keys และ Key Policies. Secrets Manager จัดการ Secrets/Passwords และ ACM ดูแล TLS Certificates [คำตอบที่ถูก]",
+            "D. AWS IAM — กำหนด identities, roles และสิทธิ์เข้าถึง AWS เช่น กำหนด IAM policy ให้ application อ่าน S3 ได้"
+          ]
+        },
+        {
+          "questionId": 33,
+          "result": "Correct",
+          "topic": "L09 — AWS Shield vs WAF vs Firewall Manager",
+          "question": "A public API is targeted by large-scale traffic flooding intended to exhaust network capacity. Which service focuses on DDoS protection?",
+          "questionTh": "Public API ถูก Traffic Flooding ขนาดใหญ่เพื่อทำให้ Network Capacity เต็ม บริการใดเน้น DDoS Protection",
+          "selected": "AWS Shield",
+          "correct": "AWS Shield",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "diagnosis": "ตอบถูก แต่ปักธงขอทบทวนตามข้อมูลที่ส่งมา ไม่ได้แปลว่าตอบโดยไม่เข้าใจ",
+          "memoryCue": "large-scale DDoS / network capacity exhaustion → AWS Shield",
+          "notes": [
+            "Shield เน้น DDoS Protection รวมถึง Volumetric Attacks. WAF กรอง HTTP(S) Requests ตาม Web ACL ส่วน Firewall Manager จัดการ Security Policies ข้าม Accounts",
+            "A. AWS WAF — กรอง HTTP(S) requests ตาม web ACL rules เช่น บล็อก HTTP request ที่มีรูปแบบ SQL injection",
+            "B. AWS Shield — AWS Shield ช่วยป้องกัน DDoS. WAF กรอง Application-layer Requests อย่าง SQLi/XSS [คำตอบที่ถูก]",
+            "C. AWS Firewall Manager — จัดการ security policies ส่วนกลางข้ามบัญชี เช่น จัดการ WAF policies ข้ามหลาย accounts",
+            "D. Amazon GuardDuty — ตรวจจับภัยคุกคามจากสัญญาณและกิจกรรมที่น่าสงสัย เช่น ตรวจพบการใช้ credentials ที่น่าสงสัย"
+          ]
+        },
+        {
+          "questionId": 34,
+          "result": "Correct",
+          "topic": "L09 — AWS WAF vs AWS Shield vs Firewall Manager",
+          "question": "A website owner wants to block HTTP requests that match managed rules for malicious URL patterns before they reach an ALB. Which service does the filtering?",
+          "questionTh": "เจ้าของเว็บต้อง Block HTTP Requests ตาม Managed Rules ที่ตรวจ Malicious URL Patterns ก่อนถึง ALB Service ใดทำ Filtering",
+          "selected": "AWS WAF",
+          "correct": "AWS WAF",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "diagnosis": "ตอบถูก แต่ปักธงขอทบทวนตามข้อมูลที่ส่งมา ไม่ได้แปลว่าตอบโดยไม่เข้าใจ",
+          "memoryCue": "block malicious HTTP requests before ALB → AWS WAF",
+          "notes": [
+            "WAF ใช้ Web ACL และ Managed Rules เพื่อกรอง HTTP(S) Requests ที่ ALB ได้. Shield เน้น DDoS Protection ส่วน Firewall Manager เน้น Central Policy Management",
+            "A. AWS WAF — WAF ใช้ Web ACL/Rules กรอง HTTP(S) Requests ที่มาถึง Web Resources. Firewall Manager จัด Policies ข้าม Accounts [คำตอบที่ถูก]",
+            "B. AWS Firewall Manager — จัดการ security policies ส่วนกลางข้ามบัญชี เช่น จัดการ WAF policies ข้ามหลาย accounts",
+            "C. AWS Shield — ป้องกันการโจมตี DDoS เช่น ช่วยป้องกันการโจมตี DDoS",
+            "D. AWS Security Hub — รวม findings และสถานะ security จากหลายแหล่ง เช่น รวม security findings จากหลายบริการ"
+          ]
+        },
+        {
+          "questionId": 36,
+          "result": "Correct",
+          "topic": "L03 — Elastic Beanstalk vs CloudFormation vs CDK / ECS",
+          "question": "A team uploads its Java application package and expects AWS to provision the web environment and coordinate deployment without designing every underlying resource manually. Which service is most suitable?",
+          "questionTh": "ทีมอัปโหลด Java Application Package แล้วต้องการให้ AWS Provision Web Environment และช่วย Deploy โดยไม่ต้องออกแบบ Resources ทุกตัวเอง ใช้บริการใด",
+          "selected": "AWS Elastic Beanstalk",
+          "correct": "AWS Elastic Beanstalk",
+          "rawFlags": [
+            "🧠 Concept / Recall Gap"
+          ],
+          "reviewedCauses": [
+            "concept"
+          ],
+          "diagnosis": "ตอบถูก แต่ปักธงขอทบทวนตามข้อมูลที่ส่งมา ไม่ได้แปลว่าตอบโดยไม่เข้าใจ",
+          "memoryCue": "upload Java app + automatically provision web environment → Elastic Beanstalk",
+          "notes": [
+            "Elastic Beanstalk รับ Application Package แล้วจัดการ Web Environment และ Deployment. CloudFormation เป็น Infrastructure Stack Engine, CDK ใช้ภาษา Programming นิยาม Infrastructure และ ECS ใช้จัดการ Containers",
+            "A. AWS Elastic Beanstalk — Elastic Beanstalk เป็น Application Deployment Platform ที่ช่วย Provision/Manage Environment. CloudFormation เป็น IaC Stack Engine [คำตอบที่ถูก]",
+            "B. AWS CloudFormation — สร้างและจัดการ infrastructure จาก templates",
+            "C. AWS CDK — นิยาม cloud infrastructure ด้วย programming languages",
+            "D. Amazon ECS — orchestrate containers ด้วย AWS-native control plane เช่น จัดการ container tasks และ services"
+          ]
+        },
+        {
+          "questionId": 37,
+          "result": "Correct",
+          "topic": "L03 — CloudFormation vs CDK / Elastic Beanstalk / CodePipeline",
+          "question": "Operations needs to roll back a failed infrastructure change managed as one declarative stack of IAM roles, VPCs, and subnets. Which service supplies the stack lifecycle?",
+          "questionTh": "ฝ่าย Ops ต้อง Rollback Infrastructure Changes ที่พลาด โดย Resources เช่น IAM Roles, VPC, Subnets อยู่ใน Declarative Stack เดียว ใช้ Service ใดดูแล Stack Lifecycle",
+          "selected": "AWS CloudFormation",
+          "correct": "AWS CloudFormation",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "diagnosis": "ตอบถูก แต่ปักธงขอทบทวนตามข้อมูลที่ส่งมา ไม่ได้แปลว่าตอบโดยไม่เข้าใจ",
+          "memoryCue": "declarative stack lifecycle / stack rollback → CloudFormation",
+          "notes": [
+            "CloudFormation สร้าง จัดการ และ Rollback Infrastructure Stacks. CDK ใช้เขียน IaC แล้ว Synthesize เป็น CloudFormation, Elastic Beanstalk เน้น Deploy Application, CodePipeline ประสาน CI/CD Stages",
+            "A. AWS CloudFormation — CloudFormation จัด Lifecycle ของ Infrastructure Stacks และ Rollback Updates. CDK Synthesizes Templates แต่ไม่ใช่ Stack Engine [คำตอบที่ถูก]",
+            "B. AWS CDK — นิยาม cloud infrastructure ด้วย programming languages",
+            "C. AWS CodePipeline — automate release pipelines",
+            "D. AWS Elastic Beanstalk — deploy applications พร้อมจัดการ underlying environment"
+          ]
+        },
+        {
+          "questionId": 47,
+          "result": "Wrong",
+          "topic": "L05 — Security group vs Network ACL",
+          "question": "An EC2 instance needs an inbound rule for port 443 and a stateful connection filter at its network interface. Which VPC control applies?",
+          "questionTh": "EC2 ต้องเปิด Inbound Port 443 และใช้ Stateful Connection Filter ที่ Network Interface ควรใช้ VPC Control ใด",
+          "selected": "Network ACL",
+          "correct": "Security group",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "diagnosis": "เลือก Network ACL แทน Security group ข้อมูลไม่ได้ระบุเหตุผลในใจขณะเลือก จึงวิเคราะห์จาก Requirement และหน้าที่บริการเท่านั้น",
+          "memoryCue": "stateful connection filtering at ENI + inbound 443 → Security group",
+          "notes": [
+            "Security group เป็น Stateful Firewall ที่ใช้กับ Network Interface ของ EC2 เมื่ออนุญาต Inbound HTTPS แล้ว Return Traffic สำหรับ Connection นั้นได้รับอนุญาตโดยสถานะการเชื่อมต่อ. Network ACL เป็น Stateless Filter ที่ระดับ Subnet จึงไม่ตรง Requirement นี้",
+            "A. Network ACL — Stateless Filter ที่ระดับ Subnet ไม่ใช่ Stateful Connection Filter ระดับ ENI",
+            "B. Security group — Stateful Firewall ที่ผูกกับ EC2 Network Interface ตรงกับ Inbound TCP 443 และ Stateful Requirement [คำตอบที่ถูก]",
+            "C. AWS WAF — กรอง HTTP(S) Requests ด้วย Web ACL ไม่ได้เป็น Stateful ENI Firewall",
+            "D. AWS Shield — เน้นป้องกัน DDoS ไม่ใช่กำหนด Inbound Port 443 ของ Instance"
+          ]
+        },
+        {
+          "questionId": 48,
+          "result": "Wrong",
+          "topic": "L05 — NAT Gateway vs VPC endpoint / Internet Gateway",
+          "question": "A private-subnet application must download software updates from public repositories but must not be directly reachable by unsolicited internet connections. Which component enables this path?",
+          "questionTh": "Application ใน Private Subnet ต้อง Download Software Updates จาก Public Repositories แต่ไม่เปิดรับ Unsolicited Internet Connections ตรง ๆ ใช้ Component ใด",
+          "selected": "VPC endpoint",
+          "correct": "NAT Gateway",
+          "rawFlags": [
+            "📘 English Unclear"
+          ],
+          "reviewedCauses": [
+            "language"
+          ],
+          "diagnosis": "เลือก VPC endpoint แทน NAT Gateway ข้อมูลไม่ได้ระบุเหตุผลในใจขณะเลือก จึงวิเคราะห์จาก Requirement และหน้าที่บริการเท่านั้น",
+          "memoryCue": "private subnet outbound to public software repositories → NAT Gateway",
+          "notes": [
+            "NAT Gateway ช่วย EC2 ใน Private Subnet เริ่ม Connection ออก Internet เพื่อ Download Updates โดยไม่เปิดรับ Unsolicited Inbound Connections ไปยัง Instance. VPC endpoint ใช้เข้าถึง Service ที่รองรับผ่าน Private Connectivity ไม่ใช่ Public Repository ทั่วไป",
+            "A. VPC endpoint — เข้าถึง AWS Services ที่รองรับผ่าน Private Connectivity ไม่ได้ใช้เป็น General Internet Egress ไป Public Repositories",
+            "B. Internet Gateway — ต่อ VPC กับ Internet แต่ Instance ใน Private Subnet ต้องใช้ NAT สำหรับออก Internet แบบไม่มี Public IP ใน Scenario นี้",
+            "C. NAT Gateway — รองรับ Outbound Internet Connectivity ของ Private Subnet ไปยัง Public Software Repositories โดย Instance ไม่จำเป็นต้องมี Public IP [คำตอบที่ถูก]",
+            "D. AWS Direct Connect — Dedicated Network Link ระหว่าง On-premises กับ AWS ไม่ใช่อุปกรณ์ออก Internet ของ Private Subnet"
+          ]
+        },
+        {
+          "questionId": 51,
+          "result": "Correct",
+          "topic": "L06 — AWS Backup vs DataSync / Storage Gateway / S3",
+          "question": "An organization wants centralized policies to schedule and retain backups of supported RDS, EBS, and other AWS resources. Which service manages these policies?",
+          "questionTh": "องค์กรต้องการ Centralized Policies เพื่อ Schedule และ Retain Backups ของ RDS, EBS และ Resources ที่รองรับ ใช้ Service ใดจัด Policies",
+          "selected": "AWS Backup",
+          "correct": "AWS Backup",
+          "rawFlags": [
+            "🧠 Concept / Recall Gap"
+          ],
+          "reviewedCauses": [
+            "concept"
+          ],
+          "diagnosis": "ตอบถูก แต่ปักธงขอทบทวนตามข้อมูลที่ส่งมา ไม่ได้แปลว่าตอบโดยไม่เข้าใจ",
+          "memoryCue": "centralized scheduled backup policies across AWS services → AWS Backup",
+          "notes": [
+            "AWS Backup ตั้ง Backup Plans และ Retention Policies รวมศูนย์สำหรับทรัพยากร AWS ที่รองรับ. DataSync ใช้โอนย้ายข้อมูล, Storage Gateway เชื่อม Storage ภายในองค์กรกับ AWS และ S3 เป็น Object Storage",
+            "A. Amazon S3 — durable object storage เช่น เก็บรูปภาพหรือ backup files เป็น objects",
+            "B. AWS Backup — AWS Backup เป็น Centralized Backup Policy/Jobs สำหรับ Supported Resources. DataSync เน้น Transfer Data [คำตอบที่ถูก]",
+            "C. AWS DataSync — ย้ายข้อมูลระหว่าง storage locations แบบ online",
+            "D. AWS Storage Gateway — เชื่อม on-premises applications กับ cloud storage"
+          ]
+        },
+        {
+          "questionId": 57,
+          "result": "Wrong",
+          "topic": "L02 — Amazon SES vs SNS / SQS / EventBridge",
+          "question": "A bank wants to send transactional email receipts to customers from its software, not fan out internal service events. Which AWS messaging service is intended for email delivery?",
+          "questionTh": "ธนาคารต้องส่ง Transactional Email Receipts ให้ลูกค้าจาก Application ไม่ได้ต้องการ Fan-out Events ภายใน ระบบส่งข้อความใดเหมาะ",
+          "selected": "Amazon SNS",
+          "correct": "Amazon SES",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "เลือก Amazon SNS แทน Amazon SES ข้อมูลไม่ได้ระบุเหตุผลในใจขณะเลือก จึงวิเคราะห์จาก Requirement และหน้าที่บริการเท่านั้น",
+          "memoryCue": "transactional email receipts to external customers → Amazon SES",
+          "notes": [
+            "SES ใช้ส่ง Transactional Emails เช่น Receipt หรือ Confirmation ให้ลูกค้าผ่าน Application. SNS เหมาะกับ Pub/Sub Notifications และ Fan-out ไม่ใช่บริการ Email Delivery ของ Application ที่ต้องการในโจทย์",
+            "A. Amazon SNS — Pub/Sub Topic และ Fan-out Events/Notifications ไป Subscribers แม้ส่ง Email Notifications ได้ แต่ไม่ใช่ Email Sending Service ที่โจทย์เน้น",
+            "B. Amazon SES — ออกแบบสำหรับส่ง Transactional Email เช่น Receipt และ Customer Notifications จาก Application ผ่าน Email APIs/SMTP [คำตอบที่ถูก]",
+            "C. Amazon EventBridge — Event Bus สำหรับ Route Events ไป Targets ตาม Rules ไม่ใช่ Delivery Service สำหรับ Transactional Emails",
+            "D. Amazon SQS — Message Queue สำหรับ Decoupling Workers ไม่ใช่บริการส่ง Email Receipt ไป External Customers โดยตรง"
+          ]
+        },
+        {
+          "questionId": 65,
+          "result": "Correct",
+          "topic": "L11 — AWS Marketplace vs AWS Partner Network / re:Post / Support Center",
+          "question": "A team needs to subscribe to a third-party virtual appliance product offered through AWS billing rather than hire a migration consulting partner. Which resource is suitable?",
+          "questionTh": "ทีมต้องการ Subscribe Third-party Virtual Appliance Product ผ่านระบบ AWS Billing แทนการจ้าง Migration Consultant ใช้ Resource ใด",
+          "selected": "AWS Marketplace",
+          "correct": "AWS Marketplace",
+          "rawFlags": [
+            "📘 English Unclear"
+          ],
+          "reviewedCauses": [
+            "language"
+          ],
+          "diagnosis": "ตอบถูก แต่ปักธงขอทบทวนตามข้อมูลที่ส่งมา ไม่ได้แปลว่าตอบโดยไม่เข้าใจ",
+          "memoryCue": "third-party virtual appliance offered through AWS billing → AWS Marketplace",
+          "notes": [
+            "Marketplace เป็น Catalog สำหรับค้นหา Subscribe และซื้อ Third-party Software/Products ผ่าน AWS Billing. Partner Network เป็นเครือข่ายคู่ค้าบริการปรึกษาและ Implementation ไม่ใช่ Catalog สำหรับซื้อ Software",
+            "A. AWS Marketplace — AWS Marketplace เป็น Product/Service Catalog สำหรับ Third-party Software/Offerings. APN ช่วยค้นหา Partners [คำตอบที่ถูก]",
+            "B. AWS Partner Network — เครือข่ายคู่ค้าของ AWS",
+            "C. AWS Support Center — เปิดและติดตาม support cases",
+            "D. AWS re:Post — ชุมชนถามตอบเกี่ยวกับ AWS"
+          ]
+        }
+      ]
     }
   },
   "history": [
@@ -3388,6 +4025,17 @@ window.REVIEW_INSIGHTS = window.REVIEW_INSIGHTS || {
       "concept": 2,
       "confidence": 4,
       "language": 1,
+      "clue": 1
+    },
+    {
+      "setId": "local-set-06",
+      "label": "Local Mock Set 6 · 16 Nov 2026",
+      "score": 61,
+      "total": 65,
+      "percent": 94,
+      "concept": 3,
+      "confidence": 5,
+      "language": 6,
       "clue": 1
     }
   ],
