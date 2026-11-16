@@ -115,11 +115,11 @@
   ],
   [
     "1.4",
-    "A developer routinely leaves temporary EC2 environments running even after tests finish. Which TWO actions or principles directly reduce unnecessary compute expenses? (Select TWO.)",
-    "Developer มักเปิด EC2 ทดสอบทิ้งไว้หลังงานเสร็จ ข้อใดสองแนวทางช่วยลดค่า Compute ส่วนเกินโดยตรง",
+    "A test team has oversized EC2 instances and often leaves its temporary servers running after tests finish. Which TWO practices address these separate cost wastes? (Select TWO.)",
+    "ทีม Test ใช้ EC2 Instances ที่ใหญ่เกินโหลดและมักเปิด Temporary Servers ทิ้งไว้หลังทดสอบ ข้อใดสองแนวทางช่วยลดค่าใช้จ่ายส่วนเกินจากทั้งสองปัญหา",
     "AWS Budgets|Pay-as-you-go|Consolidated billing|Rightsizing|Cost allocation tags",
     "1,3",
-    "Pay-as-you-go ช่วยไม่จ่ายค่า Compute ที่หยุดใช้งาน และ Rightsizing เลือก Instance ที่ไม่ใหญ่เกินโหลด; Budgets แค่แจ้งเตือนค่าใช้จ่าย"
+    "Rightsizing เลือกขนาด Instance ให้เหมาะกับโหลด ส่วน Pay-as-you-go ช่วยประหยัดเมื่อหยุดใช้ Compute ที่คิดตาม Usage; ต้องหยุดทรัพยากรที่ไม่ใช้งานจริงด้วย"
   ],
   [
     "1.4",
