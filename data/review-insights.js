@@ -2789,6 +2789,549 @@ window.REVIEW_INSIGHTS = window.REVIEW_INSIGHTS || {
           ]
         }
       ]
+    },
+    "local-set-05": {
+      "title": "Local Mock Set 5",
+      "note": "16 Nov 2026 · 54/65 correct (83.1%) · 11 wrong + 5 correct flagged · 4 Explain More, 1 English Unclear, 2 Concept / Recall, 1 Clue / Distractor (flags may overlap). English note Q13: 'fluctuating bill' means 'บิลที่เปลี่ยนแปลงขึ้นลงตามการใช้บริการ'.",
+      "englishNotes": [
+        {
+          "questionId": 13,
+          "phrase": "fluctuating bill",
+          "translation": "บิลที่ขึ้นลงตามปริมาณการใช้งาน"
+        }
+      ],
+      "items": [
+        {
+          "questionId": 4,
+          "key": "local-set-05:q4",
+          "topic": "L01 — Agility + Elasticity vs Durability",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | Select TWO มีสอง Requirement: เปิดโปรโมชัน/Environment ให้เร็ว = Agility และเพิ่ม Compute ชั่วคราวเมื่อมีผู้ใช้ = Elasticity ไม่ได้พูดถึงการเก็บข้อมูล"
+        },
+        {
+          "questionId": 10,
+          "key": "local-set-05:q10",
+          "topic": "L12 — Refactor vs Replatform / Rehost",
+          "type": "clue",
+          "rawFlags": [
+            "🟡 Explain More",
+            "🧩 Clue / Distractor Gap"
+          ],
+          "reviewedCauses": [
+            "clue",
+            "confidence"
+          ],
+          "note": "Correct; flagged for review | Microservices ที่ Deploy แยกกันเป็นการเปลี่ยน Architecture เชิงลึกจึงเป็น Refactor ไม่ใช่ Replatform ซึ่งเปลี่ยน Platform เพียงบางส่วน"
+        },
+        {
+          "questionId": 11,
+          "key": "local-set-05:q11",
+          "topic": "L12 — Application Discovery Service vs Migration Hub vs Migration Evaluator",
+          "type": "concept",
+          "rawFlags": [
+            "🧠 Concept / Recall Gap"
+          ],
+          "reviewedCauses": [
+            "concept"
+          ],
+          "note": "Wrong | ต้องใช้ Discovery Service เพื่อค้นหา Server Dependencies และ Migration Evaluator เพื่อประเมิน Migration Costs; Migration Hub มีหน้าที่ติดตาม Progress ระหว่างการย้าย"
+        },
+        {
+          "questionId": 14,
+          "key": "local-set-05:q14",
+          "topic": "L01 — Economies of scale vs Capital expenditure",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | การซื้อ Hardware จำนวนมากของ Cloud Provider จนต้นทุนต่อหน่วยลด คือ Economies of scale ไม่ใช่การจัดหมวดต้นทุนลงทุนของผู้ซื้อ"
+        },
+        {
+          "questionId": 19,
+          "key": "local-set-05:q19",
+          "topic": "L09 — Guest OS and IAM vs AWS-owned infrastructure",
+          "type": "confidence",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "note": "Correct; flagged for review | EC2 ให้ลูกค้าดูแล Linux Guest OS และ IAM Permissions ของ Workload ส่วน AWS ดูแล Hypervisor, Data Centers และ Physical Servers"
+        },
+        {
+          "questionId": 26,
+          "key": "local-set-05:q26",
+          "topic": "L09 — AWS Control Tower vs Organizations",
+          "type": "concept",
+          "rawFlags": [
+            "🧠 Concept / Recall Gap"
+          ],
+          "reviewedCauses": [
+            "concept"
+          ],
+          "note": "Correct; flagged for review | Control Tower ช่วย Set up Multi-account Landing Zone และ Governance Guardrails; Organizations จัดโครงสร้าง Account/OUs ซึ่ง Control Tower ใช้ร่วมด้วย"
+        },
+        {
+          "questionId": 27,
+          "key": "local-set-05:q27",
+          "topic": "L09 — IAM Identity Center vs AWS IAM",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | โจทย์เป็น Workforce Federation พร้อม Portal เข้าหลาย AWS Accounts จึงใช้ IAM Identity Center ไม่ใช่ IAM Role สำหรับให้สิทธิ์ Workload หรือ User เพียงตัวเดียว"
+        },
+        {
+          "questionId": 31,
+          "key": "local-set-05:q31",
+          "topic": "L09 — IAM Access Analyzer vs Amazon Inspector",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | IAM Access Analyzer วิเคราะห์ S3 Resource-based Policies ว่าเปิดสิทธิ์ให้ External Principals หรือไม่; Inspector ตรวจ Software Vulnerabilities ไม่ใช่ External Access"
+        },
+        {
+          "questionId": 33,
+          "key": "local-set-05:q33",
+          "topic": "L09 — Amazon GuardDuty vs Amazon Detective",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | ถามเครื่องมือตรวจจับ Threat อัตโนมัติจาก Access Keys ที่อาจถูกขโมย = GuardDuty; Detective ใช้ช่วยสืบสวนหลังมี Finding"
+        },
+        {
+          "questionId": 34,
+          "key": "local-set-05:q34",
+          "topic": "L09 — AWS Firewall Manager vs Security Hub vs WAF",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | เมื่อโจทย์เน้นบังคับ Web ACL Policy ให้สอดคล้องกันหลาย AWS Accounts ใช้ Firewall Manager; Security Hub แค่รวม Security Findings"
+        },
+        {
+          "questionId": 37,
+          "key": "local-set-05:q37",
+          "topic": "L03 — AWS CDK vs AWS CloudFormation",
+          "type": "confidence",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "note": "Wrong | AWS CDK ให้เขียน IaC ด้วย TypeScript แล้ว Generate CloudFormation Templates ส่วน CloudFormation คือระบบ Provision/Update Stack จาก Templates"
+        },
+        {
+          "questionId": 42,
+          "key": "local-set-05:q42",
+          "topic": "L03 — AWS Lambda vs Elastic Beanstalk",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | Lambda รัน Event-driven Function สั้น ๆ เมื่อ S3 Upload เกิดขึ้นโดยไม่ต้องเปิด Web Server; Elastic Beanstalk เป็น Platform Deploy Application Environment"
+        },
+        {
+          "questionId": 50,
+          "key": "local-set-05:q50",
+          "topic": "L06 — Instance store vs Amazon EBS",
+          "type": "confidence",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "note": "Correct; flagged for review | Instance Store เหมาะกับ Temporary Local Data ที่สร้างใหม่ได้และไม่ต้องเก็บเมื่อ Stop/Terminate EC2; EBS เป็น Persistent Block Volume"
+        },
+        {
+          "questionId": 53,
+          "key": "local-set-05:q53",
+          "topic": "L08 — Amazon Athena vs AWS Glue vs Redshift",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | Athena Query Data ใน S3 ด้วย SQL โดยตรง ส่วน Glue ทำ ETL/Schema Catalog ไม่ใช่ตัวหลักในการ Query SQL แบบ Ad hoc"
+        },
+        {
+          "questionId": 60,
+          "key": "local-set-05:q60",
+          "topic": "L11 — On-Demand Instances vs Dedicated Hosts",
+          "type": "language",
+          "rawFlags": [
+            "📘 English Unclear"
+          ],
+          "reviewedCauses": [
+            "language"
+          ],
+          "note": "Correct; flagged for review | โจทย์มีสอง Workloads: EC2 ชั่วคราวไม่มี Term Commitment ใช้ On-Demand; Licensing ผูก Physical Cores ต้องพิจารณา Dedicated Hosts. term commitment = ข้อผูกมัดระยะยาว"
+        },
+        {
+          "questionId": 62,
+          "key": "local-set-05:q62",
+          "topic": "L11 — AWS Cost and Usage Report vs Cost Explorer",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | Cost and Usage Report (CUR) ให้รายการค่าใช้จ่ายระดับ Line Item สำหรับ Custom SQL Analysis; Cost Explorer เหมาะดู Trends/Filters บน UI โดยตรง"
+        }
+      ],
+      "details": [
+        {
+          "questionId": 4,
+          "result": "Wrong",
+          "topic": "L01 — Agility + Elasticity vs Durability",
+          "question": "A retailer needs to start an online promotion rapidly and increase compute only while shoppers are active. Which TWO cloud attributes best address these different needs? (Select TWO.)",
+          "questionTh": "ร้านค้าต้องเริ่มโปรโมชันออนไลน์อย่างรวดเร็วและเพิ่ม Compute เฉพาะตอนมีลูกค้าเข้ามามาก ข้อใดสองคุณสมบัติตอบโจทย์แยกกันนี้",
+          "selected": "Agility + Durability",
+          "correct": "Agility + Elasticity",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "เลือก Service หรือ Concept ที่ใกล้เคียงแต่ไม่ตอบ Requirement หลักตามเฉลย เหตุผลที่ผู้สอบคิดจริงยังไม่ทราบ",
+          "memoryCue": "rapidly → Agility; increase compute only while active → Elasticity; Durability → รักษาข้อมูลไม่ให้สูญหาย",
+          "notes": [
+            "Select TWO มีสอง Requirement: เปิดโปรโมชัน/Environment ให้เร็ว = Agility และเพิ่ม Compute ชั่วคราวเมื่อมีผู้ใช้ = Elasticity ไม่ได้พูดถึงการเก็บข้อมูล",
+            "A. Agility — จัดสรรและทดลองทรัพยากรได้รวดเร็ว [คำตอบที่ถูก]",
+            "B. Durability — โอกาสที่ข้อมูลยังคงอยู่ไม่สูญหาย",
+            "C. Fault tolerance — ทำงานต่อได้เมื่อบางส่วนล้มเหลว",
+            "D. Elasticity — Elasticity คือการเพิ่มลด capacity ตาม demand ส่วนโจทย์นี้เน้นความเร็วในการสร้างและเลิกใช้ test environment [คำตอบที่ถูก]",
+            "E. High availability — High availability มุ่งให้บริการพร้อมใช้งานโดยรวม แต่อาจมีช่วง failover; โจทย์นี้เน้นทำงานต่อได้แม้ component หยุดกะทันหัน"
+          ]
+        },
+        {
+          "questionId": 10,
+          "result": "Correct",
+          "topic": "L12 — Refactor vs Replatform / Rehost",
+          "question": "An insurance company rebuilds a large legacy application as independently deployable microservices while moving to AWS. Which approach describes this work?",
+          "questionTh": "บริษัทประกันปรับ Legacy Application ขนาดใหญ่เป็น Microservices ที่ Deploy แยกกันได้ระหว่างย้ายขึ้น AWS เป็นแนวทางใด",
+          "selected": "Refactor",
+          "correct": "Refactor",
+          "rawFlags": [
+            "🟡 Explain More",
+            "🧩 Clue / Distractor Gap"
+          ],
+          "reviewedCauses": [
+            "clue",
+            "confidence"
+          ],
+          "diagnosis": "ตอบถูก แต่ยังมีธงขอทบทวนตามที่ระบุในไฟล์สอบ",
+          "memoryCue": "rebuilds / independently deployable microservices → Refactor; managed platform with minor changes → Replatform",
+          "notes": [
+            "Microservices ที่ Deploy แยกกันเป็นการเปลี่ยน Architecture เชิงลึกจึงเป็น Refactor ไม่ใช่ Replatform ซึ่งเปลี่ยน Platform เพียงบางส่วน",
+            "A. Replatform — Replatform เปลี่ยน platform บางส่วนโดยยังคงโครงสร้างหลัก แต่โจทย์ต้องการแยก monolith และออกแบบ cloud-native",
+            "B. Refactor — Refactor ปรับ architecture/code เชิงลึก แต่โจทย์เปลี่ยน platform บางส่วนและแก้ code เพียงเล็กน้อย [คำตอบที่ถูก]",
+            "C. Retire — เลิกใช้แอปที่ไม่จำเป็น",
+            "D. Rehost — Rehost คือ lift-and-shift โดยแก้ไขน้อย ไม่ใช่การปรับ architecture เป็น cloud-native"
+          ]
+        },
+        {
+          "questionId": 11,
+          "result": "Wrong",
+          "topic": "L12 — Application Discovery Service vs Migration Hub vs Migration Evaluator",
+          "question": "Before moving workloads, a team wants a dependency map of existing machines and a separate projected migration cost assessment. Which TWO services target those tasks? (Select TWO.)",
+          "questionTh": "ก่อนย้าย Workload ทีมต้องการ Dependency Map ของเครื่องเดิม และรายงานประเมินต้นทุน Migration แยกต่างหาก ข้อใดสอง Services ที่ตรงงาน",
+          "selected": "AWS Migration Evaluator + AWS Migration Hub",
+          "correct": "AWS Application Discovery Service + AWS Migration Evaluator",
+          "rawFlags": [
+            "🧠 Concept / Recall Gap"
+          ],
+          "reviewedCauses": [
+            "concept"
+          ],
+          "diagnosis": "เลือก Service หรือ Concept ที่ใกล้เคียงแต่ไม่ตอบ Requirement หลักตามเฉลย เหตุผลที่ผู้สอบคิดจริงยังไม่ทราบ",
+          "memoryCue": "dependency map → Application Discovery Service; projected cost/business case → Migration Evaluator; progress dashboard → Migration Hub",
+          "notes": [
+            "ต้องใช้ Discovery Service เพื่อค้นหา Server Dependencies และ Migration Evaluator เพื่อประเมิน Migration Costs; Migration Hub มีหน้าที่ติดตาม Progress ระหว่างการย้าย",
+            "A. AWS Migration Hub — ติดตามความคืบหน้าการ migration",
+            "B. AWS Application Discovery Service — รวบรวมข้อมูล servers และ dependencies เพื่อวางแผน migration [คำตอบที่ถูก]",
+            "C. AWS Application Migration Service — ย้าย servers โดยทำ lift-and-shift",
+            "D. AWS DMS — ย้ายและ replicate databases",
+            "E. AWS Migration Evaluator — ช่วยสร้าง business case และ cost assessment ก่อน migration [คำตอบที่ถูก]"
+          ]
+        },
+        {
+          "questionId": 14,
+          "result": "Wrong",
+          "topic": "L01 — Economies of scale vs Capital expenditure",
+          "question": "A cloud provider can buy servers and networking equipment in large volumes and offer lower unit costs to customers. What explains this economic advantage?",
+          "questionTh": "ผู้ให้บริการ Cloud ซื้อ Server และ Network Equipment จำนวนมากจึงมีต้นทุนต่อหน่วยต่ำกว่า แนวคิดใดอธิบายข้อได้เปรียบนี้",
+          "selected": "Capital expenditure",
+          "correct": "Economies of scale",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "เลือก Service หรือ Concept ที่ใกล้เคียงแต่ไม่ตอบ Requirement หลักตามเฉลย เหตุผลที่ผู้สอบคิดจริงยังไม่ทราบ",
+          "memoryCue": "large volumes + lower unit costs → Economies of scale; buy physical servers upfront → Capital expenditure",
+          "notes": [
+            "การซื้อ Hardware จำนวนมากของ Cloud Provider จนต้นทุนต่อหน่วยลด คือ Economies of scale ไม่ใช่การจัดหมวดต้นทุนลงทุนของผู้ซื้อ",
+            "A. Rightsizing — Rightsizing คือเลือกขนาด resource ให้เหมาะกับการใช้งานที่วัดได้ แต่ไม่ได้หมายถึงการเพิ่มลด capacity ตาม demand แบบต่อเนื่อง",
+            "B. Economies of scale — Economies of scale คือข้อได้เปรียบด้านต้นทุนจากการใช้ทรัพยากรรวมจำนวนมาก ไม่ใช่การลดขนาด instance ของบริษัท [คำตอบที่ถูก]",
+            "C. Pay-as-you-go — Pay-as-you-go คือจ่ายตามการใช้งานจริง แม้ช่วยเรื่องค่าใช้จ่าย แต่ไม่ใช่คุณสมบัติที่อธิบายความเร็วในการสร้าง environment",
+            "D. Capital expenditure — ค่าใช้จ่ายลงทุนล่วงหน้าในสินทรัพย์"
+          ]
+        },
+        {
+          "questionId": 19,
+          "result": "Correct",
+          "topic": "L09 — Guest OS and IAM vs AWS-owned infrastructure",
+          "question": "A company operates a Linux API on EC2. Which TWO controls must it maintain itself, rather than expecting AWS to maintain them? (Select TWO.)",
+          "questionTh": "บริษัทเปิด Linux API บน EC2 ข้อใดสอง Controls ที่ลูกค้าต้องดูแลเอง ไม่ใช่ AWS ดูแลให้",
+          "selected": "Guest operating system + Configuring IAM permissions",
+          "correct": "Configuring IAM permissions + Guest operating system",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "diagnosis": "ตอบถูก แต่ยังมีธงขอทบทวนตามที่ระบุในไฟล์สอบ",
+          "memoryCue": "customer on EC2 → guest OS patches + IAM policies; AWS → hypervisor/physical hosts/data centers",
+          "notes": [
+            "EC2 ให้ลูกค้าดูแล Linux Guest OS และ IAM Permissions ของ Workload ส่วน AWS ดูแล Hypervisor, Data Centers และ Physical Servers",
+            "A. Configuring IAM permissions — ลูกค้ากำหนดสิทธิ์ IAM identities และ resource access ที่จำเป็น [คำตอบที่ถูก]",
+            "B. Securing AWS data centers — หน้าที่ของ AWS ในการรักษาความปลอดภัยศูนย์ข้อมูลทางกายภาพ",
+            "C. Guest operating system — ระบบปฏิบัติการภายใน EC2 ที่ลูกค้าต้องกำหนดค่าและ patch [คำตอบที่ถูก]",
+            "D. Hypervisor — ระบบ virtualization underlying EC2 ที่ AWS ดูแล",
+            "E. Maintaining AWS physical servers — หน้าที่ของ AWS ในการบำรุงรักษา hardware underlying services"
+          ]
+        },
+        {
+          "questionId": 26,
+          "result": "Correct",
+          "topic": "L09 — AWS Control Tower vs Organizations",
+          "question": "A company needs centralized setup of a governed landing zone for many AWS accounts, including ready-made guardrails. Which AWS service leads the setup?",
+          "questionTh": "บริษัทต้องการตั้ง Landing Zone สำหรับหลาย AWS Accounts พร้อม Guardrails ที่มีให้จากส่วนกลาง ใช้บริการใดเป็นหลัก",
+          "selected": "AWS Control Tower",
+          "correct": "AWS Control Tower",
+          "rawFlags": [
+            "🧠 Concept / Recall Gap"
+          ],
+          "reviewedCauses": [
+            "concept"
+          ],
+          "diagnosis": "ตอบถูก แต่ยังมีธงขอทบทวนตามที่ระบุในไฟล์สอบ",
+          "memoryCue": "landing zone / ready-made guardrails → Control Tower; OUs / SCP / consolidated billing → Organizations",
+          "notes": [
+            "Control Tower ช่วย Set up Multi-account Landing Zone และ Governance Guardrails; Organizations จัดโครงสร้าง Account/OUs ซึ่ง Control Tower ใช้ร่วมด้วย",
+            "A. AWS Organizations — จัดกลุ่มบัญชีและใช้ governance / consolidated billing",
+            "B. AWS Control Tower — ตั้งค่าและกำกับ multi-account landing zone [คำตอบที่ถูก]",
+            "C. AWS Config — ติดตามและประเมิน configuration ของทรัพยากรตามกฎ",
+            "D. AWS Security Hub — รวม findings และสถานะ security จากหลายแหล่ง"
+          ]
+        },
+        {
+          "questionId": 27,
+          "result": "Wrong",
+          "topic": "L09 — IAM Identity Center vs AWS IAM",
+          "question": "The IT department wants employees to sign into a portal backed by the corporate identity provider and receive access to different AWS accounts. Which service is the intended choice?",
+          "questionTh": "ฝ่าย IT ให้พนักงาน Login Portal ที่เชื่อม Corporate Identity Provider และรับสิทธิ์ AWS Accounts ต่าง ๆ ควรใช้บริการใด",
+          "selected": "AWS IAM",
+          "correct": "IAM Identity Center",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "เลือก Service หรือ Concept ที่ใกล้เคียงแต่ไม่ตอบ Requirement หลักตามเฉลย เหตุผลที่ผู้สอบคิดจริงยังไม่ทราบ",
+          "memoryCue": "employees + corporate identity provider + access portal / multiple AWS accounts → IAM Identity Center; roles/policies/assume role → IAM",
+          "notes": [
+            "โจทย์เป็น Workforce Federation พร้อม Portal เข้าหลาย AWS Accounts จึงใช้ IAM Identity Center ไม่ใช่ IAM Role สำหรับให้สิทธิ์ Workload หรือ User เพียงตัวเดียว",
+            "A. Amazon Cognito — จัดการการลงชื่อเข้าใช้ของลูกค้าใน web/mobile applications",
+            "B. IAM Identity Center — จัดการการเข้าถึงหลายบัญชีสำหรับ workforce [คำตอบที่ถูก]",
+            "C. AWS Organizations — จัดกลุ่มบัญชีและใช้ governance / consolidated billing",
+            "D. AWS IAM — กำหนด identities, roles และสิทธิ์เข้าถึง AWS"
+          ]
+        },
+        {
+          "questionId": 31,
+          "result": "Wrong",
+          "topic": "L09 — IAM Access Analyzer vs Amazon Inspector",
+          "question": "Before publishing an S3 repository, the team wants to check whether its resource policy permits access from an unintended external principal. Which service is best?",
+          "questionTh": "ก่อนเผยแพร่ S3 Repository ทีมต้องตรวจว่า Resource Policy เปิดให้ External Principal ที่ไม่ต้องการหรือไม่ ควรใช้ Service ใด",
+          "selected": "Amazon Inspector",
+          "correct": "IAM Access Analyzer",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "เลือก Service หรือ Concept ที่ใกล้เคียงแต่ไม่ตอบ Requirement หลักตามเฉลย เหตุผลที่ผู้สอบคิดจริงยังไม่ทราบ",
+          "memoryCue": "external principal / resource policy / public access → Access Analyzer; CVE/package vulnerabilities → Inspector",
+          "notes": [
+            "IAM Access Analyzer วิเคราะห์ S3 Resource-based Policies ว่าเปิดสิทธิ์ให้ External Principals หรือไม่; Inspector ตรวจ Software Vulnerabilities ไม่ใช่ External Access",
+            "A. Amazon Macie — ค้นหาและจัดประเภทข้อมูลอ่อนไหวใน Amazon S3",
+            "B. AWS Config — ติดตามและประเมิน configuration ของทรัพยากรตามกฎ",
+            "C. IAM Access Analyzer — วิเคราะห์ resource access และ external access [คำตอบที่ถูก]",
+            "D. Amazon Inspector — สแกนช่องโหว่ของ workload ที่รองรับ"
+          ]
+        },
+        {
+          "questionId": 33,
+          "result": "Wrong",
+          "topic": "L09 — Amazon GuardDuty vs Amazon Detective",
+          "question": "A team sees indicators of possible compromised access keys and wants a service to detect this threat automatically. Which is the closest fit?",
+          "questionTh": "ทีมพบสัญญาณ Access Keys อาจถูกขโมย ต้องการ Service ตรวจจับ Threat อัตโนมัติ ใช้ตัวใด",
+          "selected": "Amazon Detective",
+          "correct": "Amazon GuardDuty",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "เลือก Service หรือ Concept ที่ใกล้เคียงแต่ไม่ตอบ Requirement หลักตามเฉลย เหตุผลที่ผู้สอบคิดจริงยังไม่ทราบ",
+          "memoryCue": "detect compromised keys / suspicious API activity → GuardDuty; investigate existing finding/graph → Detective",
+          "notes": [
+            "ถามเครื่องมือตรวจจับ Threat อัตโนมัติจาก Access Keys ที่อาจถูกขโมย = GuardDuty; Detective ใช้ช่วยสืบสวนหลังมี Finding",
+            "A. Amazon Detective — ช่วยสืบสวนความสัมพันธ์ของเหตุการณ์ security",
+            "B. Amazon GuardDuty — ตรวจจับภัยคุกคามจากสัญญาณและกิจกรรมที่น่าสงสัย [คำตอบที่ถูก]",
+            "C. Amazon Inspector — สแกนช่องโหว่ของ workload ที่รองรับ",
+            "D. AWS Security Hub — รวม findings และสถานะ security จากหลายแหล่ง"
+          ]
+        },
+        {
+          "questionId": 34,
+          "result": "Wrong",
+          "topic": "L09 — AWS Firewall Manager vs Security Hub vs WAF",
+          "question": "A security organization must ensure an approved WAF web ACL policy is consistently applied across a fleet of AWS accounts. Which service provides this centralized control?",
+          "questionTh": "องค์กร Security ต้องใช้ Web ACL Policy มาตรฐานกับ AWS Accounts จำนวนมากจากศูนย์กลาง ควรเลือก Service ใด",
+          "selected": "AWS Security Hub",
+          "correct": "AWS Firewall Manager",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "เลือก Service หรือ Concept ที่ใกล้เคียงแต่ไม่ตอบ Requirement หลักตามเฉลย เหตุผลที่ผู้สอบคิดจริงยังไม่ทราบ",
+          "memoryCue": "centrally apply WAF policies across many accounts → Firewall Manager; aggregate findings → Security Hub; filter HTTP request → WAF",
+          "notes": [
+            "เมื่อโจทย์เน้นบังคับ Web ACL Policy ให้สอดคล้องกันหลาย AWS Accounts ใช้ Firewall Manager; Security Hub แค่รวม Security Findings",
+            "A. AWS WAF — กรอง HTTP(S) requests ตาม web ACL rules",
+            "B. AWS Firewall Manager — จัดการ security policies ส่วนกลางข้ามบัญชี [คำตอบที่ถูก]",
+            "C. AWS Organizations — จัดกลุ่มบัญชีและใช้ governance / consolidated billing",
+            "D. AWS Security Hub — รวม findings และสถานะ security จากหลายแหล่ง"
+          ]
+        },
+        {
+          "questionId": 37,
+          "result": "Wrong",
+          "topic": "L03 — AWS CDK vs AWS CloudFormation",
+          "question": "A developer wants to describe AWS infrastructure using TypeScript and compile that definition into CloudFormation templates. Which tool should be selected?",
+          "questionTh": "Developer ต้องการนิยาม AWS Infrastructure ด้วย TypeScript แล้ว Generate CloudFormation Templates ใช้ Tool ใด",
+          "selected": "AWS CloudFormation",
+          "correct": "AWS CDK",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "diagnosis": "เลือก Service หรือ Concept ที่ใกล้เคียงแต่ไม่ตอบ Requirement หลักตามเฉลย เหตุผลที่ผู้สอบคิดจริงยังไม่ทราบ",
+          "memoryCue": "TypeScript / programmatic infrastructure definition / synthesize templates → AWS CDK; declarative JSON/YAML stacks / update rollback → CloudFormation",
+          "notes": [
+            "AWS CDK ให้เขียน IaC ด้วย TypeScript แล้ว Generate CloudFormation Templates ส่วน CloudFormation คือระบบ Provision/Update Stack จาก Templates",
+            "A. AWS CloudFormation — สร้างและจัดการ infrastructure จาก templates",
+            "B. AWS CDK — นิยาม cloud infrastructure ด้วย programming languages [คำตอบที่ถูก]",
+            "C. AWS CodeBuild — build และ test source code",
+            "D. AWS CloudShell — shell ผ่าน browser ที่มี AWS tools พร้อมใช้"
+          ]
+        },
+        {
+          "questionId": 42,
+          "result": "Wrong",
+          "topic": "L03 — AWS Lambda vs Elastic Beanstalk",
+          "question": "An S3 event triggers a brief image-metadata operation that does not need a persistent HTTP server. Which compute service minimizes infrastructure operations?",
+          "questionTh": "เมื่อเกิด S3 Event ต้องทำงานสั้น ๆ อ่าน Metadata ของรูป โดยไม่จำเป็นต้องมี HTTP Server รอตลอด ใช้ Compute ใดเพื่อลดการดูแล Infrastructure",
+          "selected": "AWS Elastic Beanstalk",
+          "correct": "AWS Lambda",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "เลือก Service หรือ Concept ที่ใกล้เคียงแต่ไม่ตอบ Requirement หลักตามเฉลย เหตุผลที่ผู้สอบคิดจริงยังไม่ทราบ",
+          "memoryCue": "S3 event + brief operation + no persistent HTTP server → Lambda; deploy long-running web app → Beanstalk",
+          "notes": [
+            "Lambda รัน Event-driven Function สั้น ๆ เมื่อ S3 Upload เกิดขึ้นโดยไม่ต้องเปิด Web Server; Elastic Beanstalk เป็น Platform Deploy Application Environment",
+            "A. AWS Batch — จัดคิวและรัน batch computing jobs",
+            "B. AWS Lambda — รันโค้ดแบบ event-driven โดยไม่จัดการ servers [คำตอบที่ถูก]",
+            "C. Amazon EC2 — ให้ virtual servers ที่ลูกค้าจัดการ guest OS",
+            "D. AWS Elastic Beanstalk — deploy applications พร้อมจัดการ underlying environment"
+          ]
+        },
+        {
+          "questionId": 50,
+          "result": "Correct",
+          "topic": "L06 — Instance store vs Amazon EBS",
+          "question": "An application writes temporary scratch files that can be regenerated, and it values local disk speed more than persistence after an EC2 stop. Which storage fits?",
+          "questionTh": "แอปสร้าง Scratch Files ที่สร้างใหม่ได้ ต้องการ Local Disk เร็วและไม่ต้องเก็บหลัง Stop EC2 ควรใช้ Storage ใด",
+          "selected": "Instance store",
+          "correct": "Instance store",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "diagnosis": "ตอบถูก แต่ยังมีธงขอทบทวนตามที่ระบุในไฟล์สอบ",
+          "memoryCue": "temporary scratch files / regenerate / no persistence after stop → Instance store; persistent block + snapshots → EBS",
+          "notes": [
+            "Instance Store เหมาะกับ Temporary Local Data ที่สร้างใหม่ได้และไม่ต้องเก็บเมื่อ Stop/Terminate EC2; EBS เป็น Persistent Block Volume",
+            "A. Amazon EBS — persistent block volumes สำหรับ EC2",
+            "B. Instance store — temporary local block storage ผูกกับ host [คำตอบที่ถูก]",
+            "C. Amazon EFS — shared elastic file system สำหรับ Linux workloads",
+            "D. Amazon S3 — durable object storage"
+          ]
+        },
+        {
+          "questionId": 53,
+          "result": "Wrong",
+          "topic": "L08 — Amazon Athena vs AWS Glue vs Redshift",
+          "question": "A marketing team needs serverless SQL queries against Parquet files already stored in S3 without loading them into a warehouse. Which service is designed for this?",
+          "questionTh": "ทีม Marketing ต้อง Query Parquet ใน S3 ด้วย Serverless SQL โดยไม่โหลดเข้า Data Warehouse ใช้ Service ใด",
+          "selected": "AWS Glue",
+          "correct": "Amazon Athena",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "เลือก Service หรือ Concept ที่ใกล้เคียงแต่ไม่ตอบ Requirement หลักตามเฉลย เหตุผลที่ผู้สอบคิดจริงยังไม่ทราบ",
+          "memoryCue": "serverless SQL + Parquet files in S3 + no warehouse loading → Athena; ETL/Data Catalog → Glue; warehouse → Redshift",
+          "notes": [
+            "Athena Query Data ใน S3 ด้วย SQL โดยตรง ส่วน Glue ทำ ETL/Schema Catalog ไม่ใช่ตัวหลักในการ Query SQL แบบ Ad hoc",
+            "A. AWS Glue — serverless data integration และ catalog",
+            "B. Amazon Athena — query data ใน S3 ด้วย SQL [คำตอบที่ถูก]",
+            "C. Amazon Redshift — cloud data warehouse สำหรับ analytics",
+            "D. Amazon Quick Sight — business intelligence dashboards"
+          ]
+        },
+        {
+          "questionId": 60,
+          "result": "Correct",
+          "topic": "L11 — On-Demand Instances vs Dedicated Hosts",
+          "question": "One workload needs ordinary temporary EC2 without term commitment; another requires an entire physical host for software licensing by physical core. Which TWO options match? (Select TWO.)",
+          "questionTh": "Workload แรกต้องใช้ EC2 ชั่วคราวแบบไม่ Commit ระยะยาว ส่วนอีกงานต้องการ Physical Host เฉพาะเพื่อใช้ Software License ตาม Physical Core ข้อใดสองตัวเลือกตรงงาน",
+          "selected": "Dedicated Hosts + On-Demand Instances",
+          "correct": "On-Demand Instances + Dedicated Hosts",
+          "rawFlags": [
+            "📘 English Unclear"
+          ],
+          "reviewedCauses": [
+            "language"
+          ],
+          "diagnosis": "ตอบถูก แต่ยังมีธงขอทบทวนตามที่ระบุในไฟล์สอบ",
+          "memoryCue": "without term commitment → On-Demand Instances; entire physical host / physical-core licensing → Dedicated Hosts",
+          "notes": [
+            "โจทย์มีสอง Workloads: EC2 ชั่วคราวไม่มี Term Commitment ใช้ On-Demand; Licensing ผูก Physical Cores ต้องพิจารณา Dedicated Hosts. term commitment = ข้อผูกมัดระยะยาว",
+            "A. On-Demand Instances — คิดเงินตามการใช้งานโดยไม่มีสัญญาระยะยาว [คำตอบที่ถูก]",
+            "B. Savings Plans — ส่วนลดตาม commitment ด้านการใช้ compute",
+            "C. Reserved Instances — ส่วนลดตาม commitment และคุณสมบัติที่กำหนด",
+            "D. Dedicated Hosts — physical server ที่สงวนให้ลูกค้ารายเดียว [คำตอบที่ถูก]",
+            "E. Spot Instances — ใช้ EC2 spare capacity ที่อาจถูกขัดจังหวะ"
+          ]
+        },
+        {
+          "questionId": 62,
+          "result": "Wrong",
+          "topic": "L11 — AWS Cost and Usage Report vs Cost Explorer",
+          "question": "A team requires the most granular line-item cost and usage data for custom SQL analysis in S3 and Athena. Which billing dataset should it export?",
+          "questionTh": "ทีมต้องการ Granular Cost/Usage Line Items สำหรับ Custom SQL Analysis ใน S3 และ Athena ควร Export Billing Dataset ใด",
+          "selected": "AWS Cost Explorer",
+          "correct": "AWS Cost and Usage Report",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "เลือก Service หรือ Concept ที่ใกล้เคียงแต่ไม่ตอบ Requirement หลักตามเฉลย เหตุผลที่ผู้สอบคิดจริงยังไม่ทราบ",
+          "memoryCue": "most granular line-item data / custom SQL in S3 and Athena → CUR; interactive historical charts → Cost Explorer",
+          "notes": [
+            "Cost and Usage Report (CUR) ให้รายการค่าใช้จ่ายระดับ Line Item สำหรับ Custom SQL Analysis; Cost Explorer เหมาะดู Trends/Filters บน UI โดยตรง",
+            "A. AWS Cost Explorer — วิเคราะห์ค่าใช้จ่ายจริงและแนวโน้ม",
+            "B. AWS Cost and Usage Report — ข้อมูลค่าใช้จ่ายและการใช้งานละเอียด [คำตอบที่ถูก]",
+            "C. AWS Budgets — กำหนด budgets และแจ้งเตือนตาม thresholds",
+            "D. AWS Pricing Calculator — ประเมินค่าใช้จ่ายก่อนใช้งาน"
+          ]
+        }
+      ]
     }
   },
   "history": [
@@ -2835,6 +3378,17 @@ window.REVIEW_INSIGHTS = window.REVIEW_INSIGHTS || {
       "confidence": 4,
       "language": 2,
       "clue": 2
+    },
+    {
+      "setId": "local-set-05",
+      "label": "Local Mock Set 5 · 16 Nov 2026",
+      "score": 54,
+      "total": 65,
+      "percent": 83,
+      "concept": 2,
+      "confidence": 4,
+      "language": 1,
+      "clue": 1
     }
   ],
   "topicStatus": [],
