@@ -35,11 +35,11 @@
   ],
   [
     "2.1",
-    "A team switches an EC2 workload to a managed compute service. What changes under the shared responsibility model?",
-    "ทีมเปลี่ยน Workload จาก EC2 ไปใช้ Managed Compute Service หน้าที่ตาม Shared Responsibility Model เปลี่ยนไปอย่างไร",
-    "AWS|The customer|Guest operating system|Hypervisor",
+    "A team stores confidential data in an AWS-managed service. Which activity regarding data protection remains the customer's responsibility?",
+    "ทีมเก็บ Confidential Data ใน AWS Managed Service กิจกรรมใดด้านการป้องกันข้อมูลยังเป็นหน้าที่ของลูกค้า",
+    "Managing customer-data encryption settings|Securing AWS data centers|Maintaining AWS physical servers|Hypervisor",
     "0",
-    "AWS รับภาระดูแล Underlying Infrastructure มากขึ้นใน Managed Service แต่ลูกค้ายังรับผิดชอบ Code/Data/IAM; ตัวเลือก AWS สื่อถึงฝ่ายที่เพิ่มภาระงาน"
+    "ลูกค้ายังกำหนด Encryption Settings ที่เกี่ยวข้องกับข้อมูลของตน แม้ AWS ดูแล Physical Infrastructure, Data Centers และ Hypervisor"
   ],
   [
     "2.2",
