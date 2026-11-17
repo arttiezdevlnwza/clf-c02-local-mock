@@ -3969,6 +3969,518 @@ window.REVIEW_INSIGHTS = window.REVIEW_INSIGHTS || {
           ]
         }
       ]
+    },
+    "local-set-07": {
+      "title": "Local Mock Set 7",
+      "note": "17 Nov 2026 · 55/65 correct (84.6%) · 10 wrong + 4 correct flagged · 5 Explain More, 3 English Unclear, 2 Concept/Recall, 1 Clue/Distractor; overlapping flags counted independently.",
+      "items": [
+        {
+          "questionId": 6,
+          "key": "local-set-07:q6",
+          "topic": "L13 — Reliability + Performance Efficiency vs other pillars",
+          "type": "language",
+          "rawFlags": [
+            "🟡 Explain More",
+            "📘 English Unclear"
+          ],
+          "reviewedCauses": [
+            "language",
+            "confidence"
+          ],
+          "note": "Correct; flagged for review | โจทย์มีสองส่วน: Recover หลัง Component Outage คือ Reliability ส่วน Latency Target คือ Performance Efficiency; คำว่า latency หมายถึงเวลาหน่วงในการประมวลผล"
+        },
+        {
+          "questionId": 9,
+          "key": "local-set-07:q9",
+          "topic": "L12 — Rehost vs Replatform vs Refactor",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | Rehost (lift-and-shift) ย้าย Virtual Machine/แอปแทบไม่เปลี่ยน ส่วน Replatform ต้องมีการเปลี่ยน Platform บางส่วน เช่นเปลี่ยน Self-managed Database เป็น RDS"
+        },
+        {
+          "questionId": 11,
+          "key": "local-set-07:q11",
+          "topic": "L12 — AWS SCT + AWS DMS vs Application Migration Service",
+          "type": "concept",
+          "rawFlags": [
+            "🟡 Explain More",
+            "🧠 Concept / Recall Gap"
+          ],
+          "reviewedCauses": [
+            "concept",
+            "confidence"
+          ],
+          "note": "Wrong | AWS SCT แปลง Schema/SQL เมื่อ Database Engines ไม่เข้ากัน; AWS DMS ย้าย/Replicate Data; Application Migration Service (MGN) ย้าย Server ไม่ใช่แปลง Database Schema"
+        },
+        {
+          "questionId": 16,
+          "key": "local-set-07:q16",
+          "topic": "L01 — Variable expense vs Capital expenditure",
+          "type": "language",
+          "rawFlags": [
+            "📘 English Unclear"
+          ],
+          "reviewedCauses": [
+            "language"
+          ],
+          "note": "Correct; flagged for review | Invoice คือใบแจ้งหนี้; variable invoices คือใบแจ้งหนี้ที่ยอดขึ้นลงตามการใช้ ไม่ใช่ซื้อ Physical Assets เป็นเงินลงทุนล่วงหน้า"
+        },
+        {
+          "questionId": 30,
+          "key": "local-set-07:q30",
+          "topic": "L09 — AWS Organizations vs Control Tower vs Identity Center",
+          "type": "concept",
+          "rawFlags": [
+            "🟡 Explain More",
+            "🧠 Concept / Recall Gap"
+          ],
+          "reviewedCauses": [
+            "concept",
+            "confidence"
+          ],
+          "note": "Wrong | AWS Organizations จัด Accounts/OUs และ SCPs โดยตรง; Control Tower ช่วยตั้งและกำกับ Landing Zone ที่ใช้ Organizations เป็นส่วนประกอบ"
+        },
+        {
+          "questionId": 36,
+          "key": "local-set-07:q36",
+          "topic": "L03 — AWS CloudFormation vs AWS CDK",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | CloudFormation คือ Engine จัดการ IaC Stacks จาก JSON/YAML Templates; CDK ใช้ภาษาโปรแกรมสร้าง Infrastructure Definitions แล้ว Synthesize เป็น CloudFormation Templates"
+        },
+        {
+          "questionId": 39,
+          "key": "local-set-07:q39",
+          "topic": "L04 — Amazon CloudFront vs Edge location",
+          "type": "clue",
+          "rawFlags": [
+            "🧩 Clue / Distractor Gap"
+          ],
+          "reviewedCauses": [
+            "clue"
+          ],
+          "note": "Wrong | CloudFront เป็นชื่อ CDN Service ส่วน Edge Location คือจุดกระจาย Content/Cache ที่ CloudFront ใช้; โจทย์นี้ถามบริการ (service) จึงตอบ CloudFront"
+        },
+        {
+          "questionId": 41,
+          "key": "local-set-07:q41",
+          "topic": "L03 — Amazon EKS + AWS Fargate vs ECS/EC2",
+          "type": "language",
+          "rawFlags": [
+            "📘 English Unclear"
+          ],
+          "reviewedCauses": [
+            "language"
+          ],
+          "note": "Correct; flagged for review | EKS เป็น Managed Kubernetes Orchestration ส่วน Fargate ให้ Serverless Compute สำหรับ Pods/Containers ที่รองรับ; ถ้า ECS แทน EKS จะไม่ใช่ Kubernetes เดิม"
+        },
+        {
+          "questionId": 47,
+          "key": "local-set-07:q47",
+          "topic": "L05 — Network ACL vs Security group",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | Network ACL ทำ Allow/Deny ที่ Subnet Boundary และเป็น Stateless ต้องคิด Inbound/Outbound แยกกัน; Security Group เป็น Stateful ที่ ENI"
+        },
+        {
+          "questionId": 48,
+          "key": "local-set-07:q48",
+          "topic": "L05 — NAT Gateway vs Internet Gateway vs VPC endpoint",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | NAT Gateway ให้ Instances ใน Private Subnet เริ่ม Outbound Internet ผ่าน NAT; Internet Gateway เป็น Gateway ของ VPC แต่ Private Instances ไม่ควรออก Internet โดยตรงผ่าน IGW"
+        },
+        {
+          "questionId": 49,
+          "key": "local-set-07:q49",
+          "topic": "L05 — AWS Site-to-Site VPN + VPC endpoint vs Direct Connect",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | Site-to-Site VPN ตอบ On-prem-to-AWS Encrypted Tunnel; VPC Endpoint ตอบ Private Access ไป S3; Direct Connect ใช้ Dedicated Circuit ไม่ใช่ Private Endpoint สำหรับ S3 จาก VPC"
+        },
+        {
+          "questionId": 52,
+          "key": "local-set-07:q52",
+          "topic": "L06 — AWS DataSync vs Snowball Edge vs Storage Gateway",
+          "type": "confidence",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "note": "Correct; flagged for review | AWS DataSync ย้ายหรือ Sync Files Online ผ่าน Network; Snowball Edge ใช้ Physical Appliance ขนข้อมูล; Storage Gateway เชื่อม Storage On-prem กับ AWS แบบ Hybrid"
+        },
+        {
+          "questionId": 56,
+          "key": "local-set-07:q56",
+          "topic": "Messaging — Amazon Kinesis Data Streams + SQS vs Step Functions",
+          "type": "confidence",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "note": "Wrong | Kinesis Data Streams สำหรับ Streaming Records ที่ Consumers อ่านซ้ำได้ตาม Retention; SQS เป็น Durable Message Queue ให้ Worker Poll งาน; Step Functions ทำ Workflow Orchestration ไม่ใช่ Queue"
+        },
+        {
+          "questionId": 57,
+          "key": "local-set-07:q57",
+          "topic": "Services — Amazon Connect vs Amazon WorkSpaces",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | Amazon Connect เป็น Cloud Contact Center สำหรับ Customer Calls และ Agents; Amazon WorkSpaces เป็น Virtual Desktop Service ไม่ใช่ระบบ Call Routing"
+        }
+      ],
+      "details": [
+        {
+          "questionId": 6,
+          "result": "Correct",
+          "topic": "L13 — Reliability + Performance Efficiency vs other pillars",
+          "question": "An IoT platform must recover after a component outage and meet a strict event-processing latency target. Which TWO pillars are most directly addressed? (Select TWO.)",
+          "questionTh": "IoT Platform ต้อง Recover หลัง Component Outage และต้องผ่าน Event-processing Latency Target ที่เข้มงวด ข้อใดสอง Pillars ตรงที่สุด",
+          "selected": "Reliability + Performance Efficiency",
+          "correct": "Reliability + Performance Efficiency",
+          "rawFlags": [
+            "🟡 Explain More",
+            "📘 English Unclear"
+          ],
+          "reviewedCauses": [
+            "language",
+            "confidence"
+          ],
+          "diagnosis": "ตอบถูก แต่มีธงขอทบทวนหรืออ่านภาษาอังกฤษไม่ชัด",
+          "memoryCue": "recover after component outage → Reliability; strict event-processing latency target → Performance Efficiency",
+          "notes": [
+            "โจทย์มีสองส่วน: Recover หลัง Component Outage คือ Reliability ส่วน Latency Target คือ Performance Efficiency; คำว่า latency หมายถึงเวลาหน่วงในการประมวลผล",
+            "A. Reliability — Reliability เป็นแนวคิดกว้างเรื่องการทำงานและฟื้นจาก failure ส่วนโจทย์เจาะจงความสามารถทำงานต่อเมื่อ component ล้มเหลว [คำตอบที่ถูก]",
+            "B. Cost Optimization — Cost Optimization เป็นเป้าหมายกว้างในการลดค่าใช้จ่าย ส่วนโจทย์ระบุวิธีลดขนาด instance จาก usage ที่วัดได้",
+            "C. Performance Efficiency — Performance Efficiency เป็น pillar ด้านประสิทธิภาพ แต่โจทย์ถามชื่อวิธีเลือกขนาด resource ให้พอดี [คำตอบที่ถูก]",
+            "D. Operational Excellence — Operational Excellence เน้นการดำเนินงานและปรับปรุงกระบวนการ ไม่ได้เน้นการเลือก compute เพื่อให้ได้ throughput",
+            "E. Sustainability — Sustainability เน้นผลกระทบต่อสิ่งแวดล้อม ไม่ใช่การเลือก resource ให้ได้ performance targets"
+          ]
+        },
+        {
+          "questionId": 9,
+          "result": "Wrong",
+          "topic": "L12 — Rehost vs Replatform vs Refactor",
+          "question": "An independent software vendor cannot modify an old application, so it copies the virtual-machine workload onto EC2 with few changes. Which migration strategy matches?",
+          "questionTh": "ผู้ขาย Software แก้ Application เก่าไม่ได้ จึง Copy Virtual-machine Workload ขึ้น EC2 โดยเปลี่ยนแปลงน้อย เป็น Strategy ใด",
+          "selected": "Replatform",
+          "correct": "Rehost",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "เลือก Service หรือ Concept ที่เกี่ยวข้องแต่ไม่ตรง Requirement ตามเฉลย; ยังไม่ทราบเหตุผลที่คิดจริงขณะตอบ",
+          "memoryCue": "copy VM to EC2 / cannot modify / few changes → Rehost; change hosting platform/service slightly → Replatform; rebuild architecture → Refactor",
+          "notes": [
+            "Rehost (lift-and-shift) ย้าย Virtual Machine/แอปแทบไม่เปลี่ยน ส่วน Replatform ต้องมีการเปลี่ยน Platform บางส่วน เช่นเปลี่ยน Self-managed Database เป็น RDS",
+            "A. Refactor — Refactor ปรับ architecture/code เชิงลึก แต่โจทย์เปลี่ยน platform บางส่วนและแก้ code เพียงเล็กน้อย",
+            "B. Rehost — Rehost คือ lift-and-shift โดยแก้ไขน้อย ไม่ใช่การปรับ architecture เป็น cloud-native [คำตอบที่ถูก]",
+            "C. Replatform — Replatform เปลี่ยน platform บางส่วนโดยยังคงโครงสร้างหลัก แต่โจทย์ต้องการแยก monolith และออกแบบ cloud-native",
+            "D. Retain — Retain คือคงระบบไว้ที่เดิม ไม่ได้เปลี่ยนสถาปัตยกรรมระหว่าง migration"
+          ]
+        },
+        {
+          "questionId": 11,
+          "result": "Wrong",
+          "topic": "L12 — AWS SCT + AWS DMS vs Application Migration Service",
+          "question": "A database migration moves data between two database engines and requires conversion of incompatible schemas. Which TWO AWS services address these parts of the migration? (Select TWO.)",
+          "questionTh": "Database Migration ต้องย้าย Data ระหว่าง Database Engines สองตัวและต้อง Convert Incompatible Schemas ข้อใดสอง Services ตอบโจทย์คนละส่วน",
+          "selected": "AWS DMS + AWS Application Migration Service",
+          "correct": "AWS SCT + AWS DMS",
+          "rawFlags": [
+            "🟡 Explain More",
+            "🧠 Concept / Recall Gap"
+          ],
+          "reviewedCauses": [
+            "concept",
+            "confidence"
+          ],
+          "diagnosis": "เลือก Service หรือ Concept ที่เกี่ยวข้องแต่ไม่ตรง Requirement ตามเฉลย; ยังไม่ทราบเหตุผลที่คิดจริงขณะตอบ",
+          "memoryCue": "schema conversion / incompatible database engines → AWS SCT; move or replicate database data → AWS DMS; move servers → Application Migration Service",
+          "notes": [
+            "AWS SCT แปลง Schema/SQL เมื่อ Database Engines ไม่เข้ากัน; AWS DMS ย้าย/Replicate Data; Application Migration Service (MGN) ย้าย Server ไม่ใช่แปลง Database Schema",
+            "A. AWS SCT — ช่วยแปลง database schema ระหว่าง engines [คำตอบที่ถูก]",
+            "B. AWS Application Migration Service — ย้าย servers โดยทำ lift-and-shift",
+            "C. AWS DMS — ย้ายและ replicate databases [คำตอบที่ถูก]",
+            "D. AWS Migration Hub — ติดตามความคืบหน้าการ migration",
+            "E. AWS Migration Evaluator — ช่วยสร้าง business case และ cost assessment ก่อน migration"
+          ]
+        },
+        {
+          "questionId": 16,
+          "result": "Correct",
+          "topic": "L01 — Variable expense vs Capital expenditure",
+          "question": "A cost accountant compares buying physical equipment once with variable invoices tied to cloud consumption. What category describes the cloud invoices?",
+          "questionTh": "นักบัญชีเปรียบเทียบการซื้อ Physical Equipment ครั้งเดียวกับใบแจ้งหนี้ Cloud ที่เปลี่ยนตาม Consumption ค่า Cloud นี้จัดเป็นประเภทใด",
+          "selected": "Variable expense",
+          "correct": "Variable expense",
+          "rawFlags": [
+            "📘 English Unclear"
+          ],
+          "reviewedCauses": [
+            "language"
+          ],
+          "diagnosis": "ตอบถูก แต่มีธงขอทบทวนหรืออ่านภาษาอังกฤษไม่ชัด",
+          "memoryCue": "variable invoices / tied to cloud consumption → Variable expense; buying physical equipment once → Capital expenditure",
+          "notes": [
+            "Invoice คือใบแจ้งหนี้; variable invoices คือใบแจ้งหนี้ที่ยอดขึ้นลงตามการใช้ ไม่ใช่ซื้อ Physical Assets เป็นเงินลงทุนล่วงหน้า",
+            "A. Variable expense — ค่าใช้จ่ายที่เปลี่ยนตามการใช้งาน [คำตอบที่ถูก]",
+            "B. Capital expenditure — ค่าใช้จ่ายลงทุนล่วงหน้าในสินทรัพย์",
+            "C. Rightsizing — Rightsizing คือเลือกขนาด resource ให้เหมาะกับการใช้งานที่วัดได้ แต่ไม่ได้หมายถึงการเพิ่มลด capacity ตาม demand แบบต่อเนื่อง",
+            "D. Economies of scale — Economies of scale คือข้อได้เปรียบด้านต้นทุนจากการใช้ทรัพยากรรวมจำนวนมาก ไม่ใช่การลดขนาด instance ของบริษัท"
+          ]
+        },
+        {
+          "questionId": 30,
+          "result": "Wrong",
+          "topic": "L09 — AWS Organizations vs Control Tower vs Identity Center",
+          "question": "A company is standardizing access across AWS accounts and wants organizational units and service-control guardrails for each business division. Which service provides these features?",
+          "questionTh": "บริษัทต้องการตั้ง AWS Accounts เป็น Organizational Units และกำหนด Service-control Guardrails ให้แต่ละ Division ใช้ Service ใด",
+          "selected": "AWS Control Tower",
+          "correct": "AWS Organizations",
+          "rawFlags": [
+            "🟡 Explain More",
+            "🧠 Concept / Recall Gap"
+          ],
+          "reviewedCauses": [
+            "concept",
+            "confidence"
+          ],
+          "diagnosis": "เลือก Service หรือ Concept ที่เกี่ยวข้องแต่ไม่ตรง Requirement ตามเฉลย; ยังไม่ทราบเหตุผลที่คิดจริงขณะตอบ",
+          "memoryCue": "organizational units (OUs) / service control policies (SCPs) → Organizations; multi-account landing zone / preconfigured guardrails → Control Tower",
+          "notes": [
+            "AWS Organizations จัด Accounts/OUs และ SCPs โดยตรง; Control Tower ช่วยตั้งและกำกับ Landing Zone ที่ใช้ Organizations เป็นส่วนประกอบ",
+            "A. AWS Control Tower — ตั้งค่าและกำกับ multi-account landing zone",
+            "B. AWS Organizations — จัดกลุ่มบัญชีและใช้ governance / consolidated billing [คำตอบที่ถูก]",
+            "C. IAM Identity Center — จัดการการเข้าถึงหลายบัญชีสำหรับ workforce",
+            "D. AWS IAM — กำหนด identities, roles และสิทธิ์เข้าถึง AWS"
+          ]
+        },
+        {
+          "questionId": 36,
+          "result": "Wrong",
+          "topic": "L03 — AWS CloudFormation vs AWS CDK",
+          "question": "An infrastructure engineer must repeatedly launch identical network and compute environments from a declarative JSON file and track updates as stacks. Which service performs this provisioning?",
+          "questionTh": "Infrastructure Engineer ต้อง Launch Network และ Compute Environments ที่เหมือนกันซ้ำ ๆ จาก Declarative JSON File และติดตาม Updates เป็น Stacks บริการใดทำ Provisioning",
+          "selected": "AWS CDK",
+          "correct": "AWS CloudFormation",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "เลือก Service หรือ Concept ที่เกี่ยวข้องแต่ไม่ตรง Requirement ตามเฉลย; ยังไม่ทราบเหตุผลที่คิดจริงขณะตอบ",
+          "memoryCue": "declarative JSON/YAML template / stack creation & updates → CloudFormation; TypeScript/Python constructs / synthesize templates → CDK",
+          "notes": [
+            "CloudFormation คือ Engine จัดการ IaC Stacks จาก JSON/YAML Templates; CDK ใช้ภาษาโปรแกรมสร้าง Infrastructure Definitions แล้ว Synthesize เป็น CloudFormation Templates",
+            "A. AWS CDK — นิยาม cloud infrastructure ด้วย programming languages",
+            "B. AWS Elastic Beanstalk — deploy applications พร้อมจัดการ underlying environment",
+            "C. AWS CloudFormation — สร้างและจัดการ infrastructure จาก templates [คำตอบที่ถูก]",
+            "D. AWS CodePipeline — automate release pipelines"
+          ]
+        },
+        {
+          "questionId": 39,
+          "result": "Wrong",
+          "topic": "L04 — Amazon CloudFront vs Edge location",
+          "question": "A website's dynamic backend stays in one AWS Region, but static product pictures should be served through a global edge caching service. Which service provides the CDN?",
+          "questionTh": "Backend ของเว็บยังอยู่ Region เดียว แต่ Static Product Pictures ต้องส่งผ่าน Global Edge Caching Service ใช้บริการใดเป็น CDN",
+          "selected": "Edge location",
+          "correct": "Amazon CloudFront",
+          "rawFlags": [
+            "🧩 Clue / Distractor Gap"
+          ],
+          "reviewedCauses": [
+            "clue"
+          ],
+          "diagnosis": "เลือก Service หรือ Concept ที่เกี่ยวข้องแต่ไม่ตรง Requirement ตามเฉลย; ยังไม่ทราบเหตุผลที่คิดจริงขณะตอบ",
+          "memoryCue": "which service provides CDN → CloudFront; which infrastructure location holds cached objects → Edge location",
+          "notes": [
+            "CloudFront เป็นชื่อ CDN Service ส่วน Edge Location คือจุดกระจาย Content/Cache ที่ CloudFront ใช้; โจทย์นี้ถามบริการ (service) จึงตอบ CloudFront",
+            "A. Amazon Route 53 — DNS และ domain routing รวมถึง health checks",
+            "B. Amazon CloudFront — content delivery network ที่ใช้ edge locations [คำตอบที่ถูก]",
+            "C. Edge location — จุดกระจาย content ใกล้ผู้ใช้",
+            "D. AWS Region — พื้นที่ทางภูมิศาสตร์ที่มีหลาย Availability Zones"
+          ]
+        },
+        {
+          "questionId": 41,
+          "result": "Correct",
+          "topic": "L03 — Amazon EKS + AWS Fargate vs ECS/EC2",
+          "question": "A developer needs to keep an existing Kubernetes deployment model but wants its pods to use managed serverless compute instead of EC2 worker hosts. Which TWO services form this combination? (Select TWO.)",
+          "questionTh": "Developer ต้องคง Kubernetes Deployment Model เดิม แต่ต้องการให้ Pods ใช้ Serverless Compute แทน EC2 Worker Hosts ข้อใดสอง Services ใช้ร่วมกัน",
+          "selected": "Amazon EKS + AWS Fargate",
+          "correct": "Amazon EKS + AWS Fargate",
+          "rawFlags": [
+            "📘 English Unclear"
+          ],
+          "reviewedCauses": [
+            "language"
+          ],
+          "diagnosis": "ตอบถูก แต่มีธงขอทบทวนหรืออ่านภาษาอังกฤษไม่ชัด",
+          "memoryCue": "keep Kubernetes deployment and pods → EKS; serverless compute instead of EC2 workers → Fargate",
+          "notes": [
+            "EKS เป็น Managed Kubernetes Orchestration ส่วน Fargate ให้ Serverless Compute สำหรับ Pods/Containers ที่รองรับ; ถ้า ECS แทน EKS จะไม่ใช่ Kubernetes เดิม",
+            "A. Amazon ECS — orchestrate containers ด้วย AWS-native control plane",
+            "B. Amazon EKS — บริการ Kubernetes แบบ managed [คำตอบที่ถูก]",
+            "C. AWS Fargate — compute engine สำหรับ containers โดยไม่จัดการ servers [คำตอบที่ถูก]",
+            "D. Amazon EC2 — ให้ virtual servers ที่ลูกค้าจัดการ guest OS",
+            "E. AWS Batch — จัดคิวและรัน batch computing jobs"
+          ]
+        },
+        {
+          "questionId": 47,
+          "result": "Wrong",
+          "topic": "L05 — Network ACL vs Security group",
+          "question": "A network team must explicitly deny an IP range at the subnet boundary and understands that inbound and outbound rules are evaluated separately. Which control applies?",
+          "questionTh": "ทีม Network ต้อง Deny IP Range ที่ Subnet Boundary และเข้าใจว่า Inbound/Outbound Rules ถูกประเมินแยกกัน ใช้ Control ใด",
+          "selected": "Security group",
+          "correct": "Network ACL",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "เลือก Service หรือ Concept ที่เกี่ยวข้องแต่ไม่ตรง Requirement ตามเฉลย; ยังไม่ทราบเหตุผลที่คิดจริงขณะตอบ",
+          "memoryCue": "subnet boundary / explicit deny / stateless / separate inbound-outbound → Network ACL; ENI/instance level / stateful / allow rules → Security group",
+          "notes": [
+            "Network ACL ทำ Allow/Deny ที่ Subnet Boundary และเป็น Stateless ต้องคิด Inbound/Outbound แยกกัน; Security Group เป็น Stateful ที่ ENI",
+            "A. Security group — stateful firewall ที่ระดับ ENI/instance",
+            "B. Network ACL — stateless filtering ที่ระดับ subnet [คำตอบที่ถูก]",
+            "C. AWS WAF — กรอง HTTP(S) requests ตาม web ACL rules",
+            "D. AWS Shield — ป้องกันการโจมตี DDoS"
+          ]
+        },
+        {
+          "questionId": 48,
+          "result": "Wrong",
+          "topic": "L05 — NAT Gateway vs Internet Gateway vs VPC endpoint",
+          "question": "Private EC2 instances require outbound access to public operating-system package repositories without accepting direct inbound connections. Which network component is best?",
+          "questionTh": "Private EC2 Instances ต้องออกไป Public OS Package Repositories แต่ไม่รับ Direct Inbound Connections ควรใช้ Network Component ใด",
+          "selected": "Internet Gateway",
+          "correct": "NAT Gateway",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "เลือก Service หรือ Concept ที่เกี่ยวข้องแต่ไม่ตรง Requirement ตามเฉลย; ยังไม่ทราบเหตุผลที่คิดจริงขณะตอบ",
+          "memoryCue": "private subnet outbound to public package repositories → NAT Gateway; public subnet internet route → Internet Gateway; private AWS service access → VPC endpoint",
+          "notes": [
+            "NAT Gateway ให้ Instances ใน Private Subnet เริ่ม Outbound Internet ผ่าน NAT; Internet Gateway เป็น Gateway ของ VPC แต่ Private Instances ไม่ควรออก Internet โดยตรงผ่าน IGW",
+            "A. Internet Gateway — เชื่อม VPC กับอินเทอร์เน็ตตาม route และ security rules",
+            "B. VPC endpoint — เข้าถึง AWS services แบบ private โดยไม่ผ่าน public internet",
+            "C. NAT Gateway — ให้ private subnet เริ่ม outbound connections ไปอินเทอร์เน็ต [คำตอบที่ถูก]",
+            "D. AWS Direct Connect — dedicated private network connection ไป AWS"
+          ]
+        },
+        {
+          "questionId": 49,
+          "result": "Wrong",
+          "topic": "L05 — AWS Site-to-Site VPN + VPC endpoint vs Direct Connect",
+          "question": "A firm needs an encrypted tunnel from headquarters over its internet link, and separately wants an S3 private access path for EC2 instances inside its VPC. Which TWO AWS options match? (Select TWO.)",
+          "questionTh": "บริษัทต้องการ Encrypted Tunnel จากสำนักงานใหญ่ผ่าน Internet และ S3 Private Access Path สำหรับ EC2 ใน VPC ข้อใดสอง Options ตรงโจทย์",
+          "selected": "AWS Site-to-Site VPN + AWS Direct Connect",
+          "correct": "AWS Site-to-Site VPN + VPC endpoint",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "เลือก Service หรือ Concept ที่เกี่ยวข้องแต่ไม่ตรง Requirement ตามเฉลย; ยังไม่ทราบเหตุผลที่คิดจริงขณะตอบ",
+          "memoryCue": "encrypted headquarters-to-AWS tunnel over internet → Site-to-Site VPN; private EC2-to-S3 inside VPC → VPC endpoint; dedicated network circuit → Direct Connect",
+          "notes": [
+            "Site-to-Site VPN ตอบ On-prem-to-AWS Encrypted Tunnel; VPC Endpoint ตอบ Private Access ไป S3; Direct Connect ใช้ Dedicated Circuit ไม่ใช่ Private Endpoint สำหรับ S3 จาก VPC",
+            "A. AWS Site-to-Site VPN — เข้ารหัสการเชื่อมต่อเครือข่ายผ่านอินเทอร์เน็ต [คำตอบที่ถูก]",
+            "B. AWS Direct Connect — dedicated private network connection ไป AWS",
+            "C. VPC endpoint — เข้าถึง AWS services แบบ private โดยไม่ผ่าน public internet [คำตอบที่ถูก]",
+            "D. Internet Gateway — เชื่อม VPC กับอินเทอร์เน็ตตาม route และ security rules",
+            "E. AWS Transit Gateway — เชื่อม VPC และ on-premises networks แบบ hub"
+          ]
+        },
+        {
+          "questionId": 52,
+          "result": "Correct",
+          "topic": "L06 — AWS DataSync vs Snowball Edge vs Storage Gateway",
+          "question": "A retail chain needs to transfer file data from an on-premises NAS to S3 continuously over its existing network rather than ship a physical appliance. Which service fits?",
+          "questionTh": "ร้านค้าหลายสาขาต้อง Transfer Files จาก On-premises NAS ไป S3 ผ่าน Network เดิมอย่างต่อเนื่อง ไม่ต้องส่ง Physical Appliance ควรใช้ Service ใด",
+          "selected": "AWS DataSync",
+          "correct": "AWS DataSync",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "diagnosis": "ตอบถูก แต่มีธงขอทบทวนหรืออ่านภาษาอังกฤษไม่ชัด",
+          "memoryCue": "continuous transfer NAS to S3 over existing network → DataSync; physical/offline transfer → Snowball Edge; hybrid storage interface/gateway → Storage Gateway",
+          "notes": [
+            "AWS DataSync ย้ายหรือ Sync Files Online ผ่าน Network; Snowball Edge ใช้ Physical Appliance ขนข้อมูล; Storage Gateway เชื่อม Storage On-prem กับ AWS แบบ Hybrid",
+            "A. AWS Snowball Edge — ย้ายข้อมูลจำนวนมากแบบ physical device",
+            "B. AWS DataSync — ย้ายข้อมูลระหว่าง storage locations แบบ online [คำตอบที่ถูก]",
+            "C. AWS Storage Gateway — เชื่อม on-premises applications กับ cloud storage",
+            "D. Amazon EFS — shared elastic file system สำหรับ Linux workloads"
+          ]
+        },
+        {
+          "questionId": 56,
+          "result": "Wrong",
+          "topic": "Messaging — Amazon Kinesis Data Streams + SQS vs Step Functions",
+          "question": "A telemetry pipeline needs a retained high-throughput event stream, while a separate workload needs a durable queue for jobs waiting on workers. Which TWO services meet the distinct patterns? (Select TWO.)",
+          "questionTh": "Telemetry Pipeline ต้องมี High-throughput Event Stream ที่ Retain Records และอีก Workload ต้องมี Durable Queue เก็บ Jobs รอ Workers ข้อใดสอง Services ตรงงาน",
+          "selected": "Amazon Kinesis Data Streams + AWS Step Functions",
+          "correct": "Amazon Kinesis Data Streams + Amazon SQS",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "diagnosis": "เลือก Service หรือ Concept ที่เกี่ยวข้องแต่ไม่ตรง Requirement ตามเฉลย; ยังไม่ทราบเหตุผลที่คิดจริงขณะตอบ",
+          "memoryCue": "retained high-throughput event stream → Kinesis Data Streams; durable queue for jobs waiting on workers → SQS; ordered multi-step workflow/state machine → Step Functions",
+          "notes": [
+            "Kinesis Data Streams สำหรับ Streaming Records ที่ Consumers อ่านซ้ำได้ตาม Retention; SQS เป็น Durable Message Queue ให้ Worker Poll งาน; Step Functions ทำ Workflow Orchestration ไม่ใช่ Queue",
+            "A. Amazon Kinesis Data Streams — streaming data ingestion สำหรับ consumers [คำตอบที่ถูก]",
+            "B. Amazon SNS — pub/sub notifications และ fan-out",
+            "C. Amazon SQS — managed queues สำหรับ decoupling [คำตอบที่ถูก]",
+            "D. Amazon EventBridge — event bus และ event routing ตาม rules",
+            "E. AWS Step Functions — orchestrate workflows แบบ state machines"
+          ]
+        },
+        {
+          "questionId": 57,
+          "result": "Wrong",
+          "topic": "Services — Amazon Connect vs Amazon WorkSpaces",
+          "question": "A call center wants a cloud contact-center solution that routes incoming customer calls to agents and supports customer service interactions. Which AWS service is intended?",
+          "questionTh": "Call Center ต้องการ Cloud Contact-center Solution ที่ Route Incoming Customer Calls ไป Agents และรองรับ Customer Service Interaction ควรใช้ Service ใด",
+          "selected": "Amazon WorkSpaces",
+          "correct": "Amazon Connect",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "เลือก Service หรือ Concept ที่เกี่ยวข้องแต่ไม่ตรง Requirement ตามเฉลย; ยังไม่ทราบเหตุผลที่คิดจริงขณะตอบ",
+          "memoryCue": "call center / incoming calls / routing to agents → Amazon Connect; virtual desktops for employees → Amazon WorkSpaces",
+          "notes": [
+            "Amazon Connect เป็น Cloud Contact Center สำหรับ Customer Calls และ Agents; Amazon WorkSpaces เป็น Virtual Desktop Service ไม่ใช่ระบบ Call Routing",
+            "A. Amazon SES — ส่งอีเมลผ่านบริการ managed",
+            "B. Amazon Connect — cloud contact center [คำตอบที่ถูก]",
+            "C. Amazon WorkSpaces — managed virtual desktops",
+            "D. Amazon SNS — pub/sub notifications และ fan-out"
+          ]
+        }
+      ],
+      "englishNotes": [
+        {
+          "questionId": 6,
+          "phrase": "recover after a component outage; strict event-processing latency target",
+          "translation": "ต้องกู้คืน/ทำงานต่อหลังส่วนประกอบเสีย และต้องประมวลผล Events ได้ตามเวลา Latency ที่กำหนด"
+        },
+        {
+          "questionId": 16,
+          "phrase": "variable invoices tied to cloud consumption",
+          "translation": "ใบแจ้งหนี้ที่ยอดเปลี่ยนตามปริมาณการใช้ Cloud"
+        },
+        {
+          "questionId": 41,
+          "phrase": "keep an existing Kubernetes deployment model; pods use managed serverless compute",
+          "translation": "ยังใช้รูปแบบ Deploy Kubernetes เดิม แต่ให้ Pods ใช้ Serverless Compute แทน EC2 Worker Hosts"
+        }
+      ]
     }
   },
   "history": [
@@ -4036,6 +4548,17 @@ window.REVIEW_INSIGHTS = window.REVIEW_INSIGHTS || {
       "concept": 3,
       "confidence": 5,
       "language": 6,
+      "clue": 1
+    },
+    {
+      "setId": "local-set-07",
+      "label": "Local Mock Set 7 · 17 Nov 2026",
+      "score": 55,
+      "total": 65,
+      "percent": 85,
+      "concept": 2,
+      "confidence": 5,
+      "language": 3,
       "clue": 1
     }
   ],
