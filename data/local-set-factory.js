@@ -1,5 +1,16 @@
 (() => {
   const defs = {
+    'AWS': 'ผู้ให้บริการ Cloud ที่รับผิดชอบ Physical Data Centers, Servers และ Virtualization ใต้ Managed Services',
+    'The customer': 'ผู้ใช้ AWS รับผิดชอบข้อมูล Identity Access Policies และ Guest OS ที่จัดการเองตามประเภทบริการ',
+    'Guest operating system': 'ระบบปฏิบัติการภายใน EC2 Instance ซึ่งลูกค้ามีหน้าที่ Patch และ Configure',
+    'AWS-owned physical servers': 'Hardware จริงของ Cloud Infrastructure ที่ AWS ดูแลและเปลี่ยนอุปกรณ์ที่เสีย',
+    'Hypervisor': 'Virtualization Layer ใต้ EC2 Instances ที่ AWS จัดการ',
+    'AWS Systems Manager': 'ช่วยจัดการและปฏิบัติงานกับ AWS Resources แบบรวมศูนย์ เช่น Automation และ Patch',
+    'Amazon Comprehend': 'บริการ NLP วิเคราะห์ข้อความ เช่น Sentiment, Entities และ Key Phrases',
+    'AWS Management Console': 'Graphical Web Interface สำหรับจัดการ AWS Services ผ่าน Browser',
+    'AWS Global Accelerator': 'เพิ่มประสิทธิภาพเส้นทางการเชื่อมต่อ TCP/UDP ไปยัง AWS Application Endpoints ด้วย Global Network',
+    'Amazon Translate': 'แปลข้อความระหว่างภาษาด้วย Machine Translation',
+    'AWS CLI': 'Command-line Interface สำหรับเรียก AWS APIs ผ่านคำสั่งหรือ Scripts',
     'AWS CloudTrail':'บันทึกกิจกรรม API และการดำเนินการในบัญชี AWS',
     'AWS CloudFront':'content delivery network ใช้ edge locations เพื่อส่ง content ใกล้ผู้ใช้',
     'Amazon Cognito':'จัดการการลงชื่อเข้าใช้ของลูกค้าใน web/mobile applications',
@@ -362,9 +373,9 @@
     for(const [d,n] of Object.entries({1:16,2:19,3:22,4:8}))if(domainCount[d]!==n)errors.push('Domain '+d+' count '+domainCount[d]);
     for(const t of tasks)if(!taskCount[t])errors.push('Missing task '+t);
     if((typeCount.multiple||0)<8)errors.push('Not enough multiple-response questions');
-    const id='local-set-0'+setNumber;
+    const id='local-set-'+String(setNumber).padStart(2,'0');
     const set={id,title:'Local Mock Set '+setNumber,subtitle:'65 Questions · Official CLF-C02 Blueprint · Original Exam-Style Questions',questionCount:65,questions,_blueprint:{domains:domainCount,types:typeCount,tasks:taskCount,qualityProblems:errors,sourceNote:['Official AWS CLF-C02 Exam Guide and AWS service documentation; independently authored questions, not sourced from AWS Learning Hub.']}};
-    window['LOCAL_SET_0'+setNumber+'_VALIDATION']={ok:errors.length===0,problems:errors};
+    window['LOCAL_SET_'+String(setNumber).padStart(2,'0')+'_VALIDATION']={ok:errors.length===0,problems:errors};
     if(errors.length){console.error('CLF-C02 Set '+setNumber+' validation failed',errors);return;}
     const sets=window.QUIZ_SETS=window.QUIZ_SETS||[];
     const idx=sets.findIndex(s=>s.id===id);
