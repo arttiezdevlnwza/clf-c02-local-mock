@@ -4481,6 +4481,584 @@ window.REVIEW_INSIGHTS = window.REVIEW_INSIGHTS || {
           "translation": "ยังใช้รูปแบบ Deploy Kubernetes เดิม แต่ให้ Pods ใช้ Serverless Compute แทน EC2 Worker Hosts"
         }
       ]
+    },
+    "local-set-08": {
+      "title": "Local Mock Set 8",
+      "note": "18 Nov 2026 · 56/65 correct (86.2%) · 9 wrong + 6 correct flagged · 5 Explain More, 4 English Unclear, 4 Concept/Recall Gap, 2 Clue/Distractor Gap; flags may overlap. Set 8 questions use a fixed mixed-domain shuffle.",
+      "items": [
+        {
+          "questionId": 6,
+          "key": "local-set-08:q6",
+          "topic": "L13 — Security vs Reliability — Least privilege",
+          "type": "clue",
+          "rawFlags": [
+            "🧩 Clue / Distractor Gap"
+          ],
+          "reviewedCauses": [
+            "clue"
+          ],
+          "note": "Wrong | โจทย์จำกัดสิทธิ์อ่าน S3 Bucket เดียวและห้าม Delete เป็น IAM Least Privilege ซึ่งอยู่ใน Security Pillar ไม่ใช่ Reliability ที่เน้นความต่อเนื่องและการกู้คืน"
+        },
+        {
+          "questionId": 8,
+          "key": "local-set-08:q8",
+          "topic": "L01 — Capital expenditure vs Variable expense",
+          "type": "clue",
+          "rawFlags": [
+            "🧩 Clue / Distractor Gap"
+          ],
+          "reviewedCauses": [
+            "clue"
+          ],
+          "note": "Correct; flagged for review | คำว่า buys server racks and network equipment upfront คือใช้เงินก้อนซื้อสินทรัพย์ล่วงหน้า (Capital expenditure) ไม่ใช่ค่าเช่า Compute ตามชั่วโมง"
+        },
+        {
+          "questionId": 12,
+          "key": "local-set-08:q12",
+          "topic": "L11 — AWS Marketplace vs AWS Partner Network",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | ต้องการซื้อ License และ Deploy Third-party Security Appliance ที่จำหน่ายบน AWS จึงค้นจาก AWS Marketplace ถ้าต้องการบริษัทผู้เชี่ยวชาญมาช่วย Implement หรือ Migrate จึงใช้ AWS Partner Network"
+        },
+        {
+          "questionId": 13,
+          "key": "local-set-08:q13",
+          "topic": "L13 — Reliability + Performance Efficiency",
+          "type": "confidence",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "note": "Correct; flagged for review | โจทย์ Select TWO มีสอง Requirement ต่างกัน คือกู้บริการหลัง AZ Outage จึงเลือก Reliability และวัด Latency การประมวลผลจึงเลือก Performance Efficiency"
+        },
+        {
+          "questionId": 14,
+          "key": "local-set-08:q14",
+          "topic": "L09 — Amazon Macie + GuardDuty vs Inspector",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | โจทย์มีสองงานคือค้นหาข้อมูลอ่อนไหวใน S3 (Amazon Macie) และตรวจจับพฤติกรรมเข้าถึงที่น่าสงสัย (GuardDuty) ไม่ได้ขอ Scan Vulnerable Packages"
+        },
+        {
+          "questionId": 19,
+          "key": "local-set-08:q19",
+          "topic": "L09 — IAM Identity Center vs Cognito vs Organizations",
+          "type": "confidence",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "note": "Wrong | กลุ่มผู้ใช้คือพนักงานองค์กรที่ต้อง SSO เข้า AWS Accounts หลายบัญชีและรับ Roles/Permission Sets ผ่าน Portal กลาง จึงเป็น IAM Identity Center ไม่ใช่ Cognito สำหรับผู้ใช้แอป"
+        },
+        {
+          "questionId": 23,
+          "key": "local-set-08:q23",
+          "topic": "L01 — Variable expense vs Capital expenditure",
+          "type": "language",
+          "rawFlags": [
+            "🟡 Explain More",
+            "📘 English Unclear"
+          ],
+          "reviewedCauses": [
+            "language",
+            "confidence"
+          ],
+          "note": "Correct; flagged for review | Seasonal Demand หมายถึงความต้องการเปลี่ยนตามฤดูกาล เมื่อโจทย์ถาม 'Cost concept' ที่ค่าใช้จ่ายเพิ่มลดตาม Consumption จึงเป็น Variable expense"
+        },
+        {
+          "questionId": 28,
+          "key": "local-set-08:q28",
+          "topic": "L05 — NAT Gateway vs VPC endpoint vs Internet Gateway",
+          "type": "concept",
+          "rawFlags": [
+            "🧠 Concept / Recall Gap"
+          ],
+          "reviewedCauses": [
+            "concept"
+          ],
+          "note": "Wrong | โจทย์ระบุ Public Repositories บน Internet และ EC2 อยู่ใน Private Subnet ต้องเริ่ม Outbound ได้โดยไม่เปิด Direct Inbound จึงใช้ NAT Gateway โดยทั่วไปผ่าน Public Subnet และ Internet Gateway"
+        },
+        {
+          "questionId": 41,
+          "key": "local-set-08:q41",
+          "topic": "L09 — EC2 vs RDS — Shared Responsibility",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | เดิมบน EC2 ลูกค้าต้องดูแล Guest OS เอง เมื่อเปลี่ยนเป็น RDS ภาระ OS และ Managed Database Platform จึงย้ายให้ AWS ดูแล ส่วน AWS-owned Physical Servers เป็นหน้าที่ AWS ตั้งแต่เดิม ไม่ใช่หน้าที่ที่เพิ่งย้าย"
+        },
+        {
+          "questionId": 43,
+          "key": "local-set-08:q43",
+          "topic": "L12 — Application Discovery Service + Migration Hub vs Migration Evaluator",
+          "type": "concept",
+          "rawFlags": [
+            "🟡 Explain More",
+            "📘 English Unclear",
+            "🧠 Concept / Recall Gap"
+          ],
+          "reviewedCauses": [
+            "concept",
+            "language",
+            "confidence"
+          ],
+          "note": "Wrong | งานแรกต้องสำรวจ Server Dependencies ซึ่งเป็นหน้าที่ Application Discovery Service งานที่สองต้องติดตามสถานะจากหลาย Migration Tools ซึ่งเป็น Migration Hub ส่วน Evaluator ใช้สร้าง Financial Business Case"
+        },
+        {
+          "questionId": 52,
+          "key": "local-set-08:q52",
+          "topic": "L05 — VPC endpoint + Site-to-Site VPN vs NAT/Direct Connect",
+          "type": "concept",
+          "rawFlags": [
+            "🧠 Concept / Recall Gap"
+          ],
+          "reviewedCauses": [
+            "concept"
+          ],
+          "note": "Correct; flagged for review | โจทย์มีสองเส้นทาง คนละการใช้งาน: Workload ภายใน VPC ไป S3 แบบ Private ใช้ VPC Endpoint ส่วน On-premises ไป AWS ผ่าน Encrypted Tunnel บน Internet เดิมใช้ Site-to-Site VPN"
+        },
+        {
+          "questionId": 53,
+          "key": "local-set-08:q53",
+          "topic": "L09 — Customer data access vs AWS-managed S3 infrastructure",
+          "type": "language",
+          "rawFlags": [
+            "📘 English Unclear"
+          ],
+          "reviewedCauses": [
+            "language"
+          ],
+          "note": "Correct; flagged for review | แม้ Amazon S3 จะเป็น Managed Object Storage แต่ผู้ใช้ยังต้องตัดสินใจว่าใครเข้าถึง Confidential Files ได้และตั้งค่า Bucket/IAM Policies ของตนเอง"
+        },
+        {
+          "questionId": 57,
+          "key": "local-set-08:q57",
+          "topic": "L04 — AWS Region vs Availability Zone vs Edge location",
+          "type": "language",
+          "rawFlags": [
+            "📘 English Unclear"
+          ],
+          "reviewedCauses": [
+            "language"
+          ],
+          "note": "Wrong | โจทย์เน้นข้อกำหนดพื้นที่ภูมิศาสตร์เพื่อเก็บข้อมูล (Data Residency) จึงเลือก AWS Region ให้ตรงข้อกำหนดกฎหมาย ส่วน Availability Zone เป็นพื้นที่ย่อยภายใน Region ที่เลือกเพื่อ Availability"
+        },
+        {
+          "questionId": 58,
+          "key": "local-set-08:q58",
+          "topic": "L09 — AWS EC2 Shared Responsibility — Physical Hosts + Hypervisor",
+          "type": "confidence",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "note": "Correct; flagged for review | AWS ดูแล Physical Servers และ Hypervisor/Virtualization ใต้ EC2 ส่วนลูกค้าดูแล Guest OS Patches และตั้งค่า Security Group Rules ของ EC2"
+        },
+        {
+          "questionId": 61,
+          "key": "local-set-08:q61",
+          "topic": "L09 — AWS Firewall Manager vs WAF vs Security Hub",
+          "type": "concept",
+          "rawFlags": [
+            "🧠 Concept / Recall Gap"
+          ],
+          "reviewedCauses": [
+            "concept"
+          ],
+          "note": "Wrong | เมื่อโจทย์เน้น Enforce WAF Rules ชุดเดียวกันหลาย AWS Accounts โดยจัดการ Policy จากศูนย์กลาง ควรใช้ AWS Firewall Manager ส่วน Security Hub รวม Findings และ AWS WAF เป็นตัวกรอง HTTP Requests"
+        }
+      ],
+      "details": [
+        {
+          "questionId": 6,
+          "result": "Wrong",
+          "topic": "L13 — Security vs Reliability — Least privilege",
+          "question": "A developer should only read objects from one S3 bucket and must not delete them. Which Well-Architected pillar MOST directly supports this least-privilege requirement?",
+          "questionTh": "Developer ต้องอ่าน Objects จาก S3 Bucket เดียวแต่ห้าม Delete Records ข้อกำหนด Least Privilege นี้ตรงกับ Well-Architected Pillar ใดที่สุด",
+          "selected": "Reliability",
+          "correct": "Security",
+          "rawFlags": [
+            "🧩 Clue / Distractor Gap"
+          ],
+          "reviewedCauses": [
+            "clue"
+          ],
+          "diagnosis": "เลือกตัวเลือกที่เกี่ยวข้องแต่ไม่ตอบ Requirement เฉพาะตามเฉลย เหตุผลที่ผู้สอบคิดจริงยังไม่ทราบ",
+          "memoryCue": "only read / must not delete / least privilege → Security; recover after failure / failover → Reliability",
+          "notes": [
+            "โจทย์จำกัดสิทธิ์อ่าน S3 Bucket เดียวและห้าม Delete เป็น IAM Least Privilege ซึ่งอยู่ใน Security Pillar ไม่ใช่ Reliability ที่เน้นความต่อเนื่องและการกู้คืน",
+            "A. Security — Security Pillar เน้นการป้องกันข้อมูล Identity และ Authorization ให้เฉพาะ s3:GetObject ไม่ให้ s3:DeleteObject [คำตอบที่ถูก]",
+            "B. Reliability — Reliability เน้น Availability, Fault Recovery และความทนทานต่อความล้มเหลว ไม่ใช่การกำหนด IAM Permission",
+            "C. Cost Optimization — Cost Optimization ลดต้นทุนที่สูญเปล่า เช่น ปิด Resources ที่ไม่ได้ใช้งาน ไม่ใช่การจำกัดสิทธิ์อ่านไฟล์",
+            "D. Operational Excellence — Operational Excellence เน้น Runbook, Incident Review และ Automation ของ Operations ไม่ใช่ Access Control"
+          ]
+        },
+        {
+          "questionId": 8,
+          "result": "Correct",
+          "topic": "L01 — Capital expenditure vs Variable expense",
+          "question": "A manufacturer buys server racks and network equipment upfront rather than renting compute by the hour. Which expense category describes this purchase?",
+          "questionTh": "ผู้ผลิตซื้อ Server Racks และ Network Equipment ด้วยเงินก้อนล่วงหน้า แทนการเช่า Compute รายชั่วโมง เป็นค่าใช้จ่ายประเภทใด",
+          "selected": "Capital expenditure",
+          "correct": "Capital expenditure",
+          "rawFlags": [
+            "🧩 Clue / Distractor Gap"
+          ],
+          "reviewedCauses": [
+            "clue"
+          ],
+          "diagnosis": "ตอบถูก แต่ผู้สอบปักธงขอทบทวนหรือแจ้งว่าอ่านภาษาอังกฤษยังไม่ชัด",
+          "memoryCue": "buys racks / upfront / owns physical hardware → Capital expenditure; consumption-based monthly bill → Variable expense",
+          "notes": [
+            "คำว่า buys server racks and network equipment upfront คือใช้เงินก้อนซื้อสินทรัพย์ล่วงหน้า (Capital expenditure) ไม่ใช่ค่าเช่า Compute ตามชั่วโมง",
+            "A. Capital expenditure — ซื้อและถือครอง Physical Assets ล่วงหน้า เช่น Server Racks และ Networking Equipment [คำตอบที่ถูก]",
+            "B. Variable expense — ค่าใช้จ่ายผันแปรตามการใช้ Cloud ในแต่ละช่วง เช่น Compute Hours",
+            "C. Pay-as-you-go — หลักจ่ายตามปริมาณทรัพยากรที่ใช้ ไม่ใช่การซื้อ Hardware ล่วงหน้า",
+            "D. Rightsizing — ปรับขนาด Instance ให้เหมาะกับ Usage ไม่ได้อธิบายรูปแบบซื้อทรัพย์สิน"
+          ]
+        },
+        {
+          "questionId": 12,
+          "result": "Wrong",
+          "topic": "L11 — AWS Marketplace vs AWS Partner Network",
+          "question": "A team needs to license and deploy a supported third-party security appliance available through AWS. Where should it look first?",
+          "questionTh": "ทีมต้องการซื้อ License และ Deploy Third-party Security Appliance ที่มีใน AWS ควรค้นจากบริการใดก่อน",
+          "selected": "AWS Partner Network",
+          "correct": "AWS Marketplace",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "เลือกตัวเลือกที่เกี่ยวข้องแต่ไม่ตอบ Requirement เฉพาะตามเฉลย เหตุผลที่ผู้สอบคิดจริงยังไม่ทราบ",
+          "memoryCue": "license / deploy / subscribe third-party appliance → AWS Marketplace; find migration consultants or partners → AWS Partner Network",
+          "notes": [
+            "ต้องการซื้อ License และ Deploy Third-party Security Appliance ที่จำหน่ายบน AWS จึงค้นจาก AWS Marketplace ถ้าต้องการบริษัทผู้เชี่ยวชาญมาช่วย Implement หรือ Migrate จึงใช้ AWS Partner Network",
+            "A. AWS Artifact — Portal สำหรับ AWS Compliance Reports และ Agreements ไม่ใช่ Third-party Product Catalog",
+            "B. AWS Marketplace — Catalog สำหรับค้นหา ซื้อและ Deploy Third-party Software และ Security Appliances ที่รองรับ [คำตอบที่ถูก]",
+            "C. AWS Trusted Advisor — ตรวจ Account Best Practices เช่น Security, Performance และ Cost ไม่ใช่ช่องทางซื้อ Appliances",
+            "D. AWS Partner Network — เครือข่าย AWS Partners สำหรับหาผู้ให้บริการ Consulting หรือ Migration Projects ไม่ใช่หน้าซื้อ Software License โดยตรง"
+          ]
+        },
+        {
+          "questionId": 13,
+          "result": "Correct",
+          "topic": "L13 — Reliability + Performance Efficiency",
+          "question": "A streaming platform measures processing latency while also planning recovery after an Availability Zone outage. Which TWO pillars are directly involved? (Select TWO.)",
+          "questionTh": "แพลตฟอร์ม Streaming วัด Processing Latency และเตรียมการกู้บริการหลัง Availability Zone มีปัญหา Pillars สองข้อใดเกี่ยวข้องโดยตรง",
+          "selected": "Reliability + Performance Efficiency",
+          "correct": "Reliability + Performance Efficiency",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "diagnosis": "ตอบถูก แต่ผู้สอบปักธงขอทบทวนหรือแจ้งว่าอ่านภาษาอังกฤษยังไม่ชัด",
+          "memoryCue": "recovery after AZ outage → Reliability; processing latency / throughput target → Performance Efficiency",
+          "notes": [
+            "โจทย์ Select TWO มีสอง Requirement ต่างกัน คือกู้บริการหลัง AZ Outage จึงเลือก Reliability และวัด Latency การประมวลผลจึงเลือก Performance Efficiency",
+            "A. Reliability — ออกแบบระบบให้ทน Failure และกู้คืนตาม Recovery Objectives เช่น AZ Failover [คำตอบที่ถูก]",
+            "B. Cost Optimization — ควบคุมต้นทุนและลด Idle Resources ไม่ได้เป็นเป้าหมายหลักของโจทย์นี้",
+            "C. Security — ปกป้องข้อมูลและ Identity ไม่ใช่ Recovery/Latency ที่โจทย์ถาม",
+            "D. Performance Efficiency — เลือกใช้ทรัพยากรเพื่อให้ได้ Latency/Throughput ตามเป้าหมาย [คำตอบที่ถูก]",
+            "E. Sustainability — ลด Environmental Impact ไม่ใช่เป้าหมาย Latency หรือ AZ Recovery"
+          ]
+        },
+        {
+          "questionId": 14,
+          "result": "Wrong",
+          "topic": "L09 — Amazon Macie + GuardDuty vs Inspector",
+          "question": "A company wants to detect personal identification numbers stored in Amazon S3 and investigate suspicious access patterns. Which TWO services cover the two requirements? (Select TWO.)",
+          "questionTh": "บริษัทต้องการค้นเลขประจำตัวส่วนบุคคลใน S3 และตรวจจับรูปแบบการเข้าถึงที่น่าสงสัย บริการใดสองตัวตรงคนละส่วน",
+          "selected": "Amazon Macie + Amazon Inspector",
+          "correct": "Amazon Macie + Amazon GuardDuty",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "เลือกตัวเลือกที่เกี่ยวข้องแต่ไม่ตอบ Requirement เฉพาะตามเฉลย เหตุผลที่ผู้สอบคิดจริงยังไม่ทราบ",
+          "memoryCue": "sensitive data / personal identifiers in S3 → Macie; suspicious access patterns → GuardDuty; software vulnerabilities / CVEs → Inspector",
+          "notes": [
+            "โจทย์มีสองงานคือค้นหาข้อมูลอ่อนไหวใน S3 (Amazon Macie) และตรวจจับพฤติกรรมเข้าถึงที่น่าสงสัย (GuardDuty) ไม่ได้ขอ Scan Vulnerable Packages",
+            "A. Amazon Macie — ค้นหาและจัดประเภท Sensitive Data เช่น Personal Identifiers ใน S3 [คำตอบที่ถูก]",
+            "B. Amazon Inspector — Scan Software Vulnerabilities/CVEs ใน EC2 หรือ ECR Images ที่รองรับ ไม่ใช่ตรวจพฤติกรรมการใช้ Credentials",
+            "C. Amazon GuardDuty — ตรวจจับ Threat Indicators และ Suspicious Access/API Activity จากสัญญาณต่าง ๆ [คำตอบที่ถูก]",
+            "D. AWS Artifact — ดาวน์โหลด Compliance Reports และ Agreements ของ AWS ไม่ใช่ Threat Detection",
+            "E. AWS Config — ติดตาม Configuration และประเมิน Rules ของ Resources ไม่ใช่ค้น PII ใน S3"
+          ]
+        },
+        {
+          "questionId": 19,
+          "result": "Wrong",
+          "topic": "L09 — IAM Identity Center vs Cognito vs Organizations",
+          "question": "An enterprise wants employees to sign in once and access assigned roles in multiple AWS accounts through a central portal. Which service BEST fits?",
+          "questionTh": "องค์กรต้องการให้พนักงาน Sign in ครั้งเดียว แล้วเข้า AWS Accounts หลายบัญชีผ่าน Portal กลางพร้อม Assigned Roles ใช้บริการใด",
+          "selected": "Amazon Cognito",
+          "correct": "IAM Identity Center",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "diagnosis": "เลือกตัวเลือกที่เกี่ยวข้องแต่ไม่ตอบ Requirement เฉพาะตามเฉลย เหตุผลที่ผู้สอบคิดจริงยังไม่ทราบ",
+          "memoryCue": "employees / sign in once / central AWS access portal / multiple AWS accounts → IAM Identity Center; app customers/mobile sign-in → Cognito",
+          "notes": [
+            "กลุ่มผู้ใช้คือพนักงานองค์กรที่ต้อง SSO เข้า AWS Accounts หลายบัญชีและรับ Roles/Permission Sets ผ่าน Portal กลาง จึงเป็น IAM Identity Center ไม่ใช่ Cognito สำหรับผู้ใช้แอป",
+            "A. AWS IAM — กำหนด IAM Users/Roles/Policies ของ AWS; ไม่ใช่ Workforce SSO Portal ข้ามหลายบัญชีโดยตรง",
+            "B. Amazon Cognito — Authentication ของ End Users ใน Web/Mobile Applications เช่นลูกค้าหรือผู้เล่นเกม",
+            "C. IAM Identity Center — Workforce SSO และ Permission Sets ข้าม AWS Accounts เชื่อม Corporate Identity Provider ได้ [คำตอบที่ถูก]",
+            "D. AWS Organizations — จัด AWS Accounts/OUs/SCPs และ Consolidated Billing ไม่ใช่หน้าจอ Workforce Login"
+          ]
+        },
+        {
+          "questionId": 23,
+          "result": "Correct",
+          "topic": "L01 — Variable expense vs Capital expenditure",
+          "question": "A finance team wants compute expenses to follow seasonal demand rather than buying hardware for the highest peak. Which cost concept is central?",
+          "questionTh": "ทีม Finance ต้องการให้ค่า Compute เปลี่ยนตาม Seasonal Demand แทนซื้อ Hardware รองรับ Peak สูงสุด แนวคิดค่าใช้จ่ายใดเป็นหลัก",
+          "selected": "Variable expense",
+          "correct": "Variable expense",
+          "rawFlags": [
+            "🟡 Explain More",
+            "📘 English Unclear"
+          ],
+          "reviewedCauses": [
+            "language",
+            "confidence"
+          ],
+          "diagnosis": "ตอบถูก แต่ผู้สอบปักธงขอทบทวนหรือแจ้งว่าอ่านภาษาอังกฤษยังไม่ชัด",
+          "memoryCue": "compute expenses follow seasonal demand → Variable expense; buying peak hardware upfront → Capital expenditure",
+          "notes": [
+            "Seasonal Demand หมายถึงความต้องการเปลี่ยนตามฤดูกาล เมื่อโจทย์ถาม 'Cost concept' ที่ค่าใช้จ่ายเพิ่มลดตาม Consumption จึงเป็น Variable expense",
+            "A. Capital expenditure — ลงทุนซื้อ Physical Servers รองรับ Peak ล่วงหน้า ไม่ใช่ค่าใช้จ่ายตาม Usage",
+            "B. Variable expense — ค่าใช้จ่ายที่เปลี่ยนตาม Actual Cloud Consumption เช่น Compute ใช้มากช่วงเทศกาล [คำตอบที่ถูก]",
+            "C. Economies of scale — ต้นทุนต่อหน่วยลดจากผู้ให้บริการดำเนินงานขนาดใหญ่ ไม่ใช่รูปแบบบิลตามฤดูกาล",
+            "D. Consolidated billing — รวม Billing จากหลาย AWS Accounts ไม่ใช่ต้นทุนผันแปรตาม Workload"
+          ]
+        },
+        {
+          "questionId": 28,
+          "result": "Wrong",
+          "topic": "L05 — NAT Gateway vs VPC endpoint vs Internet Gateway",
+          "question": "A private subnet hosts instances that must download software updates from public repositories but accept no direct incoming internet connections. Which component is used for outbound internet access?",
+          "questionTh": "Private Subnet มี Instances ที่ต้องดาวน์โหลด Updates จาก Internet แต่ไม่รับ Inbound Connections โดยตรง ควรใช้ Component ใด",
+          "selected": "VPC endpoint",
+          "correct": "NAT Gateway",
+          "rawFlags": [
+            "🧠 Concept / Recall Gap"
+          ],
+          "reviewedCauses": [
+            "concept"
+          ],
+          "diagnosis": "เลือกตัวเลือกที่เกี่ยวข้องแต่ไม่ตอบ Requirement เฉพาะตามเฉลย เหตุผลที่ผู้สอบคิดจริงยังไม่ทราบ",
+          "memoryCue": "private subnet + outbound public software repositories → NAT Gateway; private access to S3/DynamoDB → VPC endpoint",
+          "notes": [
+            "โจทย์ระบุ Public Repositories บน Internet และ EC2 อยู่ใน Private Subnet ต้องเริ่ม Outbound ได้โดยไม่เปิด Direct Inbound จึงใช้ NAT Gateway โดยทั่วไปผ่าน Public Subnet และ Internet Gateway",
+            "A. Internet Gateway — Gateway ระหว่าง VPC กับ Internet ใช้ร่วม Route Tables; Private Instance ไม่มี Public IP จึงไม่สามารถใช้ IGW ออกโดยตรงแบบ Public Instance",
+            "B. VPC endpoint — ใช้ Private Connectivity จาก VPC ไป AWS Services ที่รองรับ เช่น S3 โดยไม่ใช้ Public Internet ไม่ใช่ทางออกไป Public Software Repositories ทั่วไป",
+            "C. NAT Gateway — ช่วย Instances ใน Private Subnet เริ่ม Outbound Internet Connections ได้โดยไม่มี Direct Unsolicited Inbound กลับมาหา Instance [คำตอบที่ถูก]",
+            "D. AWS Direct Connect — Dedicated Link ระหว่าง On-premises Data Center กับ AWS ไม่ได้ทำ Internet Egress ให้ Private Subnet โดยตัวมันเอง"
+          ]
+        },
+        {
+          "questionId": 41,
+          "result": "Wrong",
+          "topic": "L09 — EC2 vs RDS — Shared Responsibility",
+          "question": "An organization replaces a self-hosted database on EC2 with Amazon RDS. Which responsibility does AWS take over for the managed database?",
+          "questionTh": "องค์กรย้าย Database จาก EC2 ที่ดูแลเองไป Amazon RDS หน้าที่ใดเปลี่ยนไปให้ AWS รับผิดชอบสำหรับ Managed Database",
+          "selected": "AWS-owned physical servers",
+          "correct": "Guest operating system",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "เลือกตัวเลือกที่เกี่ยวข้องแต่ไม่ตอบ Requirement เฉพาะตามเฉลย เหตุผลที่ผู้สอบคิดจริงยังไม่ทราบ",
+          "memoryCue": "which responsibility does AWS take over when EC2 database becomes RDS? → guest OS / managed database platform; physical hardware already AWS-managed",
+          "notes": [
+            "เดิมบน EC2 ลูกค้าต้องดูแล Guest OS เอง เมื่อเปลี่ยนเป็น RDS ภาระ OS และ Managed Database Platform จึงย้ายให้ AWS ดูแล ส่วน AWS-owned Physical Servers เป็นหน้าที่ AWS ตั้งแต่เดิม ไม่ใช่หน้าที่ที่เพิ่งย้าย",
+            "A. Guest operating system — ลูกค้า Patch/Configure Guest OS ของ EC2 เอง แต่ AWS ดูแล OS ของ Managed RDS Infrastructure [คำตอบที่ถูก]",
+            "B. Security group — ลูกค้ายังต้องกำหนด Network Access/Rules สำหรับ RDS ตามข้อกำหนด Workload",
+            "C. AWS-owned physical servers — AWS ดูแล Physical Hardware ทั้งตอนใช้ EC2 และ RDS อยู่แล้ว จึงไม่ใช่ส่วนที่เปลี่ยนเจ้าของความรับผิดชอบ",
+            "D. AWS IAM — ลูกค้ายังต้องออกแบบและกำหนด IAM Permissions/Access ที่เกี่ยวข้อง ไม่ใช่สิ่งที่ AWS รับช่วงกำหนดสิทธิ์แทน"
+          ]
+        },
+        {
+          "questionId": 43,
+          "result": "Wrong",
+          "topic": "L12 — Application Discovery Service + Migration Hub vs Migration Evaluator",
+          "question": "A migration team needs one service to collect server dependencies and another to track progress of multiple migration tools. Which TWO fit? (Select TWO.)",
+          "questionTh": "ทีมย้ายระบบต้องมีบริการหนึ่งรวบรวม Server Dependencies และอีกบริการติดตามความคืบหน้าจาก Migration Tools หลายตัว บริการใดสองข้อเหมาะ",
+          "selected": "AWS Migration Evaluator + AWS Migration Hub",
+          "correct": "AWS Migration Hub + AWS Application Discovery Service",
+          "rawFlags": [
+            "🟡 Explain More",
+            "📘 English Unclear",
+            "🧠 Concept / Recall Gap"
+          ],
+          "reviewedCauses": [
+            "concept",
+            "language",
+            "confidence"
+          ],
+          "diagnosis": "เลือกตัวเลือกที่เกี่ยวข้องแต่ไม่ตอบ Requirement เฉพาะตามเฉลย เหตุผลที่ผู้สอบคิดจริงยังไม่ทราบ",
+          "memoryCue": "collect server dependencies → AWS Application Discovery Service; track progress across migration tools → AWS Migration Hub; cost/business case → Migration Evaluator",
+          "notes": [
+            "งานแรกต้องสำรวจ Server Dependencies ซึ่งเป็นหน้าที่ Application Discovery Service งานที่สองต้องติดตามสถานะจากหลาย Migration Tools ซึ่งเป็น Migration Hub ส่วน Evaluator ใช้สร้าง Financial Business Case",
+            "A. AWS Migration Hub — ศูนย์กลางติดตาม Progress ของ Applications ที่ย้ายผ่านหลาย Tools [คำตอบที่ถูก]",
+            "B. AWS SCT — ช่วยแปลง Database Schema/Code ระหว่าง Engines ไม่ใช่ติดตาม Migration Project",
+            "C. AWS Application Discovery Service — เก็บ Server Inventory และ Dependencies ก่อนวาง Migration Waves [คำตอบที่ถูก]",
+            "D. AWS DMS — ย้าย/Replicate Database Data ไม่ใช่เก็บ Dependencies ของ Servers",
+            "E. AWS Migration Evaluator — ประเมิน TCO, Migration Costs และ Business Case ไม่ได้ใช้ทำ Server Dependency Mapping"
+          ]
+        },
+        {
+          "questionId": 52,
+          "result": "Correct",
+          "topic": "L05 — VPC endpoint + Site-to-Site VPN vs NAT/Direct Connect",
+          "question": "A private workload needs network access to S3 without sending traffic over the public internet, and a company needs an encrypted tunnel to AWS over its existing internet link. Which TWO services satisfy these needs? (Select TWO.)",
+          "questionTh": "Private Workload ต้องเข้าถึง S3 แบบ Private และบริษัทต้องเชื่อมเครือข่าย On-premises กับ AWS ผ่าน Encrypted Tunnel บน Internet เดิม บริการใดสองตัวตอบโจทย์",
+          "selected": "VPC endpoint + AWS Site-to-Site VPN",
+          "correct": "VPC endpoint + AWS Site-to-Site VPN",
+          "rawFlags": [
+            "🧠 Concept / Recall Gap"
+          ],
+          "reviewedCauses": [
+            "concept"
+          ],
+          "diagnosis": "ตอบถูก แต่ผู้สอบปักธงขอทบทวนหรือแจ้งว่าอ่านภาษาอังกฤษยังไม่ชัด",
+          "memoryCue": "S3 private without public internet → VPC endpoint; encrypted tunnel over existing internet → Site-to-Site VPN",
+          "notes": [
+            "โจทย์มีสองเส้นทาง คนละการใช้งาน: Workload ภายใน VPC ไป S3 แบบ Private ใช้ VPC Endpoint ส่วน On-premises ไป AWS ผ่าน Encrypted Tunnel บน Internet เดิมใช้ Site-to-Site VPN",
+            "A. VPC endpoint — Private Connectivity จาก VPC ไป S3 หรือ AWS Services ที่รองรับ [คำตอบที่ถูก]",
+            "B. NAT Gateway — ออก Public Internet จาก Private Subnet แต่ไม่ใช่ Private S3 Endpoint",
+            "C. AWS Direct Connect — Dedicated Private Network Circuit ไม่ใช่ VPN Tunnel บน Internet เดิม",
+            "D. AWS Site-to-Site VPN — Encrypted IPSec Tunnel เชื่อม On-premises Network กับ AWS ผ่าน Internet [คำตอบที่ถูก]",
+            "E. Internet Gateway — ต่อ Internet ให้ VPC ตาม Route/IP ไม่ได้ทำ Private AWS Service Access"
+          ]
+        },
+        {
+          "questionId": 53,
+          "result": "Correct",
+          "topic": "L09 — Customer data access vs AWS-managed S3 infrastructure",
+          "question": "A team uploads confidential files to Amazon S3. Which responsibility remains with the customer?",
+          "questionTh": "ทีมอัปโหลดไฟล์ลับขึ้น Amazon S3 หน้าที่ใดยังคงเป็นความรับผิดชอบของลูกค้า",
+          "selected": "The customer",
+          "correct": "The customer",
+          "rawFlags": [
+            "📘 English Unclear"
+          ],
+          "reviewedCauses": [
+            "language"
+          ],
+          "diagnosis": "ตอบถูก แต่ผู้สอบปักธงขอทบทวนหรือแจ้งว่าอ่านภาษาอังกฤษยังไม่ชัด",
+          "memoryCue": "confidential files / who controls permissions → The customer; physical hardware/data center → AWS",
+          "notes": [
+            "แม้ Amazon S3 จะเป็น Managed Object Storage แต่ผู้ใช้ยังต้องตัดสินใจว่าใครเข้าถึง Confidential Files ได้และตั้งค่า Bucket/IAM Policies ของตนเอง",
+            "A. AWS-owned physical servers — เป็น Hardware ที่ AWS บำรุงรักษา ไม่ใช่ชื่อฝ่ายที่กำหนดสิทธิ์อ่านไฟล์ของลูกค้า",
+            "B. Hypervisor — Virtualization Layer ที่ AWS ดูแล ไม่เกี่ยวกับการอนุญาตให้ผู้ใช้เปิด Confidential Data",
+            "C. The customer — กำหนดการเข้าถึง S3 Data, IAM/Bucket Policies และ Data Classification ของไฟล์ลับ [คำตอบที่ถูก]",
+            "D. AWS — ดูแล Security OF the Cloud เช่น S3 Service Infrastructure ไม่ใช่เป็นเจ้าของการกำหนด Data Permissions แทนลูกค้า"
+          ]
+        },
+        {
+          "questionId": 57,
+          "result": "Wrong",
+          "topic": "L04 — AWS Region vs Availability Zone vs Edge location",
+          "question": "A company has legal requirements to keep customer data within a specific geographic area. Which AWS infrastructure choice is MOST relevant?",
+          "questionTh": "บริษัทต้องเก็บ Customer Data อยู่ภายในพื้นที่ภูมิศาสตร์ตามข้อกำหนดกฎหมาย การเลือก Infrastructure ใดสำคัญที่สุด",
+          "selected": "Availability Zone",
+          "correct": "AWS Region",
+          "rawFlags": [
+            "📘 English Unclear"
+          ],
+          "reviewedCauses": [
+            "language"
+          ],
+          "diagnosis": "เลือกตัวเลือกที่เกี่ยวข้องแต่ไม่ตอบ Requirement เฉพาะตามเฉลย เหตุผลที่ผู้สอบคิดจริงยังไม่ทราบ",
+          "memoryCue": "legal geographic requirements / data residency → AWS Region; fault isolation within same Region → Availability Zone",
+          "notes": [
+            "โจทย์เน้นข้อกำหนดพื้นที่ภูมิศาสตร์เพื่อเก็บข้อมูล (Data Residency) จึงเลือก AWS Region ให้ตรงข้อกำหนดกฎหมาย ส่วน Availability Zone เป็นพื้นที่ย่อยภายใน Region ที่เลือกเพื่อ Availability",
+            "A. Availability Zone — Isolated Infrastructure ภายใน Region เหมาะกระจายระบบให้ทน AZ Failure ไม่ใช่หน่วยเลือก Geographic Area หลัก",
+            "B. AWS Region — Geographic Area ที่ใช้เลือกสถานที่ Deploy/Store Data ให้ตรง Data Residency Requirements [คำตอบที่ถูก]",
+            "C. Edge location — จุดใกล้ผู้ใช้สำหรับ Global Edge Delivery/Caching ไม่ใช่พื้นที่ Region สำหรับเก็บ Primary Workload",
+            "D. Amazon CloudFront — CDN สำหรับ Content Delivery ผ่าน Edge Locations ไม่ใช่ Service สำหรับกำหนด Data Residency ของฐานข้อมูลโดยตรง"
+          ]
+        },
+        {
+          "questionId": 58,
+          "result": "Correct",
+          "topic": "L09 — AWS EC2 Shared Responsibility — Physical Hosts + Hypervisor",
+          "question": "A company uses EC2 and wants to distinguish responsibilities. Which TWO are handled by AWS under the shared responsibility model? (Select TWO.)",
+          "questionTh": "บริษัทใช้ EC2 และต้องแยกหน้าที่ตาม Shared Responsibility Model ข้อใดสองอย่าง AWS เป็นผู้ดูแล",
+          "selected": "AWS-owned physical servers + Hypervisor",
+          "correct": "AWS-owned physical servers + Hypervisor",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "diagnosis": "ตอบถูก แต่ผู้สอบปักธงขอทบทวนหรือแจ้งว่าอ่านภาษาอังกฤษยังไม่ชัด",
+          "memoryCue": "AWS responsibilities on EC2 → physical servers + hypervisor; customer → guest OS + security groups",
+          "notes": [
+            "AWS ดูแล Physical Servers และ Hypervisor/Virtualization ใต้ EC2 ส่วนลูกค้าดูแล Guest OS Patches และตั้งค่า Security Group Rules ของ EC2",
+            "A. AWS-owned physical servers — AWS บำรุงรักษา Physical Servers และ Data Centers ที่ใช้รัน EC2 [คำตอบที่ถูก]",
+            "B. Guest operating system — ระบบ Linux/Windows ภายใน EC2 ที่ลูกค้าต้อง Patch/Configure",
+            "C. Hypervisor — Virtualization Layer ใต้ EC2 ที่ AWS จัดการ [คำตอบที่ถูก]",
+            "D. Security group — Customer-configured Stateful Network Firewall Rules ของ ENI",
+            "E. The customer — เป็นฝ่ายผู้รับผิดชอบ Code/Data/Guest OS/Policies ไม่ใช่หนึ่งใน Physical Components ที่ถามหา"
+          ]
+        },
+        {
+          "questionId": 61,
+          "result": "Wrong",
+          "topic": "L09 — AWS Firewall Manager vs WAF vs Security Hub",
+          "question": "A security leader wants the same AWS WAF rules enforced centrally across accounts in an organization. Which service is designed for centralized policy management?",
+          "questionTh": "หัวหน้าทีม Security ต้องการใช้ AWS WAF Rules ชุดเดียวกันกับหลาย Accounts โดยบริหาร Policies จากส่วนกลาง ใช้บริการใด",
+          "selected": "AWS Security Hub",
+          "correct": "AWS Firewall Manager",
+          "rawFlags": [
+            "🧠 Concept / Recall Gap"
+          ],
+          "reviewedCauses": [
+            "concept"
+          ],
+          "diagnosis": "เลือกตัวเลือกที่เกี่ยวข้องแต่ไม่ตอบ Requirement เฉพาะตามเฉลย เหตุผลที่ผู้สอบคิดจริงยังไม่ทราบ",
+          "memoryCue": "same WAF rules centrally across AWS accounts → Firewall Manager; filter HTTP requests → WAF; aggregate findings → Security Hub",
+          "notes": [
+            "เมื่อโจทย์เน้น Enforce WAF Rules ชุดเดียวกันหลาย AWS Accounts โดยจัดการ Policy จากศูนย์กลาง ควรใช้ AWS Firewall Manager ส่วน Security Hub รวม Findings และ AWS WAF เป็นตัวกรอง HTTP Requests",
+            "A. AWS WAF — กรอง/Block HTTP(S) Requests ที่ตรง Web ACL Rules เช่น SQL Injection และ XSS",
+            "B. AWS Shield — DDoS Protection ไม่ได้เป็นบริการศูนย์กลางสำหรับกระจาย WAF Rules",
+            "C. AWS Firewall Manager — จัดการและบังคับ Security Policies เช่น WAF Web ACLs ข้าม Accounts จากส่วนกลาง [คำตอบที่ถูก]",
+            "D. AWS Security Hub — รวม Security Findings จาก GuardDuty/Inspector และแหล่งอื่น ไม่ได้ Deploy WAF Policy เป็นหน้าที่หลัก"
+          ]
+        }
+      ],
+      "englishNotes": [
+        {
+          "questionId": 23,
+          "phrase": "compute expenses to follow seasonal demand rather than buying hardware for the highest peak",
+          "translation": "ให้ค่า Compute เปลี่ยนตามความต้องการแต่ละฤดูกาล แทนลงทุนซื้อเครื่องเผื่อโหลดสูงสุด"
+        },
+        {
+          "questionId": 43,
+          "phrase": "collect server dependencies; track progress of multiple migration tools",
+          "translation": "สำรวจว่า Servers ไหนมีการพึ่งพากัน และติดตามสถานะงานย้ายจากหลาย Migration Tools"
+        },
+        {
+          "questionId": 53,
+          "phrase": "confidential files; responsibility remains with the customer",
+          "translation": "ไฟล์ลับและหน้าที่ด้านการควบคุมสิทธิ์เข้าถึงข้อมูลที่ยังเป็นความรับผิดชอบลูกค้า"
+        },
+        {
+          "questionId": 57,
+          "phrase": "legal requirements; within a specific geographic area",
+          "translation": "ข้อกำหนดตามกฎหมายให้จัดเก็บข้อมูลอยู่ภายในพื้นที่ภูมิศาสตร์ที่ระบุ จึงพิจารณา AWS Region"
+        }
+      ]
     }
   },
   "history": [
@@ -4560,6 +5138,17 @@ window.REVIEW_INSIGHTS = window.REVIEW_INSIGHTS || {
       "confidence": 5,
       "language": 3,
       "clue": 1
+    },
+    {
+      "setId": "local-set-08",
+      "label": "Local Mock Set 8 · 18 Nov 2026",
+      "score": 56,
+      "total": 65,
+      "percent": 86,
+      "concept": 4,
+      "confidence": 5,
+      "language": 4,
+      "clue": 2
     }
   ],
   "topicStatus": [],
