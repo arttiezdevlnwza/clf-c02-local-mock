@@ -5059,6 +5059,453 @@ window.REVIEW_INSIGHTS = window.REVIEW_INSIGHTS || {
           "translation": "ข้อกำหนดตามกฎหมายให้จัดเก็บข้อมูลอยู่ภายในพื้นที่ภูมิศาสตร์ที่ระบุ จึงพิจารณา AWS Region"
         }
       ]
+    },
+    "local-set-09": {
+      "title": "Local Mock Set 9",
+      "note": "20 Nov 2026 · 57/65 correct (87.7%) · 8 wrong + 5 correct flagged · 3 Explain More, 2 English Unclear, 1 Concept/Recall Gap, 0 Clue/Distractor Gap; overlapping flags counted independently. Fixed mixed-domain question shuffle.",
+      "items": [
+        {
+          "questionId": 11,
+          "key": "local-set-09:q11",
+          "topic": "L02 — AWS IoT Core vs Kinesis Data Streams",
+          "type": "confidence",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "note": "Correct; flagged for review | โจทย์ต้องเชื่อม Devices เข้าสู่ Cloud ด้วยบริการที่ออกแบบสำหรับ IoT จึงเลือก AWS IoT Core; Kinesis Data Streams เหมาะเก็บและกระจาย Streaming Records ให้ Consumers หลังรับข้อมูลแล้ว"
+        },
+        {
+          "questionId": 12,
+          "key": "local-set-09:q12",
+          "topic": "L01 — Pay-as-you-go vs Capital expenditure",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | จ่ายเฉพาะ Cloud Resources ที่ใช้จริง = Pay-as-you-go ส่วน Capital expenditure คือเงินลงทุนล่วงหน้าเพื่อซื้อเครื่องหรือสินทรัพย์จริง จึงตรงข้ามกับเงื่อนไขที่บริษัทต้องการ"
+        },
+        {
+          "questionId": 13,
+          "key": "local-set-09:q13",
+          "topic": "L09 — IAM Identity Center + IAM Access Analyzer vs Cognito",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | Select TWO ถามสองหน้าที่: พนักงานเข้า AWS หลาย Accounts ใช้ Identity Center และวิเคราะห์ Resource Policies ที่เปิด Public/Cross-account Access ใช้ Access Analyzer; Cognito จัด Login ให้ผู้ใช้ Web/Mobile Apps"
+        },
+        {
+          "questionId": 15,
+          "key": "local-set-09:q15",
+          "topic": "L09 — AWS Firewall Manager vs AWS WAF",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | Firewall Manager ควบคุมและกระจาย Web ACL/Firewall Policies ในหลาย AWS Accounts จากศูนย์กลาง ขณะที่ AWS WAF เป็นบริการกรอง HTTP Requests ตามกฎ Web ACL"
+        },
+        {
+          "questionId": 20,
+          "key": "local-set-09:q20",
+          "topic": "L05 — Direct Connect + Transit Gateway vs Site-to-Site VPN",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | Direct Connect เป็น Dedicated Network Connection จากองค์กรไป AWS; Transit Gateway เป็น Hub เชื่อมหลาย VPC/Networks; Site-to-Site VPN ส่ง Tunnel ที่เข้ารหัสผ่าน Internet เดิม ไม่ใช่ Dedicated Circuit"
+        },
+        {
+          "questionId": 24,
+          "key": "local-set-09:q24",
+          "topic": "L03 — AWS Outposts vs AWS Direct Connect",
+          "type": "concept",
+          "rawFlags": [
+            "📘 English Unclear",
+            "🧠 Concept / Recall Gap"
+          ],
+          "reviewedCauses": [
+            "concept",
+            "language"
+          ],
+          "note": "Correct; flagged for review | Outposts นำ AWS Infrastructure/บริการที่รองรับมาติดตั้งในสถานที่ขององค์กร จึงตอบโจทย์โรงงานต้องรันในอาคารเอง ส่วน Direct Connect เป็น Private Network Connection ไป AWS ไม่ได้นำ Hardware AWS ไปติดตั้ง"
+        },
+        {
+          "questionId": 30,
+          "key": "local-set-09:q30",
+          "topic": "L13 — Cost Optimization + Security Well-Architected Pillars",
+          "type": "language",
+          "rawFlags": [
+            "📘 English Unclear"
+          ],
+          "reviewedCauses": [
+            "language"
+          ],
+          "note": "Correct; flagged for review | Select TWO มีสองเป้าหมาย: ลด Waste ทางการเงิน = Cost Optimization และทำ Identity/Access Controls ให้รัดกุม = Security; strengthen หมายถึงทำให้เข้มงวดขึ้น"
+        },
+        {
+          "questionId": 31,
+          "key": "local-set-09:q31",
+          "topic": "L03 — Amazon ECS vs EKS vs AWS Fargate",
+          "type": "confidence",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "note": "Correct; flagged for review | ECS จัด Scheduling/Orchestration ของ Containers แบบ AWS-native ส่วน Fargate เป็น Compute ที่รัน Containers โดยไม่จัดการ EC2 Hosts; EKS เป็น Managed Kubernetes Orchestrator"
+        },
+        {
+          "questionId": 34,
+          "key": "local-set-09:q34",
+          "topic": "L03 — Elastic Beanstalk vs EC2/Fargate/Batch",
+          "type": "confidence",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "note": "Correct; flagged for review | Elastic Beanstalk ช่วย Deploy Web Application และบริหาร Environment/Scaling/Health; EC2 คือ VM ที่ต้องจัดระบบเพิ่ม ส่วน Fargate เป็น Compute สำหรับ Containers และ Batch ใช้กับ Batch Jobs"
+        },
+        {
+          "questionId": 39,
+          "key": "local-set-09:q39",
+          "topic": "L02 — AWS CodeBuild + Step Functions vs CodePipeline",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | CodeBuild ทำ Build/Test Source Code; Step Functions Orchestrate Application Workflows ผ่าน State Machines; CodePipeline จัดลำดับ CI/CD Release Stages ไม่ได้เป็น State Machine ของ Application โดยตรง"
+        },
+        {
+          "questionId": 40,
+          "key": "local-set-09:q40",
+          "topic": "L01 — Fault tolerance vs Durability vs High availability",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | Fault tolerance หมายถึง Workload ทำงานต่อเมื่อส่วนประกอบหนึ่งล้มเหลว ขณะที่ Durability เน้นข้อมูลไม่สูญหาย และ High availability เน้นลด Downtime/เพิ่มความพร้อมให้บริการโดยรวม"
+        },
+        {
+          "questionId": 42,
+          "key": "local-set-09:q42",
+          "topic": "L12 — AWS SCT + AWS DMS vs Application Migration Service",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | AWS SCT แปลง Database Schema/Code เพื่อให้เข้ากับ Target Engine ส่วน DMS ย้ายหรือ Replicate Database Records; Application Migration Service ย้าย Servers/VMs ไม่ได้ทำ Database Schema Conversion"
+        },
+        {
+          "questionId": 62,
+          "key": "local-set-09:q62",
+          "topic": "L13 — Performance Efficiency vs Operational Excellence",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | Performance Efficiency เน้นเลือกประเภทและขนาดทรัพยากรเพื่อให้ได้ Throughput/Latency ตามเป้าหมาย ส่วน Operational Excellence เน้นวิธี Operate/Improve Workloads เช่น Runbooks และ Release Processes"
+        }
+      ],
+      "details": [
+        {
+          "questionId": 11,
+          "result": "Correct",
+          "topic": "L02 — AWS IoT Core vs Kinesis Data Streams",
+          "question": "A manufacturer connects devices that continuously send telemetry to the cloud using an IoT-specific managed service. Which service should it consider?",
+          "questionTh": "ผู้ผลิตเชื่อม Devices ที่ส่ง Telemetry ขึ้น Cloud ต่อเนื่อง โดยต้องการ Managed Service เฉพาะงาน IoT ใช้บริการใด",
+          "selected": "AWS IoT Core",
+          "correct": "AWS IoT Core",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "diagnosis": "ตอบถูก แต่ปักธงว่าต้องการคำอธิบายเพิ่มหรือยังไม่มั่นใจ",
+          "memoryCue": "IoT-specific managed service / devices continuously send telemetry → AWS IoT Core; streaming records and consumers → Kinesis Data Streams",
+          "notes": [
+            "โจทย์ต้องเชื่อม Devices เข้าสู่ Cloud ด้วยบริการที่ออกแบบสำหรับ IoT จึงเลือก AWS IoT Core; Kinesis Data Streams เหมาะเก็บและกระจาย Streaming Records ให้ Consumers หลังรับข้อมูลแล้ว",
+            "A. AWS IoT Core — เชื่อม IoT Devices กับ AWS และรับส่ง Messages ผ่าน IoT Protocols เช่น MQTT [คำตอบที่ถูก]",
+            "B. Amazon Kinesis Data Streams — รับ Streaming Records ต่อเนื่องโดย Consumers อ่านตาม Shards/Retention ได้",
+            "C. Amazon SNS — Publish/Subscribe และ Fan-out Notifications ไปหลาย Subscribers",
+            "D. Amazon SES — บริการส่งอีเมล Transactional/Bulk จาก Applications"
+          ]
+        },
+        {
+          "questionId": 12,
+          "result": "Wrong",
+          "topic": "L01 — Pay-as-you-go vs Capital expenditure",
+          "question": "A company wants to avoid owning equipment and instead pay only for the cloud resources it actually consumes. Which financial cloud benefit is emphasized?",
+          "questionTh": "บริษัทไม่อยากเป็นเจ้าของ Hardware และอยากจ่ายตาม Cloud Resources ที่ใช้จริง ประโยชน์ด้านการเงินใดตรงที่สุด",
+          "selected": "Capital expenditure",
+          "correct": "Pay-as-you-go",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "เลือกตัวเลือกที่เกี่ยวข้องแต่ไม่ตรง Requirement ของข้อสอบ; ยังไม่มีข้อมูลว่าผู้สอบใช้เหตุผลใดขณะเลือก",
+          "memoryCue": "avoid owning equipment + pay only for actual consumption → Pay-as-you-go; buy servers upfront → Capital expenditure",
+          "notes": [
+            "จ่ายเฉพาะ Cloud Resources ที่ใช้จริง = Pay-as-you-go ส่วน Capital expenditure คือเงินลงทุนล่วงหน้าเพื่อซื้อเครื่องหรือสินทรัพย์จริง จึงตรงข้ามกับเงื่อนไขที่บริษัทต้องการ",
+            "A. Economies of scale — Cloud Provider ดำเนินงาน/จัดซื้อขนาดใหญ่จนต้นทุนต่อหน่วยลดลง",
+            "B. Capital expenditure — ลงทุนซื้อสินทรัพย์หรือ Hardware ล่วงหน้า เช่น Physical Servers",
+            "C. Pay-as-you-go — จ่ายตามปริมาณการใช้ Cloud โดยไม่ต้องซื้อ Physical Hardware ล่วงหน้า [คำตอบที่ถูก]",
+            "D. High availability — ออกแบบให้ Service พร้อมใช้งานและ Downtime ต่ำ เช่น Multi-AZ Failover"
+          ]
+        },
+        {
+          "questionId": 13,
+          "result": "Wrong",
+          "topic": "L09 — IAM Identity Center + IAM Access Analyzer vs Cognito",
+          "question": "A security review wants workforce single sign-on and a way to detect public or cross-account resource exposure. Which TWO services match these needs? (Select TWO.)",
+          "questionTh": "ทีม Security ต้องการ Workforce Single Sign-on และค้นหา Resources ที่เปิด Public/Cross-account Access สองบริการใดตรง",
+          "selected": "Amazon Cognito + IAM Identity Center",
+          "correct": "IAM Identity Center + IAM Access Analyzer",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "เลือกตัวเลือกที่เกี่ยวข้องแต่ไม่ตรง Requirement ของข้อสอบ; ยังไม่มีข้อมูลว่าผู้สอบใช้เหตุผลใดขณะเลือก",
+          "memoryCue": "workforce SSO → IAM Identity Center; public/cross-account resource exposure → IAM Access Analyzer; customer app login → Cognito",
+          "notes": [
+            "Select TWO ถามสองหน้าที่: พนักงานเข้า AWS หลาย Accounts ใช้ Identity Center และวิเคราะห์ Resource Policies ที่เปิด Public/Cross-account Access ใช้ Access Analyzer; Cognito จัด Login ให้ผู้ใช้ Web/Mobile Apps",
+            "A. IAM Identity Center — Workforce SSO ผ่าน Access Portal และ Permission Sets ข้าม AWS Accounts [คำตอบที่ถูก]",
+            "B. AWS IAM — กำหนด AWS Identities, Roles, Trust/Permission Policies และ Temporary Access",
+            "C. IAM Access Analyzer — วิเคราะห์ Resource Policies เพื่อค้นหาการเปิดสิทธิ์ Public/External/Cross-account [คำตอบที่ถูก]",
+            "D. AWS Organizations — รวม/จัด AWS Accounts เป็น OUs ใช้ SCPs และ Consolidated Billing",
+            "E. Amazon Cognito — Sign-up/Sign-in สำหรับ Customer หรือ App End Users ผ่าน Web/Mobile Apps"
+          ]
+        },
+        {
+          "questionId": 15,
+          "result": "Wrong",
+          "topic": "L09 — AWS Firewall Manager vs AWS WAF",
+          "question": "A security team wants to apply standard web filtering policies across dozens of AWS accounts. Which governance service can centrally manage them?",
+          "questionTh": "ทีม Security ต้อง Apply Web Filtering Policies มาตรฐานข้าม AWS Accounts หลายสิบบัญชี บริการใดจัดการส่วนกลาง",
+          "selected": "AWS WAF",
+          "correct": "AWS Firewall Manager",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "เลือกตัวเลือกที่เกี่ยวข้องแต่ไม่ตรง Requirement ของข้อสอบ; ยังไม่มีข้อมูลว่าผู้สอบใช้เหตุผลใดขณะเลือก",
+          "memoryCue": "centralized web filtering policies across dozens of accounts → Firewall Manager; inspect and block individual HTTP requests → WAF",
+          "notes": [
+            "Firewall Manager ควบคุมและกระจาย Web ACL/Firewall Policies ในหลาย AWS Accounts จากศูนย์กลาง ขณะที่ AWS WAF เป็นบริการกรอง HTTP Requests ตามกฎ Web ACL",
+            "A. AWS WAF — ตรวจ/อนุญาต/บล็อก HTTP(S) Requests ด้วย Web ACL Rules เช่น SQLi/XSS",
+            "B. AWS Firewall Manager — ตั้งและบังคับใช้ Security Policies รวมถึง WAF ข้ามหลาย AWS Accounts จากศูนย์กลาง [คำตอบที่ถูก]",
+            "C. AWS Shield — บริการป้องกัน DDoS",
+            "D. AWS Config — บันทึก Resource Configurations และประเมิน Config Rules/Compliance"
+          ]
+        },
+        {
+          "questionId": 20,
+          "result": "Wrong",
+          "topic": "L05 — Direct Connect + Transit Gateway vs Site-to-Site VPN",
+          "question": "A firm wants a dedicated connectivity path from its office to AWS and a central hub for many VPC networks. Which TWO services satisfy those different goals? (Select TWO.)",
+          "questionTh": "บริษัทต้องการ Dedicated Connectivity จากสำนักงานสู่ AWS และ Hub สำหรับเชื่อมหลาย VPC Networks สองบริการใดตรงแต่ละหน้าที่",
+          "selected": "AWS Transit Gateway + AWS Site-to-Site VPN",
+          "correct": "AWS Direct Connect + AWS Transit Gateway",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "เลือกตัวเลือกที่เกี่ยวข้องแต่ไม่ตรง Requirement ของข้อสอบ; ยังไม่มีข้อมูลว่าผู้สอบใช้เหตุผลใดขณะเลือก",
+          "memoryCue": "dedicated connectivity path from office → Direct Connect; central hub for many VPCs → Transit Gateway; encrypted over internet → Site-to-Site VPN",
+          "notes": [
+            "Direct Connect เป็น Dedicated Network Connection จากองค์กรไป AWS; Transit Gateway เป็น Hub เชื่อมหลาย VPC/Networks; Site-to-Site VPN ส่ง Tunnel ที่เข้ารหัสผ่าน Internet เดิม ไม่ใช่ Dedicated Circuit",
+            "A. AWS Direct Connect — Dedicated Network Connection ระหว่าง On-premises กับ AWS ไม่ใช่ VPN ผ่าน Internet [คำตอบที่ถูก]",
+            "B. AWS Site-to-Site VPN — สร้าง IPSec Encrypted Tunnel เชื่อม On-premises กับ AWS ผ่าน Internet",
+            "C. AWS Transit Gateway — Network Hub เชื่อม VPCs และ On-premises Networks หลายวง [คำตอบที่ถูก]",
+            "D. VPC endpoint — เชื่อมจาก VPC ไปบริการ AWS ที่รองรับแบบ Private โดยไม่ผ่าน Internet",
+            "E. NAT Gateway — ให้ทรัพยากรใน Private Subnets เริ่ม Outbound Internet Connections"
+          ]
+        },
+        {
+          "questionId": 24,
+          "result": "Correct",
+          "topic": "L03 — AWS Outposts vs AWS Direct Connect",
+          "question": "A factory must run supported AWS infrastructure and services inside its own facility to meet low-latency operational needs. Which AWS offering extends AWS infrastructure on premises?",
+          "questionTh": "โรงงานต้องรัน AWS Infrastructure และ Services ที่รองรับภายในอาคารของตนเพื่อให้ Latency ต่ำ บริการใดนำ AWS Infrastructure ไปติดตั้ง On-premises",
+          "selected": "AWS Outposts",
+          "correct": "AWS Outposts",
+          "rawFlags": [
+            "📘 English Unclear",
+            "🧠 Concept / Recall Gap"
+          ],
+          "reviewedCauses": [
+            "concept",
+            "language"
+          ],
+          "diagnosis": "ตอบถูก แต่ปักธงว่าต้องการคำอธิบายเพิ่มหรือยังไม่มั่นใจ",
+          "memoryCue": "AWS infrastructure physically inside own facility → Outposts; network link to AWS Region → Direct Connect",
+          "notes": [
+            "Outposts นำ AWS Infrastructure/บริการที่รองรับมาติดตั้งในสถานที่ขององค์กร จึงตอบโจทย์โรงงานต้องรันในอาคารเอง ส่วน Direct Connect เป็น Private Network Connection ไป AWS ไม่ได้นำ Hardware AWS ไปติดตั้ง",
+            "A. AWS Outposts — บริการนำ AWS Infrastructure/บริการที่รองรับมาติดตั้งภายในสถานที่ขององค์กร [คำตอบที่ถูก]",
+            "B. AWS Region — Geographic Area ที่ AWS ให้บริการและมีหลาย Availability Zones",
+            "C. AWS Cloud Adoption Framework — กรอบแนวทางเตรียม People, Governance, Platform และอื่น ๆ สำหรับ Cloud Adoption",
+            "D. AWS Direct Connect — Dedicated Network Connection ระหว่าง On-premises กับ AWS ไม่ใช่ VPN ผ่าน Internet"
+          ]
+        },
+        {
+          "questionId": 30,
+          "result": "Correct",
+          "topic": "L13 — Cost Optimization + Security Well-Architected Pillars",
+          "question": "A board wants to reduce unnecessary spending and strengthen identity controls. Which TWO pillars address these separate goals? (Select TWO.)",
+          "questionTh": "คณะกรรมการต้องการลดค่าใช้จ่ายที่ไม่จำเป็นและเพิ่มความเข้มงวดการจัดการ Identity โดยเป็นสองเป้าหมายแยกกัน Pillars ใดเกี่ยวข้อง",
+          "selected": "Cost Optimization + Security",
+          "correct": "Security + Cost Optimization",
+          "rawFlags": [
+            "📘 English Unclear"
+          ],
+          "reviewedCauses": [
+            "language"
+          ],
+          "diagnosis": "ตอบถูก แต่ปักธงว่าต้องการคำอธิบายเพิ่มหรือยังไม่มั่นใจ",
+          "memoryCue": "reduce unnecessary spending → Cost Optimization; strengthen identity controls → Security",
+          "notes": [
+            "Select TWO มีสองเป้าหมาย: ลด Waste ทางการเงิน = Cost Optimization และทำ Identity/Access Controls ให้รัดกุม = Security; strengthen หมายถึงทำให้เข้มงวดขึ้น",
+            "A. Security — Well-Architected Pillar ด้านการป้องกัน Data/Systems และ Identity Controls [คำตอบที่ถูก]",
+            "B. Reliability — Well-Architected Pillar ด้าน Recovery/Availability/Fault Resilience",
+            "C. Cost Optimization — Well-Architected Pillar ด้านลด Financial Waste และจัดการต้นทุนให้คุ้มค่า [คำตอบที่ถูก]",
+            "D. Sustainability — Well-Architected Pillar ด้านลด Environmental Impact/Energy Use",
+            "E. Operational Excellence — Well-Architected Pillar ด้าน Runbooks, Change Processes และปรับปรุง Operations"
+          ]
+        },
+        {
+          "questionId": 31,
+          "result": "Correct",
+          "topic": "L03 — Amazon ECS vs EKS vs AWS Fargate",
+          "question": "An organization wants AWS-native container orchestration and serverless compute for its containers. Which TWO services address these different parts? (Select TWO.)",
+          "questionTh": "องค์กรต้องการ AWS-native Container Orchestration และ Serverless Compute ให้ Containers สองบริการใดช่วยคนละหน้าที่",
+          "selected": "Amazon ECS + AWS Fargate",
+          "correct": "Amazon ECS + AWS Fargate",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "diagnosis": "ตอบถูก แต่ปักธงว่าต้องการคำอธิบายเพิ่มหรือยังไม่มั่นใจ",
+          "memoryCue": "AWS-native container orchestration → Amazon ECS; Kubernetes → Amazon EKS; serverless compute for containers → AWS Fargate",
+          "notes": [
+            "ECS จัด Scheduling/Orchestration ของ Containers แบบ AWS-native ส่วน Fargate เป็น Compute ที่รัน Containers โดยไม่จัดการ EC2 Hosts; EKS เป็น Managed Kubernetes Orchestrator",
+            "A. Amazon ECS — AWS-native Container Orchestration ใช้ Tasks/Services และ Desired Count [คำตอบที่ถูก]",
+            "B. Amazon EKS — Managed Kubernetes Control Plane สำหรับ Kubernetes Deployments/Pods",
+            "C. AWS Fargate — Serverless Container Compute สำหรับ ECS/EKS โดยไม่ต้องดูแล EC2 Hosts [คำตอบที่ถูก]",
+            "D. Amazon EC2 — Virtual Servers ที่ลูกค้าควบคุม Guest OS และ Instance Configuration",
+            "E. AWS Batch — จัด Queue/Schedule/Run Batch Computing Jobs"
+          ]
+        },
+        {
+          "questionId": 34,
+          "result": "Correct",
+          "topic": "L03 — Elastic Beanstalk vs EC2/Fargate/Batch",
+          "question": "A team wants to deploy a conventional web application while AWS handles much of the environment provisioning, scaling, and health monitoring. Which service helps?",
+          "questionTh": "ทีมต้องการ Deploy Web Application แบบเดิม โดย AWS ช่วย Provision Environment, Scaling และ Health Monitoring ใช้บริการใด",
+          "selected": "AWS Elastic Beanstalk",
+          "correct": "AWS Elastic Beanstalk",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "diagnosis": "ตอบถูก แต่ปักธงว่าต้องการคำอธิบายเพิ่มหรือยังไม่มั่นใจ",
+          "memoryCue": "conventional web app + environment provisioning + scaling/health monitoring → Elastic Beanstalk",
+          "notes": [
+            "Elastic Beanstalk ช่วย Deploy Web Application และบริหาร Environment/Scaling/Health; EC2 คือ VM ที่ต้องจัดระบบเพิ่ม ส่วน Fargate เป็น Compute สำหรับ Containers และ Batch ใช้กับ Batch Jobs",
+            "A. Amazon EC2 — Virtual Servers ที่ลูกค้าควบคุม Guest OS และ Instance Configuration",
+            "B. AWS Elastic Beanstalk — Deploy Conventional Web Applications พร้อม Provision/Manage Application Environment [คำตอบที่ถูก]",
+            "C. AWS Batch — จัด Queue/Schedule/Run Batch Computing Jobs",
+            "D. AWS Fargate — Serverless Container Compute สำหรับ ECS/EKS โดยไม่ต้องดูแล EC2 Hosts"
+          ]
+        },
+        {
+          "questionId": 39,
+          "result": "Wrong",
+          "topic": "L02 — AWS CodeBuild + Step Functions vs CodePipeline",
+          "question": "A development team needs a managed build service to compile and test source code, plus a service that models multi-step application state transitions. Which TWO fit? (Select TWO.)",
+          "questionTh": "ทีม Developer ต้องใช้ Managed Build สำหรับ Compile/Test Code และบริการอีกตัวทำ Multi-step Application State Transitions สองบริการใดตอบโจทย์",
+          "selected": "AWS CodePipeline + AWS CodeBuild",
+          "correct": "AWS CodeBuild + AWS Step Functions",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "เลือกตัวเลือกที่เกี่ยวข้องแต่ไม่ตรง Requirement ของข้อสอบ; ยังไม่มีข้อมูลว่าผู้สอบใช้เหตุผลใดขณะเลือก",
+          "memoryCue": "compile and test source code → CodeBuild; multi-step application state transitions → Step Functions; automate CI/CD release stages → CodePipeline",
+          "notes": [
+            "CodeBuild ทำ Build/Test Source Code; Step Functions Orchestrate Application Workflows ผ่าน State Machines; CodePipeline จัดลำดับ CI/CD Release Stages ไม่ได้เป็น State Machine ของ Application โดยตรง",
+            "A. AWS CodeBuild — Managed Build/Test Jobs สำหรับ Compile, Unit Tests และ Artifacts [คำตอบที่ถูก]",
+            "B. AWS CodePipeline — จัด CI/CD Release Pipeline เช่น Source → Build → Deploy",
+            "C. AWS Step Functions — Orchestrate Multi-step Workflows ผ่าน State Machines, Retry, Branching [คำตอบที่ถูก]",
+            "D. AWS X-Ray — Distributed Tracing เพื่อวิเคราะห์ Requests ข้าม Services",
+            "E. Amazon EventBridge — Event Bus ที่ Route Events ตาม Rules/Patterns"
+          ]
+        },
+        {
+          "questionId": 40,
+          "result": "Wrong",
+          "topic": "L01 — Fault tolerance vs Durability vs High availability",
+          "question": "A medical service must continue handling requests when one processing node fails unexpectedly. Which characteristic BEST matches this goal?",
+          "questionTh": "บริการทางการแพทย์ต้องรับ Requests ต่อได้แม้ Processing Node ตัวหนึ่งหยุดทำงานกะทันหัน คุณสมบัติใดตรงที่สุด",
+          "selected": "Durability",
+          "correct": "Fault tolerance",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "เลือกตัวเลือกที่เกี่ยวข้องแต่ไม่ตรง Requirement ของข้อสอบ; ยังไม่มีข้อมูลว่าผู้สอบใช้เหตุผลใดขณะเลือก",
+          "memoryCue": "continue processing requests when node fails → Fault tolerance; retain data without loss → Durability; overall service uptime → High availability",
+          "notes": [
+            "Fault tolerance หมายถึง Workload ทำงานต่อเมื่อส่วนประกอบหนึ่งล้มเหลว ขณะที่ Durability เน้นข้อมูลไม่สูญหาย และ High availability เน้นลด Downtime/เพิ่มความพร้อมให้บริการโดยรวม",
+            "A. High availability — ออกแบบให้ Service พร้อมใช้งานและ Downtime ต่ำ เช่น Multi-AZ Failover",
+            "B. Fault tolerance — ระบบสามารถทำงานต่อได้เมื่อบาง Component ล้มเหลว [คำตอบที่ถูก]",
+            "C. Durability — ความคงอยู่ของข้อมูล ไม่ให้ข้อมูลสูญหาย",
+            "D. Pay-as-you-go — จ่ายตามปริมาณการใช้ Cloud โดยไม่ต้องซื้อ Physical Hardware ล่วงหน้า"
+          ]
+        },
+        {
+          "questionId": 42,
+          "result": "Wrong",
+          "topic": "L12 — AWS SCT + AWS DMS vs Application Migration Service",
+          "question": "A firm changes database engines and must convert incompatible schema definitions and then migrate records. Which TWO services handle the distinct stages? (Select TWO.)",
+          "questionTh": "บริษัทเปลี่ยน Database Engine ต้อง Convert Incompatible Schemas ก่อน แล้วจึงย้าย Records สองบริการใดทำหน้าที่แยกกัน",
+          "selected": "AWS SCT + AWS Application Migration Service",
+          "correct": "AWS SCT + AWS DMS",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "เลือกตัวเลือกที่เกี่ยวข้องแต่ไม่ตรง Requirement ของข้อสอบ; ยังไม่มีข้อมูลว่าผู้สอบใช้เหตุผลใดขณะเลือก",
+          "memoryCue": "incompatible database schema conversion → AWS SCT; migrate database records → AWS DMS; rehost servers → Application Migration Service",
+          "notes": [
+            "AWS SCT แปลง Database Schema/Code เพื่อให้เข้ากับ Target Engine ส่วน DMS ย้ายหรือ Replicate Database Records; Application Migration Service ย้าย Servers/VMs ไม่ได้ทำ Database Schema Conversion",
+            "A. AWS SCT — Schema Conversion Tool สำหรับแปลง Database Schemas/SQL ระหว่าง Engines [คำตอบที่ถูก]",
+            "B. AWS Application Migration Service — Replicate/Rehost Server/VM Workloads ไป AWS",
+            "C. AWS DMS — Database Migration Service สำหรับย้าย/Replicate Database Data [คำตอบที่ถูก]",
+            "D. AWS Migration Hub — ติดตามสถานะและ Progress ของ Migration Projects/Tools",
+            "E. AWS Application Discovery Service — สำรวจ Server Inventory และ Dependencies ก่อน Migration"
+          ]
+        },
+        {
+          "questionId": 62,
+          "result": "Wrong",
+          "topic": "L13 — Performance Efficiency vs Operational Excellence",
+          "question": "A company chooses an EC2 instance family based on memory needs so it can reach its throughput target without excess capacity. Which pillar is most relevant?",
+          "questionTh": "บริษัทเลือก EC2 Instance Family จาก Memory Requirements เพื่อให้ Throughput ตามเป้าหมายโดยไม่ใช้ Capacity เกินจำเป็น Pillar ใดเด่น",
+          "selected": "Operational Excellence",
+          "correct": "Performance Efficiency",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "เลือกตัวเลือกที่เกี่ยวข้องแต่ไม่ตรง Requirement ของข้อสอบ; ยังไม่มีข้อมูลว่าผู้สอบใช้เหตุผลใดขณะเลือก",
+          "memoryCue": "choose EC2 instance family from memory needs + meet throughput target → Performance Efficiency; runbooks/change process → Operational Excellence",
+          "notes": [
+            "Performance Efficiency เน้นเลือกประเภทและขนาดทรัพยากรเพื่อให้ได้ Throughput/Latency ตามเป้าหมาย ส่วน Operational Excellence เน้นวิธี Operate/Improve Workloads เช่น Runbooks และ Release Processes",
+            "A. Reliability — Well-Architected Pillar ด้าน Recovery/Availability/Fault Resilience",
+            "B. Performance Efficiency — Well-Architected Pillar ด้านเลือก Compute/Storage/DB Resources ให้ถึง Performance Goals [คำตอบที่ถูก]",
+            "C. Operational Excellence — Well-Architected Pillar ด้าน Runbooks, Change Processes และปรับปรุง Operations",
+            "D. Sustainability — Well-Architected Pillar ด้านลด Environmental Impact/Energy Use"
+          ]
+        }
+      ],
+      "englishNotes": [
+        {
+          "questionId": 24,
+          "phrase": "run supported AWS infrastructure and services inside its own facility",
+          "translation": "รัน AWS Infrastructure และบริการที่รองรับภายในสถานที่ขององค์กรเอง → AWS Outposts; Direct Connect แค่เชื่อม Network"
+        },
+        {
+          "questionId": 30,
+          "phrase": "reduce unnecessary spending and strengthen identity controls",
+          "translation": "ลดค่าใช้จ่ายที่ไม่จำเป็น (Cost Optimization) และทำ Identity Controls ให้รัดกุมขึ้น (Security) เป็นสองเป้าหมายแยกกัน"
+        }
+      ]
     }
   },
   "history": [
@@ -5149,6 +5596,17 @@ window.REVIEW_INSIGHTS = window.REVIEW_INSIGHTS || {
       "confidence": 5,
       "language": 4,
       "clue": 2
+    },
+    {
+      "setId": "local-set-09",
+      "label": "Local Mock Set 9 · 20 Nov 2026",
+      "score": 57,
+      "total": 65,
+      "percent": 88,
+      "concept": 1,
+      "confidence": 3,
+      "language": 2,
+      "clue": 0
     }
   ],
   "topicStatus": [],
