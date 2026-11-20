@@ -13,4 +13,10 @@
     [mixed[i], mixed[j]] = [mixed[j], mixed[i]];
   }
   window.buildClfLocalExamSet(9, mixed);
+  // Historical first completed Set 9 result; local browser progress takes precedence.
+  const completedSet = (window.QUIZ_SETS || []).find(set => set.id === 'local-set-09');
+  if (completedSet) {
+    completedSet.historicalAnswered = 65;
+    completedSet.historicalScore = 57;
+  }
 })();
