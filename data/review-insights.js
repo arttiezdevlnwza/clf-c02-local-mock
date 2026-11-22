@@ -5506,6 +5506,517 @@ window.REVIEW_INSIGHTS = window.REVIEW_INSIGHTS || {
           "translation": "ลดค่าใช้จ่ายที่ไม่จำเป็น (Cost Optimization) และทำ Identity Controls ให้รัดกุมขึ้น (Security) เป็นสองเป้าหมายแยกกัน"
         }
       ]
+    },
+    "local-set-10": {
+      "title": "Local Mock Set 10",
+      "note": "23 Nov 2026 · 54/65 correct (83.1%) · 11 wrong + 4 correct flagged · 4 Explain More, 2 English Unclear, 1 Concept / Recall Gap, 0 Clue / Distractor Gap; flags may overlap. Fixed mixed-domain question shuffle.",
+      "items": [
+        {
+          "questionId": 1,
+          "key": "local-set-10:q1",
+          "topic": "L11 — On-Demand Capacity Reservations vs Reserved Instances / Savings Plans",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | โจทย์ต้องการ Reserve EC2 Capacity ให้พร้อมใน Availability Zone ที่ระบุ โดยไม่ผูกสัญญาส่วนลดระยะยาว จึงใช้ On-Demand Capacity Reservations ไม่ใช่ Reserved Instances ซึ่งโดยทั่วไปเป็น Pricing Benefit จาก Commitment"
+        },
+        {
+          "questionId": 3,
+          "key": "local-set-10:q3",
+          "topic": "L09 — AWS WAF vs AWS Shield vs AWS Firewall Manager",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | ต้อง Block HTTP Requests ที่ตรง Malicious Path Pattern จึงใช้ AWS WAF ตั้ง Web ACL Rules แม้คำว่า Many Requests อาจชวนให้คิด DDoS แต่โจทย์ระบุ Filtering by HTTP Path ไม่ใช่ Network Flooding"
+        },
+        {
+          "questionId": 14,
+          "key": "local-set-10:q14",
+          "topic": "L04 — Multi-AZ vs Multi-Region deployment",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | ถ้า Region ทั้งหมดใช้งานไม่ได้ AZ ทุกแห่งภายใน Region เดียวกันก็อาจได้รับผลกระทบ ดังนั้นต้อง Deploy Workload ใน Region ที่สองเพื่อรองรับ Regional Failure"
+        },
+        {
+          "questionId": 21,
+          "key": "local-set-10:q21",
+          "topic": "L05 — Network ACL vs Security group",
+          "type": "confidence",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "note": "Correct; flagged for review | Network ACL ตรวจ Subnet Boundary แบบ Stateless และรองรับ Allow/Deny ขณะที่ Security Group ผูกกับ Network Interface และ Stateful คือ Response Traffic ที่อนุญาตกลับมาได้ตาม Connection State"
+        },
+        {
+          "questionId": 26,
+          "key": "local-set-10:q26",
+          "topic": "L03 — AWS CDK vs CloudFormation vs CloudShell",
+          "type": "confidence",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "note": "Correct; flagged for review | CDK ช่วยนิยาม Infrastructure ด้วย Programming Languages เช่น TypeScript แล้ว Synthesize CloudFormation Template ส่วน CloudFormation ใช้ Deploy/Update Stacks จาก Template และ CloudShell เป็น Browser Terminal"
+        },
+        {
+          "questionId": 33,
+          "key": "local-set-10:q33",
+          "topic": "L13 — Security + Performance Efficiency vs Operational Excellence",
+          "type": "confidence",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "note": "Wrong | ข้อ Select TWO มีสอง Requirement: ปกป้อง Credentials = Security และรักษา Response Times ตาม Target แม้ Traffic สูง = Performance Efficiency. Operational Excellence เน้นกระบวนการบริหารจัดการระบบ ไม่ใช่ Latency Target"
+        },
+        {
+          "questionId": 35,
+          "key": "local-set-10:q35",
+          "topic": "L09 — Amazon Detective vs GuardDuty vs Security Hub",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | โจทย์ระบุว่ามี Alert อยู่แล้วและต้อง Investigate Related Entities/Timelines จึงเป็นงานของ Detective ไม่ใช่ GuardDuty ที่เน้น Detect Threats ตั้งแต่แรก"
+        },
+        {
+          "questionId": 38,
+          "key": "local-set-10:q38",
+          "topic": "L03 — AWS CLI vs AWS CloudShell / Console / CloudFormation",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | โจทย์เน้น Repeatable Shell Scripts ที่รันบน Workstation ของ Engineer จึงใช้ AWS CLI ซึ่งติดตั้งหรือรันเป็น Command-line Program บนเครื่องได้ ขณะที่ CloudShell เป็น Terminal ภายใน AWS Console"
+        },
+        {
+          "questionId": 40,
+          "key": "local-set-10:q40",
+          "topic": "L11 — AWS Partner Network vs Support Center / Marketplace / re:Post",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | ต้องค้นหาบริษัท Consulting/Technology Partners ที่เชี่ยวชาญอุตสาหกรรม จึงใช้ AWS Partner Network (APN) ส่วน AWS Support Center มีหน้าที่เปิด AWS Support Cases ไม่ใช่ Partner Directory"
+        },
+        {
+          "questionId": 44,
+          "key": "local-set-10:q44",
+          "topic": "L06 — AWS Storage Gateway + DataSync vs AWS Backup",
+          "type": "confidence",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "note": "Wrong | Select TWO ถามสองงาน: Hybrid File Access ใช้ AWS Storage Gateway ส่วน Managed Data Transfer ใช้ AWS DataSync. AWS Backup จัดการ Backup Policies และ Jobs ไม่ใช่ Hybrid File Interface"
+        },
+        {
+          "questionId": 51,
+          "key": "local-set-10:q51",
+          "topic": "L09 — AWS IAM Role vs Secrets Manager",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | EC2 Application ไม่ควรฝัง Long-lived Access Keys ใน Code ให้ใช้ IAM Role สำหรับ EC2 เพื่อได้ Temporary Credentials และตั้ง Policy ให้เข้าถึง S3 เท่าที่จำเป็น ส่วน Secrets Manager เหมาะกับ Database Password/API Secrets ไม่ใช่ทางเลือกแรกแทน IAM Role สำหรับ AWS Credentials"
+        },
+        {
+          "questionId": 56,
+          "key": "local-set-10:q56",
+          "topic": "L09 — IAM Identity Center + AWS IAM Roles — Workforce vs Workloads",
+          "type": "language",
+          "rawFlags": [
+            "📘 English Unclear"
+          ],
+          "reviewedCauses": [
+            "language"
+          ],
+          "note": "Correct; flagged for review | โจทย์ Select TWO ถามคนละตัวตน Employee ต้องใช้ IAM Identity Center ทำ Workforce SSO ส่วน EC2 Workload ใช้ IAM Role ที่ได้ Temporary Credentials แบบจำกัดสิทธิ์"
+        },
+        {
+          "questionId": 63,
+          "key": "local-set-10:q63",
+          "topic": "L01 — Variable expense vs Capital expenditure / Pay-as-you-go",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | โจทย์ถาม Expense Category ของบิลที่ขึ้นลงตาม Actual Compute Usage ซึ่งเป็น Variable expense ไม่ใช่ Capital expenditure ที่ซื้อ Server Assets ล่วงหน้า แม้เป็น Cloud เหมือนกันก็ต้องดูว่าถามประเภทต้นทุนหรือวิธีคิดเงิน"
+        },
+        {
+          "questionId": 64,
+          "key": "local-set-10:q64",
+          "topic": "L05 — Internet Gateway + NAT Gateway vs VPC endpoint",
+          "type": "concept",
+          "rawFlags": [
+            "📘 English Unclear",
+            "🧠 Concept / Recall Gap"
+          ],
+          "reviewedCauses": [
+            "concept",
+            "language"
+          ],
+          "note": "Correct; flagged for review | โจทย์ Select TWO แบ่งเส้นทาง Internet เป็น Public Subnet (ใช้ IGW) และ Private Subnet Outbound (NAT Gateway โดยมี IGW สำหรับทางออก Internet ใน Typical Setup) ส่วน VPC Endpoint ใช้เข้า Supported AWS Services โดยไม่ผ่าน Public Internet"
+        },
+        {
+          "questionId": 65,
+          "key": "local-set-10:q65",
+          "topic": "L12 — Rehost vs Replatform vs Refactor vs Retain",
+          "type": "review",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "note": "Wrong | การ Copy VM-based App ไป EC2 และแทบไม่เปลี่ยน Code เป็น Lift-and-shift หรือ Rehost. Replatform ต้องมีการปรับ Platform บางส่วน เช่นเปลี่ยน Engine/Service โดยไม่เปลี่ยน Architecture มาก"
+        }
+      ],
+      "details": [
+        {
+          "questionId": 1,
+          "result": "Wrong",
+          "topic": "L11 — On-Demand Capacity Reservations vs Reserved Instances / Savings Plans",
+          "question": "An enterprise must reserve instance availability in a particular AZ for a future production launch but does not want to lock into an instance-discount commitment. Which option fits?",
+          "questionTh": "องค์กรต้องสำรอง Instance Availability ใน AZ ที่กำหนดสำหรับวัน Launch แต่ไม่ต้องการ Instance-discount Commitment ควรใช้ตัวเลือกใด",
+          "selected": "Reserved Instances",
+          "correct": "On-Demand Capacity Reservations",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "เลือก Option ที่เกี่ยวข้องแต่ไม่ตรง Requirement หลักตามเฉลย เหตุผลที่ผู้สอบคิดขณะเลือกจริงยังไม่ทราบ",
+          "memoryCue": "capacity available in a particular AZ + no discount commitment → On-Demand Capacity Reservations; long-term price discount → Reserved Instances / Savings Plans",
+          "notes": [
+            "โจทย์ต้องการ Reserve EC2 Capacity ให้พร้อมใน Availability Zone ที่ระบุ โดยไม่ผูกสัญญาส่วนลดระยะยาว จึงใช้ On-Demand Capacity Reservations ไม่ใช่ Reserved Instances ซึ่งโดยทั่วไปเป็น Pricing Benefit จาก Commitment",
+            "A. On-Demand Capacity Reservations — จอง Capacity ของ Instance Type ใน AZ ที่ระบุให้พร้อมเปิดใช้งาน ไม่จำเป็นต้องทำ Discount Commitment [คำตอบที่ถูก]",
+            "B. Savings Plans — ส่วนลดจาก Commit ค่า Compute เป็นจำนวนเงินต่อชั่วโมง 1 หรือ 3 ปี ไม่ใช่ตัวจอง EC2 Capacity",
+            "C. Spot Instances — ใช้ Spare EC2 Capacity ราคาประหยัด แต่ AWS อาจ Reclaim/Interrupt ได้ ไม่เหมาะรับประกัน Capacity สำหรับ Launch",
+            "D. Reserved Instances — ซื้อสิทธิ์รับส่วนลดค่า EC2 ตามเงื่อนไขการใช้งานและระยะเวลา บางชนิดมีคุณสมบัติ Capacity Reservation แต่โจทย์ระบุว่าไม่ต้องการ Commitment"
+          ]
+        },
+        {
+          "questionId": 3,
+          "result": "Wrong",
+          "topic": "L09 — AWS WAF vs AWS Shield vs AWS Firewall Manager",
+          "question": "A public API has many unwanted requests matching a specific malicious HTTP path pattern. Which protection should the team configure?",
+          "questionTh": "Public API มี Requests ที่ตรงกับ Malicious HTTP Path Pattern จำนวนมาก ทีมควรกำหนดการป้องกันผ่านบริการใด",
+          "selected": "AWS Shield",
+          "correct": "AWS WAF",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "เลือก Option ที่เกี่ยวข้องแต่ไม่ตรง Requirement หลักตามเฉลย เหตุผลที่ผู้สอบคิดขณะเลือกจริงยังไม่ทราบ",
+          "memoryCue": "malicious HTTP path / URL pattern / web ACL rule → AWS WAF; volumetric network DDoS → AWS Shield; policies across accounts → Firewall Manager",
+          "notes": [
+            "ต้อง Block HTTP Requests ที่ตรง Malicious Path Pattern จึงใช้ AWS WAF ตั้ง Web ACL Rules แม้คำว่า Many Requests อาจชวนให้คิด DDoS แต่โจทย์ระบุ Filtering by HTTP Path ไม่ใช่ Network Flooding",
+            "A. AWS Shield — ป้องกันการโจมตี DDoS โดยเฉพาะ Network/Transport Flooding ไม่ใช่ตัวหลักสำหรับ Match Malicious URL Path",
+            "B. AWS WAF — ตรวจและบล็อก HTTP(S) Requests ตาม Path, Headers หรือ Rule Patterns ผ่าน Web ACL [คำตอบที่ถูก]",
+            "C. Amazon GuardDuty — ตรวจจับ Threat Indicators จากกิจกรรมและสัญญาณต่าง ๆ ไม่ใช่ Inline HTTP Rule Filter",
+            "D. AWS Firewall Manager — บริหาร WAF และ Security Policies จากส่วนกลางข้าม AWS Accounts ไม่ใช่ตัวกรอง HTTP Request รายตัว"
+          ]
+        },
+        {
+          "questionId": 14,
+          "result": "Wrong",
+          "topic": "L04 — Multi-AZ vs Multi-Region deployment",
+          "question": "A business runs production in one Region and needs to withstand loss of an entire Region. Which placement strategy addresses this larger failure scope?",
+          "questionTh": "บริษัทเปิด Production ใน Region เดียว แต่ต้องการรับมือเมื่อ Region ทั้งหมดใช้ไม่ได้ ควรวาง Workloads อย่างไร",
+          "selected": "Multi-AZ deployment",
+          "correct": "Multi-Region deployment",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "เลือก Option ที่เกี่ยวข้องแต่ไม่ตรง Requirement หลักตามเฉลย เหตุผลที่ผู้สอบคิดขณะเลือกจริงยังไม่ทราบ",
+          "memoryCue": "entire Region outage → Multi-Region; one AZ failure → Multi-AZ; data residency geography → Region",
+          "notes": [
+            "ถ้า Region ทั้งหมดใช้งานไม่ได้ AZ ทุกแห่งภายใน Region เดียวกันก็อาจได้รับผลกระทบ ดังนั้นต้อง Deploy Workload ใน Region ที่สองเพื่อรองรับ Regional Failure",
+            "A. Multi-AZ deployment — กระจายระบบข้าม Availability Zones ภายใน Region เดียว ลดผลกระทบจาก AZ Failure ไม่ป้องกัน Region Outage ทั้งหมด",
+            "B. Multi-Region deployment — กระจาย Production/Disaster Recovery ข้าม AWS Regions เพื่อรับมือ Regional Failure [คำตอบที่ถูก]",
+            "C. Edge location — จุด Cache/Content Delivery ใกล้ผู้ใช้สำหรับ CDN ไม่ใช่ตำแหน่งสำรองระบบ Production เต็มรูปแบบ",
+            "D. Availability Zone — หน่วยโครงสร้างพื้นฐานที่แยกกันภายใน Region เดียว ไม่ได้หมายถึงข้าม Region"
+          ]
+        },
+        {
+          "questionId": 21,
+          "result": "Correct",
+          "topic": "L05 — Network ACL vs Security group",
+          "question": "A network engineer wants stateless rules applied to an entire VPC subnet rather than to individual instances. Which security control fits?",
+          "questionTh": "Network Engineer ต้องการ Stateless Rules ครอบคลุมทั้ง VPC Subnet แทนควบคุมเฉพาะ Instances ควรใช้สิ่งใด",
+          "selected": "Network ACL",
+          "correct": "Network ACL",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "diagnosis": "ตอบถูกแต่ปักธงว่าอยากทบทวนการแยกตัวเลือกหรือภาษาอังกฤษเพิ่มเติม",
+          "memoryCue": "stateless rules + entire subnet → Network ACL; stateful + ENI/instance → Security group",
+          "notes": [
+            "Network ACL ตรวจ Subnet Boundary แบบ Stateless และรองรับ Allow/Deny ขณะที่ Security Group ผูกกับ Network Interface และ Stateful คือ Response Traffic ที่อนุญาตกลับมาได้ตาม Connection State",
+            "A. Security group — Stateful Firewall ที่ ENI/Instance รองรับ Allow Rules ไม่ใช่ NACL ระดับ Subnet",
+            "B. Network ACL — Firewall ระดับ Subnet แบบ Stateless แยก Inbound/Outbound Rules และรองรับ Explicit Deny [คำตอบที่ถูก]",
+            "C. AWS WAF — กรอง HTTP/HTTPS Requests ที่ระดับ Application ไม่ใช่ Firewall แบบ Stateless ครอบ Subnet",
+            "D. AWS Shield — DDoS Protection ไม่ใช่ Subnet Firewall"
+          ]
+        },
+        {
+          "questionId": 26,
+          "result": "Correct",
+          "topic": "L03 — AWS CDK vs CloudFormation vs CloudShell",
+          "question": "A development team wants to define AWS infrastructure in TypeScript and have the resulting CloudFormation templates generated for deployment. Which tool fits?",
+          "questionTh": "ทีม Developer ต้องการนิยาม AWS Infrastructure ด้วย TypeScript และให้ Generate CloudFormation Templates สำหรับ Deploy ใช้เครื่องมือใด",
+          "selected": "AWS CDK",
+          "correct": "AWS CDK",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "diagnosis": "ตอบถูกแต่ปักธงว่าอยากทบทวนการแยกตัวเลือกหรือภาษาอังกฤษเพิ่มเติม",
+          "memoryCue": "TypeScript/Python constructs + synthesize templates → CDK; JSON/YAML infrastructure stacks → CloudFormation; browser terminal → CloudShell",
+          "notes": [
+            "CDK ช่วยนิยาม Infrastructure ด้วย Programming Languages เช่น TypeScript แล้ว Synthesize CloudFormation Template ส่วน CloudFormation ใช้ Deploy/Update Stacks จาก Template และ CloudShell เป็น Browser Terminal",
+            "A. AWS CDK — นิยาม Infrastructure เป็น Code ด้วย TypeScript/Python แล้วสร้าง CloudFormation Templates [คำตอบที่ถูก]",
+            "B. AWS CloudFormation — Infrastructure-as-Code Engine ใช้ JSON/YAML Templates เพื่อสร้างและจัดการ AWS Resource Stacks",
+            "C. AWS CloudShell — Shell ใน AWS Console ผ่าน Browser ที่มีเครื่องมือ CLI พร้อมใช้ ไม่ใช่ Framework สำหรับเขียน Infrastructure Definitions",
+            "D. AWS Config — ตรวจ/ติดตาม Resource Configurations และ Rules/Compliance ไม่ใช่ IaC Tool"
+          ]
+        },
+        {
+          "questionId": 33,
+          "result": "Wrong",
+          "topic": "L13 — Security + Performance Efficiency vs Operational Excellence",
+          "question": "A business wants to protect user credentials and achieve predictable response times during heavy traffic. Which TWO Well-Architected pillars are directly targeted? (Select TWO.)",
+          "questionTh": "ธุรกิจต้องการปกป้อง User Credentials และทำให้ Response Times เป็นไปตามเป้าหมายแม้ Traffic สูง Pillars สองข้อใดตรง",
+          "selected": "Security + Operational Excellence",
+          "correct": "Security + Performance Efficiency",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "diagnosis": "เลือก Option ที่เกี่ยวข้องแต่ไม่ตรง Requirement หลักตามเฉลย เหตุผลที่ผู้สอบคิดขณะเลือกจริงยังไม่ทราบ",
+          "memoryCue": "protect user credentials → Security; predictable response time / latency under heavy traffic → Performance Efficiency; runbooks / procedures → Operational Excellence",
+          "notes": [
+            "ข้อ Select TWO มีสอง Requirement: ปกป้อง Credentials = Security และรักษา Response Times ตาม Target แม้ Traffic สูง = Performance Efficiency. Operational Excellence เน้นกระบวนการบริหารจัดการระบบ ไม่ใช่ Latency Target",
+            "A. Security — Pillar ปกป้อง Systems/Information เช่น Credentials, Least Privilege, Encryption [คำตอบที่ถูก]",
+            "B. Reliability — Pillar ด้าน Fault Recovery, Availability และ Resilience ไม่ใช่ Performance Target โดยตรง",
+            "C. Performance Efficiency — Pillar เลือก/ปรับทรัพยากรให้รองรับ Latency, Throughput และ Response Time Targets เมื่อ Demand เปลี่ยน [คำตอบที่ถูก]",
+            "D. Operational Excellence — Pillar ด้าน Operations, Runbooks, Change Management และ Continuous Improvement ไม่ได้เน้น Response Time",
+            "E. Cost Optimization — Pillar ด้านลดต้นทุนส่วนเกินและปรับความคุ้มค่า ไม่ใช่ Target ในโจทย์"
+          ]
+        },
+        {
+          "questionId": 35,
+          "result": "Wrong",
+          "topic": "L09 — Amazon Detective vs GuardDuty vs Security Hub",
+          "question": "A security team has an alert and wants to explore related entities, timelines, and activity to investigate its cause. Which service supports investigation?",
+          "questionTh": "ทีม Security มี Alert แล้วต้องการสำรวจ Related Entities Timelines และ Activities เพื่อสืบสวนสาเหตุ ใช้บริการใด",
+          "selected": "Amazon GuardDuty",
+          "correct": "Amazon Detective",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "เลือก Option ที่เกี่ยวข้องแต่ไม่ตรง Requirement หลักตามเฉลย เหตุผลที่ผู้สอบคิดขณะเลือกจริงยังไม่ทราบ",
+          "memoryCue": "existing alert + investigate entities / relationships / timelines → Detective; detect suspicious activity → GuardDuty; collect findings → Security Hub",
+          "notes": [
+            "โจทย์ระบุว่ามี Alert อยู่แล้วและต้อง Investigate Related Entities/Timelines จึงเป็นงานของ Detective ไม่ใช่ GuardDuty ที่เน้น Detect Threats ตั้งแต่แรก",
+            "A. AWS Security Hub — Aggregate/Summarize Security Findings จาก Security Products ต่าง ๆ ไม่ใช่ตัวหลักในการสืบสวน Relationship Graph",
+            "B. Amazon GuardDuty — Threat Detection เพื่อแจ้ง Suspicious/Compromised Activity เป็น Finding ก่อนขั้นสืบสวน",
+            "C. Amazon Detective — Investigate Security Findings และความเชื่อมโยงของ Entities/Activities เพื่อช่วยหาสาเหตุ [คำตอบที่ถูก]",
+            "D. Amazon Macie — ค้นหา/จัดประเภท Sensitive Data ใน S3 ไม่ใช่ Incident Investigation"
+          ]
+        },
+        {
+          "questionId": 38,
+          "result": "Wrong",
+          "topic": "L03 — AWS CLI vs AWS CloudShell / Console / CloudFormation",
+          "question": "An engineer wants to manage AWS services from repeatable shell scripts running on a workstation, without clicking through web pages. Which tool provides the AWS commands?",
+          "questionTh": "Engineer ต้อง Manage AWS Services จาก Shell Scripts ที่รันบน Workstation ซ้ำได้ โดยไม่คลิกหน้า Web ควรใช้เครื่องมือใด",
+          "selected": "AWS CloudShell",
+          "correct": "AWS CLI",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "เลือก Option ที่เกี่ยวข้องแต่ไม่ตรง Requirement หลักตามเฉลย เหตุผลที่ผู้สอบคิดขณะเลือกจริงยังไม่ทราบ",
+          "memoryCue": "shell scripts on a workstation / automate aws commands locally → AWS CLI; browser-based preconfigured shell → AWS CloudShell",
+          "notes": [
+            "โจทย์เน้น Repeatable Shell Scripts ที่รันบน Workstation ของ Engineer จึงใช้ AWS CLI ซึ่งติดตั้งหรือรันเป็น Command-line Program บนเครื่องได้ ขณะที่ CloudShell เป็น Terminal ภายใน AWS Console",
+            "A. AWS CLI — Command-line Interface สำหรับเรียก AWS Services จาก Local Workstation/Server/Automation Scripts [คำตอบที่ถูก]",
+            "B. AWS Management Console — Graphical Interface บน Web Browser สำหรับ Click/Configure ไม่ใช่ Automation Script Tool",
+            "C. AWS CloudFormation — Declarative IaC Templates/Stacks สำหรับจัดการ Infrastructure ไม่ใช่ตัวเลือกคำสั่ง AWS CLI ของ Shell Script ทั่วไป",
+            "D. AWS CloudShell — Browser-based Terminal ภายใน AWS Console มี AWS CLI ให้ใช้ แต่ไม่ใช่เครื่องมือ Shell ที่รันบน Workstation ตามโจทย์"
+          ]
+        },
+        {
+          "questionId": 40,
+          "result": "Wrong",
+          "topic": "L11 — AWS Partner Network vs Support Center / Marketplace / re:Post",
+          "question": "An enterprise wants help from an AWS consulting and technology partner with specialized industry experience. Which program helps locate such partners?",
+          "questionTh": "องค์กรต้องการ Consulting/Technology Partner ของ AWS ที่มีความเชี่ยวชาญในอุตสาหกรรม ควรใช้โปรแกรมใดค้นหา",
+          "selected": "AWS Support Center",
+          "correct": "AWS Partner Network",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "เลือก Option ที่เกี่ยวข้องแต่ไม่ตรง Requirement หลักตามเฉลย เหตุผลที่ผู้สอบคิดขณะเลือกจริงยังไม่ทราบ",
+          "memoryCue": "find consulting / technology partner with industry experience → AWS Partner Network; support cases → Support Center; buy software → Marketplace",
+          "notes": [
+            "ต้องค้นหาบริษัท Consulting/Technology Partners ที่เชี่ยวชาญอุตสาหกรรม จึงใช้ AWS Partner Network (APN) ส่วน AWS Support Center มีหน้าที่เปิด AWS Support Cases ไม่ใช่ Partner Directory",
+            "A. AWS Partner Network — เครือข่าย AWS Partners พร้อมช่องทางค้นหาผู้เชี่ยวชาญ Consulting/Technology และ Industry Solutions [คำตอบที่ถูก]",
+            "B. AWS Marketplace — Catalog สำหรับเลือกซื้อ Third-party Products/Software และ Offerings ที่เกี่ยวข้อง",
+            "C. AWS Support Center — Portal เปิด/ติดตาม AWS Support Cases ตาม Support Plan",
+            "D. AWS re:Post — Public Community Question-and-answer Forum สำหรับความรู้และปัญหา AWS"
+          ]
+        },
+        {
+          "questionId": 44,
+          "result": "Wrong",
+          "topic": "L06 — AWS Storage Gateway + DataSync vs AWS Backup",
+          "question": "An on-premises team wants hybrid access to cloud-backed files and a managed service to move large data sets between existing storage systems. Which TWO AWS services fit? (Select TWO.)",
+          "questionTh": "ทีม On-premises ต้องใช้ Hybrid Access กับ Cloud-backed Files และ Managed Service สำหรับโอนข้อมูลขนาดใหญ่ระหว่าง Storage Systems สองบริการใดตรง",
+          "selected": "AWS Backup + AWS DataSync",
+          "correct": "AWS Storage Gateway + AWS DataSync",
+          "rawFlags": [
+            "🟡 Explain More"
+          ],
+          "reviewedCauses": [
+            "confidence"
+          ],
+          "diagnosis": "เลือก Option ที่เกี่ยวข้องแต่ไม่ตรง Requirement หลักตามเฉลย เหตุผลที่ผู้สอบคิดขณะเลือกจริงยังไม่ทราบ",
+          "memoryCue": "hybrid access to cloud-backed files from on-premises → Storage Gateway; transfer/sync large data sets → DataSync; schedule/retain backups → AWS Backup",
+          "notes": [
+            "Select TWO ถามสองงาน: Hybrid File Access ใช้ AWS Storage Gateway ส่วน Managed Data Transfer ใช้ AWS DataSync. AWS Backup จัดการ Backup Policies และ Jobs ไม่ใช่ Hybrid File Interface",
+            "A. AWS Storage Gateway — Hybrid Storage Gateway ให้ On-premises Applications เข้าถึง Cloud-backed File/Volume/Tape Storage ผ่าน Interface ที่รองรับ [คำตอบที่ถูก]",
+            "B. AWS DataSync — Managed Online Transfer/Synchronization ของข้อมูลระหว่าง On-premises/AWS Storage Locations ที่รองรับ [คำตอบที่ถูก]",
+            "C. Amazon S3 Intelligent-Tiering — S3 Storage Class ที่ปรับ Storage Access Tiers ตามพฤติกรรมการเรียกข้อมูล ไม่ใช่ Data Transfer Service",
+            "D. Amazon EBS — Persistent Block Volume สำหรับ EC2 ไม่ได้เชื่อม On-prem File Access โดยตรง",
+            "E. AWS Backup — Centralized Backup Plans, Schedules, Retention Policies สำหรับ AWS Resources/Workloads ที่รองรับ"
+          ]
+        },
+        {
+          "questionId": 51,
+          "result": "Wrong",
+          "topic": "L09 — AWS IAM Role vs Secrets Manager",
+          "question": "An EC2 application accesses S3. What should the team use instead of embedding long-lived AWS access keys inside the application?",
+          "questionTh": "Application บน EC2 ต้องเข้าถึง S3 ทีมควรใช้ความสามารถใดแทนการฝัง Long-lived AWS Access Keys ใน Code",
+          "selected": "AWS Secrets Manager",
+          "correct": "AWS IAM",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "เลือก Option ที่เกี่ยวข้องแต่ไม่ตรง Requirement หลักตามเฉลย เหตุผลที่ผู้สอบคิดขณะเลือกจริงยังไม่ทราบ",
+          "memoryCue": "EC2 needs S3 access without long-lived AWS keys → IAM Role + temporary credentials; store or rotate app/database password → Secrets Manager",
+          "notes": [
+            "EC2 Application ไม่ควรฝัง Long-lived Access Keys ใน Code ให้ใช้ IAM Role สำหรับ EC2 เพื่อได้ Temporary Credentials และตั้ง Policy ให้เข้าถึง S3 เท่าที่จำเป็น ส่วน Secrets Manager เหมาะกับ Database Password/API Secrets ไม่ใช่ทางเลือกแรกแทน IAM Role สำหรับ AWS Credentials",
+            "A. AWS Secrets Manager — จัดเก็บ/Rotate Secrets เช่น Database Passwords/API Keys ที่จำเป็นต่อ App ไม่ใช่กลไกหลักสำหรับ EC2 Role Credentials",
+            "B. AWS IAM — IAM Role สำหรับ EC2 Instance Profile ออก Temporary Credentials ที่ SDK/CLI ใช้เข้าถึง S3 ตาม Permissions [คำตอบที่ถูก]",
+            "C. AWS Artifact — Portal ดาวน์โหลด Compliance Reports และ Agreements ของ AWS ไม่เกี่ยวกับ EC2 Credentials",
+            "D. AWS Organizations — จัด Organization Accounts, OUs, SCPs ไม่ใช่ Issuer ของ EC2 Temporary Credentials"
+          ]
+        },
+        {
+          "questionId": 56,
+          "result": "Correct",
+          "topic": "L09 — IAM Identity Center + AWS IAM Roles — Workforce vs Workloads",
+          "question": "A company wants centralized employee account access and tightly scoped temporary permissions for EC2 workloads. Which TWO AWS services or capabilities correspond to these needs? (Select TWO.)",
+          "questionTh": "บริษัทต้องการ Centralized Employee Account Access และ Temporary Permissions ที่จำกัดสำหรับ EC2 Workloads สองบริการใดเกี่ยวข้อง",
+          "selected": "IAM Identity Center + AWS IAM",
+          "correct": "IAM Identity Center + AWS IAM",
+          "rawFlags": [
+            "📘 English Unclear"
+          ],
+          "reviewedCauses": [
+            "language"
+          ],
+          "diagnosis": "ตอบถูกแต่ปักธงว่าอยากทบทวนการแยกตัวเลือกหรือภาษาอังกฤษเพิ่มเติม",
+          "memoryCue": "employees + centralized SSO → IAM Identity Center; EC2 workload + temporary permissions → AWS IAM Role",
+          "notes": [
+            "โจทย์ Select TWO ถามคนละตัวตน Employee ต้องใช้ IAM Identity Center ทำ Workforce SSO ส่วน EC2 Workload ใช้ IAM Role ที่ได้ Temporary Credentials แบบจำกัดสิทธิ์",
+            "A. IAM Identity Center — Workforce SSO/Permission Sets ให้พนักงานเข้า AWS Accounts ผ่าน Portal กลาง [คำตอบที่ถูก]",
+            "B. AWS IAM — IAM Roles/Policies สำหรับ Application และ EC2 Workloads พร้อม Temporary Credentials ผ่าน Role/STS [คำตอบที่ถูก]",
+            "C. AWS Organizations — จัด OUs/SCPs/Accounts ไม่ใช่ Workforce SSO Portal",
+            "D. Amazon Cognito — Sign-up/Sign-in ของ Web/Mobile App Customers ไม่ใช่ AWS Workforce Portal",
+            "E. AWS CloudTrail — Audit History ว่า AWS API Calls เกิดจาก Principal ใดเมื่อไร ไม่ใช่ตัวกำหนด Workforce Login"
+          ]
+        },
+        {
+          "questionId": 63,
+          "result": "Wrong",
+          "topic": "L01 — Variable expense vs Capital expenditure / Pay-as-you-go",
+          "question": "A CFO wants to stop buying oversized servers for forecast peaks and pay operational bills that vary by actual compute use. Which expense category results?",
+          "questionTh": "CFO จะเลิกซื้อ Servers ขนาดใหญ่รับ Peak ล่วงหน้า แล้วจ่าย Operational Bills ที่เปลี่ยนตาม Compute Usage เป็น Expense Category ใด",
+          "selected": "Capital expenditure",
+          "correct": "Variable expense",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "เลือก Option ที่เกี่ยวข้องแต่ไม่ตรง Requirement หลักตามเฉลย เหตุผลที่ผู้สอบคิดขณะเลือกจริงยังไม่ทราบ",
+          "memoryCue": "operational bills vary by actual compute use → Variable expense; upfront server purchase → Capital expenditure; usage-based billing concept → Pay-as-you-go",
+          "notes": [
+            "โจทย์ถาม Expense Category ของบิลที่ขึ้นลงตาม Actual Compute Usage ซึ่งเป็น Variable expense ไม่ใช่ Capital expenditure ที่ซื้อ Server Assets ล่วงหน้า แม้เป็น Cloud เหมือนกันก็ต้องดูว่าถามประเภทต้นทุนหรือวิธีคิดเงิน",
+            "A. Capital expenditure — ค่าใช้จ่ายลงทุนซื้อ Physical Server/Asset ล่วงหน้าเป็นเจ้าของ ไม่ใช่ Operational Bill ที่แปรผันตามการใช้",
+            "B. Variable expense — ค่าใช้จ่ายที่เปลี่ยนขึ้นลงตาม Actual Usage เช่น Cloud Compute Hours [คำตอบที่ถูก]",
+            "C. Economies of scale — ต้นทุนต่อหน่วยของ Cloud Provider ลดลงจากการดำเนินงานขนาดใหญ่ ไม่ใช่ Expense Category ของผู้ใช้",
+            "D. Rightsizing — ปรับขนาด Resource ให้พอดีกับ Workload เพื่อไม่จ่ายส่วนเกิน ไม่ใช่ประเภทค่าใช้จ่าย"
+          ]
+        },
+        {
+          "questionId": 64,
+          "result": "Correct",
+          "topic": "L05 — Internet Gateway + NAT Gateway vs VPC endpoint",
+          "question": "A VPC architecture requires an internet route for resources in a public subnet and outbound-only internet access for private subnet instances. Which TWO gateways address the distinct needs? (Select TWO.)",
+          "questionTh": "VPC ต้องมี Internet Route ให้ Public Subnet และให้ Private Subnet Instances ออก Internet ได้โดยไม่รับการเชื่อมต่อเข้าโดยตรง Gateways ใดสองตัวทำหน้าที่",
+          "selected": "Internet Gateway + NAT Gateway",
+          "correct": "Internet Gateway + NAT Gateway",
+          "rawFlags": [
+            "📘 English Unclear",
+            "🧠 Concept / Recall Gap"
+          ],
+          "reviewedCauses": [
+            "concept",
+            "language"
+          ],
+          "diagnosis": "ตอบถูกแต่ปักธงว่าอยากทบทวนการแยกตัวเลือกหรือภาษาอังกฤษเพิ่มเติม",
+          "memoryCue": "public subnet internet route → Internet Gateway; private subnet outbound internet → NAT Gateway; private access to AWS service → VPC endpoint",
+          "notes": [
+            "โจทย์ Select TWO แบ่งเส้นทาง Internet เป็น Public Subnet (ใช้ IGW) และ Private Subnet Outbound (NAT Gateway โดยมี IGW สำหรับทางออก Internet ใน Typical Setup) ส่วน VPC Endpoint ใช้เข้า Supported AWS Services โดยไม่ผ่าน Public Internet",
+            "A. Internet Gateway — เชื่อม VPC กับ Internet สำหรับ Public Routing และ Egress ของ NAT Gateway ที่อยู่ Public Subnet [คำตอบที่ถูก]",
+            "B. NAT Gateway — ให้ EC2 ใน Private Subnet เริ่ม Outbound Internet Connections โดยไม่เปิด Direct Inbound [คำตอบที่ถูก]",
+            "C. VPC endpoint — Private Connection จาก VPC ไปบริการ AWS ที่รองรับ เช่น S3 ไม่ใช่ Public Internet Egress",
+            "D. AWS Direct Connect — Dedicated Network Link จาก On-premises ไป AWS ไม่ใช่ Gateway ของ Public/Private Subnets",
+            "E. AWS Transit Gateway — Hub เชื่อมหลาย VPCs/On-prem Networks ไม่ใช่ VPC Internet Egress Gateway"
+          ]
+        },
+        {
+          "questionId": 65,
+          "result": "Wrong",
+          "topic": "L12 — Rehost vs Replatform vs Refactor vs Retain",
+          "question": "A company copies an existing virtual machine-based application to EC2 and changes almost no application code. Which migration strategy is it using?",
+          "questionTh": "บริษัท Copy Application จาก Virtual Machines เดิมขึ้น EC2 และแทบไม่แก้ Code เลย เป็น Migration Strategy ใด",
+          "selected": "Replatform",
+          "correct": "Rehost",
+          "rawFlags": [],
+          "reviewedCauses": [],
+          "diagnosis": "เลือก Option ที่เกี่ยวข้องแต่ไม่ตรง Requirement หลักตามเฉลย เหตุผลที่ผู้สอบคิดขณะเลือกจริงยังไม่ทราบ",
+          "memoryCue": "copy VM to EC2 + almost no code change / lift-and-shift → Rehost; change part of hosting platform → Replatform; redesign architecture → Refactor",
+          "notes": [
+            "การ Copy VM-based App ไป EC2 และแทบไม่เปลี่ยน Code เป็น Lift-and-shift หรือ Rehost. Replatform ต้องมีการปรับ Platform บางส่วน เช่นเปลี่ยน Engine/Service โดยไม่เปลี่ยน Architecture มาก",
+            "A. Replatform — ย้ายขึ้น Cloud พร้อมปรับ Platform บางส่วน เช่นเปลี่ยน Database ไป Managed RDS โดยยังคง Logic หลัก",
+            "B. Rehost — Lift-and-shift ย้าย VM/App แบบ As-is หรือเปลี่ยน Code น้อยมาก เช่นย้ายเดิมไป EC2 [คำตอบที่ถูก]",
+            "C. Refactor — เปลี่ยน Application Code/Architecture อย่างมากเพื่อ Cloud-native เช่น Monolith → Microservices",
+            "D. Retain — เก็บ Workload ไว้ที่เดิมและยังไม่ย้ายในรอบนี้"
+          ]
+        }
+      ],
+      "englishNotes": [
+        {
+          "questionId": 56,
+          "phrase": "centralized employee account access and tightly scoped temporary permissions for EC2 workloads",
+          "translation": "ต้องการทั้ง Workforce SSO สำหรับพนักงาน และสิทธิ์ชั่วคราวแบบจำกัดสำหรับ EC2 Workloads: ใช้ IAM Identity Center + IAM Roles"
+        },
+        {
+          "questionId": 64,
+          "phrase": "an internet route for resources in a public subnet and outbound-only internet access for private subnet instances",
+          "translation": "Public Subnet ใช้ Internet Route ผ่าน Internet Gateway ส่วน Private Subnet ออก Internet ผ่าน NAT Gateway โดยไม่เปิดรับ Inbound Direct Connections"
+        }
+      ]
     }
   },
   "history": [
@@ -5605,6 +6116,17 @@ window.REVIEW_INSIGHTS = window.REVIEW_INSIGHTS || {
       "percent": 88,
       "concept": 1,
       "confidence": 3,
+      "language": 2,
+      "clue": 0
+    },
+    {
+      "setId": "local-set-10",
+      "label": "Local Mock Set 10 · 23 Nov 2026",
+      "score": 54,
+      "total": 65,
+      "percent": 83,
+      "concept": 1,
+      "confidence": 4,
       "language": 2,
       "clue": 0
     }
