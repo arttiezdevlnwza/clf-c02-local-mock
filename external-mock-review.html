@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="External CLF-C02 mock exam analysis, 23 Nov 2026: scored result, domains, incorrect answers, and review flags.">
+  <title>External Mock Review · CLF-C02 Local Mock</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  :root{--navy:#142d50;--blue:#1868b5;--orange:#f28b28;--line:#dce5ef;--muted:#56677d}
+  body{background:#f3f6fb;color:#1b2c43}
+  .app-shell{max-width:1160px}
+  .topbar{border-bottom:1px solid #dce5ef;padding-bottom:20px;align-items:center}
+  .topbar h1{font-size:clamp(1.5rem,2.8vw,2.2rem);color:var(--navy)}
+  .topbar p{max-width:760px;line-height:1.6}
+  .navlink{display:inline-flex;align-items:center;text-decoration:none;border:1px solid #cbd5e1;border-radius:10px;padding:10px 14px;background:#fff;color:var(--navy);font-weight:750;white-space:nowrap}
+  .navlink:hover{background:#eaf3ff}
+  h2{color:var(--navy);font-size:1.25rem;margin:0 0 9px}
+  .hero{background:linear-gradient(125deg,#14385f,#246ab2);color:#fff;border-radius:20px;padding:24px;margin-bottom:18px}
+  .hero .eyebrow{color:#b9dcff}
+  .hero h2{color:#fff;font-size:1.45rem}
+  .hero p{margin:0;line-height:1.65;max-width:900px}
+  .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:16px 0}
+  .statbox{border:1px solid var(--line);border-radius:15px;background:white;padding:18px;min-width:0}
+  .statbox .minor{display:block;color:var(--muted);font-size:.83rem}
+  .statbox strong{display:block;color:var(--navy);font-size:clamp(1.4rem,3vw,2rem);line-height:1.35}
+  .statbox small{color:var(--muted);font-size:.78rem}
+  .statbox.accent strong{color:#137a50}
+  .panel{background:#fff;border:1px solid var(--line);border-radius:17px;padding:20px;margin-bottom:16px}
+  .panel>p{line-height:1.65;color:var(--muted)}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .domain-row{display:grid;grid-template-columns:minmax(190px,1.5fr) 1fr 70px;gap:13px;align-items:center;padding:12px 0;border-bottom:1px solid #edf2f7}
+  .domain-row:last-child{border-bottom:none}
+  .domain-row strong{font-size:.9rem}
+  .domain-row small{display:block;color:var(--muted);margin-top:4px}
+  .track{height:11px;border-radius:30px;background:#eaf0f8;overflow:hidden}
+  .fill{height:100%;background:#267dc1;border-radius:30px}
+  .domain-row.weak .fill{background:#ed963e}
+  .domain-row.weak .percent{color:#b86110}
+  .percent{font-weight:800;text-align:right}
+  .callout{padding:14px 16px;border-left:4px solid var(--orange);background:#fff9ef;border-radius:0 10px 10px 0;line-height:1.65;margin:14px 0}
+  .lesson-list{display:grid;gap:10px}
+  .lesson{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;padding:13px;border:1px solid #e6edf5;border-radius:12px;background:#fbfdff}
+  .lesson .rank{display:grid;place-items:center;background:#e7f2ff;color:#194e80;font-weight:900;border-radius:10px;width:32px;height:32px}
+  .lesson b{display:block;margin-bottom:5px}
+  .lesson p{margin:0;color:#4a5b70;font-size:.9rem;line-height:1.6}
+  .sectionhead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px}
+  .sectionhead p{margin:0;color:var(--muted);font-size:.85rem}
+  .filterbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .filterbar button{font:inherit;font-weight:700;font-size:.84rem;border:1px solid #cbd5e1;background:#fff;color:#243e62;border-radius:99px;padding:7px 12px;cursor:pointer}
+  .filterbar button[aria-pressed=true]{background:var(--navy);color:#fff;border-color:var(--navy)}
+  .question{border:1px solid #dfe8f4;border-radius:13px;overflow:hidden;margin-top:9px}
+  .question[hidden]{display:none}
+  .question summary{cursor:pointer;display:flex;gap:12px;align-items:center;padding:14px 16px;list-style:none;background:#fcfdff}
+  .question summary::-webkit-details-marker{display:none}
+  .question summary:after{content:'+';font-weight:900;color:#4475aa}
+  .question[open] summary:after{content:'−'}
+  .qnum{display:inline-flex;flex-shrink:0;border-radius:9px;padding:8px;background:#eaf2fc;color:#1c528b;font-weight:800}
+  .qtopic{flex:1;min-width:0}
+  .qtopic b{display:block;font-size:.94rem}
+  .qtopic small,.watch small{display:block;color:var(--muted);margin-top:4px;font-size:.75rem}
+  .pill{display:inline-block;border-radius:99px;padding:4px 9px;font-weight:800;font-size:.7rem}
+  .pill.scored{background:#dff1e7;color:#17613d}
+  .pill.unscored{background:#eff2f6;color:#516179}
+  .qbody{border-top:1px solid #e4ebf5;padding:15px 17px}
+  .qbody p{line-height:1.65}
+  .stem{font-weight:650;color:#1a3453}
+  .translated{color:#42546a}
+  .answer-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .answer-grid p{background:#f8fafc;border-radius:10px;padding:12px;margin:0;min-width:0}
+  .answer-grid small{display:block;color:var(--muted)}
+  .answer-grid strong{display:block;overflow-wrap:anywhere}
+  .bad-answer{color:#b83432}
+  .good-answer{color:#127a51}
+  .reason{padding:12px 14px;background:#eff7ff;border-radius:10px}
+  .option-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:12px 0}
+  .option{border:1px solid #e4eaf2;border-radius:10px;padding:12px}
+  .option b,.option span{display:block}
+  .option b{font-size:.86rem}
+  .option span{font-size:.83rem;color:#516177;line-height:1.55;margin-top:5px}
+  .option.correct{background:#ecfaf2;border-color:#afdfc3}
+  .option.incorrect{background:#fff1ef;border-color:#f1c7c2}
+  .cue{background:#fff8e9;padding:11px 13px;border-radius:9px;color:#66451b}
+  .watchgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .watch{display:flex;gap:11px;border:1px solid #e2eaf5;border-radius:11px;padding:12px}
+  .watch p{line-height:1.55;font-size:.86rem;color:#4c5d74;margin:7px 0 0}
+  .note{font-size:.85rem;color:#55667c;line-height:1.65;margin-top:8px}
+  .footer{color:var(--muted);font-size:.78rem;margin:18px 0;line-height:1.6}
+  @media(max-width:810px){.stats{grid-template-columns:1fr 1fr}.two,.watchgrid{grid-template-columns:1fr}.domain-row{grid-template-columns:minmax(145px,1fr) 1fr 45px}.domain-row strong{font-size:.81rem}.panel{padding:16px}}
+  @media(max-width:570px){.app-shell{padding:18px 12px}.topbar{flex-direction:column}.stats{gap:8px}.statbox{padding:12px}.domain-row{grid-template-columns:1fr 45px}.domain-row .track{grid-column:1/-1;grid-row:2}.domain-row .percent{grid-column:2;grid-row:1}.question summary{gap:7px;padding:10px}.pill{display:none}.answer-grid,.option-grid{grid-template-columns:1fr}}
+  @media print{body{background:white}.topbar .navlink,.filterbar{display:none}.hero{background:#fff;color:#102a4a;border:1px solid #dce5ef}.hero h2{color:#102a4a}.question{break-inside:avoid}.panel{break-inside:avoid}}
+  </style>
+</head>
+<body>
+<main class="app-shell">
+  <header class="topbar">
+    <div>
+      <div class="eyebrow">CLF-C02 · SEPARATE EXAM REVIEW</div>
+      <h1>External Mock Review</h1>
+      <p>วิเคราะห์ผล Mock Exam วันที่ 23 พฤศจิกายน 2026 พร้อมบทเรียนที่ผิดและคำอธิบายทุกช้อยส์ แยกจาก Local Mock Set 1–10</p>
+    </div>
+    <a class="navlink" href="./index.html">← กลับ Local Mock</a>
+  </header>
+  <section class="hero">
+    <div class="eyebrow">AWS CERTIFIED CLOUD PRACTITIONER · MOCK EXAM</div>
+    <h2>ผลสอบ: Pass · ข้อคิดคะแนน 44/50 (88%)</h2>
+    <p>รายงานต้นทางให้คะแนน 892/1,000 · ทำ 65 ข้อใน 34 นาที 15 วินาที (2,055 วินาที) · มีข้อที่ไม่คิดคะแนน 15 ข้อแยกต่างหาก</p>
+  </section>
+  <div class="stats">
+    <div class="statbox accent"><span class="minor">Scaled score ตามรายงาน</span><strong>892/1000</strong><small>Mock Report · Pass</small></div>
+    <div class="statbox"><span class="minor">Scored questions</span><strong>44/50</strong><small>88% · ผิด 6 ข้อ</small></div>
+    <div class="statbox"><span class="minor">All questions</span><strong>56/65</strong><small>ผิด 9 ข้อ รวม unscored</small></div>
+    <div class="statbox"><span class="minor">Confidence / Review</span><strong>7 Unsure</strong><small>Review Flag 12 ข้อ · Unsure ถูก 3 ผิด 4</small></div>
+  </div>
+  <div class="two">
+    <section class="panel" aria-labelledby="domain-title">
+      <h2 id="domain-title">คะแนนตาม Domain (เฉพาะข้อคิดคะแนน)</h2>
+      <div class="domain-row"><div><strong>Cloud Concepts</strong><small>11 / 12 correct</small></div><div class="track"><div class="fill" style="width:91.7%"></div></div><span class="percent">92%</span></div>
+      <div class="domain-row"><div><strong>Security and Compliance</strong><small>14 / 15 correct</small></div><div class="track"><div class="fill" style="width:93.3%"></div></div><span class="percent">93%</span></div>
+      <div class="domain-row"><div><strong>Cloud Technology and Services</strong><small>15 / 17 correct</small></div><div class="track"><div class="fill" style="width:88.2%"></div></div><span class="percent">88%</span></div>
+      <div class="domain-row weak"><div><strong>Billing, Pricing, and Support</strong><small>4 / 6 correct</small></div><div class="track"><div class="fill" style="width:66.7%"></div></div><span class="percent">67%</span></div>
+      <p class="note">คะแนน 892/1000 เป็น Scaled Score จากระบบ Mock นี้ ไม่ใช่การนำ 88% ไปแปลงเป็นคะแนน AWS จริง</p>
+    </section>
+    <section class="panel" aria-labelledby="snapshot-title">
+      <h2 id="snapshot-title">ภาพรวมการตรวจ 65 ข้อ</h2>
+      <div class="lesson-list">
+        <div class="lesson"><span class="rank">50</span><div><b>Scored · ถูก 44 / ผิด 6</b><p>Q9, Q24, Q36, Q38, Q43, Q60 เป็นข้อผิดที่ส่งผลกับ Raw Score</p></div></div>
+        <div class="lesson"><span class="rank">15</span><div><b>Unscored · ถูก 12 / ผิด 3</b><p>Q5, Q55, Q59 ควรทบทวน Concept แม้ไม่กระทบคะแนน 44/50</p></div></div>
+        <div class="lesson"><span class="rank">12</span><div><b>Review Flag</b><p>Q9, 15, 21, 29, 37, 38, 40, 43, 49, 53, 55, 61</p></div></div>
+        <div class="lesson"><span class="rank">7</span><div><b>Confidence: Unsure</b><p>Q5, 9, 15, 29, 36, 40, 43 · ถูก 3 ผิด 4</p></div></div>
+      </div>
+    </section>
+  </div>
+  <section class="panel">
+    <h2>จุดอ่อนที่ควรแก้จากผลครั้งนี้</h2>
+    <div class="lesson-list">
+      <div class="lesson"><span class="rank">1</span><div><b>Pricing / Billing — จุดอ่อนหลักของ Scored Exam</b><p>Q38 และ Q43: Consolidated Billing ไม่ได้ทำลาย IAM Boundaries และ Savings Plans ไม่ลด Hourly Commitment อัตโนมัติช่วง Off-peak</p></div></div>
+      <div class="lesson"><span class="rank">2</span><div><b>Migration Strategy — Rehost vs Replatform</b><p>Q24 ผิดเพราะมองว่า 'ไม่เปลี่ยน Schema' = Rehost ทั้งที่เปลี่ยน Self-managed MySQL ไป Managed RDS คือ Replatform (สัมพันธ์กับจุดอ่อนจาก Set 1–10)</p></div></div>
+      <div class="lesson"><span class="rank">3</span><div><b>Infrastructure Scope — VPC, Subnet, AZ และ AMI</b><p>Q36: Subnet เดียวอยู่ใน AZ เดียว ไม่ Replicate EC2 อัตโนมัติ · Q60: AMI เก็บ OS/Software Image ส่วน CloudFormation นิยาม Infrastructure</p></div></div>
+      <div class="lesson"><span class="rank">4</span><div><b>Compliance Ownership — AWS vs Customer</b><p>Q9: AWS Compliance Report ไม่รับรองการตั้งค่าและ Application ของลูกค้าอัตโนมัติ · Q59 (unscored): Pentest ต้องดูนโยบาย AWS ที่อนุญาต</p></div></div>
+      <div class="lesson"><span class="rank">5</span><div><b>Well-Architected / CAF — Keyword เฉพาะ Framework</b><p>Q5 (unscored): Stop guessing capacity อยู่ใน Reliability · Q55 (unscored): Budget/Risk/Policies อยู่ใน Governance Perspective</p></div></div>
+    </div>
+    <div class="callout"><b>เทียบกับ Set 1–10:</b> Pricing/Economics และ Migration ยังมีการสับสนคำจำเป็นระยะ ๆ ส่วนคะแนน Security สูง แต่ Q9 แสดงว่ายังต้องแยก AWS Provider Compliance จากหน้าที่ของลูกค้าให้ชัดเจน หลีกเลี่ยงการสรุปว่า Security ทั้ง Domain อ่อนจากข้อผิดเพียงข้อเดียวในชุดนี้</div>
+  </section>
+  <section class="panel" id="wrong-answers">
+    <div class="sectionhead"><div><h2>ทบทวนข้อผิด 9 ข้อ</h2><p>ขยายดูคำแปล เหตุผล และช้อยส์ทุกตัว · แยก Scored/Unscored</p></div><div class="filterbar" role="group" aria-label="กรองข้อผิด"><button type="button" aria-pressed="true" data-filter="all">ทั้งหมด 9</button><button type="button" aria-pressed="false" data-filter="scored">Scored 6</button><button type="button" aria-pressed="false" data-filter="unscored">Unscored 3</button></div></div>
+    <details class="question" data-kind="unscored" id="q5"><summary><span class="qnum">Q05</span><span class="qtopic"><b>Well-Architected: Stop guessing capacity</b><small>Cloud Concepts · L13 — Well-Architected Solutions</small></span><span class="pill unscored">Unscored</span></summary><div class="qbody"><p class="stem">Which AWS Well-Architected Framework pillar includes the principle of stopping capacity guesses and using automatic scaling?</p><p class="translated"><strong>คำแปล:</strong> โจทย์ถามว่า Design Principle &#39;Stop guessing capacity&#39; และการใช้ Automatic Scaling ถูกจัดอยู่ใน Pillar ใด</p><div class="answer-grid"><p><small>ตอบที่เลือก</small><strong class="bad-answer">Performance Efficiency</strong></p><p><small>เฉลย</small><strong class="good-answer">Reliability</strong></p></div><p class="reason">ตามกรอบการจัดหมวดในข้อสอบนี้ &#39;Stop guessing capacity&#39; เป็น Design Principle ของ Reliability แม้การเลือกขนาดทรัพยากรให้เหมาะกับงานจะเกี่ยวข้องกับ Performance Efficiency</p><div class="option-grid"><div class="option "><b>Cost Optimization</b><span>มุ่งลด Waste และเพิ่มความคุ้มค่าด้านต้นทุน ไม่ใช่ชื่อ Pillar ของหลักการที่ถาม</span></div><div class="option incorrect"><b>Performance Efficiency</b><span>มุ่งเลือกทรัพยากร/ปรับ Performance ให้เหมาะ แต่ &#39;Stop guessing capacity&#39; เป็นคำเฉพาะของ Reliability</span></div><div class="option "><b>Operational Excellence</b><span>เน้นกระบวนการ Operate/Improve Workloads เช่น Runbooks และ Change Management</span></div><div class="option correct"><b>Reliability</b><span>เน้นระบบรับ Capacity/Demand ได้ตามต้องการและฟื้นตัวจากความล้มเหลว</span></div></div><p class="cue"><strong>จำให้แม่น:</strong> Stop guessing capacity → Reliability | Select suitable resources for latency/throughput → Performance Efficiency</p></div></details><details class="question" data-kind="scored" id="q9"><summary><span class="qnum">Q09</span><span class="qtopic"><b>Provider vs Customer Compliance</b><small>Security and Compliance · L10 — Monitoring, Compliance, and Governance</small></span><span class="pill scored">Scored</span></summary><div class="qbody"><p class="stem">AWS has a compliance report for a service. Does that automatically certify a customer application using the service?</p><p class="translated"><strong>คำแปล:</strong> รายงาน Compliance ของ AWS รับรองแอปของลูกค้าและการตั้งค่าของลูกค้าโดยอัตโนมัติหรือไม่</p><div class="answer-grid"><p><small>ตอบที่เลือก</small><strong class="bad-answer">Yes, including all customer configurations</strong></p><p><small>เฉลย</small><strong class="good-answer">No, the customer must also satisfy its own applicable controls</strong></p></div><p class="reason">AWS มีรายงานและการรับรอง Controls ที่ AWS รับผิดชอบ แต่การใช้บริการที่มีรายงานไม่ได้ทำให้ Application หรือ Configurations ของลูกค้าได้รับการรับรองอัตโนมัติ ลูกค้าต้องรับผิดชอบ Controls ที่เกี่ยวข้องของตนเอง</p><div class="option-grid"><div class="option correct"><b>No, the customer must also satisfy its own applicable controls</b><span>ถูก: Provider Compliance ไม่แทน Customer Compliance</span></div><div class="option "><b>No AWS services can support regulated data</b><span>ผิด: บางบริการรองรับ Regulated Workloads ได้ภายใต้เงื่อนไขที่เกี่ยวข้อง</span></div><div class="option incorrect"><b>Yes, including all customer configurations</b><span>ผิด: AWS ไม่ได้เป็นผู้รับรองการตั้งค่าของลูกค้าทุกส่วน</span></div><div class="option "><b>Yes, if the application uses a free support plan</b><span>ผิด: Support Plan ไม่ใช่ตัวกำหนดการผ่านมาตรฐาน Compliance</span></div></div><p class="cue"><strong>จำให้แม่น:</strong> AWS Compliance Report ≠ Customer Application Automatically Certified</p></div></details><details class="question" data-kind="scored" id="q24"><summary><span class="qnum">Q24</span><span class="qtopic"><b>Database Migration: Rehost vs Replatform</b><small>Cloud Concepts · L12 — Migrating to the AWS Cloud</small></span><span class="pill scored">Scored</span></summary><div class="qbody"><p class="stem">A company moves a self-managed MySQL database on a VM to Amazon RDS for MySQL to reduce patching, backup, and failover work without changing the application schema or queries. Which migration strategy is this?</p><p class="translated"><strong>คำแปล:</strong> ย้าย MySQL ที่ดูแลเองบน VM ไป Amazon RDS for MySQL เพื่อให้ AWS ช่วยดูแล Patch/Backup/Failover โดยไม่เปลี่ยน Schema หรือ Query</p><div class="answer-grid"><p><small>ตอบที่เลือก</small><strong class="bad-answer">Rehost</strong></p><p><small>เฉลย</small><strong class="good-answer">Replatform</strong></p></div><p class="reason">แม้ Application SQL ไม่เปลี่ยน แต่มีการเปลี่ยนจาก Self-managed Database ไปเป็น Managed Database Platform จึงเป็น Replatform ไม่ใช่ Rehost ที่ย้าย VM/Workload แบบแทบไม่เปลี่ยนวิธี Host</p><div class="option-grid"><div class="option incorrect"><b>Rehost</b><span>Lift-and-shift VM/Application แบบ As-is เช่น VM → EC2 โดยไม่เปลี่ยน Database Platform</span></div><div class="option "><b>Refactor</b><span>ปรับ Code/Architecture มากเพื่อใช้ Cloud-native Patterns</span></div><div class="option "><b>Repurchase</b><span>ยกเลิกโซลูชันเดิมแล้วซื้อ SaaS/Commercial Product ทดแทน</span></div><div class="option correct"><b>Replatform</b><span>ย้าย Workload พร้อมปรับ Platform บางส่วน เช่น Self-managed DB → RDS</span></div></div><p class="cue"><strong>จำให้แม่น:</strong> VM → EC2 (แทบไม่เปลี่ยน) = Rehost | VM MySQL → RDS = Replatform | ระบบเดิม → SaaS ใหม่ = Repurchase</p></div></details><details class="question" data-kind="scored" id="q36"><summary><span class="qnum">Q36</span><span class="qtopic"><b>Subnet belongs to a single AZ</b><small>Cloud Technology and Services · L04 — Going Global / L05 — Networking</small></span><span class="pill scored">Scored</span></summary><div class="qbody"><p class="stem">Which statement correctly describes a VPC subnet?</p><p class="translated"><strong>คำแปล:</strong> Subnet ใน Amazon VPC มีความสัมพันธ์กับ Availability Zone อย่างไร</p><div class="answer-grid"><p><small>ตอบที่เลือก</small><strong class="bad-answer">It automatically duplicates every instance into all AZs</strong></p><p><small>เฉลย</small><strong class="good-answer">It resides in one Availability Zone</strong></p></div><p class="reason">VPC ครอบคลุม Region แต่ Subnet แต่ละแห่งต้องถูกสร้างใน AZ เดียว การสร้าง Subnet ไม่ได้ทำให้ EC2 Instances ถูก Duplicate ข้าม AZ โดยอัตโนมัติ ต้องออกแบบการกระจาย/Replication แยกเอง</p><div class="option-grid"><div class="option "><b>It spans all Regions</b><span>ผิด: VPC อยู่ภายใน Region ไม่ใช่ครอบคลุมทุก Region</span></div><div class="option correct"><b>It resides in one Availability Zone</b><span>ถูก: Subnet หนึ่งอยู่ใน AZ หนึ่งแห่งเท่านั้น</span></div><div class="option "><b>It is an edge location</b><span>ผิด: Edge Location เป็นโครงสร้าง CDN/Edge ไม่ใช่ VPC Subnet</span></div><div class="option incorrect"><b>It automatically duplicates every instance into all AZs</b><span>ผิด: Subnet ไม่ได้ Replicate EC2 ข้าม AZ ให้อัตโนมัติ</span></div></div><p class="cue"><strong>จำให้แม่น:</strong> 1 VPC = 1 Region | 1 Region = multiple AZs | 1 Subnet = 1 AZ</p></div></details><details class="question" data-kind="scored" id="q38"><summary><span class="qnum">Q38</span><span class="qtopic"><b>Consolidated Billing vs IAM Account Boundary</b><small>Billing, Pricing, and Support · L11 — Pricing and Support</small></span><span class="pill scored">Scored</span></summary><div class="qbody"><p class="stem">Which TWO statements about consolidated billing are correct? (Select TWO.)</p><p class="translated"><strong>คำแปล:</strong> เลือกสองข้อความที่ถูกเกี่ยวกับการรวมการเรียกเก็บเงินหลาย AWS Accounts</p><div class="answer-grid"><p><small>ตอบที่เลือก</small><strong class="bad-answer">Eligible usage can be combined for volume pricing + Consolidated billing removes IAM account boundaries</strong></p><p><small>เฉลย</small><strong class="good-answer">Eligible usage can be combined for volume pricing + Eligible RI and Savings Plans benefits can be shared subject to sharing settings</strong></p></div><p class="reason">Consolidated Billing ช่วยรวม Usage ตามเงื่อนไขเพื่อคำนวณ Volume Pricing และแชร์ RI/Savings Plans Discounts ที่เข้าเงื่อนไขตาม Sharing Settings แต่ไม่ได้รวม Security/IAM Boundaries ของ Member Accounts</p><div class="option-grid"><div class="option correct"><b>Eligible usage can be combined for volume pricing</b><span>ถูก: Usage ที่เข้าเกณฑ์สามารถรวมเพื่อรับ Volume Pricing Benefit</span></div><div class="option incorrect"><b>Consolidated billing removes IAM account boundaries</b><span>ผิด: AWS Accounts ยังมี IAM/Root Credentials และ Security Boundaries แยกกัน</span></div><div class="option "><b>An RI purchase always launches a new server in every account</b><span>ผิด: Reserved Instance เป็น Billing Benefit ไม่ใช่การ Launch Servers อัตโนมัติ</span></div><div class="option "><b>All member accounts share root credentials</b><span>ผิด: Root Credentials แยกตาม AWS Account</span></div><div class="option correct"><b>Eligible RI and Savings Plans benefits can be shared subject to sharing settings</b><span>ถูก: Sharing Discounts ทำได้ตาม Eligibility และ Sharing Settings</span></div></div><p class="cue"><strong>จำให้แม่น:</strong> Consolidated Billing = one bill / eligible discounts; NOT shared IAM or root credentials</p></div></details><details class="question" data-kind="scored" id="q43"><summary><span class="qnum">Q43</span><span class="qtopic"><b>Savings Plans Commitment Utilization</b><small>Billing, Pricing, and Support · L11 — Pricing and Support</small></span><span class="pill scored">Scored</span></summary><div class="qbody"><p class="stem">A team buys a Savings Plan for peak usage that occurs only briefly each month. What is the main cost risk?</p><p class="translated"><strong>คำแปล:</strong> ซื้อ Savings Plan อ้างอิง Peak ที่เกิดแค่ช่วงสั้น ๆ ของเดือน มีความเสี่ยงด้านต้นทุนอะไร</p><div class="answer-grid"><p><small>ตอบที่เลือก</small><strong class="bad-answer">Savings Plans automatically lower the commitment each hour</strong></p><p><small>เฉลย</small><strong class="good-answer">The hourly commitment may be underused outside the peak</strong></p></div><p class="reason">Savings Plans ผูก Commitment ด้านยอดใช้ Compute ต่อชั่วโมงสำหรับระยะสัญญา ไม่ลด Commitment ลงเองเมื่อ Workload ลดลง ดังนั้นการซื้อเผื่อ Peak สั้น ๆ อาจเหลือ Unused Commitment ในชั่วโมงส่วนใหญ่</p><div class="option-grid"><div class="option correct"><b>The hourly commitment may be underused outside the peak</b><span>ถูก: Commit สูงเกิน Baseline Usage ทำให้จ่ายเกินส่วนที่คุ้มค่า</span></div><div class="option incorrect"><b>Savings Plans automatically lower the commitment each hour</b><span>ผิด: Commitment ไม่ลดตาม Demand โดยอัตโนมัติ</span></div><div class="option "><b>All unused commitment is always refunded</b><span>ผิด: ไม่สามารถถือว่า Unused Commitment จะได้รับเงินคืนเสมอ</span></div><div class="option "><b>Savings Plans guarantee capacity for the peak</b><span>ผิด: Savings Plans เป็น Pricing Discount ไม่ใช่ Capacity Reservation</span></div></div><p class="cue"><strong>จำให้แม่น:</strong> Savings Plans = fixed hourly spend commitment, not auto-scaling commitment or capacity guarantee</p></div></details><details class="question" data-kind="unscored" id="q55"><summary><span class="qnum">Q55</span><span class="qtopic"><b>AWS Cloud Adoption Framework Perspectives</b><small>Cloud Concepts · L12 — Migrating to the AWS Cloud</small></span><span class="pill unscored">Unscored</span></summary><div class="qbody"><p class="stem">During cloud adoption planning, an organization needs policies for budget allocation, risk control, and resource use aligned with internal regulations. Which AWS Cloud Adoption Framework perspective applies?</p><p class="translated"><strong>คำแปล:</strong> องค์กรต้องกำหนด Policy ด้าน Budget, Risk และ Resource Use ให้เป็นไปตามกฎภายใน ระหว่างวางแผน Cloud Adoption</p><div class="answer-grid"><p><small>ตอบที่เลือก</small><strong class="bad-answer">Business Perspective</strong></p><p><small>เฉลย</small><strong class="good-answer">Governance Perspective</strong></p></div><p class="reason">โจทย์เน้นกรอบควบคุม/นโยบายองค์กร เช่น Budget Allocation, Risk Management และ Internal Regulations ซึ่งเป็น Governance Perspective ส่วน Business Perspective เน้นคุณค่าธุรกิจ/ผลลัพธ์และการลงทุน</p><div class="option-grid"><div class="option correct"><b>Governance Perspective</b><span>ถูก: กำหนด/กำกับ Policies, Risk และ Cloud Governance</span></div><div class="option "><b>People Perspective</b><span>เน้นบุคลากร ทักษะ และการเปลี่ยนผ่านองค์กร</span></div><div class="option "><b>Platform Perspective</b><span>เน้นโครงสร้าง/สถาปัตยกรรมแพลตฟอร์ม Cloud</span></div><div class="option incorrect"><b>Business Perspective</b><span>ผิด: เน้น Business Outcomes, Value และการจัดลำดับ Investments ไม่ใช่การกำกับ Policies เป็นหลัก</span></div></div><p class="cue"><strong>จำให้แม่น:</strong> Policies + risk + compliance controls → Governance | Business outcomes + value → Business</p></div></details><details class="question" data-kind="unscored" id="q59"><summary><span class="qnum">Q59</span><span class="qtopic"><b>Penetration Testing Policy</b><small>Security and Compliance · L09 — Security</small></span><span class="pill unscored">Unscored</span></summary><div class="qbody"><p class="stem">Before penetration testing an AWS workload, what should a customer check?</p><p class="translated"><strong>คำแปล:</strong> ก่อนทำ Penetration Testing บน AWS ลูกค้าต้องตรวจสอบอะไร</p><div class="answer-grid"><p><small>ตอบที่เลือก</small><strong class="bad-answer">Whether all AWS services are always permitted targets</strong></p><p><small>เฉลย</small><strong class="good-answer">The current AWS testing policy and permitted services and conditions</strong></p></div><p class="reason">ต้องอ่านนโยบาย Penetration Testing ปัจจุบันของ AWS ว่าบริการ/รูปแบบการทดสอบใดอนุญาตและมีข้อจำกัดอย่างไร ไม่ควรคิดว่าทุก AWS Service สามารถทดสอบได้โดยไม่ต้องดูเงื่อนไข</p><div class="option-grid"><div class="option correct"><b>The current AWS testing policy and permitted services and conditions</b><span>ถูก: ตรวจ Policy/Scope และเงื่อนไขก่อนทดสอบ</span></div><div class="option incorrect"><b>Whether all AWS services are always permitted targets</b><span>ผิด: ไม่สามารถสรุปว่าบริการทุกตัวเปิดให้ทดสอบได้ทุกรูปแบบ</span></div><div class="option "><b>Whether the support plan automatically authorizes attacks</b><span>ผิด: Support Plan ไม่ใช่การอนุญาต Pentest ทุกประเภท</span></div><div class="option "><b>Only the number of AWS accounts in the organization</b><span>ผิด: จำนวน Accounts ไม่ใช่เกณฑ์อนุญาต Penetration Testing</span></div></div><p class="cue"><strong>จำให้แม่น:</strong> Penetration test → read current AWS permitted services and testing rules</p></div></details><details class="question" data-kind="scored" id="q60"><summary><span class="qnum">Q60</span><span class="qtopic"><b>AMI vs CloudFormation</b><small>Cloud Technology and Services · L02 — Compute in the Cloud / L03 — Compute Services</small></span><span class="pill scored">Scored</span></summary><div class="qbody"><p class="stem">A company needs to launch many EC2 instances with identical operating systems, software, and configuration without reinstalling software manually. What should it use as the template?</p><p class="translated"><strong>คำแปล:</strong> ต้องเปิด EC2 จำนวนมากที่มี OS, Software และ Configuration เหมือนกันโดยไม่ติดตั้งใหม่ทีละเครื่อง</p><div class="answer-grid"><p><small>ตอบที่เลือก</small><strong class="bad-answer">AWS CloudFormation template only</strong></p><p><small>เฉลย</small><strong class="good-answer">Amazon Machine Image (AMI)</strong></p></div><p class="reason">AMI เป็น Image Template ของ EC2 ที่มี OS และ Software/Config ตามที่สร้างไว้สำหรับ Launch Instance ซ้ำ ๆ ส่วน CloudFormation เป็น Infrastructure-as-Code Template ที่สร้าง Resources และสามารถอ้างอิง AMI ได้ แต่ไม่ใช่ตัวเก็บ OS/Software Image โดยตรง</p><div class="option-grid"><div class="option "><b>AWS Systems Manager</b><span>ช่วย Automate/Manage Instances แต่ไม่ใช่ EC2 Boot Image Template ในโจทย์</span></div><div class="option correct"><b>Amazon Machine Image (AMI)</b><span>ถูก: Template ของ EC2 Instance ที่มี OS/Software/Configuration</span></div><div class="option "><b>Amazon EBS snapshot only</b><span>Snapshot เป็น Backup/ต้นทาง Volume แต่ไม่ใช่คำตอบตรงสำหรับ Instance Launch Template ทั้งชุด</span></div><div class="option incorrect"><b>AWS CloudFormation template only</b><span>ผิด: สร้าง Infrastructure Resources จาก Template แต่ไม่ได้แทน AMI ที่บรรจุ OS และ Software</span></div></div><p class="cue"><strong>จำให้แม่น:</strong> Identical preconfigured EC2 OS/Software → AMI | Define Infrastructure Resources → CloudFormation</p></div></details>
+  </section>
+  <section class="panel" id="watchlist">
+    <h2>ตอบถูก แต่ Flag ไว้ทบทวน (8 ข้อ)</h2>
+    <p>รวมรายการที่ผู้ทำข้อสอบ Flag แม้ตอบถูก แยกจาก Wrong Answers เพื่อไม่เพิ่มจำนวนข้อผิดโดยไม่ตั้งใจ</p>
+    <div class="watchgrid"><div class="watch"><span class="qnum">Q15</span><div><b>Repurchase</b><small>Cloud Concepts · Unsure</small><p>Retire custom HR software → subscribe to Workday SaaS = Repurchase (Drop and Shop).</p></div></div><div class="watch"><span class="qnum">Q21</span><div><b>Democratize advanced technologies</b><small>Cloud Concepts</small><p>Use ready-to-use Amazon Translate without an ML team = democratize advanced technologies.</p></div></div><div class="watch"><span class="qnum">Q29</span><div><b>Federation + IAM Role</b><small>Security and Compliance · Unsure</small><p>Existing IdP + workforce federation and temporary role credentials; no shared permanent AWS keys.</p></div></div><div class="watch"><span class="qnum">Q37</span><div><b>EC2 T family</b><small>Cloud Technology and Services</small><p>Low average CPU with short bursts → burstable T family (CPU credits).</p></div></div><div class="watch"><span class="qnum">Q40</span><div><b>HIPAA eligibility &amp; agreements</b><small>Security and Compliance · Unsure</small><p>Check applicable AWS Artifact documents and HIPAA Eligible Services; customer controls still matter.</p></div></div><div class="watch"><span class="qnum">Q49</span><div><b>AWS Business Support+</b><small>Billing, Pricing, and Support</small><p>Report-selected plan for production support needs without a dedicated TAM; support entitlements evolve.</p></div></div><div class="watch"><span class="qnum">Q53</span><div><b>BYOL</b><small>Cloud Concepts</small><p>Bring Your Own License requires checking vendor license/tenancy terms.</p></div></div><div class="watch"><span class="qnum">Q61</span><div><b>WorkSpaces vs AppStream 2.0</b><small>Cloud Technology and Services</small><p>WorkSpaces = managed desktops; AppStream 2.0 = stream individual applications.</p></div></div></div>
+  </section>
+  <section class="panel">
+    <h2>ลำดับทบทวนที่เหมาะกับผลชุดนี้</h2>
+    <p><b>L11 — Pricing and Support:</b> Savings Plans / Consolidated Billing → <b>L12 — Migration:</b> Rehost / Replatform / Repurchase → <b>L04–L05:</b> VPC / AZ / Subnet → <b>L02–L03:</b> AMI / CloudFormation → <b>L09–L10:</b> Compliance Ownership / Penetration Testing → <b>L13:</b> Reliability Principles</p>
+    <p class="note">ชุดนี้เป็น External Mock จากไฟล์ผลสอบที่แนบ ไม่ใช่ Question Bank ของ Local Mock และไม่ได้ถูกนำไปปนกับคะแนน Local Set 1–10 หรือสร้างเป็นข้อสอบใหม่</p>
+  </section>
+  <footer class="footer">Source: Uploaded “Mock Exam - CLF-C02” report dated 2026-11-23, 17:19 UTC. Reported score, responses, and explanations preserved in this analysis. External practice result only; not an AWS exam score guarantee.</footer>
+</main>
+<script>
+  (() => {
+    const buttons = [...document.querySelectorAll('[data-filter]')];
+    const entries = [...document.querySelectorAll('.question')];
+    buttons.forEach(button => button.addEventListener('click', () => {
+      const mode = button.dataset.filter;
+      buttons.forEach(b => b.setAttribute('aria-pressed', String(b === button)));
+      entries.forEach(e => { e.hidden = mode !== 'all' && e.dataset.kind !== mode; });
+    }));
+  })();
+</script>
+</body>
+</html>
