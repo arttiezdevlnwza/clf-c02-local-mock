@@ -10,7 +10,8 @@
   const ICONS = {
     'cloud-concepts':'☁️','well-architected':'🏛️','migration':'🚚','shared-responsibility':'🛡️',
     'iam-security':'🔐','compute-containers':'🖥️','database-storage':'🗄️','networking-global':'🌐',
-    'monitoring-analytics':'📊','billing-support':'💳'
+    'monitoring-analytics':'📊','billing-support':'💳',
+    'analytics-ai-ml':'🧠','frontend-mobile-enduser':'📱'
   };
 
   const totalItems = guide.groups.reduce((sum, group) => sum + group.items.length, 0);
