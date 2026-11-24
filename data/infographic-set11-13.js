@@ -80,7 +80,7 @@
   ]);tag(9,'EMR','OpenSearch','Transcribe','Amazon Q','SES');
   // QuickSight naming has evolved; retain former name as a test cue.
   const p9=pages.find(p=>p.page===9);
-  if(p9)for(const s of p9.sections)s.items=s.items.map(line=>line.replace(/Quick ?Sight|QuickSight/g,'AWS Quick Sight (เดิม QuickSight)'));
+  if(p9)for(const sec of p9.sections)sec.items=sec.items.map(line=>line.replace('Quick Sight = BI visualization','AWS Quick Sight (เดิม QuickSight) = BI visualization').replace('QuickSight ทำ BI','AWS Quick Sight (เดิม QuickSight) ทำ BI'));
   // Domain 4
   section(10,'Capacity, Pricing & Billing Traps',[
     'On-Demand Capacity Reservations = Reserve EC2 Capacity in AZ; Savings Plans = Spend Commitment Discount ไม่ Guarantee Capacity',
