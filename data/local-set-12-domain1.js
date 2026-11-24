@@ -75,11 +75,11 @@
   ],
   [
     "1.3",
-    "A company wants to move a supported virtualized estate as a group to its corresponding AWS-supported hosting solution with minimal application-level changes. Which migration strategy describes moving the environment?",
-    "บริษัทต้องย้าย Virtualized Environment ไป Hosting บน AWS แบบคง Workloads เดิมและแทบไม่เปลี่ยน Application Code เป็น Strategy ใด",
+    "A company moves VMware virtual machines as a group to a compatible virtualization environment hosted on AWS without converting each VM into an individually rehosted EC2 instance. Which strategy describes this move?",
+    "บริษัทต้องย้าย VMware VMs ทั้ง Environment ไป Virtualization Platform ที่รองรับบน AWS โดยไม่แปลงทุก VM เป็น EC2 ใหม่ทีละตัว เป็น Strategy ใด",
     "Rehost|Replatform|Relocate|Repurchase",
     "2",
-    "Relocate ใช้กับการย้าย Infrastructure/Virtualized Environment ไป Cloud โดยคง Application Changes ต่ำ ขณะที่ Rehost เน้นย้าย Application/Server แบบ Lift-and-shift"
+    "Relocate หมายถึงย้าย Virtualized Infrastructure ไปยัง Compatible Cloud Environment โดยเปลี่ยน Application น้อย ต่างจาก Rehost ที่ย้าย Server/App แบบ Lift-and-shift ไป Infrastructure ใหม่"
   ],
   [
     "1.3",
