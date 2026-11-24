@@ -1,5 +1,12 @@
 (() => {
   const defs = {
+    "Total Cost of Ownership (TCO)": "ต้นทุนรวมการเป็นเจ้าของตลอดวงจรชีวิต รวมค่า Hardware, Energy, Facilities, People และการดูแล",
+    "Governance Perspective": "AWS CAF มุมมองการบริหาร Risk, Policies, Controls และ Compliance ขององค์กร",
+    "Business Perspective": "AWS CAF มุมมอง Business Outcomes, Investments และ Value ของ Cloud Adoption",
+    "People Perspective": "AWS CAF มุมมอง Skills, Roles, Culture และ Organizational Change",
+    "Platform Perspective": "AWS CAF มุมมอง Architecture/Infrastructure ของ Cloud Platform",
+    "Operations Perspective": "AWS CAF มุมมอง Operating Model, Processes และ Service Management",
+    "Security Perspective": "AWS CAF มุมมอง Identity, Detection, Protection และ Security Governance",
     "Amazon ECR": "จัดเก็บและแจกจ่าย Container Images พร้อม Version/Tags สำหรับ ECS/EKS",
     "Amazon EMR": "บริการประมวลผล Big Data Frameworks เช่น Apache Spark และ Hadoop บน AWS",
     "Amazon OpenSearch Service": "Managed Search/Log Analytics สำหรับ Index ค้นหาและวิเคราะห์ Logs",
