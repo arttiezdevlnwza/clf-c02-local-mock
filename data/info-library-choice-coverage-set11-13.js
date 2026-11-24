@@ -38,9 +38,11 @@
     ['Edge location','จุดกระจาย CDN/Edge Delivery ที่ CloudFront สามารถ Cache Content ใกล้ผู้ใช้','Cache static content near users','Availability Zone = Host Compute/Storage Workloads ภายใน Region','CloudFront ส่งรูปจาก Edge ใกล้ผู้ใช้'],
     ['Multi-AZ deployment','กระจาย Workload หรือ Standby ไปหลาย Availability Zones ใน Region เดียวเพื่อรองรับ AZ Failure','One AZ fails → other AZ serves','Multi-Region deployment = ทน Outage ทั้ง Region','วาง RDS Multi-AZ Standby ใน AZ สำรอง']
   ]);
+  add('monitoring-analytics',[
+    ['Amazon Quick Sight (formerly QuickSight)','BI Visualization/Dashboards ภายใต้ AWS Quick (ชื่อบริการเดิม Amazon QuickSight/Quick Sight)','Dashboard and interactive business reports','Athena = SQL Data Query; AWS Quick = broader Analytics/AI Experience','ผู้บริหารดู Dashboard ของ KPI รายเดือน']
+  ]);
   add('billing-support',[
     ['On-Demand Instances','EC2 Pay-as-you-use Pricing ไม่ต้องทำ Long-term Discount Commitment','Short or unpredictable EC2 use','Spot = Interruptible Spare Capacity; Savings Plans = Spend Commitment','เปิด EC2 Test Server ชั่วคราว'],
     ['Spot Instances','ใช้ EC2 Spare Capacity ในราคาส่วนลด โดย AWS สามารถ Interrupt/Reclaim ได้','Fault-tolerant / restartable jobs','On-Demand = ไม่มี Interruption จาก Capacity Reclaim แบบ Spot','รัน Batch Jobs ที่ Retry ได้'],
-    ['Amazon Quick Sight (formerly QuickSight)','BI Visualization/Dashboards ภายใต้ AWS Quick (ชื่อบริการเดิม Amazon QuickSight/Quick Sight)','Dashboard and interactive business reports','Athena = SQL Data Query; AWS Quick = broader Analytics/AI Experience','ผู้บริหารดู Dashboard ของ KPI รายเดือน']
   ]);
 })();
