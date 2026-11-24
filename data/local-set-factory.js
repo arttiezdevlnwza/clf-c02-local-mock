@@ -1,5 +1,6 @@
 (() => {
   const defs = {
+    'AWS Audit Manager': 'ช่วยรวบรวมและจัดระเบียบ Audit Evidence สำหรับ Audit Assessments จาก AWS Resources และ Accounts ที่รองรับ',
     "Dedicated Instances": "EC2 Instances บน Hardware ที่แยกจากลูกค้ารายอื่น แต่ไม่ได้ให้ Host-level Visibility/Placement เหมือน Dedicated Hosts",
     "Amazon Quick": "Managed BI และ Analytics Experience ของ AWS สำหรับสร้าง Dashboards/Insights (รวมความสามารถเดิมของ QuickSight)",
     "S3 Lifecycle rules": "กำหนดการย้าย S3 Object ไป Storage Class อื่นหรือ Expire ตามอายุ/เงื่อนไข Lifecycle",
