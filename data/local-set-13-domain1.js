@@ -99,11 +99,11 @@
   ],
   [
     "1.4",
-    "A chief financial officer compares yearly operating spend with large upfront equipment purchases. Which TWO expense categories are being contrasted? (Select TWO.)",
-    "CFO เปรียบเทียบรายจ่ายดำเนินงานแต่ละปี กับเงินก้อนซื้อ Hardware ล่วงหน้า เป็นการเทียบสอง Expense Categories ใด",
+    "A CFO compares a data center's one-time hardware purchase with AWS operating bills that vary with actual usage. Which TWO expense concepts describe these different costs? (Select TWO.)",
+    "CFO เปรียบเทียบการซื้อ Data Center Hardware ล่วงหน้าเป็นก้อน กับ AWS Operating Bills ที่แปรผันตาม Usage จริง สองแนวคิดค่าใช้จ่ายใดตรง",
     "Economies of scale|Capital expenditure|Variable expense|Rightsizing|Global reach",
     "1,2",
-    "CapEx เป็นเงินลงทุนซื้อ Physical Assets ล่วงหน้า ส่วน Variable Expense ขึ้นลงตาม Usage และ Operating Model ของ Cloud"
+    "Capital expenditure คือเงินลงทุนซื้อ Hardware/Assets ล่วงหน้า ส่วน Variable expense เป็นค่าใช้จ่ายดำเนินงานที่ขึ้นลงตาม Actual Cloud Usage"
   ],
   [
     "1.4",
