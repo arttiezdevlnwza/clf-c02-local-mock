@@ -14,7 +14,7 @@
   const esc = value => String(value == null ? '' : value).replace(/[&<>"']/g, c => ({
     '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'
   })[c]);
-  const ICONS = ['☁️','🏛️','🛡️','🔐','🖥️','🗄️','🌐','📊','🔁','💳'];
+  const ICONS = ['☁️','🏛️','🛡️','🔐','🖥️','🗄️','🌐','📊','🔁','💳','🚚','📱','💸'];
 
   function openTab(kind) {
     const showInfographic = kind === 'infographic';
