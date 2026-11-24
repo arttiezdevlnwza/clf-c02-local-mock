@@ -42,11 +42,17 @@
   ],
   [
     "2.2",
-    "An auditor downloads an AWS SOC report and assumes the company's application is automatically certified as compliant. Which conclusion is correct?",
-    "Auditor ดาวน์โหลด AWS SOC Report แล้วคิดว่า Application ขององค์กรผ่าน Compliance อัตโนมัติ ข้อสรุปใดถูกต้อง",
-    "AWS Artifact|AWS Audit Manager|The customer|AWS Trusted Advisor",
-    "2",
-    "AWS Report ยืนยัน Controls ในขอบเขตผู้ให้บริการ ไม่รับรอง Customer Application/Configurations โดยอัตโนมัติ ลูกค้าต้องทำ Compliance Controls ของตน"
+    "An auditor reviews AWS's SOC report for a cloud service. Which statement correctly describes the customer's own application compliance obligations?",
+    "Auditor อ่าน AWS SOC Report ของ Cloud Service แล้ว ข้อความใดอธิบาย Compliance ของ Application ฝั่งลูกค้าได้ถูกต้อง",
+    "Customer application controls must still meet applicable requirements|An AWS provider report certifies all customer configurations automatically|Any application on AWS is automatically compliant with every industry rule|A customer support plan replaces the customer's compliance assessment",
+    "0",
+    "AWS Report รับรอง Controls ภายในขอบเขต AWS แต่ไม่รับรอง Application/Configuration ของลูกค้าโดยอัตโนมัติ ลูกค้ายังต้องทำ Controls ที่เกี่ยวข้อง",
+    [
+      "ถูก: ลูกค้ายังต้องจัด Controls ตามกฎหมาย/นโยบายของตนเอง",
+      "ผิด: Provider Report ไม่ครอบคลุม Customer Configuration ทุกส่วน",
+      "ผิด: Industry Compliance ยังขึ้นกับ Service Eligibility และ Customer Controls",
+      "ผิด: Support Plan ไม่ใช่ใบรับรอง Compliance"
+    ]
   ],
   [
     "2.2",
@@ -82,11 +88,11 @@
   ],
   [
     "2.2",
-    "A web application needs clients to send login credentials across the internet without exposing them in transit. What security mechanism should its HTTPS endpoint use?",
-    "Web Application ต้องรับ Login Credentials ผ่าน Internet โดยป้องกันการดักอ่านระหว่างส่งข้อมูล ต้องใช้ Security Mechanism ใด",
+    "A web application must use HTTPS for browser logins, and its team wants AWS to issue and renew the endpoint's TLS certificates. Which AWS service manages those certificates?",
+    "เว็บต้องใช้ HTTPS ตอน Login และทีมอยากให้ AWS ช่วยออกและ Renew TLS Certificates ของ Endpoint ควรใช้บริการใด",
     "AWS KMS|AWS Certificate Manager|AWS CloudHSM|AWS Secrets Manager",
     "1",
-    "AWS Certificate Manager จัดหา/บริหาร TLS Certificates สำหรับ HTTPS ที่เข้ารหัสข้อมูลระหว่างทาง ขณะที่ KMS เน้น Cryptographic Keys สำหรับ Encryption และ Secrets Manager เก็บ Secrets"
+    "AWS Certificate Manager ใช้ Provision/Manage TLS Certificates สำหรับ HTTPS Endpoints ที่รองรับ ต่างจาก KMS ที่จัด Encryption Keys และ Secrets Manager ที่เก็บ Application Credentials"
   ],
   [
     "2.3",
@@ -114,19 +120,31 @@
   ],
   [
     "2.3",
-    "A root user rarely signs in, but the company wants a second authentication factor whenever it does. Which security control should be added to that account?",
-    "Root User ใช้งานไม่บ่อย แต่ต้องการให้ทุกครั้งที่ Login ต้องยืนยันตัวตนอย่างน้อยอีกหนึ่งปัจจัย ควรเปิดใช้อะไร",
-    "AWS IAM|IAM Identity Center|Amazon Cognito|AWS Organizations",
+    "An organization wants to reduce risk if the AWS root user's password is compromised. Which control should it apply to the root sign-in?",
+    "องค์กรต้องลดความเสี่ยงเมื่อ AWS Root Password รั่ว ควรใช้ Security Control ใดกับ Root Sign-in",
+    "Enable multi-factor authentication for the root user|Share the root password among the operations team|Create permanent root access keys for daily automation|Disable login auditing because root usage is rare",
     "0",
-    "การเปิด MFA สำหรับ Root User เป็น AWS Account/IAM Security Best Practice ส่วน Identity Center ใช้ Workforce Sign-in ข้าม Accounts ไม่แทนการป้องกัน Root Sign-in"
+    "MFA ช่วยเพิ่มปัจจัยยืนยันตัวตนเมื่อ Root Password รั่ว และควรหลีกเลี่ยงการใช้ Root ในงานประจำ",
+    [
+      "ถูก: MFA เพิ่มการพิสูจน์ตัวตนมากกว่า Password อย่างเดียว",
+      "ผิด: Shared Root Password เสี่ยงรั่วและลด Accountability",
+      "ผิด: Permanent Root Keys มีสิทธิ์สูงและไม่เหมาะกับ Automation",
+      "ผิด: ปิด Audit Logging ไม่ลดความเสี่ยงจาก Root Account"
+    ]
   ],
   [
     "2.3",
-    "A company allows S3 in its organization service control policy, but an application role still has no S3 allow permission. What is the correct interpretation?",
-    "องค์กรมี SCP ที่ไม่ได้ห้าม S3 แต่ Application Role ยังไม่มี Allow Policy สำหรับ S3 ควรตีความอย่างไร",
-    "AWS Organizations|AWS IAM|IAM Access Analyzer|AWS Control Tower",
-    "1",
-    "SCP กำหนด Permission Boundary ระดับ Organization ไม่ได้ Grant สิทธิ์เอง Role ยังต้องมี Applicable IAM Allow Policy เพื่อเข้าถึง S3"
+    "An AWS Organizations SCP does not deny S3, but an application role has no IAM allow permission for a bucket. Which statement is accurate?",
+    "SCP ของ AWS Organizations ไม่ได้ Deny S3 แต่ Application Role ไม่มี IAM Allow Policy สำหรับ Bucket ข้อความใดถูก",
+    "The role still requires an applicable IAM or resource-based allow|The SCP alone grants S3 access to the role|All accounts in one organization automatically share S3 permissions|Control Tower supplies an implicit allow for every member account",
+    "0",
+    "SCP กำหนด Maximum Permissions แต่ไม่ Grant สิทธิ์ด้วยตัวเอง Role ต้องมี Applicable IAM/Resource-based Allow และไม่มี Explicit Deny",
+    [
+      "ถูก: SCP ไม่ Grant Permissions ต้องมี Allow ที่ใช้ได้จริง",
+      "ผิด: SCP Allow ไม่ได้สร้าง IAM Permission ให้ Role",
+      "ผิด: Consolidated/Organizations ไม่ Merge IAM Boundaries",
+      "ผิด: Control Tower ไม่ได้มอบ S3 Permissions โดยอัตโนมัติ"
+    ]
   ],
   [
     "2.4",
