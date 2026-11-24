@@ -1,5 +1,28 @@
 (() => {
   const defs = {
+    "Amazon ECR": "จัดเก็บและแจกจ่าย Container Images พร้อม Version/Tags สำหรับ ECS/EKS",
+    "Amazon EMR": "บริการประมวลผล Big Data Frameworks เช่น Apache Spark และ Hadoop บน AWS",
+    "Amazon OpenSearch Service": "Managed Search/Log Analytics สำหรับ Index ค้นหาและวิเคราะห์ Logs",
+    "Amazon WorkSpaces Secure Browser": "Managed Browser แบบ Session Isolation สำหรับเข้าถึง Web Applications อย่างปลอดภัย",
+    "Amazon Transcribe": "แปลง Speech/Audio เป็น Text",
+    "Amazon Q": "Generative AI Assistant สำหรับตอบคำถามและช่วยงานตามรุ่นผลิตภัณฑ์",
+    "AWS Compute Optimizer": "แนะนำขนาด/ประเภท Compute Resources จาก Utilization Metrics",
+    "AWS License Manager": "ติดตาม/บริหาร Software Licenses และ License Rules",
+    "AWS Service Catalog": "จัด Portfolio ของ IT Products ที่อนุมัติให้ Provision",
+    "Service Quotas": "แสดง/จัดการ Quotas และร้องขอเพิ่ม Service Limits ตามที่รองรับ",
+    "AWS PrivateLink": "เชื่อม AWS Services/Endpoint Services ผ่าน VPC Endpoint แบบ Private",
+    "AWS Client VPN": "Managed VPN ให้ Remote Users/Devices เชื่อม AWS Networks จาก Client",
+    "AWS CloudHSM": "Dedicated Hardware Security Modules ที่ลูกค้าควบคุมสำหรับ Cryptographic Keys/Operations",
+    "AWS Directory Service": "จัด Managed Directory เช่น Active Directory เพื่อรองรับ Authentication",
+    "AWS Resource Access Manager": "แชร์ AWS Resources ที่รองรับข้าม AWS Accounts ตามเงื่อนไข",
+    "AWS Elastic Disaster Recovery": "Replicate Source Servers และจัด Recovery Servers ใน AWS สำหรับ DR",
+    "AWS Prescriptive Guidance": "Patterns และ Playbooks สำหรับ Cloud Migration/Modernization",
+    "AWS Professional Services": "ทีมที่ปรึกษา AWS ช่วยโครงการ Cloud Transformation ตามขอบเขตบริการ",
+    "Repurchase": "แทน Application เดิมด้วยผลิตภัณฑ์/SaaS สำเร็จรูป (Drop and Shop)",
+    "Relocate": "ย้าย Infrastructure Workload โดยเปลี่ยน Application น้อย ตาม Platform ที่รองรับ",
+    "Bring Your Own License (BYOL)": "นำ Software Licenses ที่มีอยู่มาใช้ตาม Vendor License Terms",
+    "AWS Service Health": "ข้อมูลสถานะการให้บริการ AWS ไม่ใช่ Metric ของ Workload เอง",
+    "Fixed expense": "รายจ่ายที่ไม่แปรผันตาม Usage ระยะสั้น",
     'AWS': 'ผู้ให้บริการ Cloud ที่รับผิดชอบ Physical Data Centers, Servers และ Virtualization ใต้ Managed Services',
     'The customer': 'ผู้ใช้ AWS รับผิดชอบข้อมูล Identity Access Policies และ Guest OS ที่จัดการเองตามประเภทบริการ',
     'Guest operating system': 'ระบบปฏิบัติการภายใน EC2 Instance ซึ่งลูกค้ามีหน้าที่ Patch และ Configure',
@@ -347,14 +370,14 @@
   function build(setNumber,rows){
     const errors=[],domainCount={},taskCount={},typeCount={},seen=new Set();
     const questions=rows.map((r,i)=>{
-      const [task,question,questionTh,optionString,correctString,why]=r;
+      const [task,question,questionTh,optionString,correctString,why,optionReasons]=r;
       const options=optionString.split('|'),correct=correctString.split(',').map(Number);
       const type=correct.length===1?'single':'multiple';
       const choices=Object.fromEntries(options.map((o,j)=>[String.fromCharCode(65+j),o]));
       const answer=correct.map(j=>String.fromCharCode(65+j));
       const explanation=options.map((o,j)=>{
         const letter=String.fromCharCode(65+j);
-        return correct.includes(j)?'✅ '+letter+' — '+why:'❌ '+letter+' — '+explainDistractor(o,correct.map(index=>options[index]),why);
+        return correct.includes(j)?'✅ '+letter+' — '+why:'❌ '+letter+' — '+(Array.isArray(optionReasons) && optionReasons[j] ? optionReasons[j] : explainDistractor(o,correct.map(index=>options[index]),why));
       }).join('\n');
       const domain=Number(task[0]);
       domainCount[domain]=(domainCount[domain]||0)+1;taskCount[task]=(taskCount[task]||0)+1;typeCount[type]=(typeCount[type]||0)+1;
@@ -365,7 +388,7 @@
       if(type==='single'&&(options.length!==4||correct.length!==1))errors.push('Bad single '+(i+1));
       if(type==='multiple'&&(options.length<5||!question.includes('Select TWO')||correct.length!==2))errors.push('Bad multiple '+(i+1));
       if(new Set(options).size!==options.length)errors.push('Duplicate options '+(i+1));
-      if(options.some(o=>!defs[o]))errors.push('Missing option definition '+(i+1)+': '+options.filter(o=>!defs[o]).join(','));
+      if(options.some((o,j)=>!defs[o] && !(Array.isArray(optionReasons) && optionReasons[j])))errors.push('Missing option definition '+(i+1)+': '+options.filter((o,j)=>!defs[o] && !(Array.isArray(optionReasons) && optionReasons[j])).join(','));
       if(correct.some(j=>j<0||j>=options.length))errors.push('Bad answer '+(i+1));
       return {id:i+1,domain,domainName:domainNames[domain],task,type,question,questionTh,choices,answer,explanation,vocab:[]};
     });
