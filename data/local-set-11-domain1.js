@@ -69,9 +69,9 @@
     "1.3",
     "A cloud adoption committee is drafting organization-wide controls for expenditure approvals, risks, and policies. Which AWS CAF perspective is most directly concerned?",
     "คณะกรรมการ Cloud กำหนด Policies ควบคุมการอนุมัติค่าใช้จ่าย ความเสี่ยง และกฎองค์กร นี่เป็นมุมมองใดของ AWS CAF",
-    "AWS Organizations|AWS Well-Architected Framework|AWS Cloud Adoption Framework|AWS Control Tower",
-    "2",
-    "AWS CAF ให้กรอบ Governance Perspective สำหรับองค์กร ทั้ง Policies, Risk และ Control Processes ส่วน Organizations/Control Tower เป็นบริการช่วยใช้ Governance ไม่ใช่ชื่อ Framework ที่ถาม"
+    "Governance Perspective|Business Perspective|People Perspective|Platform Perspective",
+    "0",
+    "Governance Perspective ของ AWS CAF ครอบคลุม Risk, Policies, Expenditure Controls และ Compliance ส่วน Business Perspective เน้น Business Outcomes และการลงทุน"
   ],
   [
     "1.3",
@@ -101,9 +101,9 @@
     "1.4",
     "A finance manager counts power, facilities, hardware depreciation, staff effort, and support contracts when comparing on-premises with cloud. Which framework helps assess the full ownership cost?",
     "Finance รวมค่าไฟ สถานที่ ค่าเสื่อม Hardware บุคลากร และ Support เพื่อเทียบต้นทุน On-premises กับ Cloud แนวคิดการรวมต้นทุนทั้งหมดคืออะไร",
-    "Economies of scale|Capital expenditure|Variable expense|Pay-as-you-go",
+    "Capital expenditure|Total Cost of Ownership (TCO)|Economies of scale|Pay-as-you-go",
     "1",
-    "CapEx เป็นหนึ่งในหมวดค่าใช้จ่ายลงทุน เช่น ค่า Hardware ที่ซื้อเอง แต่ TCO ต้องรวมทั้ง Direct/Indirect Costs ข้อสอบนี้เน้นส่วนการลงทุนล่วงหน้าเป็นหมวดที่ใกล้เคียงที่สุด"
+    "TCO รวมต้นทุนทั้งหมดของการเป็นเจ้าของระบบทั้ง CapEx, ค่าใช้จ่ายดำเนินงาน, บุคลากรและ Facilities เพื่อประเมิน On-premises เทียบ Cloud"
   ],
   [
     "1.4",
