@@ -339,7 +339,7 @@
       <div class="dashboard-stat-card">
         <span>Completed sets</span>
         <strong>${data.completedSets}/${sets.length}</strong>
-        <small>Local Mock Set 1–10</small>
+        <small>Local Mock Set 1–13</small>
       </div>
       <div class="dashboard-stat-card concept-stat">
         <span>Concept / Recall gaps</span>
