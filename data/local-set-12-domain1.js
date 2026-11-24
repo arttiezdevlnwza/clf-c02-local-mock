@@ -115,11 +115,17 @@
   ],
   [
     "1.4",
-    "A vendor agreement prohibits cloud use of an existing on-premises license. What must a customer consider before assuming a BYOL cost advantage?",
-    "License เดิมของ Vendor ห้ามนำไปใช้บน Cloud ลูกค้าควรพิจารณาเงื่อนไขใดก่อนคิดว่าจะประหยัดด้วย BYOL",
-    "Savings Plans|Reserved Instances|AWS Marketplace|Bring Your Own License (BYOL)",
-    "3",
-    "BYOL ทำได้เฉพาะเมื่อ Vendor Licensing Terms อนุญาต ต้องตรวจ License Eligibility ไม่ใช่ถือว่าซื้อ Software เดิมแล้วจะย้ายไป AWS ได้เสมอ"
+    "A vendor agreement prohibits using an existing on-premises database license on AWS. Which action should a customer take before choosing BYOL to reduce migration costs?",
+    "Vendor License เดิมระบุห้ามใช้บน AWS ก่อนเลือก BYOL เพื่อลดค่า Migration ลูกค้าควรทำสิ่งใด",
+    "Verify cloud-use eligibility and licensing terms with the vendor|Assume all on-premises licenses transfer to EC2|Buy Reserved Instances to make the license portable|Use a Savings Plan to override the software license",
+    "0",
+    "BYOL ต้องตรวจ Vendor License Entitlements/Cloud Eligibility และเงื่อนไข Tenancy ก่อนเสมอ ไม่สามารถใช้ Pricing Commitments แทนสิทธิ์ Software License ได้",
+    [
+      "ถูก: ตรวจ Vendor Agreement และ Cloud Eligibility ก่อนใช้ BYOL",
+      "ผิด: License เดิมไม่จำเป็นต้องอนุญาตให้ใช้บน AWS",
+      "ผิด: RI Discount ไม่เปลี่ยนเงื่อนไข Vendor License",
+      "ผิด: Savings Plans ลด Compute Cost ไม่เปลี่ยน License Rights"
+    ]
   ],
   [
     "1.4",
