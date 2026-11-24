@@ -1,5 +1,14 @@
 (() => {
   const defs = {
+    "Dedicated Instances": "EC2 Instances บน Hardware ที่แยกจากลูกค้ารายอื่น แต่ไม่ได้ให้ Host-level Visibility/Placement เหมือน Dedicated Hosts",
+    "Amazon Quick": "Managed BI และ Analytics Experience ของ AWS สำหรับสร้าง Dashboards/Insights (รวมความสามารถเดิมของ QuickSight)",
+    "S3 Lifecycle rules": "กำหนดการย้าย S3 Object ไป Storage Class อื่นหรือ Expire ตามอายุ/เงื่อนไข Lifecycle",
+    "T family (burstable)": "EC2 Burstable Instance Family ใช้ CPU Credits เพื่อรองรับ Bursts จาก Low CPU Baseline",
+    "M family (general purpose)": "EC2 General-purpose Instance Family สมดุล Compute/Memory/Network",
+    "R family (memory optimized)": "EC2 Instance Family สำหรับ Workload ที่ต้องใช้ Memory สูง",
+    "I family (storage optimized)": "EC2 Instance Family เน้น Storage IO และ Local Instance Storage",
+    "Data transfer out": "ข้อมูลที่ส่งออกจาก AWS ไปผู้ใช้หรือปลายทางตามเส้นทางที่คิด Data Transfer Charges",
+    "Data transfer in": "ข้อมูลที่ส่งจากผู้ใช้หรือปลายทางเข้าสู่ AWS",
     "Total Cost of Ownership (TCO)": "ต้นทุนรวมการเป็นเจ้าของตลอดวงจรชีวิต รวมค่า Hardware, Energy, Facilities, People และการดูแล",
     "Governance Perspective": "AWS CAF มุมมองการบริหาร Risk, Policies, Controls และ Compliance ขององค์กร",
     "Business Perspective": "AWS CAF มุมมอง Business Outcomes, Investments และ Value ของ Cloud Adoption",
