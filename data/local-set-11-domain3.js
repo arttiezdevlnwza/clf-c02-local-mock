@@ -51,11 +51,17 @@
   ],
   [
     "3.3",
-    "A small website's CPU is low most hours but occasionally spikes for short periods. Which EC2 capability is a suitable cost-conscious starting point?",
-    "เว็บไซต์เล็กใช้ CPU ต่ำเกือบทั้งวัน แต่มี Burst สั้น ๆ เป็นครั้งคราว การเลือก EC2 แบบใดเหมาะเริ่มต้นโดยคิดต้นทุน",
-    "AWS Compute Optimizer|Amazon Lightsail|Amazon EC2|AWS Batch",
-    "2",
-    "EC2 Burstable T Instance Family ใช้ CPU Credits รองรับ Bursts ได้ จึงเหมาะกับ Low Baseline CPU + Short Spikes กว่า Compute Optimizer ที่เป็นบริการแนะนำขนาด ไม่ใช่ตัวรัน Workload"
+    "A small web app has a very low CPU baseline but brief compute bursts. Which EC2 instance family is optimized for that pattern rather than sustained high compute use?",
+    "Web App ใช้ CPU ต่ำเป็นพื้นฐานแต่ Burst สั้น ๆ ควรเลือก EC2 Instance Family แบบใดแทนการจ่ายเพื่อ Sustained High Compute",
+    "T family (burstable)|M family (general purpose)|R family (memory optimized)|I family (storage optimized)",
+    "0",
+    "T Family ใช้ CPU Credits รองรับ Short Bursts เหมาะ Low Average CPU ขณะที่ M/R/I เน้น General-purpose, High Memory และ Local Storage ตามลำดับ",
+    [
+      "ถูก: T Family เหมาะ CPU Baseline ต่ำและ Burst สั้นโดยใช้ Credits",
+      "M Family เหมาะ Compute ทั่วไปที่ต้องการ Performance ค่อนข้างสม่ำเสมอ",
+      "R Family เน้น Memory-intensive Workloads ไม่ใช่ Short CPU Bursts",
+      "I Family เน้น Local Storage/IO Performance ไม่ใช่ Burstable CPU"
+    ]
   ],
   [
     "3.3",
@@ -131,11 +137,17 @@
   ],
   [
     "3.6",
-    "A company has S3 objects that are read frequently during the first 30 days and then are rarely accessed. Which S3 capability moves them automatically based on age?",
-    "บริษัทมี S3 Objects อ่านบ่อยเดือนแรก จากนั้นแทบไม่ใช้ ต้องการย้าย Storage Class ตามอายุ Object โดยอัตโนมัติ ใช้ความสามารถใด",
-    "Amazon S3 Intelligent-Tiering|AWS Backup|AWS DataSync|Amazon S3",
-    "3",
-    "S3 Lifecycle Rules ให้กำหนด Transition ตามอายุ Object ไป Storage Classes ที่เหมาะสม ขณะที่ Intelligent-Tiering ใช้ Automation ตามรูปแบบ Access โดยไม่กำหนด Time-based Rule เอง"
+    "A business reads S3 objects frequently for a month and then moves them to lower-cost storage classes based on each object's age. Which S3 feature automates that time-based transition?",
+    "บริษัทอ่าน S3 Objects บ่อยช่วงเดือนแรก จากนั้นต้องย้ายไป Storage Class ราคาถูกตามอายุ Object โดยอัตโนมัติ ใช้ Feature ใด",
+    "S3 Lifecycle rules|Amazon S3 Intelligent-Tiering|AWS Backup|AWS DataSync",
+    "0",
+    "S3 Lifecycle Rules ใช้กำหนด Time-based Transition/Expiration ตามอายุ Object ส่วน Intelligent-Tiering เปลี่ยน Tier ตาม Access Patterns ไม่ใช่ Rule ตามอายุที่กำหนดเอง",
+    [
+      "ถูก: Lifecycle Configuration กำหนด Transition ตาม Object Age ได้",
+      "Intelligent-Tiering ติดตาม Access Patterns เพื่อปรับ Tier ไม่ใช่ Time-based Lifecycle Rule",
+      "AWS Backup เน้น Backup Plans/Retention ของ Workloads ไม่ใช่ S3 Object Transitions",
+      "DataSync เป็น Data Transfer/Synchronization ไม่ใช่ S3 Lifecycle"
+    ]
   ],
   [
     "3.7",
