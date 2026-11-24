@@ -157,9 +157,9 @@
     "3.7",
     "An executive wants interactive business dashboards over curated cloud data, not raw SQL query execution. Which analytics product is intended for visual reports?",
     "ผู้บริหารต้องการ Interactive Business Dashboards จาก Cloud Data ที่จัดเตรียมแล้ว ไม่ได้ต้องการรัน Raw SQL อย่างเดียว ใช้เครื่องมือใด",
-    "Amazon Athena|Amazon Redshift|AWS Glue|Amazon Quick Sight",
+    "Amazon Athena|Amazon Redshift|AWS Glue|Amazon Quick",
     "3",
-    "Amazon Quick (เดิม Quick Sight) เน้น BI Visualization/Dashboards ส่วน Athena Query S3 ผ่าน SQL และ Glue ทำ Data Integration/ETL"
+    "Amazon Quick (บริการ BI/Analytics ที่รวมความสามารถเดิมของ QuickSight) สร้าง Dashboards/Insights ส่วน Athena ใช้ SQL Query ข้อมูล S3 และ Glue เน้น Data Integration"
   ],
   [
     "3.8",
