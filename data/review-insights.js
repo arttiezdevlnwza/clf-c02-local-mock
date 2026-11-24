@@ -6135,3 +6135,1053 @@ window.REVIEW_INSIGHTS = window.REVIEW_INSIGHTS || {
   "languageTrend": [],
   "languageFocus": []
 };
+
+window.REVIEW_INSIGHTS.sets["local-set-11"] = {
+  "title": "Local Mock Set 11",
+  "note": "24 Nov 2026 · 54/65 correct (83.1%) · 11 wrong + 18 correct flagged · 9 Explain More, 6 English Unclear, 4 Concept / Recall Gap, 2 Clue / Distractor Gap; flags may overlap.",
+  "items": [
+    {
+      "questionId": 2,
+      "key": "local-set-11:q2",
+      "topic": "AWS Prescriptive Guidance vs APN",
+      "type": "confidence",
+      "rawFlags": [
+        "🟡 Explain More",
+        "📘 English Unclear"
+      ],
+      "reviewedCauses": [
+        "confidence",
+        "language"
+      ],
+      "note": "Correct; flagged for review | AWS Prescriptive Guidance รวบรวม Patterns/Playbooks ด้าน Migration/Modernization ส่วน Partner Network ค้นหาพันธมิตรและ Marketplace ค้นหา Software/Offerings"
+    },
+    {
+      "questionId": 3,
+      "key": "local-set-11:q3",
+      "topic": "OpenSearch vs CloudWatch / Athena / Quick Sight",
+      "type": "concept",
+      "rawFlags": [
+        "🧠 Concept / Recall Gap"
+      ],
+      "reviewedCauses": [
+        "concept"
+      ],
+      "note": "Correct; flagged for review | OpenSearch Service เป็น Managed Search/Log Analytics Engine สำหรับ Indexed Log Search ส่วน Athena SQL Query บน S3 และ Quick Sight สร้าง BI Dashboards"
+    },
+    {
+      "questionId": 4,
+      "key": "local-set-11:q4",
+      "topic": "Variable expense vs CapEx",
+      "type": "review",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "note": "Wrong | Variable expense เปลี่ยนตามการใช้ทรัพยากรจริง ต่างจาก CapEx ที่ลงทุนซื้อ Asset ล่วงหน้าและ Fixed expense ที่ไม่แปรตามการใช้ระยะสั้น"
+    },
+    {
+      "questionId": 5,
+      "key": "local-set-11:q5",
+      "topic": "Reliability — Stop guessing capacity",
+      "type": "review",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "note": "Wrong | Stop guessing capacity เป็น Design Principle ภายใต้ Reliability เพื่อลดการเตรียม Capacity ผิด ส่วน Performance Efficiency เน้นการเลือก/ใช้ทรัพยากรให้ตอบ Performance Requirements"
+    },
+    {
+      "questionId": 7,
+      "key": "local-set-11:q7",
+      "topic": "Amplify vs Cognito / Beanstalk / API Gateway",
+      "type": "confidence",
+      "rawFlags": [
+        "🟡 Explain More"
+      ],
+      "reviewedCauses": [
+        "confidence"
+      ],
+      "note": "Correct; flagged for review | Amplify ช่วยสร้าง/Deploy Frontend Web/Mobile Apps และ Integrate Backend Services ส่วน Cognito เป็น Identity Component และ API Gateway เป็น API Front Door"
+    },
+    {
+      "questionId": 9,
+      "key": "local-set-11:q9",
+      "topic": "Global Accelerator vs Route 53 / CloudFront / ELB",
+      "type": "confidence",
+      "rawFlags": [
+        "🟡 Explain More"
+      ],
+      "reviewedCauses": [
+        "confidence"
+      ],
+      "note": "Correct; flagged for review | Global Accelerator ใช้ Anycast Static IPs และ AWS Global Network ไปยัง Healthy Regional Endpoints ขณะที่ CloudFront ทำ CDN Caching และ Route 53 เป็น DNS Routing"
+    },
+    {
+      "questionId": 10,
+      "key": "local-set-11:q10",
+      "topic": "Data transfer out",
+      "type": "confidence",
+      "rawFlags": [
+        "🟡 Explain More"
+      ],
+      "reviewedCauses": [
+        "confidence"
+      ],
+      "note": "Correct; flagged for review | Data Transfer Out จาก AWS ไป Internet โดยทั่วไปมีค่าใช้จ่ายตามการใช้งาน ส่วน Data Transfer In อาจมีนโยบายราคาแตกต่างและไม่ตอบโจทย์เส้นทาง Outbound นี้"
+    },
+    {
+      "questionId": 15,
+      "key": "local-set-11:q15",
+      "topic": "S3 Lifecycle vs Intelligent-Tiering",
+      "type": "review",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "note": "Wrong | S3 Lifecycle Rules ใช้กำหนด Time-based Transition/Expiration ตามอายุ Object ส่วน Intelligent-Tiering เปลี่ยน Tier ตาม Access Patterns ไม่ใช่ Rule ตามอายุที่กำหนดเอง"
+    },
+    {
+      "questionId": 23,
+      "key": "local-set-11:q23",
+      "topic": "RDS shared responsibility",
+      "type": "language",
+      "rawFlags": [
+        "📘 English Unclear"
+      ],
+      "reviewedCauses": [
+        "language"
+      ],
+      "note": "Correct; flagged for review | AWS ดูแล Physical Hardware และ Underlying Managed Infrastructure ของ RDS ขณะที่ลูกค้าดูแล Data, Schema และ Access Permissions"
+    },
+    {
+      "questionId": 24,
+      "key": "local-set-11:q24",
+      "topic": "Firewall Manager vs WAF / Shield",
+      "type": "confidence",
+      "rawFlags": [
+        "🟡 Explain More"
+      ],
+      "reviewedCauses": [
+        "confidence"
+      ],
+      "note": "Correct; flagged for review | Firewall Manager กระจาย/บังคับใช้ Security Policies ข้าม AWS Accounts ส่วน WAF เป็นบริการกรอง HTTP Requests จริง"
+    },
+    {
+      "questionId": 27,
+      "key": "local-set-11:q27",
+      "topic": "Consolidated billing and discount sharing",
+      "type": "confidence",
+      "rawFlags": [
+        "🟡 Explain More"
+      ],
+      "reviewedCauses": [
+        "confidence"
+      ],
+      "note": "Correct; flagged for review | Consolidated Billing อาจรวม Eligible Usage เพื่อ Volume Discounts และแชร์ RI/Savings Plans Benefits ตาม Eligibility/Sharing Settings แต่ Accounts ยังมี IAM/Root Security Boundaries แยกกัน / Consolidated Billing อาจรวม Eligible Usage เพื่อ Volume Discounts และแชร์ RI/Savings Plans Benefits ตาม Eligibility/Sharing Settings แต่ Accounts ยังมี IAM/Root Security Boundaries แยกกัน"
+    },
+    {
+      "questionId": 28,
+      "key": "local-set-11:q28",
+      "topic": "IAM Identity Center vs Cognito",
+      "type": "review",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "note": "Wrong | IAM Identity Center ใช้ Workforce SSO และ Permission Sets เพื่อเข้าถึง AWS Accounts ต่างจาก Cognito ที่จัดการ App End Users"
+    },
+    {
+      "questionId": 29,
+      "key": "local-set-11:q29",
+      "topic": "PrivateLink vs NAT / VPN",
+      "type": "concept",
+      "rawFlags": [
+        "🧠 Concept / Recall Gap"
+      ],
+      "reviewedCauses": [
+        "concept"
+      ],
+      "note": "Correct; flagged for review | PrivateLink ให้ Private Connectivity ถึง Endpoint Services ผ่าน VPC Endpoints โดยไม่ต้องมี Public Internet Routing หรือ NAT Gateway"
+    },
+    {
+      "questionId": 31,
+      "key": "local-set-11:q31",
+      "topic": "Compute Optimizer vs Pricing Calculator",
+      "type": "review",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "note": "Wrong | Compute Optimizer วิเคราะห์ Utilization/Performance Metrics เพื่อแนะนำ Resource Type/Size ส่วน Cost Explorer แสดง Actual Costs/Trends และ Pricing Calculator ประเมินราคาก่อนใช้"
+    },
+    {
+      "questionId": 33,
+      "key": "local-set-11:q33",
+      "topic": "EMR vs Glue / Redshift / Athena",
+      "type": "review",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "note": "Wrong | EMR รองรับ Big Data Frameworks เช่น Spark/Hadoop ใน Managed Clusters ส่วน Athena คือ Serverless SQL Query และ Glue เน้น Data Integration/ETL"
+    },
+    {
+      "questionId": 34,
+      "key": "local-set-11:q34",
+      "topic": "CloudHSM vs KMS",
+      "type": "concept",
+      "rawFlags": [
+        "🧠 Concept / Recall Gap"
+      ],
+      "reviewedCauses": [
+        "concept"
+      ],
+      "note": "Correct; flagged for review | AWS CloudHSM ให้ Dedicated HSMs ที่ลูกค้าควบคุมสำหรับ Cryptographic Operations ส่วน KMS เน้น Managed Keys และ ACM เน้น TLS Certificates"
+    },
+    {
+      "questionId": 36,
+      "key": "local-set-11:q36",
+      "topic": "Savings Plans underutilization",
+      "type": "confidence",
+      "rawFlags": [
+        "🟡 Explain More",
+        "📘 English Unclear"
+      ],
+      "reviewedCauses": [
+        "confidence",
+        "language"
+      ],
+      "note": "Correct; flagged for review | Savings Plans มี Hourly Spend Commitment ที่ไม่ลดตาม Demand โดยอัตโนมัติ หากซื้อเผื่อ Peak สั้น ๆ Usage ในชั่วโมงปกติอาจไม่ครอบคลุม Commitment"
+    },
+    {
+      "questionId": 37,
+      "key": "local-set-11:q37",
+      "topic": "Client VPN vs Site-to-Site VPN",
+      "type": "review",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "note": "Wrong | AWS Client VPN ใช้ Remote Users/Devices เข้า AWS Networks ผ่าน VPN Client ส่วน Site-to-Site VPN เชื่อมเครือข่ายสองฝั่ง และ Direct Connect เป็น Dedicated Link"
+    },
+    {
+      "questionId": 39,
+      "key": "local-set-11:q39",
+      "topic": "Total Cost of Ownership",
+      "type": "confidence",
+      "rawFlags": [
+        "🟡 Explain More",
+        "🧩 Clue / Distractor Gap"
+      ],
+      "reviewedCauses": [
+        "confidence",
+        "clue"
+      ],
+      "note": "Correct; flagged for review | TCO รวมต้นทุนทั้งหมดของการเป็นเจ้าของระบบทั้ง CapEx, ค่าใช้จ่ายดำเนินงาน, บุคลากรและ Facilities เพื่อประเมิน On-premises เทียบ Cloud"
+    },
+    {
+      "questionId": 41,
+      "key": "local-set-11:q41",
+      "topic": "Storage Gateway hybrid access",
+      "type": "language",
+      "rawFlags": [
+        "📘 English Unclear"
+      ],
+      "reviewedCauses": [
+        "language"
+      ],
+      "note": "Correct; flagged for review | Storage Gateway ให้ Hybrid File/Volume/Tape Access ที่เชื่อม AWS Storage ส่วน DataSync เน้น Transfer/Sync ข้อมูล และ Snowball Edge เหมาะกับ Offline Data Transfer/Edge"
+    },
+    {
+      "questionId": 42,
+      "key": "local-set-11:q42",
+      "topic": "Service Catalog approved products",
+      "type": "concept",
+      "rawFlags": [
+        "🧠 Concept / Recall Gap"
+      ],
+      "reviewedCauses": [
+        "concept"
+      ],
+      "note": "Correct; flagged for review | AWS Service Catalog จัด Approved Products/Portfolios ให้ผู้ใช้ Self-service Provision ตาม Governance โดย CloudFormation เน้นการ Deploy Templates เป็น Infrastructure Stacks"
+    },
+    {
+      "questionId": 44,
+      "key": "local-set-11:q44",
+      "topic": "AWS compliance vs customer controls",
+      "type": "language",
+      "rawFlags": [
+        "📘 English Unclear"
+      ],
+      "reviewedCauses": [
+        "language"
+      ],
+      "note": "Correct; flagged for review | AWS Report รับรอง Controls ภายในขอบเขต AWS แต่ไม่รับรอง Application/Configuration ของลูกค้าโดยอัตโนมัติ ลูกค้ายังต้องทำ Controls ที่เกี่ยวข้อง"
+    },
+    {
+      "questionId": 51,
+      "key": "local-set-11:q51",
+      "topic": "CloudFormation repeatable stacks",
+      "type": "confidence",
+      "rawFlags": [
+        "🟡 Explain More"
+      ],
+      "reviewedCauses": [
+        "confidence"
+      ],
+      "note": "Correct; flagged for review | CloudFormation ใช้ Templates นิยามและ Deploy Infrastructure เป็น Stacks ได้ซ้ำหลายครั้ง ไม่ต้องคลิก Resource ทีละรายการ"
+    },
+    {
+      "questionId": 53,
+      "key": "local-set-11:q53",
+      "topic": "Durability vs fault tolerance",
+      "type": "review",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "note": "Wrong | Durability วัดความคงอยู่ของข้อมูล ไม่ใช่ความพร้อมตอบ Request แบบ High availability หรือความสามารถประมวลผลต่อเมื่อ Node เสียแบบ Fault tolerance"
+    },
+    {
+      "questionId": 54,
+      "key": "local-set-11:q54",
+      "topic": "Application Discovery Service vs Migration Evaluator",
+      "type": "review",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "note": "Wrong | Application Discovery Service รวบรวม Server Inventory และ Dependencies เพื่อวางแผนย้าย แตกต่างจาก Migration Evaluator ที่เน้นข้อมูลสำหรับ Business Case/TCO"
+    },
+    {
+      "questionId": 56,
+      "key": "local-set-11:q56",
+      "topic": "IAM role vs KMS",
+      "type": "review",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "note": "Wrong | ใช้ IAM Role/Instance Profile ให้ EC2 ได้ Temporary Credentials พร้อม S3 Policy ตาม Least Privilege ไม่ใช่ฝัง Static Keys หรือเก็บ Static Keys ใน Secrets Manager"
+    },
+    {
+      "questionId": 57,
+      "key": "local-set-11:q57",
+      "topic": "Transcribe vs Polly",
+      "type": "review",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "note": "Wrong | Transcribe แปลง Speech-to-Text ส่วน Polly เป็น Text-to-Speech, Comprehend วิเคราะห์ Text และ Textract ดึง Text จากเอกสาร"
+    },
+    {
+      "questionId": 63,
+      "key": "local-set-11:q63",
+      "topic": "Elastic Disaster Recovery",
+      "type": "clue",
+      "rawFlags": [
+        "🧩 Clue / Distractor Gap"
+      ],
+      "reviewedCauses": [
+        "clue"
+      ],
+      "note": "Correct; flagged for review | AWS Elastic Disaster Recovery เน้น Continuous Replication เพื่อ Recover Servers เมื่อเกิด Disaster ส่วน Backup เน้น Restore Points และ Application Migration Service เน้นย้าย Workloads"
+    },
+    {
+      "questionId": 64,
+      "key": "local-set-11:q64",
+      "topic": "Region and data residency",
+      "type": "language",
+      "rawFlags": [
+        "📘 English Unclear"
+      ],
+      "reviewedCauses": [
+        "language"
+      ],
+      "note": "Correct; flagged for review | เลือก AWS Region ที่สอดคล้องกับข้อกำหนด Data Residency ก่อน เพราะ AZ และ Subnets อยู่ภายใน Region ไม่ใช่ตัวระบุพื้นที่ภูมิศาสตร์หลัก"
+    }
+  ],
+  "details": [
+    {
+      "questionId": 2,
+      "result": "Correct",
+      "topic": "AWS Prescriptive Guidance vs APN",
+      "question": "An enterprise wants an AWS-authored collection of migration design patterns and step-by-step guidance before choosing a consulting partner. Which resource should it read?",
+      "questionTh": "องค์กรต้องการอ่าน AWS-authored Migration Patterns/Guidance ก่อนคัดเลือก Consulting Partner ควรเริ่มจากแหล่งข้อมูลใด",
+      "selected": "C. AWS Prescriptive Guidance",
+      "correct": "C. AWS Prescriptive Guidance",
+      "rawFlags": [
+        "🟡 Explain More",
+        "📘 English Unclear"
+      ],
+      "reviewedCauses": [
+        "confidence",
+        "language"
+      ],
+      "diagnosis": "ตอบถูกแต่มี Flag สำหรับทบทวน",
+      "memoryCue": "AWS Prescriptive Guidance รวบรวม Patterns/Playbooks ด้าน Migration/Modernization ส่วน Partner Network ค้นหาพันธมิตรและ Marketplace ค้นหา Software/Offerings",
+      "notes": [
+        "AWS Prescriptive Guidance รวบรวม Patterns/Playbooks ด้าน Migration/Modernization ส่วน Partner Network ค้นหาพันธมิตรและ Marketplace ค้นหา Software/Offerings",
+        "A. AWS Marketplace — ค้นหาและซื้อซอฟต์แวร์/บริการจาก third parties",
+        "B. AWS Support Center — เปิดและติดตาม support cases",
+        "C. AWS Prescriptive Guidance — AWS Prescriptive Guidance รวบรวม Patterns/Playbooks ด้าน Migration/Modernization ส่วน Partner Network ค้นหาพันธมิตรและ Marketplace ค้นหา Software/Offerings",
+        "D. AWS Partner Network — เครือข่ายคู่ค้าของ AWS"
+      ]
+    },
+    {
+      "questionId": 3,
+      "result": "Correct",
+      "topic": "OpenSearch vs CloudWatch / Athena / Quick Sight",
+      "question": "A security operations team needs to index and search large volumes of application logs with near-real-time dashboards. Which service is designed for search analytics?",
+      "questionTh": "SOC ต้อง Index/Search Application Logs จำนวนมากและทำ Near-real-time Search Dashboards บริการใดเน้น Search Analytics",
+      "selected": "C. Amazon OpenSearch Service",
+      "correct": "C. Amazon OpenSearch Service",
+      "rawFlags": [
+        "🧠 Concept / Recall Gap"
+      ],
+      "reviewedCauses": [
+        "concept"
+      ],
+      "diagnosis": "ตอบถูกแต่มี Flag สำหรับทบทวน",
+      "memoryCue": "OpenSearch Service เป็น Managed Search/Log Analytics Engine สำหรับ Indexed Log Search ส่วน Athena SQL Query บน S3 และ Quick Sight สร้าง BI Dashboards",
+      "notes": [
+        "OpenSearch Service เป็น Managed Search/Log Analytics Engine สำหรับ Indexed Log Search ส่วน Athena SQL Query บน S3 และ Quick Sight สร้าง BI Dashboards",
+        "A. Amazon CloudWatch — เก็บ metrics, logs และสร้าง alarms สำหรับการติดตามระบบ เช่น สร้าง Alarm จาก CPUUtilization หรือ application errors",
+        "B. Amazon Quick Sight — business intelligence dashboards",
+        "C. Amazon OpenSearch Service — OpenSearch Service เป็น Managed Search/Log Analytics Engine สำหรับ Indexed Log Search ส่วน Athena SQL Query บน S3 และ Quick Sight สร้าง BI Dashboards",
+        "D. Amazon Athena — query data ใน S3 ด้วย SQL เช่น ใช้ SQL query logs ที่เก็บใน S3"
+      ]
+    },
+    {
+      "questionId": 4,
+      "result": "Wrong",
+      "topic": "Variable expense vs CapEx",
+      "question": "An organization prefers bills that rise and fall with compute usage rather than purchasing fixed peak servers. What cost category does it move toward?",
+      "questionTh": "องค์กรอยากให้บิลขึ้นลงตาม Compute Usage แทนการซื้อ Server รองรับ Peak แบบถาวร ค่าใช้จ่ายกำลังเปลี่ยนไปเป็นประเภทใด",
+      "selected": "B. Capital expenditure",
+      "correct": "D. Variable expense",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "diagnosis": "คำตอบที่เลือกไม่ตรงเงื่อนไขหลักตามเฉลย ไม่ทราบเหตุผลจริงขณะเลือก",
+      "memoryCue": "Variable expense เปลี่ยนตามการใช้ทรัพยากรจริง ต่างจาก CapEx ที่ลงทุนซื้อ Asset ล่วงหน้าและ Fixed expense ที่ไม่แปรตามการใช้ระยะสั้น",
+      "notes": [
+        "Variable expense เปลี่ยนตามการใช้ทรัพยากรจริง ต่างจาก CapEx ที่ลงทุนซื้อ Asset ล่วงหน้าและ Fixed expense ที่ไม่แปรตามการใช้ระยะสั้น",
+        "A. Fixed expense — รายจ่ายที่ไม่แปรผันตาม Usage ระยะสั้น",
+        "B. Capital expenditure — ค่าใช้จ่ายลงทุนล่วงหน้าในสินทรัพย์ เช่น ซื้อ physical servers ก่อนเริ่มใช้งาน",
+        "C. Economies of scale — ลดต้นทุนต่อหน่วยจากการใช้ทรัพยากรในปริมาณมาก เช่น AWS กระจายต้นทุนโครงสร้างพื้นฐานให้ลูกค้าจำนวนมาก",
+        "D. Variable expense — Variable expense เปลี่ยนตามการใช้ทรัพยากรจริง ต่างจาก CapEx ที่ลงทุนซื้อ Asset ล่วงหน้าและ Fixed expense ที่ไม่แปรตามการใช้ระยะสั้น"
+      ]
+    },
+    {
+      "questionId": 5,
+      "result": "Wrong",
+      "topic": "Reliability — Stop guessing capacity",
+      "question": "Which Well-Architected pillar specifically includes the design principle of replacing capacity forecasts with automated adjustment to demand?",
+      "questionTh": "หลักการ Well-Architected ที่แนะนำไม่ให้เดา Capacity ล่วงหน้า แต่ปรับตาม Demand อยู่ใน Pillar ใด",
+      "selected": "B. Performance Efficiency",
+      "correct": "A. Reliability",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "diagnosis": "คำตอบที่เลือกไม่ตรงเงื่อนไขหลักตามเฉลย ไม่ทราบเหตุผลจริงขณะเลือก",
+      "memoryCue": "Stop guessing capacity เป็น Design Principle ภายใต้ Reliability เพื่อลดการเตรียม Capacity ผิด ส่วน Performance Efficiency เน้นการเลือก/ใช้ทรัพยากรให้ตอบ Performance Requirements",
+      "notes": [
+        "Stop guessing capacity เป็น Design Principle ภายใต้ Reliability เพื่อลดการเตรียม Capacity ผิด ส่วน Performance Efficiency เน้นการเลือก/ใช้ทรัพยากรให้ตอบ Performance Requirements",
+        "A. Reliability — Stop guessing capacity เป็น Design Principle ภายใต้ Reliability เพื่อลดการเตรียม Capacity ผิด ส่วน Performance Efficiency เน้นการเลือก/ใช้ทรัพยากรให้ตอบ Performance Requirements",
+        "B. Performance Efficiency — เน้นการใช้ทรัพยากรให้เหมาะกับ workload เช่น เลือก EC2 Instance Type ให้เหมาะกับงาน CPU-intensive เพื่อให้ได้ throughput ตามเป้าหมาย",
+        "C. Operational Excellence — เน้นการดำเนินงาน การปรับปรุง และการเรียนรู้ เช่น ทำ post-incident review แล้วปรับ deployment procedure",
+        "D. Cost Optimization — เน้นคุณค่าที่ได้รับเทียบค่าใช้จ่าย เช่น ปิด development EC2 ที่ไม่ได้ใช้เพื่อลดค่าใช้จ่าย"
+      ]
+    },
+    {
+      "questionId": 7,
+      "result": "Correct",
+      "topic": "Amplify vs Cognito / Beanstalk / API Gateway",
+      "question": "A mobile team wants to publish a hosted frontend and connect authentication and backend features with an AWS-oriented developer workflow. Which service helps build these frontend applications?",
+      "questionTh": "ทีม Mobile ต้อง Deploy Frontend และเชื่อม Authentication กับ Backend Features ผ่าน Developer Workflow ของ AWS บริการใดเหมาะ",
+      "selected": "C. AWS Amplify",
+      "correct": "C. AWS Amplify",
+      "rawFlags": [
+        "🟡 Explain More"
+      ],
+      "reviewedCauses": [
+        "confidence"
+      ],
+      "diagnosis": "ตอบถูกแต่มี Flag สำหรับทบทวน",
+      "memoryCue": "Amplify ช่วยสร้าง/Deploy Frontend Web/Mobile Apps และ Integrate Backend Services ส่วน Cognito เป็น Identity Component และ API Gateway เป็น API Front Door",
+      "notes": [
+        "Amplify ช่วยสร้าง/Deploy Frontend Web/Mobile Apps และ Integrate Backend Services ส่วน Cognito เป็น Identity Component และ API Gateway เป็น API Front Door",
+        "A. Amazon Cognito — จัดการการลงชื่อเข้าใช้ของลูกค้าใน web/mobile applications",
+        "B. AWS Elastic Beanstalk — deploy applications พร้อมจัดการ underlying environment",
+        "C. AWS Amplify — Amplify ช่วยสร้าง/Deploy Frontend Web/Mobile Apps และ Integrate Backend Services ส่วน Cognito เป็น Identity Component และ API Gateway เป็น API Front Door",
+        "D. Amazon API Gateway — จัดการและเผยแพร่ APIs"
+      ]
+    },
+    {
+      "questionId": 9,
+      "result": "Correct",
+      "topic": "Global Accelerator vs Route 53 / CloudFront / ELB",
+      "question": "An application needs a static global entry point that routes users over the AWS global network to healthy regional endpoints. Which service is designed for this?",
+      "questionTh": "Application ต้องมี Global Entry Point แบบ Static IP และส่ง Traffic ผ่าน AWS Global Network ไป Regional Endpoints ที่ Healthy ใช้บริการใด",
+      "selected": "A. AWS Global Accelerator",
+      "correct": "A. AWS Global Accelerator",
+      "rawFlags": [
+        "🟡 Explain More"
+      ],
+      "reviewedCauses": [
+        "confidence"
+      ],
+      "diagnosis": "ตอบถูกแต่มี Flag สำหรับทบทวน",
+      "memoryCue": "Global Accelerator ใช้ Anycast Static IPs และ AWS Global Network ไปยัง Healthy Regional Endpoints ขณะที่ CloudFront ทำ CDN Caching และ Route 53 เป็น DNS Routing",
+      "notes": [
+        "Global Accelerator ใช้ Anycast Static IPs และ AWS Global Network ไปยัง Healthy Regional Endpoints ขณะที่ CloudFront ทำ CDN Caching และ Route 53 เป็น DNS Routing",
+        "A. AWS Global Accelerator — Global Accelerator ใช้ Anycast Static IPs และ AWS Global Network ไปยัง Healthy Regional Endpoints ขณะที่ CloudFront ทำ CDN Caching และ Route 53 เป็น DNS Routing",
+        "B. Amazon Route 53 — DNS และ domain routing รวมถึง health checks เช่น กำหนด DNS record ให้ domain ชี้ไป ALB",
+        "C. Amazon CloudFront — content delivery network ที่ใช้ edge locations เช่น cache static assets ใกล้ผู้ใช้",
+        "D. Elastic Load Balancing — กระจาย incoming traffic ไปยัง targets เช่น กระจาย HTTP requests ไปหลาย EC2 targets"
+      ]
+    },
+    {
+      "questionId": 10,
+      "result": "Correct",
+      "topic": "Data transfer out",
+      "question": "An application will send a large volume of data from its AWS Region to clients on the public internet. Which cost element deserves explicit attention?",
+      "questionTh": "Application ส่งข้อมูลปริมาณมากจาก AWS Region ไปยังผู้ใช้งานบน Public Internet ต้องระวัง Cost Element ใดเป็นพิเศษ",
+      "selected": "B. Data transfer out",
+      "correct": "B. Data transfer out",
+      "rawFlags": [
+        "🟡 Explain More"
+      ],
+      "reviewedCauses": [
+        "confidence"
+      ],
+      "diagnosis": "ตอบถูกแต่มี Flag สำหรับทบทวน",
+      "memoryCue": "Data Transfer Out จาก AWS ไป Internet โดยทั่วไปมีค่าใช้จ่ายตามการใช้งาน ส่วน Data Transfer In อาจมีนโยบายราคาแตกต่างและไม่ตอบโจทย์เส้นทาง Outbound นี้",
+      "notes": [
+        "Data Transfer Out จาก AWS ไป Internet โดยทั่วไปมีค่าใช้จ่ายตามการใช้งาน ส่วน Data Transfer In อาจมีนโยบายราคาแตกต่างและไม่ตอบโจทย์เส้นทาง Outbound นี้",
+        "A. Cost allocation tags — Cost allocation tags ใช้จัดหมวดค่าใช้จ่าย ไม่ใช่ประเภทค่า Data Transfer",
+        "B. Data transfer out — Data Transfer Out จาก AWS ไป Internet โดยทั่วไปมีค่าใช้จ่ายตามการใช้งาน ส่วน Data Transfer In อาจมีนโยบายราคาแตกต่างและไม่ตอบโจทย์เส้นทาง Outbound นี้",
+        "C. Consolidated billing — Consolidated billing รวมบิลหลายบัญชี ไม่ใช่การคิดราคาของ Traffic Out",
+        "D. Data transfer in — Inbound Data Transfer เข้าสู่ AWS ไม่ใช่ทิศทาง Traffic ที่โจทย์กล่าวถึง"
+      ]
+    },
+    {
+      "questionId": 15,
+      "result": "Wrong",
+      "topic": "S3 Lifecycle vs Intelligent-Tiering",
+      "question": "A business reads S3 objects frequently for a month and then moves them to lower-cost storage classes based on each object's age. Which S3 feature automates that time-based transition?",
+      "questionTh": "บริษัทอ่าน S3 Objects บ่อยช่วงเดือนแรก จากนั้นต้องย้ายไป Storage Class ราคาถูกตามอายุ Object โดยอัตโนมัติ ใช้ Feature ใด",
+      "selected": "A. Amazon S3 Intelligent-Tiering",
+      "correct": "D. S3 Lifecycle rules",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "diagnosis": "คำตอบที่เลือกไม่ตรงเงื่อนไขหลักตามเฉลย ไม่ทราบเหตุผลจริงขณะเลือก",
+      "memoryCue": "S3 Lifecycle Rules ใช้กำหนด Time-based Transition/Expiration ตามอายุ Object ส่วน Intelligent-Tiering เปลี่ยน Tier ตาม Access Patterns ไม่ใช่ Rule ตามอายุที่กำหนดเอง",
+      "notes": [
+        "S3 Lifecycle Rules ใช้กำหนด Time-based Transition/Expiration ตามอายุ Object ส่วน Intelligent-Tiering เปลี่ยน Tier ตาม Access Patterns ไม่ใช่ Rule ตามอายุที่กำหนดเอง",
+        "A. Amazon S3 Intelligent-Tiering — Intelligent-Tiering ติดตาม Access Patterns เพื่อปรับ Tier ไม่ใช่ Time-based Lifecycle Rule",
+        "B. AWS DataSync — DataSync เป็น Data Transfer/Synchronization ไม่ใช่ S3 Lifecycle",
+        "C. AWS Backup — AWS Backup เน้น Backup Plans/Retention ของ Workloads ไม่ใช่ S3 Object Transitions",
+        "D. S3 Lifecycle rules — S3 Lifecycle Rules ใช้กำหนด Time-based Transition/Expiration ตามอายุ Object ส่วน Intelligent-Tiering เปลี่ยน Tier ตาม Access Patterns ไม่ใช่ Rule ตามอายุที่กำหนดเอง"
+      ]
+    },
+    {
+      "questionId": 23,
+      "result": "Correct",
+      "topic": "RDS shared responsibility",
+      "question": "An Amazon RDS user wants to know who replaces malfunctioning physical storage devices beneath the database. Which party owns this activity?",
+      "questionTh": "ผู้ใช้ Amazon RDS สงสัยว่าใครเปลี่ยนอุปกรณ์ Storage จริงที่เสียใต้ Managed Database หน้าที่นี้เป็นของใคร",
+      "selected": "C. AWS",
+      "correct": "C. AWS",
+      "rawFlags": [
+        "📘 English Unclear"
+      ],
+      "reviewedCauses": [
+        "language"
+      ],
+      "diagnosis": "ตอบถูกแต่มี Flag สำหรับทบทวน",
+      "memoryCue": "AWS ดูแล Physical Hardware และ Underlying Managed Infrastructure ของ RDS ขณะที่ลูกค้าดูแล Data, Schema และ Access Permissions",
+      "notes": [
+        "AWS ดูแล Physical Hardware และ Underlying Managed Infrastructure ของ RDS ขณะที่ลูกค้าดูแล Data, Schema และ Access Permissions",
+        "A. AWS Support Center — เปิดและติดตาม support cases",
+        "B. The customer — ลูกค้า AWS ผู้ดูแลข้อมูลและสิทธิ์เข้าถึงข้อมูลของตน เช่น ลูกค้ากำหนดสิทธิ์เข้าถึงข้อมูลและ configuration ของตน",
+        "C. AWS — AWS ดูแล Physical Hardware และ Underlying Managed Infrastructure ของ RDS ขณะที่ลูกค้าดูแล Data, Schema และ Access Permissions",
+        "D. AWS Systems Manager — ช่วยจัดการและปฏิบัติงานกับ AWS Resources แบบรวมศูนย์ เช่น Automation และ Patch"
+      ]
+    },
+    {
+      "questionId": 24,
+      "result": "Correct",
+      "topic": "Firewall Manager vs WAF / Shield",
+      "question": "A team wants to apply the same HTTP filtering policy to applications in many member accounts without configuring each Web ACL manually. Which service centrally manages policies?",
+      "questionTh": "ทีมต้องใช้ HTTP Filtering Rules เดียวกันกับ Applications ในหลาย AWS Accounts โดยไม่จัดการ Web ACL ทีละบัญชี ใช้บริการใด",
+      "selected": "C. AWS Firewall Manager",
+      "correct": "C. AWS Firewall Manager",
+      "rawFlags": [
+        "🟡 Explain More"
+      ],
+      "reviewedCauses": [
+        "confidence"
+      ],
+      "diagnosis": "ตอบถูกแต่มี Flag สำหรับทบทวน",
+      "memoryCue": "Firewall Manager กระจาย/บังคับใช้ Security Policies ข้าม AWS Accounts ส่วน WAF เป็นบริการกรอง HTTP Requests จริง",
+      "notes": [
+        "Firewall Manager กระจาย/บังคับใช้ Security Policies ข้าม AWS Accounts ส่วน WAF เป็นบริการกรอง HTTP Requests จริง",
+        "A. AWS Shield — ป้องกันการโจมตี DDoS เช่น ช่วยป้องกันการโจมตี DDoS",
+        "B. AWS Security Hub — รวม findings และสถานะ security จากหลายแหล่ง เช่น รวม security findings จากหลายบริการ",
+        "C. AWS Firewall Manager — Firewall Manager กระจาย/บังคับใช้ Security Policies ข้าม AWS Accounts ส่วน WAF เป็นบริการกรอง HTTP Requests จริง",
+        "D. AWS WAF — กรอง HTTP(S) requests ตาม web ACL rules เช่น บล็อก HTTP request ที่มีรูปแบบ SQL injection"
+      ]
+    },
+    {
+      "questionId": 27,
+      "result": "Correct",
+      "topic": "Consolidated billing and discount sharing",
+      "question": "A company combines billing for member AWS accounts. Which TWO benefits are possible without merging account identities? (Select TWO.)",
+      "questionTh": "องค์กรรวม Billing ของ AWS Member Accounts สองประโยชน์ใดทำได้ โดยยังคง Identity Boundaries แยกกัน",
+      "selected": "A. Eligible aggregated usage volume discounts, B. Eligible Reserved Instances and Savings Plans discount sharing",
+      "correct": "A. Eligible aggregated usage volume discounts, B. Eligible Reserved Instances and Savings Plans discount sharing",
+      "rawFlags": [
+        "🟡 Explain More"
+      ],
+      "reviewedCauses": [
+        "confidence"
+      ],
+      "diagnosis": "ตอบถูกแต่มี Flag สำหรับทบทวน",
+      "memoryCue": "Consolidated Billing อาจรวม Eligible Usage เพื่อ Volume Discounts และแชร์ RI/Savings Plans Benefits ตาม Eligibility/Sharing Settings แต่ Accounts ยังมี IAM/Root Security Boundaries แยกกัน / Consolidated Billing อาจรวม Eligible Usage เพื่อ Volume Discounts และแชร์ RI/Savings Plans Benefits ตาม Eligibility/Sharing Settings แต่ Accounts ยังมี IAM/Root Security Boundaries แยกกัน",
+      "notes": [
+        "Consolidated Billing อาจรวม Eligible Usage เพื่อ Volume Discounts และแชร์ RI/Savings Plans Benefits ตาม Eligibility/Sharing Settings แต่ Accounts ยังมี IAM/Root Security Boundaries แยกกัน / Consolidated Billing อาจรวม Eligible Usage เพื่อ Volume Discounts และแชร์ RI/Savings Plans Benefits ตาม Eligibility/Sharing Settings แต่ Accounts ยังมี IAM/Root Security Boundaries แยกกัน",
+        "A. Eligible aggregated usage volume discounts — Consolidated Billing อาจรวม Eligible Usage เพื่อ Volume Discounts และแชร์ RI/Savings Plans Benefits ตาม Eligibility/Sharing Settings แต่ Accounts ยังมี IAM/Root Security Boundaries แยกกัน",
+        "B. Eligible Reserved Instances and Savings Plans discount sharing — Consolidated Billing อาจรวม Eligible Usage เพื่อ Volume Discounts และแชร์ RI/Savings Plans Benefits ตาม Eligibility/Sharing Settings แต่ Accounts ยังมี IAM/Root Security Boundaries แยกกัน",
+        "C. Automatic permission grants across accounts — ผิด: Billing รวมไม่ได้ Grant IAM Permissions ระหว่าง Accounts",
+        "D. A single shared security group for all VPCs — ผิด: VPC Security Groups ไม่ถูก Shared โดยการรวมบิล",
+        "E. Shared root user credentials for all accounts — ผิด: Root User และ Account Identities ไม่ถูก Merge"
+      ]
+    },
+    {
+      "questionId": 28,
+      "result": "Wrong",
+      "topic": "IAM Identity Center vs Cognito",
+      "question": "Employees need one sign-in experience across multiple AWS accounts, while customers use a separate application login. Which identity service is specifically for employees?",
+      "questionTh": "พนักงานต้องใช้ Sign-in เดียวข้ามหลาย AWS Accounts ส่วนลูกค้ามี Login ของ App แยกต่างหาก Identity Service ใดใช้กับพนักงาน",
+      "selected": "C. Amazon Cognito",
+      "correct": "D. IAM Identity Center",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "diagnosis": "คำตอบที่เลือกไม่ตรงเงื่อนไขหลักตามเฉลย ไม่ทราบเหตุผลจริงขณะเลือก",
+      "memoryCue": "IAM Identity Center ใช้ Workforce SSO และ Permission Sets เพื่อเข้าถึง AWS Accounts ต่างจาก Cognito ที่จัดการ App End Users",
+      "notes": [
+        "IAM Identity Center ใช้ Workforce SSO และ Permission Sets เพื่อเข้าถึง AWS Accounts ต่างจาก Cognito ที่จัดการ App End Users",
+        "A. AWS IAM — กำหนด identities, roles และสิทธิ์เข้าถึง AWS เช่น กำหนด IAM policy ให้ application อ่าน S3 ได้",
+        "B. AWS Organizations — จัดกลุ่มบัญชีและใช้ governance / consolidated billing",
+        "C. Amazon Cognito — จัดการการลงชื่อเข้าใช้ของลูกค้าใน web/mobile applications",
+        "D. IAM Identity Center — IAM Identity Center ใช้ Workforce SSO และ Permission Sets เพื่อเข้าถึง AWS Accounts ต่างจาก Cognito ที่จัดการ App End Users"
+      ]
+    },
+    {
+      "questionId": 29,
+      "result": "Correct",
+      "topic": "PrivateLink vs NAT / VPN",
+      "question": "A private application in a VPC must reach a partner's endpoint service without placing traffic on the public internet. Which AWS connectivity feature enables this model?",
+      "questionTh": "Private Application ใน VPC ต้องเข้า Partner Endpoint Service โดยไม่วิ่งผ่าน Public Internet ความสามารถใดรองรับ",
+      "selected": "C. AWS PrivateLink",
+      "correct": "C. AWS PrivateLink",
+      "rawFlags": [
+        "🧠 Concept / Recall Gap"
+      ],
+      "reviewedCauses": [
+        "concept"
+      ],
+      "diagnosis": "ตอบถูกแต่มี Flag สำหรับทบทวน",
+      "memoryCue": "PrivateLink ให้ Private Connectivity ถึง Endpoint Services ผ่าน VPC Endpoints โดยไม่ต้องมี Public Internet Routing หรือ NAT Gateway",
+      "notes": [
+        "PrivateLink ให้ Private Connectivity ถึง Endpoint Services ผ่าน VPC Endpoints โดยไม่ต้องมี Public Internet Routing หรือ NAT Gateway",
+        "A. NAT Gateway — ให้ private subnet เริ่ม outbound connections ไปอินเทอร์เน็ต เช่น ให้ private subnet เริ่ม outbound internet connections",
+        "B. Internet Gateway — เชื่อม VPC กับอินเทอร์เน็ตตาม route และ security rules เช่น เปิดเส้นทาง internet สำหรับ VPC ตาม route",
+        "C. AWS PrivateLink — PrivateLink ให้ Private Connectivity ถึง Endpoint Services ผ่าน VPC Endpoints โดยไม่ต้องมี Public Internet Routing หรือ NAT Gateway",
+        "D. AWS Site-to-Site VPN — เข้ารหัสการเชื่อมต่อเครือข่ายผ่านอินเทอร์เน็ต เช่น สร้าง encrypted tunnel ผ่าน internet"
+      ]
+    },
+    {
+      "questionId": 31,
+      "result": "Wrong",
+      "topic": "Compute Optimizer vs Pricing Calculator",
+      "question": "A team wants a recommendation of a smaller EC2 instance family based on historical CPU and memory usage, rather than merely a cost chart. Which service gives this resource recommendation?",
+      "questionTh": "ทีมต้องการคำแนะนำปรับ EC2 Instance Family จาก CPU/Memory Metrics ไม่ใช่แค่กราฟค่าใช้จ่าย เครื่องมือใดเหมาะ",
+      "selected": "B. AWS Pricing Calculator",
+      "correct": "C. AWS Compute Optimizer",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "diagnosis": "คำตอบที่เลือกไม่ตรงเงื่อนไขหลักตามเฉลย ไม่ทราบเหตุผลจริงขณะเลือก",
+      "memoryCue": "Compute Optimizer วิเคราะห์ Utilization/Performance Metrics เพื่อแนะนำ Resource Type/Size ส่วน Cost Explorer แสดง Actual Costs/Trends และ Pricing Calculator ประเมินราคาก่อนใช้",
+      "notes": [
+        "Compute Optimizer วิเคราะห์ Utilization/Performance Metrics เพื่อแนะนำ Resource Type/Size ส่วน Cost Explorer แสดง Actual Costs/Trends และ Pricing Calculator ประเมินราคาก่อนใช้",
+        "A. AWS Cost Explorer — วิเคราะห์ค่าใช้จ่ายจริงและแนวโน้ม เช่น ดูแนวโน้มค่า EC2 และ S3 ย้อนหลัง",
+        "B. AWS Pricing Calculator — ประเมินค่าใช้จ่ายก่อนใช้งาน เช่น ประเมินราคา workload ก่อน deploy",
+        "C. AWS Compute Optimizer — Compute Optimizer วิเคราะห์ Utilization/Performance Metrics เพื่อแนะนำ Resource Type/Size ส่วน Cost Explorer แสดง Actual Costs/Trends และ Pricing Calculator ประเมินราคาก่อนใช้",
+        "D. AWS Budgets — กำหนด budgets และแจ้งเตือนตาม thresholds เช่น แจ้งเตือนเมื่อค่าใช้จ่ายคาดว่าจะเกินงบ"
+      ]
+    },
+    {
+      "questionId": 33,
+      "result": "Wrong",
+      "topic": "EMR vs Glue / Redshift / Athena",
+      "question": "A company runs large-scale Spark jobs on its data lake and wants a managed big-data execution platform. Which AWS service specializes in this?",
+      "questionTh": "บริษัทต้องรัน Spark Jobs ขนาดใหญ่กับ Data Lake และอยากได้ Managed Platform สำหรับ Big Data Processing ควรใช้บริการใด",
+      "selected": "A. Amazon Redshift",
+      "correct": "D. Amazon EMR",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "diagnosis": "คำตอบที่เลือกไม่ตรงเงื่อนไขหลักตามเฉลย ไม่ทราบเหตุผลจริงขณะเลือก",
+      "memoryCue": "EMR รองรับ Big Data Frameworks เช่น Spark/Hadoop ใน Managed Clusters ส่วน Athena คือ Serverless SQL Query และ Glue เน้น Data Integration/ETL",
+      "notes": [
+        "EMR รองรับ Big Data Frameworks เช่น Spark/Hadoop ใน Managed Clusters ส่วน Athena คือ Serverless SQL Query และ Glue เน้น Data Integration/ETL",
+        "A. Amazon Redshift — cloud data warehouse สำหรับ analytics",
+        "B. Amazon Athena — query data ใน S3 ด้วย SQL เช่น ใช้ SQL query logs ที่เก็บใน S3",
+        "C. AWS Glue — serverless data integration และ catalog เช่น สร้าง Data Catalog และทำ ETL",
+        "D. Amazon EMR — EMR รองรับ Big Data Frameworks เช่น Spark/Hadoop ใน Managed Clusters ส่วน Athena คือ Serverless SQL Query และ Glue เน้น Data Integration/ETL"
+      ]
+    },
+    {
+      "questionId": 34,
+      "result": "Correct",
+      "topic": "CloudHSM vs KMS",
+      "question": "A company has specific regulatory requirements to operate cryptographic keys in dedicated hardware under its control. Which AWS security service is designed for that model?",
+      "questionTh": "บริษัทต้องการควบคุม Cryptographic Keys ภายใน Dedicated Hardware Security Modules ตามข้อกำหนดเฉพาะ ใช้บริการใด",
+      "selected": "A. AWS CloudHSM",
+      "correct": "A. AWS CloudHSM",
+      "rawFlags": [
+        "🧠 Concept / Recall Gap"
+      ],
+      "reviewedCauses": [
+        "concept"
+      ],
+      "diagnosis": "ตอบถูกแต่มี Flag สำหรับทบทวน",
+      "memoryCue": "AWS CloudHSM ให้ Dedicated HSMs ที่ลูกค้าควบคุมสำหรับ Cryptographic Operations ส่วน KMS เน้น Managed Keys และ ACM เน้น TLS Certificates",
+      "notes": [
+        "AWS CloudHSM ให้ Dedicated HSMs ที่ลูกค้าควบคุมสำหรับ Cryptographic Operations ส่วน KMS เน้น Managed Keys และ ACM เน้น TLS Certificates",
+        "A. AWS CloudHSM — AWS CloudHSM ให้ Dedicated HSMs ที่ลูกค้าควบคุมสำหรับ Cryptographic Operations ส่วน KMS เน้น Managed Keys และ ACM เน้น TLS Certificates",
+        "B. AWS KMS — สร้างและควบคุม encryption keys เช่น ควบคุม encryption key ที่ใช้กับ S3",
+        "C. AWS Certificate Manager — ออกและจัดการ TLS certificates ที่รองรับ",
+        "D. AWS Secrets Manager — เก็บและหมุนเวียน secrets เช่น database credentials เช่น เก็บและหมุนเวียน database password"
+      ]
+    },
+    {
+      "questionId": 36,
+      "result": "Correct",
+      "topic": "Savings Plans underutilization",
+      "question": "A small company commits to Savings Plans spending at the level of a rare monthly product launch spike. What is its most likely cost risk?",
+      "questionTh": "บริษัทตั้ง Savings Plans Commitment ตามยอด Compute ที่สูงเฉพาะวัน Launch เดือนละครั้ง ความเสี่ยงด้านค่าใช้จ่ายคืออะไร",
+      "selected": "D. Unused hourly commitment during normal periods",
+      "correct": "D. Unused hourly commitment during normal periods",
+      "rawFlags": [
+        "🟡 Explain More",
+        "📘 English Unclear"
+      ],
+      "reviewedCauses": [
+        "confidence",
+        "language"
+      ],
+      "diagnosis": "ตอบถูกแต่มี Flag สำหรับทบทวน",
+      "memoryCue": "Savings Plans มี Hourly Spend Commitment ที่ไม่ลดตาม Demand โดยอัตโนมัติ หากซื้อเผื่อ Peak สั้น ๆ Usage ในชั่วโมงปกติอาจไม่ครอบคลุม Commitment",
+      "notes": [
+        "Savings Plans มี Hourly Spend Commitment ที่ไม่ลดตาม Demand โดยอัตโนมัติ หากซื้อเผื่อ Peak สั้น ๆ Usage ในชั่วโมงปกติอาจไม่ครอบคลุม Commitment",
+        "A. Automatic reduction of commitment as traffic falls — ผิด: Savings Plans ไม่ปรับ Commitment ลดเองทุกชั่วโมงตาม Demand",
+        "B. Guaranteed EC2 capacity during launch — ผิด: Savings Plans เป็นส่วนลดจาก Commitment ไม่ใช่การจอง EC2 Capacity",
+        "C. Automatic full refund of unused spending — ผิด: ไม่ควรคาดหวังคืนเงินส่วน Commitment ที่ใช้ไม่ครบ",
+        "D. Unused hourly commitment during normal periods — Savings Plans มี Hourly Spend Commitment ที่ไม่ลดตาม Demand โดยอัตโนมัติ หากซื้อเผื่อ Peak สั้น ๆ Usage ในชั่วโมงปกติอาจไม่ครอบคลุม Commitment"
+      ]
+    },
+    {
+      "questionId": 37,
+      "result": "Wrong",
+      "topic": "Client VPN vs Site-to-Site VPN",
+      "question": "Contractors working remotely need encrypted client connections into a VPC, without a permanent office-to-AWS network link. Which service is tailored to their devices?",
+      "questionTh": "Contractors ทำงานระยะไกล ต้องใช้ Client Connections เข้าสู่ VPC แบบเข้ารหัส ไม่ได้เชื่อม Data Center ถาวร ใช้บริการใด",
+      "selected": "A. AWS Site-to-Site VPN",
+      "correct": "C. AWS Client VPN",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "diagnosis": "คำตอบที่เลือกไม่ตรงเงื่อนไขหลักตามเฉลย ไม่ทราบเหตุผลจริงขณะเลือก",
+      "memoryCue": "AWS Client VPN ใช้ Remote Users/Devices เข้า AWS Networks ผ่าน VPN Client ส่วน Site-to-Site VPN เชื่อมเครือข่ายสองฝั่ง และ Direct Connect เป็น Dedicated Link",
+      "notes": [
+        "AWS Client VPN ใช้ Remote Users/Devices เข้า AWS Networks ผ่าน VPN Client ส่วน Site-to-Site VPN เชื่อมเครือข่ายสองฝั่ง และ Direct Connect เป็น Dedicated Link",
+        "A. AWS Site-to-Site VPN — เข้ารหัสการเชื่อมต่อเครือข่ายผ่านอินเทอร์เน็ต เช่น สร้าง encrypted tunnel ผ่าน internet",
+        "B. AWS Transit Gateway — เชื่อม VPC และ on-premises networks แบบ hub",
+        "C. AWS Client VPN — AWS Client VPN ใช้ Remote Users/Devices เข้า AWS Networks ผ่าน VPN Client ส่วน Site-to-Site VPN เชื่อมเครือข่ายสองฝั่ง และ Direct Connect เป็น Dedicated Link",
+        "D. AWS Direct Connect — dedicated private network connection ไป AWS เช่น ใช้ dedicated network connection เชื่อม data center กับ AWS"
+      ]
+    },
+    {
+      "questionId": 39,
+      "result": "Correct",
+      "topic": "Total Cost of Ownership",
+      "question": "A finance manager counts power, facilities, hardware depreciation, staff effort, and support contracts when comparing on-premises with cloud. Which framework helps assess the full ownership cost?",
+      "questionTh": "Finance รวมค่าไฟ สถานที่ ค่าเสื่อม Hardware บุคลากร และ Support เพื่อเทียบต้นทุน On-premises กับ Cloud แนวคิดการรวมต้นทุนทั้งหมดคืออะไร",
+      "selected": "B. Total Cost of Ownership (TCO)",
+      "correct": "B. Total Cost of Ownership (TCO)",
+      "rawFlags": [
+        "🟡 Explain More",
+        "🧩 Clue / Distractor Gap"
+      ],
+      "reviewedCauses": [
+        "confidence",
+        "clue"
+      ],
+      "diagnosis": "ตอบถูกแต่มี Flag สำหรับทบทวน",
+      "memoryCue": "TCO รวมต้นทุนทั้งหมดของการเป็นเจ้าของระบบทั้ง CapEx, ค่าใช้จ่ายดำเนินงาน, บุคลากรและ Facilities เพื่อประเมิน On-premises เทียบ Cloud",
+      "notes": [
+        "TCO รวมต้นทุนทั้งหมดของการเป็นเจ้าของระบบทั้ง CapEx, ค่าใช้จ่ายดำเนินงาน, บุคลากรและ Facilities เพื่อประเมิน On-premises เทียบ Cloud",
+        "A. Capital expenditure — ค่าใช้จ่ายลงทุนล่วงหน้าในสินทรัพย์ เช่น ซื้อ physical servers ก่อนเริ่มใช้งาน",
+        "B. Total Cost of Ownership (TCO) — TCO รวมต้นทุนทั้งหมดของการเป็นเจ้าของระบบทั้ง CapEx, ค่าใช้จ่ายดำเนินงาน, บุคลากรและ Facilities เพื่อประเมิน On-premises เทียบ Cloud",
+        "C. Pay-as-you-go — จ่ายตามปริมาณทรัพยากรที่ใช้ เช่น หยุดจ่ายค่า compute เมื่อปิดทรัพยากรที่คิดตามเวลาใช้งาน",
+        "D. Economies of scale — ลดต้นทุนต่อหน่วยจากการใช้ทรัพยากรในปริมาณมาก เช่น AWS กระจายต้นทุนโครงสร้างพื้นฐานให้ลูกค้าจำนวนมาก"
+      ]
+    },
+    {
+      "questionId": 41,
+      "result": "Correct",
+      "topic": "Storage Gateway hybrid access",
+      "question": "An office requires continuing access to cloud-backed shared files while it migrates other storage. Which hybrid service exposes familiar file interfaces on premises?",
+      "questionTh": "สำนักงานต้องใช้ Shared Files ที่มี Cloud Storage เป็น Backend อย่างต่อเนื่องระหว่าง Migration บริการ Hybrid ใดมี File Interfaces ให้ On-premises",
+      "selected": "D. AWS Storage Gateway",
+      "correct": "D. AWS Storage Gateway",
+      "rawFlags": [
+        "📘 English Unclear"
+      ],
+      "reviewedCauses": [
+        "language"
+      ],
+      "diagnosis": "ตอบถูกแต่มี Flag สำหรับทบทวน",
+      "memoryCue": "Storage Gateway ให้ Hybrid File/Volume/Tape Access ที่เชื่อม AWS Storage ส่วน DataSync เน้น Transfer/Sync ข้อมูล และ Snowball Edge เหมาะกับ Offline Data Transfer/Edge",
+      "notes": [
+        "Storage Gateway ให้ Hybrid File/Volume/Tape Access ที่เชื่อม AWS Storage ส่วน DataSync เน้น Transfer/Sync ข้อมูล และ Snowball Edge เหมาะกับ Offline Data Transfer/Edge",
+        "A. AWS Snowball Edge — ย้ายข้อมูลจำนวนมากแบบ physical device",
+        "B. Amazon EFS — shared elastic file system สำหรับ Linux workloads เช่น ให้หลาย Linux EC2 mount file system เดียวกัน",
+        "C. AWS DataSync — ย้ายข้อมูลระหว่าง storage locations แบบ online",
+        "D. AWS Storage Gateway — Storage Gateway ให้ Hybrid File/Volume/Tape Access ที่เชื่อม AWS Storage ส่วน DataSync เน้น Transfer/Sync ข้อมูล และ Snowball Edge เหมาะกับ Offline Data Transfer/Edge"
+      ]
+    },
+    {
+      "questionId": 42,
+      "result": "Correct",
+      "topic": "Service Catalog approved products",
+      "question": "An IT organization wants employees to request only approved infrastructure products from a managed portfolio. Which service provides such controlled self-service?",
+      "questionTh": "องค์กร IT อยากให้พนักงานเลือก Provision ได้เฉพาะ Infrastructure Products ที่อนุมัติแล้วใน Portfolio กลาง ใช้บริการใด",
+      "selected": "B. AWS Service Catalog",
+      "correct": "B. AWS Service Catalog",
+      "rawFlags": [
+        "🧠 Concept / Recall Gap"
+      ],
+      "reviewedCauses": [
+        "concept"
+      ],
+      "diagnosis": "ตอบถูกแต่มี Flag สำหรับทบทวน",
+      "memoryCue": "AWS Service Catalog จัด Approved Products/Portfolios ให้ผู้ใช้ Self-service Provision ตาม Governance โดย CloudFormation เน้นการ Deploy Templates เป็น Infrastructure Stacks",
+      "notes": [
+        "AWS Service Catalog จัด Approved Products/Portfolios ให้ผู้ใช้ Self-service Provision ตาม Governance โดย CloudFormation เน้นการ Deploy Templates เป็น Infrastructure Stacks",
+        "A. AWS CloudFormation — สร้างและจัดการ infrastructure จาก templates",
+        "B. AWS Service Catalog — AWS Service Catalog จัด Approved Products/Portfolios ให้ผู้ใช้ Self-service Provision ตาม Governance โดย CloudFormation เน้นการ Deploy Templates เป็น Infrastructure Stacks",
+        "C. AWS Control Tower — ตั้งค่าและกำกับ multi-account landing zone",
+        "D. AWS Systems Manager — ช่วยจัดการและปฏิบัติงานกับ AWS Resources แบบรวมศูนย์ เช่น Automation และ Patch"
+      ]
+    },
+    {
+      "questionId": 44,
+      "result": "Correct",
+      "topic": "AWS compliance vs customer controls",
+      "question": "An auditor reviews AWS's SOC report for a cloud service. Which statement correctly describes the customer's own application compliance obligations?",
+      "questionTh": "Auditor อ่าน AWS SOC Report ของ Cloud Service แล้ว ข้อความใดอธิบาย Compliance ของ Application ฝั่งลูกค้าได้ถูกต้อง",
+      "selected": "B. Customer application controls must still meet applicable requirements",
+      "correct": "B. Customer application controls must still meet applicable requirements",
+      "rawFlags": [
+        "📘 English Unclear"
+      ],
+      "reviewedCauses": [
+        "language"
+      ],
+      "diagnosis": "ตอบถูกแต่มี Flag สำหรับทบทวน",
+      "memoryCue": "AWS Report รับรอง Controls ภายในขอบเขต AWS แต่ไม่รับรอง Application/Configuration ของลูกค้าโดยอัตโนมัติ ลูกค้ายังต้องทำ Controls ที่เกี่ยวข้อง",
+      "notes": [
+        "AWS Report รับรอง Controls ภายในขอบเขต AWS แต่ไม่รับรอง Application/Configuration ของลูกค้าโดยอัตโนมัติ ลูกค้ายังต้องทำ Controls ที่เกี่ยวข้อง",
+        "A. An AWS provider report certifies all customer configurations automatically — ผิด: Provider Report ไม่ครอบคลุม Customer Configuration ทุกส่วน",
+        "B. Customer application controls must still meet applicable requirements — AWS Report รับรอง Controls ภายในขอบเขต AWS แต่ไม่รับรอง Application/Configuration ของลูกค้าโดยอัตโนมัติ ลูกค้ายังต้องทำ Controls ที่เกี่ยวข้อง",
+        "C. A customer support plan replaces the customer's compliance assessment — ผิด: Support Plan ไม่ใช่ใบรับรอง Compliance",
+        "D. Any application on AWS is automatically compliant with every industry rule — ผิด: Industry Compliance ยังขึ้นกับ Service Eligibility และ Customer Controls"
+      ]
+    },
+    {
+      "questionId": 51,
+      "result": "Correct",
+      "topic": "CloudFormation repeatable stacks",
+      "question": "A new team wants to make an approved AWS environment from the same resource definitions in multiple accounts. Which AWS capability is designed for repeatable stacks?",
+      "questionTh": "ทีมใหม่ต้องสร้าง AWS Environments จาก Resource Definitions ชุดเดียวกันในหลาย Accounts แบบทำซ้ำได้ ควรใช้เครื่องมือใด",
+      "selected": "A. AWS CloudFormation",
+      "correct": "A. AWS CloudFormation",
+      "rawFlags": [
+        "🟡 Explain More"
+      ],
+      "reviewedCauses": [
+        "confidence"
+      ],
+      "diagnosis": "ตอบถูกแต่มี Flag สำหรับทบทวน",
+      "memoryCue": "CloudFormation ใช้ Templates นิยามและ Deploy Infrastructure เป็น Stacks ได้ซ้ำหลายครั้ง ไม่ต้องคลิก Resource ทีละรายการ",
+      "notes": [
+        "CloudFormation ใช้ Templates นิยามและ Deploy Infrastructure เป็น Stacks ได้ซ้ำหลายครั้ง ไม่ต้องคลิก Resource ทีละรายการ",
+        "A. AWS CloudFormation — CloudFormation ใช้ Templates นิยามและ Deploy Infrastructure เป็น Stacks ได้ซ้ำหลายครั้ง ไม่ต้องคลิก Resource ทีละรายการ",
+        "B. AWS CLI — Command-line Interface สำหรับเรียก AWS APIs ผ่านคำสั่งหรือ Scripts",
+        "C. AWS Management Console — Graphical Web Interface สำหรับจัดการ AWS Services ผ่าน Browser",
+        "D. AWS Systems Manager — ช่วยจัดการและปฏิบัติงานกับ AWS Resources แบบรวมศูนย์ เช่น Automation และ Patch"
+      ]
+    },
+    {
+      "questionId": 53,
+      "result": "Wrong",
+      "topic": "Durability vs fault tolerance",
+      "question": "A storage service is designed to keep a customer's records intact over many years, even when an individual storage component fails. Which property is emphasized?",
+      "questionTh": "Storage Service ต้องรักษา Records ไม่ให้สูญหายในระยะยาว แม้อุปกรณ์บางชิ้นเสีย คุณสมบัติใดเป็นหัวใจหลัก",
+      "selected": "D. Fault tolerance",
+      "correct": "A. Durability",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "diagnosis": "คำตอบที่เลือกไม่ตรงเงื่อนไขหลักตามเฉลย ไม่ทราบเหตุผลจริงขณะเลือก",
+      "memoryCue": "Durability วัดความคงอยู่ของข้อมูล ไม่ใช่ความพร้อมตอบ Request แบบ High availability หรือความสามารถประมวลผลต่อเมื่อ Node เสียแบบ Fault tolerance",
+      "notes": [
+        "Durability วัดความคงอยู่ของข้อมูล ไม่ใช่ความพร้อมตอบ Request แบบ High availability หรือความสามารถประมวลผลต่อเมื่อ Node เสียแบบ Fault tolerance",
+        "A. Durability — Durability วัดความคงอยู่ของข้อมูล ไม่ใช่ความพร้อมตอบ Request แบบ High availability หรือความสามารถประมวลผลต่อเมื่อ Node เสียแบบ Fault tolerance",
+        "B. Reliability — เน้นการฟื้นตัวและการทำงานตามที่คาดหวัง เช่น วางระบบหลาย Availability Zones และทดสอบ failover",
+        "C. High availability — ออกแบบให้บริการพร้อมใช้งานต่อเนื่อง เช่น วาง Application Load Balancer หน้า EC2 หลาย AZ เพื่อลด downtime",
+        "D. Fault tolerance — ทำงานต่อได้เมื่อบางส่วนล้มเหลว เช่น ให้ component สำรองรับงานต่อได้เมื่อ component หลักล้มเหลว"
+      ]
+    },
+    {
+      "questionId": 54,
+      "result": "Wrong",
+      "topic": "Application Discovery Service vs Migration Evaluator",
+      "question": "Before moving a legacy estate, a team wants to identify which servers communicate with each other and group applications accordingly. Which service assists with this discovery?",
+      "questionTh": "ก่อน Migration ทีมต้องรู้ว่า Servers ตัวใดสื่อสารกัน เพื่อจัดกลุ่ม Applications และ Dependencies ควรใช้บริการใด",
+      "selected": "D. AWS Migration Evaluator",
+      "correct": "C. AWS Application Discovery Service",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "diagnosis": "คำตอบที่เลือกไม่ตรงเงื่อนไขหลักตามเฉลย ไม่ทราบเหตุผลจริงขณะเลือก",
+      "memoryCue": "Application Discovery Service รวบรวม Server Inventory และ Dependencies เพื่อวางแผนย้าย แตกต่างจาก Migration Evaluator ที่เน้นข้อมูลสำหรับ Business Case/TCO",
+      "notes": [
+        "Application Discovery Service รวบรวม Server Inventory และ Dependencies เพื่อวางแผนย้าย แตกต่างจาก Migration Evaluator ที่เน้นข้อมูลสำหรับ Business Case/TCO",
+        "A. AWS Migration Hub — ติดตามความคืบหน้าการ migration เช่น ติดตามสถานะการย้ายแอปจากหลาย tools",
+        "B. AWS Application Migration Service — ย้าย servers โดยทำ lift-and-shift เช่น replicate และย้าย servers ไป AWS แบบ lift-and-shift",
+        "C. AWS Application Discovery Service — Application Discovery Service รวบรวม Server Inventory และ Dependencies เพื่อวางแผนย้าย แตกต่างจาก Migration Evaluator ที่เน้นข้อมูลสำหรับ Business Case/TCO",
+        "D. AWS Migration Evaluator — ช่วยสร้าง business case และ cost assessment ก่อน migration เช่น ประเมิน business case และค่าใช้จ่ายก่อน migration"
+      ]
+    },
+    {
+      "questionId": 56,
+      "result": "Wrong",
+      "topic": "IAM role vs KMS",
+      "question": "An EC2 service writes objects to S3. The security team rejects long-lived access keys embedded in its image. What should be attached to the instance?",
+      "questionTh": "EC2 Service ต้องเขียน S3 แต่ห้ามฝัง Long-lived Access Keys ใน Image ต้องกำหนดอะไรให้ Instance",
+      "selected": "A. AWS KMS",
+      "correct": "C. AWS IAM",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "diagnosis": "คำตอบที่เลือกไม่ตรงเงื่อนไขหลักตามเฉลย ไม่ทราบเหตุผลจริงขณะเลือก",
+      "memoryCue": "ใช้ IAM Role/Instance Profile ให้ EC2 ได้ Temporary Credentials พร้อม S3 Policy ตาม Least Privilege ไม่ใช่ฝัง Static Keys หรือเก็บ Static Keys ใน Secrets Manager",
+      "notes": [
+        "ใช้ IAM Role/Instance Profile ให้ EC2 ได้ Temporary Credentials พร้อม S3 Policy ตาม Least Privilege ไม่ใช่ฝัง Static Keys หรือเก็บ Static Keys ใน Secrets Manager",
+        "A. AWS KMS — สร้างและควบคุม encryption keys เช่น ควบคุม encryption key ที่ใช้กับ S3",
+        "B. AWS Secrets Manager — เก็บและหมุนเวียน secrets เช่น database credentials เช่น เก็บและหมุนเวียน database password",
+        "C. AWS IAM — ใช้ IAM Role/Instance Profile ให้ EC2 ได้ Temporary Credentials พร้อม S3 Policy ตาม Least Privilege ไม่ใช่ฝัง Static Keys หรือเก็บ Static Keys ใน Secrets Manager",
+        "D. IAM Access Analyzer — วิเคราะห์ resource access และ external access"
+      ]
+    },
+    {
+      "questionId": 57,
+      "result": "Wrong",
+      "topic": "Transcribe vs Polly",
+      "question": "A call center wants transcripts of voice calls to feed into a text analytics pipeline. Which managed AI capability converts audio to words?",
+      "questionTh": "Call Center ต้องแปลงเสียงสนทนาเป็น Text Transcript เพื่อส่งต่อ Text Analytics ใช้บริการ AI ใด",
+      "selected": "B. Amazon Polly",
+      "correct": "A. Amazon Transcribe",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "diagnosis": "คำตอบที่เลือกไม่ตรงเงื่อนไขหลักตามเฉลย ไม่ทราบเหตุผลจริงขณะเลือก",
+      "memoryCue": "Transcribe แปลง Speech-to-Text ส่วน Polly เป็น Text-to-Speech, Comprehend วิเคราะห์ Text และ Textract ดึง Text จากเอกสาร",
+      "notes": [
+        "Transcribe แปลง Speech-to-Text ส่วน Polly เป็น Text-to-Speech, Comprehend วิเคราะห์ Text และ Textract ดึง Text จากเอกสาร",
+        "A. Amazon Transcribe — Transcribe แปลง Speech-to-Text ส่วน Polly เป็น Text-to-Speech, Comprehend วิเคราะห์ Text และ Textract ดึง Text จากเอกสาร",
+        "B. Amazon Polly — แปลงข้อความเป็นเสียงพูด",
+        "C. Amazon Comprehend — บริการ NLP วิเคราะห์ข้อความ เช่น Sentiment, Entities และ Key Phrases",
+        "D. Amazon Textract — ดึงข้อความและโครงสร้างจากเอกสาร"
+      ]
+    },
+    {
+      "questionId": 63,
+      "result": "Correct",
+      "topic": "Elastic Disaster Recovery",
+      "question": "An organization needs replication of physical and virtual servers to AWS and a recovery environment for a major data-center outage. Which storage-related disaster recovery service is purpose-built?",
+      "questionTh": "องค์กรต้อง Replicate Physical/Virtual Servers ไป AWS เพื่อกู้คืนเมื่อ Data Center ใช้งานไม่ได้ ใช้บริการ DR ใด",
+      "selected": "C. AWS Elastic Disaster Recovery",
+      "correct": "C. AWS Elastic Disaster Recovery",
+      "rawFlags": [
+        "🧩 Clue / Distractor Gap"
+      ],
+      "reviewedCauses": [
+        "clue"
+      ],
+      "diagnosis": "ตอบถูกแต่มี Flag สำหรับทบทวน",
+      "memoryCue": "AWS Elastic Disaster Recovery เน้น Continuous Replication เพื่อ Recover Servers เมื่อเกิด Disaster ส่วน Backup เน้น Restore Points และ Application Migration Service เน้นย้าย Workloads",
+      "notes": [
+        "AWS Elastic Disaster Recovery เน้น Continuous Replication เพื่อ Recover Servers เมื่อเกิด Disaster ส่วน Backup เน้น Restore Points และ Application Migration Service เน้นย้าย Workloads",
+        "A. AWS Backup — รวมศูนย์การตั้งค่า backup policies",
+        "B. AWS Storage Gateway — เชื่อม on-premises applications กับ cloud storage",
+        "C. AWS Elastic Disaster Recovery — AWS Elastic Disaster Recovery เน้น Continuous Replication เพื่อ Recover Servers เมื่อเกิด Disaster ส่วน Backup เน้น Restore Points และ Application Migration Service เน้นย้าย Workloads",
+        "D. AWS Application Migration Service — ย้าย servers โดยทำ lift-and-shift เช่น replicate และย้าย servers ไป AWS แบบ lift-and-shift"
+      ]
+    },
+    {
+      "questionId": 64,
+      "result": "Correct",
+      "topic": "Region and data residency",
+      "question": "A regulated application needs proof that its data remains in the permitted geographic area. Which deployment-level AWS concept should be checked first?",
+      "questionTh": "แอปที่อยู่ภายใต้กฎต้องเก็บข้อมูลในพื้นที่ภูมิศาสตร์ที่กำหนด องค์ประกอบระดับ Deployment ใดเป็นตัวเลือกแรกที่ต้องตรวจ",
+      "selected": "B. AWS Region",
+      "correct": "B. AWS Region",
+      "rawFlags": [
+        "📘 English Unclear"
+      ],
+      "reviewedCauses": [
+        "language"
+      ],
+      "diagnosis": "ตอบถูกแต่มี Flag สำหรับทบทวน",
+      "memoryCue": "เลือก AWS Region ที่สอดคล้องกับข้อกำหนด Data Residency ก่อน เพราะ AZ และ Subnets อยู่ภายใน Region ไม่ใช่ตัวระบุพื้นที่ภูมิศาสตร์หลัก",
+      "notes": [
+        "เลือก AWS Region ที่สอดคล้องกับข้อกำหนด Data Residency ก่อน เพราะ AZ และ Subnets อยู่ภายใน Region ไม่ใช่ตัวระบุพื้นที่ภูมิศาสตร์หลัก",
+        "A. Availability Zone — พื้นที่โครงสร้างพื้นฐานที่แยกจาก AZ อื่นใน Region เช่น แยก infrastructure เพื่อกระจายความเสี่ยงภายใน Region",
+        "B. AWS Region — เลือก AWS Region ที่สอดคล้องกับข้อกำหนด Data Residency ก่อน เพราะ AZ และ Subnets อยู่ภายใน Region ไม่ใช่ตัวระบุพื้นที่ภูมิศาสตร์หลัก",
+        "C. Edge location — จุดกระจาย content ใกล้ผู้ใช้ เช่น ให้ CloudFront ส่ง content จาก edge ใกล้ผู้ใช้",
+        "D. Multi-AZ deployment — ออกแบบ resilience ภายใน Region ด้วยหลาย AZ เช่น วาง database standby ในอีก AZ เพื่อรองรับ failover"
+      ]
+    }
+  ],
+  "englishNotes": [
+    {
+      "questionId": 2,
+      "phrase": "An enterprise wants an AWS-authored collection of migration design patterns and step-by-step guidance before choosing a consulting partner. Which resource should it read?",
+      "translation": "องค์กรต้องการอ่าน AWS-authored Migration Patterns/Guidance ก่อนคัดเลือก Consulting Partner ควรเริ่มจากแหล่งข้อมูลใด"
+    },
+    {
+      "questionId": 23,
+      "phrase": "An Amazon RDS user wants to know who replaces malfunctioning physical storage devices beneath the database. Which party owns this activity?",
+      "translation": "ผู้ใช้ Amazon RDS สงสัยว่าใครเปลี่ยนอุปกรณ์ Storage จริงที่เสียใต้ Managed Database หน้าที่นี้เป็นของใคร"
+    },
+    {
+      "questionId": 36,
+      "phrase": "A small company commits to Savings Plans spending at the level of a rare monthly product launch spike. What is its most likely cost risk?",
+      "translation": "บริษัทตั้ง Savings Plans Commitment ตามยอด Compute ที่สูงเฉพาะวัน Launch เดือนละครั้ง ความเสี่ยงด้านค่าใช้จ่ายคืออะไร"
+    },
+    {
+      "questionId": 41,
+      "phrase": "An office requires continuing access to cloud-backed shared files while it migrates other storage. Which hybrid service exposes familiar file interfaces on premises?",
+      "translation": "สำนักงานต้องใช้ Shared Files ที่มี Cloud Storage เป็น Backend อย่างต่อเนื่องระหว่าง Migration บริการ Hybrid ใดมี File Interfaces ให้ On-premises"
+    },
+    {
+      "questionId": 44,
+      "phrase": "An auditor reviews AWS's SOC report for a cloud service. Which statement correctly describes the customer's own application compliance obligations?",
+      "translation": "Auditor อ่าน AWS SOC Report ของ Cloud Service แล้ว ข้อความใดอธิบาย Compliance ของ Application ฝั่งลูกค้าได้ถูกต้อง"
+    },
+    {
+      "questionId": 64,
+      "phrase": "A regulated application needs proof that its data remains in the permitted geographic area. Which deployment-level AWS concept should be checked first?",
+      "translation": "แอปที่อยู่ภายใต้กฎต้องเก็บข้อมูลในพื้นที่ภูมิศาสตร์ที่กำหนด องค์ประกอบระดับ Deployment ใดเป็นตัวเลือกแรกที่ต้องตรวจ"
+    }
+  ]
+};
+window.REVIEW_INSIGHTS.history.push({
+  "setId": "local-set-11",
+  "label": "Local Mock Set 11 · 24 Nov 2026",
+  "score": 54,
+  "total": 65,
+  "percent": 83,
+  "confidence": 9,
+  "language": 6,
+  "concept": 4,
+  "clue": 2
+});
