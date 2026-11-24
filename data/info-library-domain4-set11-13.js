@@ -30,5 +30,12 @@
     const i=group.items.findIndex(x=>x.name===name);
     if(i<0)group.items.push(item);else Object.assign(group.items[i],item);
   }
+  guide.updated='2026-11-24';
+  guide.sources = guide.sources || [];
+  for(const source of [
+    {name:'AWS Amplify Hosting',url:'https://docs.aws.amazon.com/amplify/latest/userguide/'},
+    {name:'AWS Quick current naming',url:'https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-quick-aws-quick/'},
+    {name:'AWS CLF-C02 in-scope services',url:'https://docs.aws.amazon.com/aws-certification/latest/cloud-practitioner-02/clf-02-in-scope-services.html'}
+  ])if(!guide.sources.some(x=>x.url===source.url))guide.sources.push(source);
   group.summary='Pricing Models, Capacity vs Discounts, Billing Tools, Support & AWS Professional Resources';
 })();
