@@ -11,11 +11,11 @@
   ],
   [
     "2.1",
-    "An organization moves a database from an EC2-hosted MySQL server to Amazon RDS for MySQL. Which responsibility generally shifts to AWS?",
-    "องค์กรย้าย MySQL ที่ติดตั้งเองบน EC2 ไป RDS for MySQL งานใดโดยทั่วไปกลายเป็นหน้าที่ Managed Service ของ AWS",
-    "Guest operating system|AWS-owned physical servers|The customer|AWS IAM",
-    "1",
-    "AWS ดูแล Physical Hardware และ Managed Database Underlying Infrastructure ของ RDS ขณะที่ลูกค้ายังคงรับผิดชอบ Data, Logical Access และ Application Queries"
+    "A team wants to move its self-managed MySQL database off EC2 so the provider handles the managed database infrastructure, routine backups, and software maintenance. Which service fits?",
+    "ทีมต้องย้าย MySQL ที่ติดตั้งเองบน EC2 เพื่อให้ AWS ดูแล Managed Database Infrastructure, Backups และ Maintenance ควรใช้บริการใด",
+    "Amazon RDS|Amazon EC2|AWS DMS|AWS License Manager",
+    "0",
+    "Amazon RDS เป็น Managed Relational Database Service ที่ช่วยลดงานดูแลฐานข้อมูลและ Infrastructure ส่วน EC2 ยังต้องบริหาร Guest OS/DB เอง"
   ],
   [
     "2.1",
@@ -135,11 +135,17 @@
   ],
   [
     "2.3",
-    "AWS Organizations imposes an SCP that allows EC2 actions. A developer role has no matching IAM allow permissions. What will happen when it calls EC2 APIs?",
-    "AWS Organizations มี SCP ที่ไม่ห้าม EC2 แต่ Developer Role ไม่มี IAM Allow Policy สำหรับ Action นั้น เมื่อเรียก EC2 API จะเป็นอย่างไร",
-    "AWS Organizations|AWS Control Tower|AWS IAM|IAM Identity Center",
-    "2",
-    "SCP กำหนด Maximum Permissions แต่ไม่ได้ Grant สิทธิ์ Role ต้องได้รับ IAM Allow ที่ใช้ได้ด้วย จึงจะเรียก Action ได้"
+    "An SCP allows an EC2 action, but the developer role has no applicable IAM allow permission. Which statement about the role's access is correct?",
+    "SCP ไม่ห้าม EC2 Action แต่ Developer Role ไม่มี IAM Allow Policy ที่ใช้ได้ ข้อความใดสรุปสิทธิ์ของ Role ได้ถูก",
+    "The role still needs an applicable IAM permission grant|The SCP itself grants access to the role|Every AWS account in the organization shares IAM role rights|The presence of Control Tower automatically permits the EC2 API",
+    "0",
+    "SCP ไม่ได้ Grant Permission; ต้องมี Applicable IAM/Resource-based Allow และไม่ถูก Explicit Deny Role จึงจะใช้ EC2 API Action ได้",
+    [
+      "ถูก: SCP เป็น Boundary ไม่ได้ให้ Allow สิทธิ์เอง",
+      "ผิด: SCP Allow ไม่ใช่ Permission Grant ให้ Principal",
+      "ผิด: Accounts ยังแยก IAM/Root Identity Boundaries",
+      "ผิด: Control Tower ไม่ได้ Grant ทุก EC2 API Action"
+    ]
   ],
   [
     "2.3",
