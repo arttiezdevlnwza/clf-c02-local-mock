@@ -7185,3 +7185,622 @@ window.REVIEW_INSIGHTS.history.push({
   "concept": 4,
   "clue": 2
 });
+
+window.REVIEW_INSIGHTS.sets["local-set-12"] = {
+  "title": "Local Mock Set 12",
+  "note": "27 Nov 2026 · 50/65 correct (76.9%) · 15 wrong + 3 correct flagged · 0 Explain More, 3 English Unclear, 5 Concept / Recall Gap, 0 Clue / Distractor Gap; flags may overlap.",
+  "items": [
+    {
+      "questionId": 2,
+      "key": "local-set-12:q2",
+      "topic": "L01 — Fault tolerance vs High availability vs Durability",
+      "type": "review",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "note": "Wrong | Fault tolerance ให้ระบบทำงานต่อเมื่อ Component ล้มเหลว ส่วน Durability เน้นความคงอยู่ของข้อมูล แยกจาก High availability ที่เน้นลด Downtime โดยรวม"
+    },
+    {
+      "questionId": 6,
+      "key": "local-set-12:q6",
+      "topic": "L10 — Shared responsibility and compliance eligibility",
+      "type": "language",
+      "rawFlags": [
+        "📘 English Unclear"
+      ],
+      "reviewedCauses": [
+        "language"
+      ],
+      "note": "Correct; flagged for review | ต้องตรวจ Service Eligibility/Agreements ที่เกี่ยวข้องและดำเนิน Customer-side Controls; AWS Provider Attestation ไม่รับรอง Application ของลูกค้าอัตโนมัติ"
+    },
+    {
+      "questionId": 14,
+      "key": "local-set-12:q14",
+      "topic": "L05 — Route 53 DNS failover vs ELB / Global Accelerator",
+      "type": "review",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "note": "Wrong | Route 53 รองรับ DNS Failover Routing และ Health Checks ส่วน CloudFront เน้น Content Delivery และ ELB กระจาย Traffic ภายใน Load Balancer"
+    },
+    {
+      "questionId": 16,
+      "key": "local-set-12:q16",
+      "topic": "L09 — Firewall Manager vs Security Hub / WAF / Shield",
+      "type": "concept",
+      "rawFlags": [
+        "🧠 Concept / Recall Gap"
+      ],
+      "reviewedCauses": [
+        "concept"
+      ],
+      "note": "Wrong | Firewall Manager เป็น Central Security Policy Management สำหรับหลาย Accounts ส่วน WAF กรอง Web Requests ตาม Rules"
+    },
+    {
+      "questionId": 17,
+      "key": "local-set-12:q17",
+      "topic": "L13 — Well-Architected Tool vs Trusted Advisor / CAF",
+      "type": "review",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "note": "Wrong | Well-Architected Tool ใช้ Review Workloads เทียบ AWS Well-Architected Framework และบันทึก Risks/Improvements ขณะที่ CAF เน้นการเปลี่ยนผ่านทั้งองค์กร"
+    },
+    {
+      "questionId": 19,
+      "key": "local-set-12:q19",
+      "topic": "L12 — Application Migration Service vs DMS / SCT / Migration Hub",
+      "type": "review",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "note": "Wrong | Application Migration Service ทำ Server-based Lift-and-shift ด้วย Replication ส่วน DMS ย้าย Data และ SCT แปลง Database Schema/Code"
+    },
+    {
+      "questionId": 24,
+      "key": "local-set-12:q24",
+      "topic": "L12 — CAF People Perspective",
+      "type": "concept",
+      "rawFlags": [
+        "🧠 Concept / Recall Gap"
+      ],
+      "reviewedCauses": [
+        "concept"
+      ],
+      "note": "Correct; flagged for review | People Perspective ดูความพร้อมบุคลากร Culture/Training และ Organizational Change ส่วน Governance เน้น Controls/Risk Policies และ Platform เน้น Technical Architecture"
+    },
+    {
+      "questionId": 26,
+      "key": "local-set-12:q26",
+      "topic": "L04 — Outposts vs Direct Connect / Global Accelerator",
+      "type": "concept",
+      "rawFlags": [
+        "🧠 Concept / Recall Gap"
+      ],
+      "reviewedCauses": [
+        "concept"
+      ],
+      "note": "Wrong | Outposts นำ AWS Infrastructure/บริการที่รองรับมาวาง On-premises เพื่อ Low Latency/Local Processing ส่วน Direct Connect แค่เชื่อมเครือข่ายไป AWS"
+    },
+    {
+      "questionId": 36,
+      "key": "local-set-12:q36",
+      "topic": "L12 — Relocate vs Rehost",
+      "type": "language",
+      "rawFlags": [
+        "📘 English Unclear",
+        "🧠 Concept / Recall Gap"
+      ],
+      "reviewedCauses": [
+        "language",
+        "concept"
+      ],
+      "note": "Wrong | Relocate หมายถึงย้าย Virtualized Infrastructure ไปยัง Compatible Cloud Environment โดยเปลี่ยน Application น้อย ต่างจาก Rehost ที่ย้าย Server/App แบบ Lift-and-shift ไป Infrastructure ใหม่"
+    },
+    {
+      "questionId": 39,
+      "key": "local-set-12:q39",
+      "topic": "L09 — EC2 shared responsibility: guest OS vs hypervisor",
+      "type": "review",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "note": "Wrong | ลูกค้า EC2 ต้อง Update Guest OS ของตนเอง AWS จัดการ Underlying Hosts/Hypervisor ไม่ใช่ Patch OS ของ EC2 ที่ลูกค้าควบคุม"
+    },
+    {
+      "questionId": 40,
+      "key": "local-set-12:q40",
+      "topic": "L10 — Artifact vs Audit Manager",
+      "type": "review",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "note": "Wrong | Artifact เป็นแหล่งรายงาน/เอกสาร Compliance ของ AWS ส่วน Audit Manager ช่วยรวบรวม Assessment Evidence จากลูกค้า"
+    },
+    {
+      "questionId": 43,
+      "key": "local-set-12:q43",
+      "topic": "L13 — Security + Cost Optimization",
+      "type": "review",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "note": "Wrong | Security เกี่ยวกับ Identity/Access Protection ส่วน Cost Optimization ลด Idle Spend ไม่ใช่เป้าหมายด้าน Environmental Impact โดยตรง"
+    },
+    {
+      "questionId": 46,
+      "key": "local-set-12:q46",
+      "topic": "L13 — Cost Optimization vs Performance Efficiency",
+      "type": "review",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "note": "Wrong | Cost Optimization มุ่งเลือกการใช้เงินเพื่อให้ได้ Business Outcomes ที่ต้องการ ต่างจาก Performance Efficiency ซึ่งเน้น Performance/Capacity ตามโจทย์เป็นหลัก"
+    },
+    {
+      "questionId": 48,
+      "key": "local-set-12:q48",
+      "topic": "L11 — Cost allocation tags vs Cost Explorer",
+      "type": "review",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "note": "Wrong | Cost Allocation Tags ใช้จัด Cost ตาม Team/Product ส่วน Consolidated Billing รวมค่าใช้จ่ายตาม Accounts ไม่ระบุ Product Labels ให้เอง"
+    },
+    {
+      "questionId": 52,
+      "key": "local-set-12:q52",
+      "topic": "L11 — Compute Optimizer vs Trusted Advisor",
+      "type": "review",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "note": "Wrong | Compute Optimizer วิเคราะห์ Utilization Metrics เพื่อแนะนำประเภท/ขนาด Compute ส่วน EC2 Auto Scaling เปลี่ยนจำนวน Instances ตาม Scaling Policies"
+    },
+    {
+      "questionId": 53,
+      "key": "local-set-12:q53",
+      "topic": "L01 — Capital expenditure vs Variable expense",
+      "type": "review",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "note": "Wrong | ลด Capital Expenditure ด้าน Assets ที่ต้องลงทุนล่วงหน้าแล้วเปลี่ยนสู่ Variable Expense ที่จ่ายตาม Usage ส่วน Rightsizing เป็นเทคนิคปรับ Resource Size"
+    },
+    {
+      "questionId": 62,
+      "key": "local-set-12:q62",
+      "topic": "L09 — Resource Access Manager vs Control Tower",
+      "type": "review",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "note": "Wrong | AWS RAM แชร์ AWS Resources ที่รองรับข้าม Accounts อย่างมีขอบเขต ส่วน Organizations จัดโครงสร้าง Accounts/OUs และ Access Analyzer ตรวจ External Permissions"
+    },
+    {
+      "questionId": 63,
+      "key": "local-set-12:q63",
+      "topic": "L09 — CloudHSM vs KMS",
+      "type": "language",
+      "rawFlags": [
+        "📘 English Unclear",
+        "🧠 Concept / Recall Gap"
+      ],
+      "reviewedCauses": [
+        "language",
+        "concept"
+      ],
+      "note": "Correct; flagged for review | CloudHSM ให้ลูกค้าควบคุม HSMs สำหรับ Cryptographic Operations ส่วน KMS เป็น Managed Encryption Key Service"
+    }
+  ],
+  "details": [
+    {
+      "questionId": 2,
+      "result": "Wrong",
+      "topic": "L01 — Fault tolerance vs High availability vs Durability",
+      "question": "A payment workload should stay operational when a single processing component stops abruptly, and customer records should remain intact. Which TWO properties are most directly requested? (Select TWO.)",
+      "questionTh": "ระบบ Payment ต้องประมวลผลต่อได้เมื่อ Node หนึ่งเสียทันที และข้อมูลลูกค้าไม่สูญหาย สองคุณสมบัติใดตรงแต่ละเป้าหมาย",
+      "selected": "C. Durability, E. High availability",
+      "correct": "C. Durability, A. Fault tolerance",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "diagnosis": "คำตอบที่เลือกไม่ครบหรือไม่ตรง Requirement หลักตามเฉลย ไม่ทราบเหตุผลจริงขณะเลือก",
+      "memoryCue": "component failure + keep operating → Fault tolerance; data intact → Durability; minimize downtime → High availability",
+      "notes": [
+        "Fault tolerance ให้ระบบทำงานต่อเมื่อ Component ล้มเหลว ส่วน Durability เน้นความคงอยู่ของข้อมูล แยกจาก High availability ที่เน้นลด Downtime โดยรวม",
+        "A. Fault tolerance — Fault tolerance ให้ระบบทำงานต่อเมื่อ Component ล้มเหลว ส่วน Durability เน้นความคงอยู่ของข้อมูล แยกจาก High availability ที่เน้นลด Downtime โดยรวม [คำตอบที่ถูก]",
+        "B. Agility — จัดสรรและทดลองทรัพยากรได้รวดเร็ว เช่น สร้าง test environment ใหม่ภายในไม่กี่นาที",
+        "C. Durability — Fault tolerance ให้ระบบทำงานต่อเมื่อ Component ล้มเหลว ส่วน Durability เน้นความคงอยู่ของข้อมูล แยกจาก High availability ที่เน้นลด Downtime โดยรวม [คำตอบที่ถูก]",
+        "D. Global reach — ใช้ AWS Global Infrastructure และ Regions เพื่อให้บริการลูกค้าหลายพื้นที่ได้โดยไม่สร้าง Data Centers เอง",
+        "E. High availability — ออกแบบให้บริการพร้อมใช้งานต่อเนื่อง เช่น วาง Application Load Balancer หน้า EC2 หลาย AZ เพื่อลด downtime"
+      ]
+    },
+    {
+      "questionId": 6,
+      "result": "Correct",
+      "topic": "L10 — Shared responsibility and compliance eligibility",
+      "question": "A security program asks whether a healthcare workload can process regulated patient data merely because the AWS infrastructure has compliance reports. Which TWO checks are still necessary? (Select TWO.)",
+      "questionTh": "โครงการ Healthcare ต้องตรวจว่าประมวลผลข้อมูลผู้ป่วยบน AWS ได้ถูกต้องหรือไม่ แม้ AWS มี Compliance Reports สองสิ่งใดยังต้องทำ",
+      "selected": "D. Implement required customer-side controls, E. Verify the relevant service eligibility and AWS agreements",
+      "correct": "D. Implement required customer-side controls, E. Verify the relevant service eligibility and AWS agreements",
+      "rawFlags": [
+        "📘 English Unclear"
+      ],
+      "reviewedCauses": [
+        "language"
+      ],
+      "diagnosis": "ตอบถูกแต่มี Flag สำหรับทบทวน",
+      "memoryCue": "provider compliance report ≠ customer application compliance; verify service eligibility and agreements + implement customer controls",
+      "notes": [
+        "ต้องตรวจ Service Eligibility/Agreements ที่เกี่ยวข้องและดำเนิน Customer-side Controls; AWS Provider Attestation ไม่รับรอง Application ของลูกค้าอัตโนมัติ",
+        "A. Use a free support plan as proof of compliance — ผิด: Support Plan ไม่ใช่ใบรับรอง Compliance",
+        "B. Assume AWS reports automatically certify the application — ผิด: Provider Report ไม่รับรอง Application อัตโนมัติ",
+        "C. Assume every AWS service supports regulated health data — ผิด: Service Eligibility ไม่ได้เท่ากันทุกบริการ",
+        "D. Implement required customer-side controls — ต้องตรวจ Service Eligibility/Agreements ที่เกี่ยวข้องและดำเนิน Customer-side Controls; AWS Provider Attestation ไม่รับรอง Application ของลูกค้าอัตโนมัติ [คำตอบที่ถูก]",
+        "E. Verify the relevant service eligibility and AWS agreements — ต้องตรวจ Service Eligibility/Agreements ที่เกี่ยวข้องและดำเนิน Customer-side Controls; AWS Provider Attestation ไม่รับรอง Application ของลูกค้าอัตโนมัติ [คำตอบที่ถูก]"
+      ]
+    },
+    {
+      "questionId": 14,
+      "result": "Wrong",
+      "topic": "L05 — Route 53 DNS failover vs ELB / Global Accelerator",
+      "question": "A company wants its web hostname to direct users to a backup endpoint when health checks fail. Which DNS service supports this routing decision?",
+      "questionTh": "บริษัทต้องการ DNS ของเว็บไซต์ส่งผู้ใช้ไป Backup Endpoint เมื่อ Primary Health Check ไม่ผ่าน ใช้บริการใด",
+      "selected": "B. Elastic Load Balancing",
+      "correct": "D. Amazon Route 53",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "diagnosis": "คำตอบที่เลือกไม่ครบหรือไม่ตรง Requirement หลักตามเฉลย ไม่ทราบเหตุผลจริงขณะเลือก",
+      "memoryCue": "hostname + DNS failover → Route 53; healthy targets within load balancer → ELB",
+      "notes": [
+        "Route 53 รองรับ DNS Failover Routing และ Health Checks ส่วน CloudFront เน้น Content Delivery และ ELB กระจาย Traffic ภายใน Load Balancer",
+        "A. AWS Global Accelerator — เพิ่มประสิทธิภาพเส้นทางการเชื่อมต่อ TCP/UDP ไปยัง AWS Application Endpoints ด้วย Global Network",
+        "B. Elastic Load Balancing — กระจาย incoming traffic ไปยัง targets เช่น กระจาย HTTP requests ไปหลาย EC2 targets",
+        "C. Amazon CloudFront — content delivery network ที่ใช้ edge locations เช่น cache static assets ใกล้ผู้ใช้",
+        "D. Amazon Route 53 — Route 53 รองรับ DNS Failover Routing และ Health Checks ส่วน CloudFront เน้น Content Delivery และ ELB กระจาย Traffic ภายใน Load Balancer [คำตอบที่ถูก]"
+      ]
+    },
+    {
+      "questionId": 16,
+      "result": "Wrong",
+      "topic": "L09 — Firewall Manager vs Security Hub / WAF / Shield",
+      "question": "A company wants to manage baseline WAF rules across a large AWS Organizations environment. Which service governs their rollout centrally?",
+      "questionTh": "บริษัทต้องการใช้ Baseline WAF Rules ข้าม AWS Accounts ใน Organization และบริหาร Rollout จากส่วนกลาง บริการใด",
+      "selected": "A. AWS Security Hub",
+      "correct": "D. AWS Firewall Manager",
+      "rawFlags": [
+        "🧠 Concept / Recall Gap"
+      ],
+      "reviewedCauses": [
+        "concept"
+      ],
+      "diagnosis": "คำตอบที่เลือกไม่ครบหรือไม่ตรง Requirement หลักตามเฉลย ไม่ทราบเหตุผลจริงขณะเลือก",
+      "memoryCue": "central rollout of WAF policies across accounts → Firewall Manager; collect findings → Security Hub",
+      "notes": [
+        "Firewall Manager เป็น Central Security Policy Management สำหรับหลาย Accounts ส่วน WAF กรอง Web Requests ตาม Rules",
+        "A. AWS Security Hub — รวม findings และสถานะ security จากหลายแหล่ง เช่น รวม security findings จากหลายบริการ",
+        "B. AWS Shield — ป้องกันการโจมตี DDoS เช่น ช่วยป้องกันการโจมตี DDoS",
+        "C. AWS WAF — กรอง HTTP(S) requests ตาม web ACL rules เช่น บล็อก HTTP request ที่มีรูปแบบ SQL injection",
+        "D. AWS Firewall Manager — Firewall Manager เป็น Central Security Policy Management สำหรับหลาย Accounts ส่วน WAF กรอง Web Requests ตาม Rules [คำตอบที่ถูก]"
+      ]
+    },
+    {
+      "questionId": 17,
+      "result": "Wrong",
+      "topic": "L13 — Well-Architected Tool vs Trusted Advisor / CAF",
+      "question": "An AWS architect uses a review tool to evaluate an existing workload against six pillar-based best practices and receive recommended improvements. Which AWS resource supports this process?",
+      "questionTh": "Architect ต้อง Review Workload ที่มีอยู่ตาม 6 Pillars และรับ Recommendations ตาม Best Practices ใช้เครื่องมือใด",
+      "selected": "C. AWS Trusted Advisor",
+      "correct": "D. AWS Well-Architected Tool",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "diagnosis": "คำตอบที่เลือกไม่ครบหรือไม่ตรง Requirement หลักตามเฉลย ไม่ทราบเหตุผลจริงขณะเลือก",
+      "memoryCue": "review workload against six pillars → Well-Architected Tool; automated resource checks → Trusted Advisor",
+      "notes": [
+        "Well-Architected Tool ใช้ Review Workloads เทียบ AWS Well-Architected Framework และบันทึก Risks/Improvements ขณะที่ CAF เน้นการเปลี่ยนผ่านทั้งองค์กร",
+        "A. AWS Cloud Adoption Framework — กรอบแนวทางการเปลี่ยนผ่านองค์กรสู่ cloud เช่น ประเมิน People, Governance, Platform และมุมมองอื่นก่อน adoption",
+        "B. AWS Control Tower — ตั้งค่าและกำกับ multi-account landing zone",
+        "C. AWS Trusted Advisor — ตรวจ best practices รวมถึงต้นทุนและ security",
+        "D. AWS Well-Architected Tool — Well-Architected Tool ใช้ Review Workloads เทียบ AWS Well-Architected Framework และบันทึก Risks/Improvements ขณะที่ CAF เน้นการเปลี่ยนผ่านทั้งองค์กร [คำตอบที่ถูก]"
+      ]
+    },
+    {
+      "questionId": 19,
+      "result": "Wrong",
+      "topic": "L12 — Application Migration Service vs DMS / SCT / Migration Hub",
+      "question": "An IT team needs a lift-and-shift service that continuously replicates servers to AWS for final migration, rather than translating a database schema. Which tool fits?",
+      "questionTh": "ทีม IT ต้อง Replicate Servers ไป AWS เพื่อ Lift-and-shift Migration ไม่ได้แปลง Database Schema ควรใช้บริการใด",
+      "selected": "A. AWS DMS",
+      "correct": "D. AWS Application Migration Service",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "diagnosis": "คำตอบที่เลือกไม่ครบหรือไม่ตรง Requirement หลักตามเฉลย ไม่ทราบเหตุผลจริงขณะเลือก",
+      "memoryCue": "replicate whole servers → Application Migration Service; database records → DMS; schema conversion → SCT",
+      "notes": [
+        "Application Migration Service ทำ Server-based Lift-and-shift ด้วย Replication ส่วน DMS ย้าย Data และ SCT แปลง Database Schema/Code",
+        "A. AWS DMS — ย้ายและ replicate databases เช่น replicate ข้อมูลจากฐานข้อมูลต้นทางไปปลายทาง",
+        "B. AWS Migration Hub — ติดตามความคืบหน้าการ migration เช่น ติดตามสถานะการย้ายแอปจากหลาย tools",
+        "C. AWS SCT — ช่วยแปลง database schema ระหว่าง engines เช่น แปลง database schema ระหว่าง engines",
+        "D. AWS Application Migration Service — Application Migration Service ทำ Server-based Lift-and-shift ด้วย Replication ส่วน DMS ย้าย Data และ SCT แปลง Database Schema/Code [คำตอบที่ถูก]"
+      ]
+    },
+    {
+      "questionId": 24,
+      "result": "Correct",
+      "topic": "L12 — CAF People Perspective",
+      "question": "A cloud transformation program focuses on workforce skills, operating roles, training, and a change-management plan. Which AWS CAF perspective is primarily involved?",
+      "questionTh": "Cloud Transformation เน้น Skills, Job Roles, Training และ Change Management ของพนักงาน ตรงกับ AWS CAF Perspective ใด",
+      "selected": "C. People Perspective",
+      "correct": "C. People Perspective",
+      "rawFlags": [
+        "🧠 Concept / Recall Gap"
+      ],
+      "reviewedCauses": [
+        "concept"
+      ],
+      "diagnosis": "ตอบถูกแต่มี Flag สำหรับทบทวน",
+      "memoryCue": "skills + training + organizational change → CAF People",
+      "notes": [
+        "People Perspective ดูความพร้อมบุคลากร Culture/Training และ Organizational Change ส่วน Governance เน้น Controls/Risk Policies และ Platform เน้น Technical Architecture",
+        "A. Governance Perspective — AWS CAF มุมมองการบริหาร Risk, Policies, Controls และ Compliance ขององค์กร",
+        "B. Platform Perspective — AWS CAF มุมมอง Architecture/Infrastructure ของ Cloud Platform",
+        "C. People Perspective — People Perspective ดูความพร้อมบุคลากร Culture/Training และ Organizational Change ส่วน Governance เน้น Controls/Risk Policies และ Platform เน้น Technical Architecture [คำตอบที่ถูก]",
+        "D. Business Perspective — AWS CAF มุมมอง Business Outcomes, Investments และ Value ของ Cloud Adoption"
+      ]
+    },
+    {
+      "questionId": 26,
+      "result": "Wrong",
+      "topic": "L04 — Outposts vs Direct Connect / Global Accelerator",
+      "question": "A factory needs supported AWS compute and services physically installed on its own premises because local processes cannot tolerate the round trip to a Region. Which offering fits?",
+      "questionTh": "โรงงานต้องการ AWS Compute/Services บางส่วนมาติดตั้งในโรงงานจริง เพราะการส่งข้อมูลไป Region มี Latency สูงเกินไป ควรใช้บริการใด",
+      "selected": "D. AWS Global Accelerator",
+      "correct": "C. AWS Outposts",
+      "rawFlags": [
+        "🧠 Concept / Recall Gap"
+      ],
+      "reviewedCauses": [
+        "concept"
+      ],
+      "diagnosis": "คำตอบที่เลือกไม่ครบหรือไม่ตรง Requirement หลักตามเฉลย ไม่ทราบเหตุผลจริงขณะเลือก",
+      "memoryCue": "AWS infrastructure physically on premises → Outposts; dedicated network link → Direct Connect; global network routing → Global Accelerator",
+      "notes": [
+        "Outposts นำ AWS Infrastructure/บริการที่รองรับมาวาง On-premises เพื่อ Low Latency/Local Processing ส่วน Direct Connect แค่เชื่อมเครือข่ายไป AWS",
+        "A. AWS Client VPN — Managed VPN ให้ Remote Users/Devices เชื่อม AWS Networks จาก Client",
+        "B. AWS Direct Connect — dedicated private network connection ไป AWS เช่น ใช้ dedicated network connection เชื่อม data center กับ AWS",
+        "C. AWS Outposts — Outposts นำ AWS Infrastructure/บริการที่รองรับมาวาง On-premises เพื่อ Low Latency/Local Processing ส่วน Direct Connect แค่เชื่อมเครือข่ายไป AWS [คำตอบที่ถูก]",
+        "D. AWS Global Accelerator — เพิ่มประสิทธิภาพเส้นทางการเชื่อมต่อ TCP/UDP ไปยัง AWS Application Endpoints ด้วย Global Network"
+      ]
+    },
+    {
+      "questionId": 36,
+      "result": "Wrong",
+      "topic": "L12 — Relocate vs Rehost",
+      "question": "A company moves VMware virtual machines as a group to a compatible virtualization environment hosted on AWS without converting each VM into an individually rehosted EC2 instance. Which strategy describes this move?",
+      "questionTh": "บริษัทต้องย้าย VMware VMs ทั้ง Environment ไป Virtualization Platform ที่รองรับบน AWS โดยไม่แปลงทุก VM เป็น EC2 ใหม่ทีละตัว เป็น Strategy ใด",
+      "selected": "D. Rehost",
+      "correct": "B. Relocate",
+      "rawFlags": [
+        "📘 English Unclear",
+        "🧠 Concept / Recall Gap"
+      ],
+      "reviewedCauses": [
+        "language",
+        "concept"
+      ],
+      "diagnosis": "คำตอบที่เลือกไม่ครบหรือไม่ตรง Requirement หลักตามเฉลย ไม่ทราบเหตุผลจริงขณะเลือก",
+      "memoryCue": "move virtualization environment without converting individual VMs → Relocate; lift individual servers to EC2 → Rehost",
+      "notes": [
+        "Relocate หมายถึงย้าย Virtualized Infrastructure ไปยัง Compatible Cloud Environment โดยเปลี่ยน Application น้อย ต่างจาก Rehost ที่ย้าย Server/App แบบ Lift-and-shift ไป Infrastructure ใหม่",
+        "A. Repurchase — แทน Application เดิมด้วยผลิตภัณฑ์/SaaS สำเร็จรูป (Drop and Shop)",
+        "B. Relocate — Relocate หมายถึงย้าย Virtualized Infrastructure ไปยัง Compatible Cloud Environment โดยเปลี่ยน Application น้อย ต่างจาก Rehost ที่ย้าย Server/App แบบ Lift-and-shift ไป Infrastructure ใหม่ [คำตอบที่ถูก]",
+        "C. Replatform — ย้ายและปรับแพลตฟอร์มบางส่วน เช่น ย้าย database ไป RDS โดยแก้แอปเพียงเล็กน้อย",
+        "D. Rehost — ย้าย workload โดยเปลี่ยนแปลงน้อยที่สุด เช่น ย้าย virtual machine ไป EC2 โดยแทบไม่แก้แอป"
+      ]
+    },
+    {
+      "questionId": 39,
+      "result": "Wrong",
+      "topic": "L09 — EC2 shared responsibility: guest OS vs hypervisor",
+      "question": "A customer creates an EC2 instance from a Linux image and never applies its operating-system security updates. Under shared responsibility, which component did the customer neglect?",
+      "questionTh": "ลูกค้าสร้าง Linux EC2 แล้วไม่ลง Security Updates หน้าที่ที่ลูกค้าละเลยคือ Component ใด",
+      "selected": "A. Hypervisor",
+      "correct": "C. Guest operating system",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "diagnosis": "คำตอบที่เลือกไม่ครบหรือไม่ตรง Requirement หลักตามเฉลย ไม่ทราบเหตุผลจริงขณะเลือก",
+      "memoryCue": "EC2 guest OS patches → customer; physical hosts and hypervisor → AWS",
+      "notes": [
+        "ลูกค้า EC2 ต้อง Update Guest OS ของตนเอง AWS จัดการ Underlying Hosts/Hypervisor ไม่ใช่ Patch OS ของ EC2 ที่ลูกค้าควบคุม",
+        "A. Hypervisor — ระบบ virtualization underlying EC2 ที่ AWS ดูแล เช่น AWS ดูแล virtualization layer ใต้ EC2",
+        "B. AWS-owned physical servers — เครื่อง server จริงใน AWS data centers ที่ AWS ดูแล เช่น AWS ดูแล hardware จริงใน data center",
+        "C. Guest operating system — ลูกค้า EC2 ต้อง Update Guest OS ของตนเอง AWS จัดการ Underlying Hosts/Hypervisor ไม่ใช่ Patch OS ของ EC2 ที่ลูกค้าควบคุม [คำตอบที่ถูก]",
+        "D. AWS — ผู้ให้บริการ cloud ที่ดูแลความปลอดภัยของ infrastructure เช่น AWS ดูแลความปลอดภัยของ physical cloud infrastructure"
+      ]
+    },
+    {
+      "questionId": 40,
+      "result": "Wrong",
+      "topic": "L10 — Artifact vs Audit Manager",
+      "question": "A compliance team wants official AWS audit agreements and downloadable provider certifications, not evidence about its own application configuration. Which service matches?",
+      "questionTh": "ทีม Compliance ต้องดาวน์โหลด AWS Provider Reports/Agreements ไม่ได้เก็บ Evidence ของ App ตัวเอง ควรใช้บริการใด",
+      "selected": "B. AWS Audit Manager",
+      "correct": "C. AWS Artifact",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "diagnosis": "คำตอบที่เลือกไม่ครบหรือไม่ตรง Requirement หลักตามเฉลย ไม่ทราบเหตุผลจริงขณะเลือก",
+      "memoryCue": "download AWS provider reports/agreements → Artifact; collect customer audit evidence → Audit Manager",
+      "notes": [
+        "Artifact เป็นแหล่งรายงาน/เอกสาร Compliance ของ AWS ส่วน Audit Manager ช่วยรวบรวม Assessment Evidence จากลูกค้า",
+        "A. AWS Config — ติดตามและประเมิน configuration ของทรัพยากรตามกฎ เช่น ตรวจว่า S3 bucket เป็นไปตาม configuration rules หรือไม่",
+        "B. AWS Audit Manager — ช่วยรวบรวมและจัดระเบียบ Audit Evidence สำหรับ Audit Assessments จาก AWS Resources และ Accounts ที่รองรับ",
+        "C. AWS Artifact — Artifact เป็นแหล่งรายงาน/เอกสาร Compliance ของ AWS ส่วน Audit Manager ช่วยรวบรวม Assessment Evidence จากลูกค้า [คำตอบที่ถูก]",
+        "D. AWS CloudTrail — บันทึกกิจกรรม API และการดำเนินการในบัญชี AWS เช่น ตรวจว่า IAM principal ใดเรียก DeleteBucket เมื่อไร"
+      ]
+    },
+    {
+      "questionId": 43,
+      "result": "Wrong",
+      "topic": "L13 — Security + Cost Optimization",
+      "question": "A system design review finds weak identity controls and waste from unused resources. Which TWO pillars should the team improve? (Select TWO.)",
+      "questionTh": "Review ระบบพบทั้ง Identity Controls อ่อนและ Idle Resources ที่สิ้นเปลือง ควรปรับปรุง Pillars สองข้อใด",
+      "selected": "E. Sustainability, C. Operational Excellence",
+      "correct": "B. Security, D. Cost Optimization",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "diagnosis": "คำตอบที่เลือกไม่ครบหรือไม่ตรง Requirement หลักตามเฉลย ไม่ทราบเหตุผลจริงขณะเลือก",
+      "memoryCue": "weak identity controls → Security; wasted spend → Cost Optimization",
+      "notes": [
+        "Security เกี่ยวกับ Identity/Access Protection ส่วน Cost Optimization ลด Idle Spend ไม่ใช่เป้าหมายด้าน Environmental Impact โดยตรง",
+        "A. Reliability — เน้นการฟื้นตัวและการทำงานตามที่คาดหวัง เช่น วางระบบหลาย Availability Zones และทดสอบ failover",
+        "B. Security — Security เกี่ยวกับ Identity/Access Protection ส่วน Cost Optimization ลด Idle Spend ไม่ใช่เป้าหมายด้าน Environmental Impact โดยตรง [คำตอบที่ถูก]",
+        "C. Operational Excellence — เน้นการดำเนินงาน การปรับปรุง และการเรียนรู้ เช่น ทำ post-incident review แล้วปรับ deployment procedure",
+        "D. Cost Optimization — Security เกี่ยวกับ Identity/Access Protection ส่วน Cost Optimization ลด Idle Spend ไม่ใช่เป้าหมายด้าน Environmental Impact โดยตรง [คำตอบที่ถูก]",
+        "E. Sustainability — ลดผลกระทบด้านสิ่งแวดล้อมของ workloads เช่น ลดทรัพยากรที่ไม่จำเป็นเพื่อลดการใช้พลังงาน"
+      ]
+    },
+    {
+      "questionId": 46,
+      "result": "Wrong",
+      "topic": "L13 — Cost Optimization vs Performance Efficiency",
+      "question": "A team removes wasted cloud spending while preserving required performance. Which pillar is the primary objective?",
+      "questionTh": "ทีมลดทรัพยากรที่เปลืองค่าใช้จ่าย แต่ยังรักษา Performance Requirements เดิม เป้าหมายหลักตรง Pillar ใด",
+      "selected": "D. Performance Efficiency",
+      "correct": "B. Cost Optimization",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "diagnosis": "คำตอบที่เลือกไม่ครบหรือไม่ตรง Requirement หลักตามเฉลย ไม่ทราบเหตุผลจริงขณะเลือก",
+      "memoryCue": "reduce waste while preserving required performance → Cost Optimization; meet performance needs with efficient resources → Performance Efficiency",
+      "notes": [
+        "Cost Optimization มุ่งเลือกการใช้เงินเพื่อให้ได้ Business Outcomes ที่ต้องการ ต่างจาก Performance Efficiency ซึ่งเน้น Performance/Capacity ตามโจทย์เป็นหลัก",
+        "A. Reliability — เน้นการฟื้นตัวและการทำงานตามที่คาดหวัง เช่น วางระบบหลาย Availability Zones และทดสอบ failover",
+        "B. Cost Optimization — Cost Optimization มุ่งเลือกการใช้เงินเพื่อให้ได้ Business Outcomes ที่ต้องการ ต่างจาก Performance Efficiency ซึ่งเน้น Performance/Capacity ตามโจทย์เป็นหลัก [คำตอบที่ถูก]",
+        "C. Sustainability — ลดผลกระทบด้านสิ่งแวดล้อมของ workloads เช่น ลดทรัพยากรที่ไม่จำเป็นเพื่อลดการใช้พลังงาน",
+        "D. Performance Efficiency — เน้นการใช้ทรัพยากรให้เหมาะกับ workload เช่น เลือก EC2 Instance Type ให้เหมาะกับงาน CPU-intensive เพื่อให้ได้ throughput ตามเป้าหมาย"
+      ]
+    },
+    {
+      "questionId": 48,
+      "result": "Wrong",
+      "topic": "L11 — Cost allocation tags vs Cost Explorer",
+      "question": "A multi-product business wants to attribute AWS spend to Product A and Product B without breaking consolidated organization billing. Which mechanism supports cost attribution?",
+      "questionTh": "บริษัทมีหลายผลิตภัณฑ์ ต้องแยกค่า AWS ตาม Product A/B แต่ยังรวม Billing ทั้ง Organization ควรใช้อะไร",
+      "selected": "C. AWS Cost Explorer",
+      "correct": "D. Cost allocation tags",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "diagnosis": "คำตอบที่เลือกไม่ครบหรือไม่ตรง Requirement หลักตามเฉลย ไม่ทราบเหตุผลจริงขณะเลือก",
+      "memoryCue": "assign spend to product or department → Cost allocation tags; analyze grouped spending → Cost Explorer",
+      "notes": [
+        "Cost Allocation Tags ใช้จัด Cost ตาม Team/Product ส่วน Consolidated Billing รวมค่าใช้จ่ายตาม Accounts ไม่ระบุ Product Labels ให้เอง",
+        "A. Consolidated billing — รวมการเรียกเก็บเงินหลายบัญชีใน Organizations เช่น รวมค่าใช้จ่ายหลาย AWS accounts ไว้ที่ payer account",
+        "B. AWS Budgets — กำหนด budgets และแจ้งเตือนตาม thresholds เช่น แจ้งเตือนเมื่อค่าใช้จ่ายคาดว่าจะเกินงบ",
+        "C. AWS Cost Explorer — วิเคราะห์ค่าใช้จ่ายจริงและแนวโน้ม เช่น ดูแนวโน้มค่า EC2 และ S3 ย้อนหลัง",
+        "D. Cost allocation tags — Cost Allocation Tags ใช้จัด Cost ตาม Team/Product ส่วน Consolidated Billing รวมค่าใช้จ่ายตาม Accounts ไม่ระบุ Product Labels ให้เอง [คำตอบที่ถูก]"
+      ]
+    },
+    {
+      "questionId": 52,
+      "result": "Wrong",
+      "topic": "L11 — Compute Optimizer vs Trusted Advisor",
+      "question": "A performance analyst wants recommendations for more appropriate EC2 sizes based on measured usage, rather than an automatic workload scaler. Which tool is designed for recommendations?",
+      "questionTh": "Performance Analyst ต้องการ Recommendations เปลี่ยน EC2 Sizes จากข้อมูล Usage ไม่ใช่ระบบ Scale ตาม Traffic บริการใด",
+      "selected": "D. AWS Trusted Advisor",
+      "correct": "B. AWS Compute Optimizer",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "diagnosis": "คำตอบที่เลือกไม่ครบหรือไม่ตรง Requirement หลักตามเฉลย ไม่ทราบเหตุผลจริงขณะเลือก",
+      "memoryCue": "recommend instance type/size from utilization → Compute Optimizer; broad best-practice checks → Trusted Advisor",
+      "notes": [
+        "Compute Optimizer วิเคราะห์ Utilization Metrics เพื่อแนะนำประเภท/ขนาด Compute ส่วน EC2 Auto Scaling เปลี่ยนจำนวน Instances ตาม Scaling Policies",
+        "A. EC2 Auto Scaling — ปรับจำนวน EC2 instances ตาม demand เช่น เพิ่มหรือลดจำนวน EC2 ตาม metric",
+        "B. AWS Compute Optimizer — Compute Optimizer วิเคราะห์ Utilization Metrics เพื่อแนะนำประเภท/ขนาด Compute ส่วน EC2 Auto Scaling เปลี่ยนจำนวน Instances ตาม Scaling Policies [คำตอบที่ถูก]",
+        "C. AWS Cost Explorer — วิเคราะห์ค่าใช้จ่ายจริงและแนวโน้ม เช่น ดูแนวโน้มค่า EC2 และ S3 ย้อนหลัง",
+        "D. AWS Trusted Advisor — ตรวจ best practices รวมถึงต้นทุนและ security"
+      ]
+    },
+    {
+      "questionId": 53,
+      "result": "Wrong",
+      "topic": "L01 — Capital expenditure vs Variable expense",
+      "question": "A department wants to move from large one-time purchases of data-center machines to bills based on actual services consumed. Which TWO financial concepts describe the change? (Select TWO.)",
+      "questionTh": "แผนกเปลี่ยนจากซื้อ Data Center Hardware เป็นก้อนมาเป็นจ่ายตาม Service Usage จริง สองแนวคิดด้านการเงินใดเกี่ยวข้อง",
+      "selected": "A. Capital expenditure, E. Rightsizing",
+      "correct": "D. Variable expense, A. Capital expenditure",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "diagnosis": "คำตอบที่เลือกไม่ครบหรือไม่ตรง Requirement หลักตามเฉลย ไม่ทราบเหตุผลจริงขณะเลือก",
+      "memoryCue": "upfront asset purchase → CapEx; usage-dependent bills → Variable expense; resize resources → Rightsizing",
+      "notes": [
+        "ลด Capital Expenditure ด้าน Assets ที่ต้องลงทุนล่วงหน้าแล้วเปลี่ยนสู่ Variable Expense ที่จ่ายตาม Usage ส่วน Rightsizing เป็นเทคนิคปรับ Resource Size",
+        "A. Capital expenditure — ลด Capital Expenditure ด้าน Assets ที่ต้องลงทุนล่วงหน้าแล้วเปลี่ยนสู่ Variable Expense ที่จ่ายตาม Usage ส่วน Rightsizing เป็นเทคนิคปรับ Resource Size [คำตอบที่ถูก]",
+        "B. Economies of scale — ลดต้นทุนต่อหน่วยจากการใช้ทรัพยากรในปริมาณมาก เช่น AWS กระจายต้นทุนโครงสร้างพื้นฐานให้ลูกค้าจำนวนมาก",
+        "C. High availability — ออกแบบให้บริการพร้อมใช้งานต่อเนื่อง เช่น วาง Application Load Balancer หน้า EC2 หลาย AZ เพื่อลด downtime",
+        "D. Variable expense — ลด Capital Expenditure ด้าน Assets ที่ต้องลงทุนล่วงหน้าแล้วเปลี่ยนสู่ Variable Expense ที่จ่ายตาม Usage ส่วน Rightsizing เป็นเทคนิคปรับ Resource Size [คำตอบที่ถูก]",
+        "E. Rightsizing — เลือกขนาดทรัพยากรให้ตรงความต้องการ เช่น ลด EC2 จากขนาดใหญ่เป็นขนาดเล็กหลังตรวจ CPU/Memory utilization"
+      ]
+    },
+    {
+      "questionId": 62,
+      "result": "Wrong",
+      "topic": "L09 — Resource Access Manager vs Control Tower",
+      "question": "A platform team wants member accounts to share a supported centrally owned AWS resource without duplicating it in each account. Which service handles controlled resource sharing?",
+      "questionTh": "Platform Team ต้องแชร์ AWS Resource ที่รองรับจากบัญชีกลางให้ Member Accounts โดยไม่ต้องสร้างใหม่ทุก Account ใช้บริการใด",
+      "selected": "A. AWS Control Tower",
+      "correct": "D. AWS Resource Access Manager",
+      "rawFlags": [],
+      "reviewedCauses": [],
+      "diagnosis": "คำตอบที่เลือกไม่ครบหรือไม่ตรง Requirement หลักตามเฉลย ไม่ทราบเหตุผลจริงขณะเลือก",
+      "memoryCue": "share supported resources across accounts → RAM; multi-account landing zone → Control Tower",
+      "notes": [
+        "AWS RAM แชร์ AWS Resources ที่รองรับข้าม Accounts อย่างมีขอบเขต ส่วน Organizations จัดโครงสร้าง Accounts/OUs และ Access Analyzer ตรวจ External Permissions",
+        "A. AWS Control Tower — ตั้งค่าและกำกับ multi-account landing zone",
+        "B. AWS Organizations — จัดกลุ่มบัญชีและใช้ governance / consolidated billing",
+        "C. IAM Access Analyzer — วิเคราะห์ resource access และ external access",
+        "D. AWS Resource Access Manager — AWS RAM แชร์ AWS Resources ที่รองรับข้าม Accounts อย่างมีขอบเขต ส่วน Organizations จัดโครงสร้าง Accounts/OUs และ Access Analyzer ตรวจ External Permissions [คำตอบที่ถูก]"
+      ]
+    },
+    {
+      "questionId": 63,
+      "result": "Correct",
+      "topic": "L09 — CloudHSM vs KMS",
+      "question": "A bank's policy requires customer-controlled dedicated hardware security modules rather than a general managed key service. Which service aligns most directly with that condition?",
+      "questionTh": "นโยบายธนาคารบังคับให้ใช้ Dedicated Hardware Security Modules ที่ลูกค้าควบคุม ไม่ใช่เพียง Managed Key Service ทั่วไป ควรเลือกอะไร",
+      "selected": "B. AWS CloudHSM",
+      "correct": "B. AWS CloudHSM",
+      "rawFlags": [
+        "📘 English Unclear",
+        "🧠 Concept / Recall Gap"
+      ],
+      "reviewedCauses": [
+        "language",
+        "concept"
+      ],
+      "diagnosis": "ตอบถูกแต่มี Flag สำหรับทบทวน",
+      "memoryCue": "dedicated customer-controlled HSM → CloudHSM; managed encryption keys → KMS",
+      "notes": [
+        "CloudHSM ให้ลูกค้าควบคุม HSMs สำหรับ Cryptographic Operations ส่วน KMS เป็น Managed Encryption Key Service",
+        "A. AWS Secrets Manager — เก็บและหมุนเวียน secrets เช่น database credentials เช่น เก็บและหมุนเวียน database password",
+        "B. AWS CloudHSM — CloudHSM ให้ลูกค้าควบคุม HSMs สำหรับ Cryptographic Operations ส่วน KMS เป็น Managed Encryption Key Service [คำตอบที่ถูก]",
+        "C. AWS KMS — สร้างและควบคุม encryption keys เช่น ควบคุม encryption key ที่ใช้กับ S3",
+        "D. AWS Certificate Manager — ออกและจัดการ TLS certificates ที่รองรับ"
+      ]
+    }
+  ],
+  "englishNotes": [
+    {
+      "questionId": 6,
+      "phrase": "A security program asks whether a healthcare workload can process regulated patient data merely because the AWS infrastructure has compliance reports. Which TWO checks are still necessary? (Select TWO.)",
+      "translation": "โครงการ Healthcare ต้องตรวจว่าประมวลผลข้อมูลผู้ป่วยบน AWS ได้ถูกต้องหรือไม่ แม้ AWS มี Compliance Reports สองสิ่งใดยังต้องทำ"
+    },
+    {
+      "questionId": 36,
+      "phrase": "A company moves VMware virtual machines as a group to a compatible virtualization environment hosted on AWS without converting each VM into an individually rehosted EC2 instance. Which strategy describes this move?",
+      "translation": "บริษัทต้องย้าย VMware VMs ทั้ง Environment ไป Virtualization Platform ที่รองรับบน AWS โดยไม่แปลงทุก VM เป็น EC2 ใหม่ทีละตัว เป็น Strategy ใด"
+    },
+    {
+      "questionId": 63,
+      "phrase": "A bank's policy requires customer-controlled dedicated hardware security modules rather than a general managed key service. Which service aligns most directly with that condition?",
+      "translation": "นโยบายธนาคารบังคับให้ใช้ Dedicated Hardware Security Modules ที่ลูกค้าควบคุม ไม่ใช่เพียง Managed Key Service ทั่วไป ควรเลือกอะไร"
+    }
+  ]
+};
+window.REVIEW_INSIGHTS.history.push({
+  "setId": "local-set-12",
+  "label": "Local Mock Set 12 · 27 Nov 2026",
+  "score": 50,
+  "total": 65,
+  "percent": 77,
+  "confidence": 0,
+  "language": 3,
+  "concept": 5,
+  "clue": 0
+});
