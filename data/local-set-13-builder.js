@@ -13,4 +13,6 @@
     [mixed[i], mixed[j]] = [mixed[j], mixed[i]];
   }
   window.buildClfLocalExamSet(13, mixed);
+  const completedSet = (window.QUIZ_SETS || []).find(set => set.id === 'local-set-13');
+  if (completedSet) { completedSet.historicalAnswered = 65; completedSet.historicalScore = 55; }
 })();
