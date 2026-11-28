@@ -932,4 +932,6 @@
     [mixed[i], mixed[j]] = [mixed[j], mixed[i]];
   }
   window.buildClfLocalExamSet(14, mixed);
+  const completedSet = (window.QUIZ_SETS || []).find(set => set.id === 'local-set-14');
+  if (completedSet) { completedSet.historicalAnswered = 65; completedSet.historicalScore = 57; }
 })();
